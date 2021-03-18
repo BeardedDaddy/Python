@@ -1,7 +1,7 @@
 #json
-{"country";{
-    "city";{
-        "temp":33,
-        "humidiy:44"
+{"country";{usa
+    "city";{lauderhill
+        "temp":,
+        "humidity":
     }
 }}

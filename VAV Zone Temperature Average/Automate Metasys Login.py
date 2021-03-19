@@ -7,8 +7,6 @@ subprocess.call("")
 username_textbox = input("Enter in your username: ")
 password = ("Enter in your password: ")
 
-driver.get("")
-
 username_textbox = driver.find_element_by_id()
 username_textbox.send_keys()
 

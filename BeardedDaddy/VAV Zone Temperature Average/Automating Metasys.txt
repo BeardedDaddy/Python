@@ -1,0 +1,6 @@
+How to automate login to Metasys
+
+#"C:/Program Files (x86)/Johnson Controls/launcher/"
+
+import pywin 
+app.jcilaunchersmp://10.110.40.32.connect.click()

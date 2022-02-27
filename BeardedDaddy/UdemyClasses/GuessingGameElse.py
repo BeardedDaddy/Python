@@ -6,8 +6,8 @@ def get_integer(prompt):
         temp = input(prompt)
         if temp.isnumeric():
             return int(temp)
-        else:
-            print("{0} is not a valid number".format(temp))
+        # else:
+        print("{0} is not a valid number".format(temp))
 
 highest = 1000
 answer = random.randint(1, highest)
@@ -44,7 +44,7 @@ if guess != answer:
     if guess == answer:
         print("Well done, you guessed it")
     else:
-        print("Sorry, you have not guessed correctly")
+        print("Sorry, you have not guessed correctly. Please guess again.")
     
 #Another way to write this code is the following.
    

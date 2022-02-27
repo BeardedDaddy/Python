@@ -6,8 +6,8 @@ def get_integer(prompt):
         temp = input(prompt)
         if temp.isnumeric():
             return int(temp)
-        else:
-            print("{0} is not a valid number".format(temp))
+        # else:
+        print("{0} is not a valid number".format(temp))
 
 highest = 1000
 answer = random.randint(1, highest)
@@ -65,7 +65,7 @@ if guess != answer:
     # print("You got it first time")
 
 # In principle elif always comes after if.
-# Else always comes after elif
+#Else always comes after elif
 # There are 6 value comparison operators
 # Less than <
 # Less than or equal to <=

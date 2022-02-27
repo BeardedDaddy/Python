@@ -42,6 +42,8 @@ albums = [
      ),
 ]
 
+# Album is index 0
+# 
 for name, artist, year, songs in albums:
     # Index (Second layer) album [], artist [], year [], songs with track_number in album []
     print("Album: {}, Artist: {}, Year: {}, Songs: {}"
@@ -66,3 +68,6 @@ mayhem = albums[3][3][2][1] # Indexes explained: [3] album number 3. [3] track n
 # print(albums[3])
 # print(albums[3][3])
 print(albums[3][3][2][1])
+
+# The albums [list] contains 5 tuples -> (each list of songs inside parenthesis
+# Inside the (tuples) contains the three items that are separated by commas.

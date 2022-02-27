@@ -68,6 +68,13 @@ mayhem = albums[3][3][2][1] # Indexes explained: [3] album number 3. [3] track n
 # print(albums[3])
 # print(albums[3][3])
 print(albums[3][3][2][1])
-
+# In this print statement the first index is calling the album at index [3].
+# The second index is calling the list of songs [3]. 
+# The third index is calling the song in the list of songs [2].
+# The fourth index is calling the song track in the list of songs [1].
+# (Example: Album name: More Mayhem [0], Artist: Imelda May [1], Year: 2011 [2], 
+# Songs: the List of songs in the album [3], More Mayhem [0], Imelda May [1], 2011 [2], (1,Pulling the Rug), (2, Psycho), (3, Mayhem), (4, Kentish Town Waltz) [3]
+# Song: the track from the List [2], 3 [0], Mayhem [1].
+# 
 # The albums [list] contains 5 tuples -> (each list of songs inside parenthesis
 # Inside the (tuples) contains the three items that are separated by commas.

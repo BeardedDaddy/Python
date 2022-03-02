@@ -1,9 +1,6 @@
-def banner_text(text):
-    screen_width = 80
+def banner_text(text, screen_width=80):
     if len(text) > screen_width -4:
-        print("EEK!!")
-        print("THE TEXT IS TOO LONG TO FIT IN THE SPECIFIED WIDTH")
-        
+        raise ValueError("String {0} is larger then specified width {1}".format(text, screen_width))
     if text == "*":
         print("*" * screen_width)
     else:
@@ -24,5 +21,3 @@ banner_text("Just purse your lips and whistle - that's the thing!")
 banner_text("And... always look on the bright side of life...")
 banner_text("*")
 
-result = banner_text("Nothing is returned")
-print(result)

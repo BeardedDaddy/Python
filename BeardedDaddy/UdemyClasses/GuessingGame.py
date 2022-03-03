@@ -2,6 +2,17 @@ import random
 
 
 def get_integer(prompt):
+    """_summary_
+    Get an integer from Standard Input (stdin).
+
+    The function will continue looping, and prompting
+    the user, until a valid `int` is entered.
+    
+    :param prompt: The string that the user will see, when they're prompted to enter the value.
+    :type prompt: int
+    :return: The integer that the user enters.
+    :type: integer
+    """
     while True:
         temp = input(prompt)
         if temp.isnumeric():
@@ -28,11 +39,6 @@ while guess != answer:
             print("Please guess higher")
         else: # guess must be greater than answer
             print("Please guess lower")
-    guess = int(input())
-    if guess == answer:
-        print("Well done, you guessed correctly.")
-    else:
-        print("Sorry, you have not guessed correctly. Please guess again.")
 
 # Another way to write this code is the following.
 if guess != answer:

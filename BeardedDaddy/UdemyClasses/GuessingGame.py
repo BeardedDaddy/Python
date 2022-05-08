@@ -37,7 +37,7 @@ while guess != answer:
     if guess == 0:
         break
     if guess == answer:
-        print("Damn you finally guessed it.")
+        print("Mia the smartest daughter in the world you finally guessed it.")
         break
     else:
         if guess < answer:

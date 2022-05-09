@@ -34,7 +34,6 @@ deque([{'data': 'a'}, {'data': 'b'}])
 #llist
 
 queue = deque()
-queue
 
 queue.append("Mary")
 queue.append("John")

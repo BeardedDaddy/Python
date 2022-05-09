@@ -17,22 +17,21 @@ class LinkedList:
         while node is not None:
             nodes.append(node.data)
             node = node.next
-        node.append("None")
+        nodes.append("None")
         return " -> ".join(nodes)
 
 
-llist = LinkedList
-llist
+llist = LinkedList()
 
 first_node = Node("a")
 llist.head = first_node
-llist
+
 
 second_node = Node("b")
 third_node = Node("c")
 first_node.next = second_node
 second_node.next = third_node
-llist
+
 
 
 def __init__(self, nodes=None):

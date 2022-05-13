@@ -1,13 +1,10 @@
 {
-	"folders": [
-		{
-			"path": "..\\Work Python Code\\BeardedDaddy"
-		},
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"maven.view": "hierarchical"
-	}
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "maven.view": "hierarchical"
+  }
 }

@@ -1,3 +1,5 @@
+
+
 graph = {
     1:[2, 3, None],
     2:[4, None],
@@ -9,4 +11,13 @@ graph = {
 
 from collections import deque
 deque(['a', 'b', 'c'])
-print(deque)
+deque('abc')
+deque([{'data': 'a'}, {'data': 'b'},])
+
+llist = deque("abcde")
+
+llist.append('f')
+llist.pop()
+llist.appendleft("z")
+llist.popleft()
+print(llist)

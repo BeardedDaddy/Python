@@ -1,3 +1,6 @@
+import sys
+
+
 def multiply(x: float, y: float) -> float:
     """
     Multiply 2 numbers.

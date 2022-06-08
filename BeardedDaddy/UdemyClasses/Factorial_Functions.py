@@ -18,7 +18,7 @@
 # 5 120 .....
 
 
-def factorial(n: int) -> int:
+def my_factorial(n: int) -> int:
     """Return n! (0! is 1)."""
     if n <= 1:
         return 1
@@ -31,4 +31,4 @@ def factorial(n: int) -> int:
 
 
 for i in range(36):
-    print(i, factorial(i))
+    print(i, my_factorial(i))

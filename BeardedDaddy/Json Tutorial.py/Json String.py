@@ -21,3 +21,4 @@ json_string = '''
 
 data = json.loads(json_string)
 print(data['students'][0])
+print(data['students'][1])

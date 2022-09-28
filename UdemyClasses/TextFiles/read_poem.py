@@ -17,7 +17,26 @@
 # for line in reversed(lines):
 #     print(line, end='') # Processing this poem in reverse
 
-with open('Jabberwocky.txt', 'r', encoding='utf-8') as jabber:
-    text = jabber.read()
+# with open('Jabberwocky.txt', 'r', encoding='utf-8') as jabber:
+#     text = jabber.read()
 
-print(text)
+# # print(text)
+# for character in reversed(text):
+#     print(character, end='')
+
+with open('Jabberwocky.txt', 'r', encoding='utf-8') as jabber:
+    while True:
+        line = jabber.readline().rstrip()
+# The difference between line and the following code block is that this line strip the trailing space with a variable.
+        print(line)
+        if 'jubjub' in line.casefold():
+            break
+
+print('*' * 80)
+
+with open('Jabberwocky.txt', 'r', encoding='utf-8') as jabber:
+    for line in jabber:
+        print(line.rstrip())
+# The difference between this line and the code block above is that this line prints the line followed by a the rstrip method.
+        if 'jubjub' in line.casefold():
+            break

@@ -24,7 +24,7 @@
 # for character in reversed(text):
 #     print(character, end='')
 
-with open('Jabberwocky.txt', 'r', encoding='utf-8') as jabber:
+with open('Jabberwocky.txt', encoding='utf-8') as jabber:
     while True:
         line = jabber.readline().rstrip()
 # The difference between line and the following code block is that this line strip the trailing space with a variable.
@@ -34,7 +34,7 @@ with open('Jabberwocky.txt', 'r', encoding='utf-8') as jabber:
 
 print('*' * 80)
 
-with open('Jabberwocky.txt', 'r', encoding='utf-8') as jabber:
+with open('Jabberwocky.txt', encoding='utf-8') as jabber:
     for line in jabber:
         print(line.rstrip())
 # The difference between this line and the code block above is that this line prints the line followed by a the rstrip method.

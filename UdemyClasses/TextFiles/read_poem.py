@@ -27,7 +27,7 @@
 with open('Jabberwocky.txt', encoding='utf-8') as jabber:
     while True:
         line = jabber.readline().rstrip()
-# The difference between line and the following code block is that this line strip the trailing space with a variable.
+#This line strip the trailing space with a variable.
         print(line)
         if 'jubjub' in line.casefold():
             break
@@ -37,6 +37,6 @@ print('*' * 80)
 with open('Jabberwocky.txt', encoding='utf-8') as jabber:
     for line in jabber:
         print(line.rstrip())
-# The difference between this line and the code block above is that this line prints the line followed by a the rstrip method.
+#This line prints the line followed by a the rstrip method.
         if 'jubjub' in line.casefold():
             break

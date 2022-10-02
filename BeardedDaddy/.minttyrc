@@ -1,0 +1,10 @@
+CursorColour=0,128,255
+ThemeFile=dracula
+Transparency=high
+OpaqueWhenFocused=no
+CursorType=block
+FontHeight=14
+FontWeight=700
+FontIsBold=yes
+BellType=4
+BoldAsFont=yes

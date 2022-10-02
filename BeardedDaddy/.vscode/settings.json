@@ -1,0 +1,6 @@
+{
+  "editor.fontSize": 24,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.globalModuleInstallation": true,
+  "python.linting.enabled": false
+}

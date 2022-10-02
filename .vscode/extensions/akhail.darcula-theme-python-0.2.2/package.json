@@ -1,0 +1,33 @@
+{
+	"name": "darcula-theme-python",
+	"displayName": "Darcula python",
+	"description": "A fork of \"Darcula Theme inspired by IntelliJ\" optimize for Python",
+	"version": "0.2.2",
+	"license": "MIT",
+	"publisher": "akhail",
+	"preview": true,
+	"extensionDependencies": [
+		"magicstack.magicpython"
+	],
+	"repository": "https://github.com/Akhail/vs-code-darcula-theme",
+	"engines": {
+		"vscode": "^1.12.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Darcula Theme",
+				"uiTheme": "vs-dark",
+				"path": "./themes/darcula-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "d56fdb34-f3c3-4a78-a69a-f1015ddfc53a",
+		"publisherId": "6a7b4e40-9af4-43a2-b83b-7049c943b4a2",
+		"publisherDisplayName": "Michel Betancourt"
+	}
+}

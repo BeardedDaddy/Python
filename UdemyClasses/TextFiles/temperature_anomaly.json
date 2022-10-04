@@ -33,7 +33,7 @@
         "1954": "-0.09",
         "1955": "-0.02",
         "1956": "-0.17",
-        "1957": "0f.16",
+        "1957": "0.16",
         "1958": "0.09",
         "1959": "0.07",
         "1960": "0.09",
@@ -100,5 +100,5 @@
         "2021": "0.89",
         "2022": "0.90"
     },
-    "citation": "NOAA National Centers for Environmental information, Climate at a Glance: Global Time Series, published September 2022, retrieved on October 2, 2022 from https://www.ncdc.noaa.gov/cag/"
+    "citation": "NOAA National Centers for Environmental information, Climate at a Glance: Global Time Series, published September 2022, retrieved on October 2, 2022 from JSON_DATA_SOURCE = 'https://www.ncdc.noaa.gov/cag/global/time-series"
 }

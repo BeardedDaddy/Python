@@ -7,10 +7,10 @@ with open(INPUT_FILENAME, encoding='utf-8', newline='') as countries_data:
     SAMPLE = ""
     for line in range(3):
         SAMPLE += countries_data.readline()
-    country_dialect = csv.Sniffer().sniff(SAMPLE)
-    country_dialect.skipinitialspace = True
+    Country_Dialect = csv.Sniffer().sniff(SAMPLE)
+    Country_Dialect.skipinitialspace = True
     countries_data.seek(0)
-    country_reader = csv.reader(countries_data, dialect=country_dialect)
+    country_reader = csv.reader(countries_data, dialect=Country_Dialect)
     for row in country_reader:
         print(row)
 
@@ -24,4 +24,4 @@ attributes = ['delimiter',
               'skipinitialspace',
               ]
 for attribute in attributes:
-    print(f'{attribute}: {repr(getattr(country_dialect, attribute))}')
+    print(f'{attribute}: {repr(getattr(Country_Dialect, attribute))}')

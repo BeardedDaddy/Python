@@ -1,6 +1,7 @@
 """In this code block we are parsing data in a text file."""
 
 import csv
+
 INPUT_FILENAME = 'country_info.txt'
 countries = {}
 # This is an empty dictionary.
@@ -9,7 +10,7 @@ with open(INPUT_FILENAME, encoding='utf-8', newline='') as country_file:
     for row in dict_reader:
         countries[row['Country'].casefold()] = row
         countries[row['CC'].casefold()] = row
-# print(countries)
+
 while True:
     chosen_country = input('Please enter the name of a country: ')
     country_key = chosen_country.casefold()

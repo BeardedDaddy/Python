@@ -106,7 +106,7 @@ medals_table = [
 And returns the country key for the dictionary."""
 
 
-def sort_key: (d: dict) -> str:
+def sort_key(d: dict) -> str:
     return d['country']
 # This function allows us to put the dictionary in alphabetical order.
 
@@ -115,7 +115,8 @@ columns = ['country', 'gold', 'silver', 'bronze', ]
 
 FILENAME = 'country_medals.csv'
 with open(FILENAME, 'w', encoding='utf-8', newline='') as output_file:
-    writer = csv.DictWriter(output_file, fieldnames=columns)
+    writer = csv.DictWriter(
+        output_file, fieldnames=columns, extrasaction='ignore')
     writer.writeheader()
     # for row in medals_table:
     #     writer.writerow(row)

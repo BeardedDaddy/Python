@@ -54,33 +54,44 @@ def next_invoice_number(invoice_number: str) -> str:
 
 def record_invoice(invoice_file: TextIO,
                    company: str,
-                   amount: float) -> None:
+                   amount: float, last_line_ptr: int = 0) -> int:
     """Create a new invoice number, and write it to a file on disk.
 
     :param invoice_file: An open text file, opened using r+.
     :param company: The name of the company being invoiced.
     :param amount: The amount of the invoice.
+    :param last_line_ptr: The position of the start of the last line in the file. This will be obtained by the previous call to              'record_invoice'.
+    :return: The position of the start of the last line in the file. This can be used in  subsequent calls to 'record_invoice'.
     """
+    invoice_file.seek(last_line_ptr, SEEK_SET)
     last_row = ''
+
+    # Restore the file pointer
+
     for line in invoice_file:
         last_row = line
+    # store file pointer
+    # write the new line
     if last_row:
-        # invoice_number, c, a = last_row.split('\t')
+        # invoice_number, _, _ = last_row.split('\t')
+        # Use an underscore in a variable that going to be used.
         invoice_number = last_row.split('\t')[0]
-        new_invoice_number = next_in_number(invoice_number)
+        new_invoice_number = next_invoice_number(invoice_number)
     else:
         # if the file is empty, we'll start numbering from 1.
         year = get_year()
         new_invoice_number = f'{year}-{1:04d}'
 
+    last_line_ptr = invoice_file.tell()
     print(f'{new_invoice_number}\t{company}\t{amount}', file=invoice_file)
+    return last_line_ptr
 
 
-data_file = 'invoices.'
+DATA_FILE = 'invoices.csv'
 
-with open(data_file, 'r+') as invoices:
-    record_invoice(invoices, 'ACME Roadrun', 18.40)
-
+with open(DATA_FILE, 'r+', encoding='utf-8') as invoices:
+    last_line = record_invoice(invoices, 'ACME Roadrun', 18.40)
+    last_line = record_invoice(invoices, 'Squirrel Storage', 320.55, last_line)
 # Test code:
 current_year = get_year()
 test_data = [

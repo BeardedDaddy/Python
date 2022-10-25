@@ -4333,7 +4333,7 @@ part of!
 
 ### Fixes
 
-1. Some LaTeX equations do not print in notebooks or the interactive window.
+1. Some LaTeX EQUATIONs do not print in notebooks or the interactive window.
    ([#8673](https://github.com/Microsoft/vscode-python/issues/8673))
 1. Converting to python script no longer working from a notebook.
    ([#8677](https://github.com/Microsoft/vscode-python/issues/8677))
@@ -4462,7 +4462,7 @@ part of!
    ([#7873](https://github.com/Microsoft/vscode-python/issues/7873))
 1. When creating a new blank notebook, it has existing text in it already.
    ([#7980](https://github.com/Microsoft/vscode-python/issues/7980))
-1. Can now include a LaTeX-style equation without surrounding the equation with '\$' in a markdown cell.
+1. Can now include a LaTeX-style EQUATION without surrounding the EQUATION with '\$' in a markdown cell.
    ([#7992](https://github.com/Microsoft/vscode-python/issues/7992))
 1. Make a spinner appear during executing a cell.
    ([#8003](https://github.com/Microsoft/vscode-python/issues/8003))

@@ -3,8 +3,8 @@ Learning to read a bitmap file.
 """
 import os
 
-SOURCE_FILE = 'bm_test.txt'
-# SOURCE_FILE = 'vintage-halloween-bat.bmp'
+# SOURCE_FILE = 'bm_test.txt'
+SOURCE_FILE = 'vintage-halloween-bat.bmp'
 inverted_file = f'inverted-{SOURCE_FILE}'
 
 with open(SOURCE_FILE, 'rb') as bat:  # No encoding
@@ -72,14 +72,14 @@ with open(SOURCE_FILE, 'rb') as bat:  # No encoding
                 remainder = bat.read()
 
                 with open(inverted_file, 'wb') as inverted_bat:
-                    print(f'\tWriting header')
+                    print(f"\tWriting header")
                     inverted_bat.write(file_header)
-                    print(f'\tWriting DIB header and other blocks')
+                    print(f"\tWriting DIB header and other blocks")
                     inverted_bat.write(dib_header_etc)
-                    print(f'\tWriting image data')
+                    print(f"\tWriting image data")
                     inverted_bat.write(image)
                     if remainder:
-                        print(f'\tWriting remaining bytes')
+                        print(f"\tWriting remaining bytes")
                         inverted_bat.write(remainder)
 
                 print(f'Image file {inverted_file} created.')

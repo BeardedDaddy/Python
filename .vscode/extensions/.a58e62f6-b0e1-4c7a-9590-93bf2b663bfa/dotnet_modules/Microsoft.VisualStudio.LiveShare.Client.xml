@@ -1,23 +1,32 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <doc>
     <assembly>
         <name>Microsoft.VisualStudio.LiveShare.Client</name>
     </assembly>
     <members>
-        <member name="M:Microsoft.Cascade.Client.AccessControlService.GetAccessControlAsync(System.Threading.CancellationToken)">
+        <member
+      name="M:Microsoft.Cascade.Client.AccessControlService.GetAccessControlAsync(System.Threading.CancellationToken)"
+    >
             <param name="cancellationToken">A cancellation token.</param>
         </member>
-        <member name="M:Microsoft.Cascade.Client.AgentProcess.StartAsync(System.Threading.CancellationToken)">
+        <member
+      name="M:Microsoft.Cascade.Client.AgentProcess.StartAsync(System.Threading.CancellationToken)"
+    >
             <param name="cancellationToken">A cancellation token.</param>
         </member>
-        <member name="M:Microsoft.Cascade.Client.AgentProcess.AcquireAgentLockAsync(System.Threading.CancellationToken)">
+        <member
+      name="M:Microsoft.Cascade.Client.AgentProcess.AcquireAgentLockAsync(System.Threading.CancellationToken)"
+    >
             <summary>
             Acquires a file lock to ensure only one vsls-agent process can be started for the agent URI.
             </summary>
             <param name="cancellationToken">Cancellation token</param>
-            <returns>Disposable that releases the lock when it's disposed</returns>
+            <returns
+      >Disposable that releases the lock when it's disposed</returns>
         </member>
-        <member name="M:Microsoft.Cascade.Client.AgentProcess.GetAgentLockFilePath">
+        <member
+      name="M:Microsoft.Cascade.Client.AgentProcess.GetAgentLockFilePath"
+    >
             <summary>
             Get agent lock file path.
             </summary>
@@ -29,21 +38,27 @@
             </remarks>
             <returns>Lock file path, not null.</returns>
         </member>
-        <member name="P:Microsoft.Cascade.Client.ClientAccessCheck.ExceptionFilter">
+        <member
+      name="P:Microsoft.Cascade.Client.ClientAccessCheck.ExceptionFilter"
+    >
             <summary>
             RPC message filter that can throw RemoteException on error codes associated with restricted operations.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.ClientAccessCheck.CanPerformOperation(Microsoft.Cascade.Contracts.RestrictedOperation)">
+        <member
+      name="M:Microsoft.Cascade.Client.ClientAccessCheck.CanPerformOperation(Microsoft.Cascade.Contracts.RestrictedOperation)"
+    >
             <summary>
             Checks if the current RPC session client can perform the specified operation.
-            Returns true if the <paramref name="operation"/> is null.
+            Returns true if the <paramref name="operation" /> is null.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.ClientAccessCheck.CanPerformOperation(Microsoft.Cascade.Contracts.RestrictedOperation,System.Int32)">
+        <member
+      name="M:Microsoft.Cascade.Client.ClientAccessCheck.CanPerformOperation(Microsoft.Cascade.Contracts.RestrictedOperation,System.Int32)"
+    >
             <summary>
             Checks if the given client can perform the specified operation.
-            Returns true if <paramref name="operation"/> is null.
+            Returns true if <paramref name="operation" /> is null.
             </summary>
         </member>
         <member name="P:Microsoft.Cascade.Client.ClientAccessCheck.IsReadOnly">
@@ -53,92 +68,142 @@
             Returns false if there is guest context on active RPC session and it is not readonly.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.ClientAccessCheck.IsClientReadOnly(System.Int32)">
+        <member
+      name="M:Microsoft.Cascade.Client.ClientAccessCheck.IsClientReadOnly(System.Int32)"
+    >
             <summary>
             Gets a value indicating whether the specific RPC session client is read-only.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.ClientAccessCheck.VerifyCanPerformOperation(Microsoft.Cascade.Contracts.RestrictedOperation)">
+        <member
+      name="M:Microsoft.Cascade.Client.ClientAccessCheck.VerifyCanPerformOperation(Microsoft.Cascade.Contracts.RestrictedOperation)"
+    >
             <summary>
-            Checks if the current RPC session client can perform the specified operation and throws <c>InsufficientAccessException</c> if not.
+            Checks if the current RPC session client can perform the specified operation and throws <c
+        >InsufficientAccessException</c> if not.
             </summary>
         </member>
-        <member name="T:Microsoft.Cascade.Client.Extensibility.CollaborationServiceFactoryException">
+        <member
+      name="T:Microsoft.Cascade.Client.Extensibility.CollaborationServiceFactoryException"
+    >
             <summary>
             Exception that indicates that CollaborationServiceFactory failed critically and joining start must be aborted.
             To indicate such critical failure, the service factory throws an exception with
             "Microsoft.VisualStudio.LiveShare.CriticalFactoryFailure" Data key.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.Extensibility.CollaborationServiceFactoryException.#ctor(System.Exception)">
+        <member
+      name="M:Microsoft.Cascade.Client.Extensibility.CollaborationServiceFactoryException.#ctor(System.Exception)"
+    >
             <summary>
-            Creates a new instance of <see cref="T:Microsoft.Cascade.Client.Extensibility.CollaborationServiceFactoryException"/> with the exception from the collaboration service factory.
+            Creates a new instance of <see
+          cref="T:Microsoft.Cascade.Client.Extensibility.CollaborationServiceFactoryException"
+        /> with the exception from the collaboration service factory.
             </summary>
-            <param name="innerException">Exception thrown by collaboration service factory, not null.</param>
+            <param
+        name="innerException"
+      >Exception thrown by collaboration service factory, not null.</param>
         </member>
         <member name="T:Microsoft.Cascade.Client.Extensibility.ExceptionFilter">
             <summary>
             An RPC message filter responsible for translating response error messages into the application errors.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.Extensibility.ExceptionFilter.FilterRequest(Microsoft.Cascade.Rpc.RequestMessage,System.Boolean)">
+        <member
+      name="M:Microsoft.Cascade.Client.Extensibility.ExceptionFilter.FilterRequest(Microsoft.Cascade.Rpc.RequestMessage,System.Boolean)"
+    >
             <summary>
             Translates RPC request messages.
             </summary>
             <param name="request">A request message</param>
             <returns>Translated request message</returns>
         </member>
-        <member name="M:Microsoft.Cascade.Client.Extensibility.ExceptionFilter.FilterResponse(Microsoft.Cascade.Rpc.RequestMessage,Microsoft.Cascade.Rpc.ResponseMessage,System.Boolean)">
+        <member
+      name="M:Microsoft.Cascade.Client.Extensibility.ExceptionFilter.FilterResponse(Microsoft.Cascade.Rpc.RequestMessage,Microsoft.Cascade.Rpc.ResponseMessage,System.Boolean)"
+    >
             <summary>
             Translates RPC response messages.
             </summary>
             /// <param name="request">A request message.</param>
             <param name="response">A response message.</param>
             <returns>Translated response message.</returns>
-            <exception cref="T:System.NotSupportedException">When remote method couldn't be resolved.</exception>
-            <exception cref="T:System.Collections.Generic.KeyNotFoundException">When remote service returns <see cref="F:Microsoft.Cascade.Client.Extensibility.RemoteServiceError.ItemNotFound"/> error code.</exception>
+            <exception
+        cref="T:System.NotSupportedException"
+      >When remote method couldn't be resolved.</exception>
+            <exception
+        cref="T:System.Collections.Generic.KeyNotFoundException"
+      >When remote service returns <see
+          cref="F:Microsoft.Cascade.Client.Extensibility.RemoteServiceError.ItemNotFound"
+        /> error code.</exception>
         </member>
-        <member name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.ReadUserProfile">
+        <member
+      name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.ReadUserProfile"
+    >
             <summary>Read user name and email info.</summary>
         </member>
-        <member name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.ShareServices">
+        <member
+      name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.ShareServices"
+    >
             <summary>Share RPC services and make requests to remote RPC services
             shared by another instance of the same extension.</summary>
         </member>
-        <member name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.ContributeCommands">
+        <member
+      name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.ContributeCommands"
+    >
             <summary>Contribute commands to the collaboration menu.</summary>
         </member>
-        <member name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.AutoShareServers">
-            <summary>Start forwarding a port without prompting for user consent.</summary>
+        <member
+      name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.AutoShareServers"
+    >
+            <summary
+      >Start forwarding a port without prompting for user consent.</summary>
         </member>
-        <member name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.All">
-            <summary>Special token that indicates all permissions are granted.</summary>
+        <member
+      name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.All"
+    >
+            <summary
+      >Special token that indicates all permissions are granted.</summary>
         </member>
-        <member name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.Block">
-            <summary>Special token that indicates the extension should be entirely
+        <member
+      name="F:Microsoft.Cascade.Client.Extensibility.ExtensionPermissions.Block"
+    >
+            <summary
+      >Special token that indicates the extension should be entirely
             blocked from using the API.</summary>
         </member>
-        <member name="T:Microsoft.Cascade.Client.Extensibility.ICascadeClientProvider">
+        <member
+      name="T:Microsoft.Cascade.Client.Extensibility.ICascadeClientProvider"
+    >
             <summary>
             Provides API to retrieve a client instance.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.Extensibility.ICascadeClientProvider.GetClientAsync(System.Threading.CancellationToken)">
+        <member
+      name="M:Microsoft.Cascade.Client.Extensibility.ICascadeClientProvider.GetClientAsync(System.Threading.CancellationToken)"
+    >
             <summary>
             Retrieves a client instance.
             </summary>
         </member>
-        <member name="T:Microsoft.Cascade.Client.Extensibility.LiveShareCollaborationSession">
+        <member
+      name="T:Microsoft.Cascade.Client.Extensibility.LiveShareCollaborationSession"
+    >
             <summary>
             Enables other VS extensions to interact with a Live Share session.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.Extensibility.LiveShareCollaborationSession.OnPropertyChanged(System.String)">
+        <member
+      name="M:Microsoft.Cascade.Client.Extensibility.LiveShareCollaborationSession.OnPropertyChanged(System.String)"
+    >
             <summary>
-            Raises a <see cref="E:Microsoft.VisualStudio.LiveShare.Peer.PropertyChanged" /> event.
+            Raises a <see
+          cref="E:Microsoft.VisualStudio.LiveShare.Peer.PropertyChanged"
+        /> event.
             </summary>
         </member>
-        <member name="T:Microsoft.Cascade.Client.Extensibility.RemoteServiceError">
+        <member
+      name="T:Microsoft.Cascade.Client.Extensibility.RemoteServiceError"
+    >
             <summary>
             Logical error codes defined by remote application services.
             </summary>
@@ -148,7 +213,9 @@
             Orchestrates a task execution flow by executing or monitoring a task.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.ITaskExecutionDriver.ExecuteAsync(System.String,System.IProgress{Microsoft.Cascade.Contracts.TaskExecutionStatusEventArgs},System.Threading.CancellationToken)">
+        <member
+      name="M:Microsoft.Cascade.Client.ITaskExecutionDriver.ExecuteAsync(System.String,System.IProgress{Microsoft.Cascade.Contracts.TaskExecutionStatusEventArgs},System.Threading.CancellationToken)"
+    >
             <summary>
             Launches a task and monitors the task execution.
             </summary>
@@ -156,22 +223,32 @@
             <param name="progress">The progress updates.</param>
             <param name="cancellationToken">The cancellation token.</param>
         </member>
-        <member name="M:Microsoft.Cascade.Client.ITaskExecutionDriver.MonitorAsync(Microsoft.Cascade.Contracts.TaskExecutionMoniker,System.IProgress{Microsoft.Cascade.Contracts.TaskExecutionStatusEventArgs},System.Boolean,System.Threading.CancellationToken)">
+        <member
+      name="M:Microsoft.Cascade.Client.ITaskExecutionDriver.MonitorAsync(Microsoft.Cascade.Contracts.TaskExecutionMoniker,System.IProgress{Microsoft.Cascade.Contracts.TaskExecutionStatusEventArgs},System.Boolean,System.Threading.CancellationToken)"
+    >
             <summary>
             Monitors an existing task execution given its moniker.
             </summary>
             <param name="taskExecution">The task execution moniker.</param>
             <param name="progress">The progress updates.</param>
-            <param name="shouldTerminateOnCancel">Indicates whether the driver should terminate the task execution on cancel.</param>
+            <param
+        name="shouldTerminateOnCancel"
+      >Indicates whether the driver should terminate the task execution on cancel.</param>
             <param name="cancellationToken">The cancellation token.</param>
         </member>
-        <member name="M:Microsoft.Cascade.Client.PortForwardingService.SetDestinationPortAsync(System.Int32,System.Int32,System.Threading.CancellationToken)">
-            <inheritdoc/>
+        <member
+      name="M:Microsoft.Cascade.Client.PortForwardingService.SetDestinationPortAsync(System.Int32,System.Int32,System.Threading.CancellationToken)"
+    >
+            <inheritdoc />
         </member>
         <member name="T:Microsoft.Cascade.Client.RemoteStream">
             <summary>
-            Represents a stream that is returned by the <see cref="T:Microsoft.Cascade.Client.StreamManagerServiceClient"/>.
-            This stream is a proxy for a stream running by the <see cref="T:Microsoft.Cascade.Contracts.IStreamService"/>, maybe across RPC boundary.
+            Represents a stream that is returned by the <see
+          cref="T:Microsoft.Cascade.Client.StreamManagerServiceClient"
+        />.
+            This stream is a proxy for a stream running by the <see
+          cref="T:Microsoft.Cascade.Contracts.IStreamService"
+        />, maybe across RPC boundary.
             </summary>
         </member>
         <member name="T:Microsoft.Cascade.Client.RemoteTaskExecutionDriver">
@@ -179,7 +256,9 @@
             Helper class facilitating the invokation flow of a remote task.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.RemoteTaskExecutionDriver.ExecuteAsync(System.String,System.IProgress{Microsoft.Cascade.Contracts.TaskExecutionStatusEventArgs},System.Threading.CancellationToken)">
+        <member
+      name="M:Microsoft.Cascade.Client.RemoteTaskExecutionDriver.ExecuteAsync(System.String,System.IProgress{Microsoft.Cascade.Contracts.TaskExecutionStatusEventArgs},System.Threading.CancellationToken)"
+    >
             <summary>
             Starts a remote task given a task ID and monitors its output.
             </summary>
@@ -189,15 +268,21 @@
             Cancellation token. Will terminate the task execution if cancellation is requested.
             </param>
         </member>
-        <member name="M:Microsoft.Cascade.Client.RemoteTaskExecutionDriver.MonitorAsync(Microsoft.Cascade.Contracts.TaskExecutionMoniker,System.IProgress{Microsoft.Cascade.Contracts.TaskExecutionStatusEventArgs},System.Boolean,System.Threading.CancellationToken)">
+        <member
+      name="M:Microsoft.Cascade.Client.RemoteTaskExecutionDriver.MonitorAsync(Microsoft.Cascade.Contracts.TaskExecutionMoniker,System.IProgress{Microsoft.Cascade.Contracts.TaskExecutionStatusEventArgs},System.Boolean,System.Threading.CancellationToken)"
+    >
             <summary>
             Monitors a task execution and stream the task output associated with it.
             </summary>
-            <param name="taskExecution">Unique ID of the desired task execution.</param>
+            <param
+        name="taskExecution"
+      >Unique ID of the desired task execution.</param>
             <param name="progress">Report progress.</param>
             <param name="cancellationToken">The cancellation token.</param>
         </member>
-        <member name="T:Microsoft.Cascade.Client.RestrictedOperationJsonConverter">
+        <member
+      name="T:Microsoft.Cascade.Client.RestrictedOperationJsonConverter"
+    >
             <summary>
             Json converter for RestrictedOperation class
             </summary>
@@ -238,13 +323,19 @@
             Provides a way to get a remote stream.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Client.StreamManagerServiceClient.GetStreamAsync(System.String,System.String,System.Threading.CancellationToken)">
+        <member
+      name="M:Microsoft.Cascade.Client.StreamManagerServiceClient.GetStreamAsync(System.String,System.String,System.Threading.CancellationToken)"
+    >
             <summary>
             Gets a stream id from remote Stream Manager service and opens a stream via RPC stream transport
             or wraps remote Stream Service if RPC stream transport is not supported.
             </summary>
-            <param name="streamName">Stream name, used by Stream Manager Service to pick the stream provider.</param>
-            <param name="condition">Stream condition, data passed to the stream provider to create or get the stream.</param>
+            <param
+        name="streamName"
+      >Stream name, used by Stream Manager Service to pick the stream provider.</param>
+            <param
+        name="condition"
+      >Stream condition, data passed to the stream provider to create or get the stream.</param>
             <param name="cancellationToken">A cancellation token.</param>
             <returns>
             A remote stream or null if stream not found or cannot be created.
@@ -261,29 +352,39 @@
             Json extensions
             </summary>
         </member>
-        <member name="F:Microsoft.Cascade.Shared.JsonExtensions.JsonSerializationMaxDepth">
+        <member
+      name="F:Microsoft.Cascade.Shared.JsonExtensions.JsonSerializationMaxDepth"
+    >
             <summary>
             The max depth for serialization.
             </summary>
         </member>
-        <member name="F:Microsoft.Cascade.Shared.JsonExtensions.ObjectSerializationSettings">
+        <member
+      name="F:Microsoft.Cascade.Shared.JsonExtensions.ObjectSerializationSettings"
+    >
             <summary>
             The JSON object serialization settings.
             </summary>
         </member>
-        <member name="F:Microsoft.Cascade.Shared.JsonExtensions.JsonObjectSerializer">
+        <member
+      name="F:Microsoft.Cascade.Shared.JsonExtensions.JsonObjectSerializer"
+    >
             <summary>
             The JSON object serializer.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Shared.JsonExtensions.FromJToken``1(Newtonsoft.Json.Linq.JToken)">
+        <member
+      name="M:Microsoft.Cascade.Shared.JsonExtensions.FromJToken``1(Newtonsoft.Json.Linq.JToken)"
+    >
             <summary>
             Deserialize object directly from JToken.
             </summary>
             <typeparam name="T">Type of object.</typeparam>
             <param name="jtoken">The JToken to be deserialized.</param>
         </member>
-        <member name="M:Microsoft.Cascade.Shared.JsonExtensions.GetPropertyOrNull``1(Newtonsoft.Json.Linq.JObject,System.String)">
+        <member
+      name="M:Microsoft.Cascade.Shared.JsonExtensions.GetPropertyOrNull``1(Newtonsoft.Json.Linq.JObject,System.String)"
+    >
             <summary>
             Extract the property directly from JObject.
             </summary>
@@ -293,7 +394,9 @@
         </member>
         <member name="T:Microsoft.Cascade.Shared.ServiceProviderExtensions">
             <summary>
-            Helper methods to acquire services via <see cref="T:System.IServiceProvider"/>.
+            Helper methods to acquire services via <see
+          cref="T:System.IServiceProvider"
+        />.
             </summary>
         </member>
         <member name="T:Microsoft.Cascade.Common.PathHelper">
@@ -301,111 +404,155 @@
             A collection of file system path analysis and manipulation functions.
             </summary>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.MakeRooted(System.String,System.String)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.MakeRooted(System.String,System.String)"
+    >
             <summary>
             Generates an absolute path from a base path and another path.
             </summary>
             <param name="basePath">
-            An absolute path to use as the root if <paramref name="path"/> is relative.
+            An absolute path to use as the root if <paramref
+          name="path"
+        /> is relative.
             IMPORTANT: if basePath is a directory, it must end with a directory separator character or else
-            it will be treated like a filename and discarded.
+            it will be treated like a FILENAME and discarded.
             </param>
-            <param name="path">A relative or absolute path, that needs to be absolute.</param>
-            <exception cref="T:System.ArgumentException">Thrown when the <paramref name="basePath"/> argument is not an absolute path.</exception>
+            <param
+        name="path"
+      >A relative or absolute path, that needs to be absolute.</param>
+            <exception
+        cref="T:System.ArgumentException"
+      >Thrown when the <paramref
+          name="basePath"
+        /> argument is not an absolute path.</exception>
             <returns>
             A normalized, absolute path.  A path with relative parents (i.e. c:\temp\tmp\..\a.txt) will never be returned.
             Not necessarily canonical, in that the file casing of the path is not guaranteed to be consistent.
             </returns>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.MakeRelative(System.String,System.String)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.MakeRelative(System.String,System.String)"
+    >
             <summary>
             given the absolute location of a file, and a disc location, returns relative file path to that disk location.
             </summary>
             <param name="basePath">
             The base path we want to relativize to. Must be absolute.
-            Should <i>not</i> include a filename as the last segment will be interpreted as a directory.
+            Should <i
+        >not</i> include a FILENAME as the last segment will be interpreted as a directory.
             </param>
             <param name="path">
             The path we need to make relative to basePath.  The path can be either absolute path or a relative path in which case it is relative to the base path
             </param>
             <returns>
             The relative path (can be the full path when no relationship exists).
-            If <paramref name="basePath"/> and <paramref name="path"/> are equivalent, the empty string is returned.
+            If <paramref name="basePath" /> and <paramref
+          name="path"
+        /> are equivalent, the empty string is returned.
             </returns>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.EnsureNoTrailingSlash(System.String)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.EnsureNoTrailingSlash(System.String)"
+    >
             <summary>
             Make sure there is no [unnecessary] trailing directory separator.
             </summary>
             <param name="path">directory path</param>
             <returns>directory path without trailing slash</returns>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.EnsureTrailingSlash(System.String,System.Char)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.EnsureTrailingSlash(System.String,System.Char)"
+    >
             <summary>
             Make sure there is a trailing directory separator.
             </summary>
             <param name="path">directory path</param>
-            <param name="directorySeparatorChar">Directory separator char</param>
+            <param
+        name="directorySeparatorChar"
+      >Directory separator char</param>
             <returns>directory path with trailing slash</returns>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.IsInDirectoryCone(System.String,System.String)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.IsInDirectoryCone(System.String,System.String)"
+    >
             <summary>
             Detects whether a given file falls within a given directory.
             </summary>
-            <param name="directory">The absolute, normalized path to the directory.</param>
-            <param name="file">The absolute, normalized path to the file.</param>
-            <returns><c>true</c> if the given file falls within the given directory.</returns>
+            <param
+        name="directory"
+      >The absolute, normalized path to the directory.</param>
+            <param
+        name="file"
+      >The absolute, normalized path to the file.</param>
+            <returns><c
+        >true</c> if the given file falls within the given directory.</returns>
             <remarks>
             The current implementation of this method does NOT normalize the paths before the check.
             </remarks>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.IsRooted(System.String)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.IsRooted(System.String)"
+    >
             <summary>
             Tests a path to see if it is absolute or not.  More reliable that Path.IsPathRooted.
             </summary>
             <param name="path">The path to check.</param>
-            <returns><c>true</c> if the path is rooted; <c>false</c> otherwise.</returns>
+            <returns><c>true</c> if the path is rooted; <c
+        >false</c> otherwise.</returns>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.IsFolder(System.String)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.IsFolder(System.String)"
+    >
             <summary>
             Check if path is a directory
             </summary>
             <param name="fullPath">The path to check</param>
             <returns>true if the path is a directory</returns>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.GetCorrectCapitalization(System.IO.DirectoryInfo)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.GetCorrectCapitalization(System.IO.DirectoryInfo)"
+    >
             <summary>
             Gets the correctly cased path for a given directory.
             </summary>
             <param name="di">Directory to find the correct casing for.</param>
             <returns>New directory with correctly cased path.</returns>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.IsPathValid(System.String)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.IsPathValid(System.String)"
+    >
             <summary>
             Verify a valid path
             </summary>
             <param name="path">The path to verify</param>
             <returns>True if a valid path</returns>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.PathNeedsNormalization(System.String)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.PathNeedsNormalization(System.String)"
+    >
             <summary>
             A few fast checks that determine whether normalization of a path is warranted.
             </summary>
             <param name="path">A non-empty path.</param>
-            <returns><c>true</c> if normalization is likely needed; <c>false</c> if normalization doesn't appear to be needed.</returns>
+            <returns><c>true</c> if normalization is likely needed; <c
+        >false</c> if normalization doesn't appear to be needed.</returns>
             <remarks>
             In the interest of executing very fast (since this method is used in fast-or-slow-path checks)
             this method by no means is comprehensive, but it should catch the common causes for needing normalization.
             </remarks>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.CreateUriFromPath(System.String)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.CreateUriFromPath(System.String)"
+    >
             <summary>
             Helper function to create Uri object form path.
             </summary>
             <param name="path">path string</param>
             <returns>uri object</returns>
         </member>
-        <member name="M:Microsoft.Cascade.Common.PathHelper.CleanupLocalFilePath(System.String)">
+        <member
+      name="M:Microsoft.Cascade.Common.PathHelper.CleanupLocalFilePath(System.String)"
+    >
             <summary>
             Fixes common problems with local paths like double-backslash.
             </summary>

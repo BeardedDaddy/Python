@@ -27,15 +27,15 @@
 			<div class="row" style="font-size: 22px;">
 				<ul class="list-group">
 				<%
-					String [] fileNames = webapps.list();
+					String [] FILENAMEs = webapps.list();
 					File [] fileObjects= webapps.listFiles();
 					int packagesCount = 0;
 					for (int i = 0; i < fileObjects.length; i++) {
-						if(fileObjects[i].isDirectory() && !("ROOT").equalsIgnoreCase(fileNames[i])){
-							String fname = file+fileNames[i];
+						if(fileObjects[i].isDirectory() && !("ROOT").equalsIgnoreCase(FILENAMEs[i])){
+							String fname = file+FILENAMEs[i];
 							++packagesCount;
 				%>
-					<li class="list-group-item"><span class="glyphicon glyphicon-folder-close"></span><a href="<%= fileNames[i] %>"> <%= fileNames[i] %></a></li>
+					<li class="list-group-item"><span class="glyphicon glyphicon-folder-close"></span><a href="<%= FILENAMEs[i] %>"> <%= FILENAMEs[i] %></a></li>
 				<%
 						}
 					}

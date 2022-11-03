@@ -148,7 +148,7 @@
 ## [10.7.0] - 2020-01-27
 ### Added
 - Hover buttons for File and Bookmarks in Side Bar (issue [#258](https://github.com/alefragnani/vscode-bookmarks/issues/258))
-- Relative path next to the filename in Side Bar (issue [#236](https://github.com/alefragnani/vscode-bookmarks/issues/236))
+- Relative path next to the FILENAME in Side Bar (issue [#236](https://github.com/alefragnani/vscode-bookmarks/issues/236))
 
 ### Internal
 - Renew iconography to match new VS Code identity (issue [#231](https://github.com/alefragnani/vscode-bookmarks/issues/231))
@@ -168,7 +168,7 @@
 - Localization support - Portuguese (Brazil)
 - Remote Development support for configurations - (issue [#219](https://github.com/alefragnani/vscode-bookmarks/issues/219))
 - New Side Bar icon matching new VS Code icon style (Thanks to @snnsnn [PR [#227](https://github.com/alefragnani/vscode-bookmarks/issues/227)](https://github.com/alefragnani/vscode-bookmarks/pull/227))
-- Show only filename in Side Bar (issue [#149](https://github.com/alefragnani/vscode-bookmarks/issues/149))
+- Show only FILENAME in Side Bar (issue [#149](https://github.com/alefragnani/vscode-bookmarks/issues/149))
 
 ### Fixed
 - Activation error for "No-Folders Workspace" scenario (issue [#212](https://github.com/alefragnani/vscode-bookmarks/issues/212))

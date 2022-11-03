@@ -52,16 +52,17 @@ data = [
 FILENAME = "test.numbers.txt"
 with open(FILENAME, "w", encoding='utf-8') as test:
     for i in range(10):
-        print(i, file=test) ## The above line of code prints out the range of numbers from 0-9 each on a new line.
+        # The above line of code prints out the range of numbers from 0-9 each on a new line.
+        print(i, file=test)
 with open(FILENAME, 'w', encoding='utf-8') as test:
     for i in range(10):
-        # test.write(i) ## This line will give you a TypeError: write () argument must be str, not int. 
-        # test.write(str(i)) ## This line will write exactly what you tell it to write. 
-        test.write(str(i) + "\n") ## This line will write the range of numbers on a newline using the + "\n". 
+        # test.write(i) ## This line will give you a TypeError: write () argument must be str, not int.
+        # test.write(str(i)) ## This line will write exactly what you tell it to write.
+        # This line will write the range of numbers on a newline using the + "\n".
+        test.write(str(i) + "\n")
 
-### Additional notes on the print and write function.
-## The print function will print the string representation of any object that you ask it to print.
+# Additional notes on the print and write function.
+# The print function will print the string representation of any object that you ask it to print.
 # In addition, it will include a separator between multiple arguments- the default is a space, but that can be changed with the sep keyword agrument.
 
-## The write method will only write exactly what you tell it to write. No separators or newline characters are included, unless you explicitly tell it to write them. Also, no conversion is performed. If you tell write to write an integer, that's what it will try to send to the file. If the file is opened in text mode (the default), you'll get an error if you try to write numerical values to it. 
-
+# The write method will only write exactly what you tell it to write. No separators or newline characters are included, unless you explicitly tell it to write them. Also, no conversion is performed. If you tell write to write an integer, that's what it will try to send to the file. If the file is opened in text mode (the default), you'll get an error if you try to write numerical values to it.

@@ -63,11 +63,13 @@ def _paths_from_assignment(module_context, expr_stmt):
         except AssertionError:
             continue
 
-        cn = ContextualizedNode(module_context.create_context(expr_stmt), expr_stmt)
+        cn = ContextualizedNode(
+            module_context.create_context(expr_stmt), expr_stmt)
         for lazy_value in cn.infer().iterate(cn):
             for value in lazy_value.infer():
                 if is_string(value):
-                    abs_path = _abs_path(module_context, value.get_safe_value())
+                    abs_path = _abs_path(
+                        module_context, value.get_safe_value())
                     if abs_path is not None:
                         yield abs_path
 
@@ -85,7 +87,8 @@ def _paths_from_list_modifications(module_context, trailer1, trailer2):
     if name not in ['insert', 'append']:
         return
     arg = trailer2.children[1]
-    if name == 'insert' and len(arg.children) in (3, 4):  # Possible trailing comma.
+    # Possible trailing comma.
+    if name == 'insert' and len(arg.children) in (3, 4):
         arg = arg.children[2]
 
     for value in module_context.create_context(arg).infer_node(arg):
@@ -156,7 +159,8 @@ def _get_paths_from_buildout_script(inference_state, buildout_script_path):
             cache_path=settings.cache_directory
         )
     except IOError:
-        debug.warning('Error trying to read buildout_script: %s', buildout_script_path)
+        debug.warning('Error trying to read buildout_script: %s',
+                      buildout_script_path)
         return
 
     from jedi.inference.value import ModuleValue
@@ -164,15 +168,16 @@ def _get_paths_from_buildout_script(inference_state, buildout_script_path):
         inference_state, module_node,
         file_io=file_io,
         string_names=None,
-        code_lines=get_cached_code_lines(inference_state.grammar, buildout_script_path),
+        code_lines=get_cached_code_lines(
+            inference_state.grammar, buildout_script_path),
     ).as_context()
     yield from check_sys_path_modifications(module_context)
 
 
-def _get_parent_dir_with_file(path: Path, filename):
+def _get_parent_dir_with_file(path: Path, FILENAME):
     for parent in path.parents:
         try:
-            if parent.joinpath(filename).is_file():
+            if parent.joinpath(FILENAME).is_file():
                 return parent
         except OSError:
             continue
@@ -195,9 +200,9 @@ def _get_buildout_script_paths(search_path: Path):
     if not bin_path.exists():
         return
 
-    for filename in os.listdir(bin_path):
+    for FILENAME in os.listdir(bin_path):
         try:
-            filepath = bin_path.joinpath(filename)
+            filepath = bin_path.joinpath(FILENAME)
             with open(filepath, 'r') as f:
                 firstline = f.readline()
                 if firstline.startswith('#!') and 'python' in firstline:

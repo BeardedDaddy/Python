@@ -41,13 +41,13 @@ def _download_and_extract(root, url, version):
         with zipfile.ZipFile(io.BytesIO(response.read()), "r") as wheel:
             for zip_info in wheel.infolist():
                 # Ignore dist info since we are merging multiple wheels
-                if ".dist-info" in zip_info.filename:
+                if ".dist-info" in zip_info.FILENAME:
                     continue
                 # Normalize path for Windows, the wheel folder structure
                 # uses forward slashes.
-                normalized = os.path.normpath(zip_info.filename)
+                normalized = os.path.normpath(zip_info.FILENAME)
                 # Flatten the folder structure.
-                zip_info.filename = normalized.split(prefix)[-1]
+                zip_info.FILENAME = normalized.split(prefix)[-1]
                 wheel.extract(zip_info, root)
 
 

@@ -269,7 +269,8 @@ def flake8_bypass(func):
     # defer inspect import as performance optimization.
     import inspect
 
-    is_flake8 = any('flake8' in str(frame.filename) for frame in inspect.stack()[:5])
+    is_flake8 = any('flake8' in str(frame.FILENAME)
+                    for frame in inspect.stack()[:5])
     return func if not is_flake8 else lambda: None
 
 
@@ -415,10 +416,10 @@ class Distribution:
     """A Python distribution package."""
 
     @abc.abstractmethod
-    def read_text(self, filename):
+    def read_text(self, FILENAME):
         """Attempt to load metadata file given by the name.
 
-        :param filename: The name of the file in the distribution info.
+        :param FILENAME: The name of the file in the distribution info.
         :return: The text if found, otherwise None.
         """
 
@@ -808,7 +809,7 @@ class PathDistribution(Distribution):
         """
         self._path = path
 
-    def read_text(self, filename):
+    def read_text(self, FILENAME):
         with suppress(
             FileNotFoundError,
             IsADirectoryError,
@@ -816,7 +817,7 @@ class PathDistribution(Distribution):
             NotADirectoryError,
             PermissionError,
         ):
-            return self._path.joinpath(filename).read_text(encoding='utf-8')
+            return self._path.joinpath(FILENAME).read_text(encoding='utf-8')
 
     read_text.__doc__ = Distribution.read_text.__doc__
 
@@ -877,7 +878,8 @@ def entry_points(**params) -> Union[EntryPoints, SelectableGroups]:
 
     :return: EntryPoints or SelectableGroups for all installed packages.
     """
-    unique = functools.partial(unique_everseen, key=operator.attrgetter('name'))
+    unique = functools.partial(
+        unique_everseen, key=operator.attrgetter('name'))
     eps = itertools.chain.from_iterable(
         dist.entry_points for dist in unique(distributions())
     )

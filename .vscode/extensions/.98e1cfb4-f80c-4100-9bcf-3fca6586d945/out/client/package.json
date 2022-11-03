@@ -1936,12 +1936,12 @@
                     "pip requirements",
                     "requirements.txt"
                 ],
-                "filenames": [
+                "FILENAMEs": [
                     "requirements.txt",
                     "constraints.txt",
                     "requirements.in"
                 ],
-                "filenamePatterns": [
+                "FILENAMEPatterns": [
                     "*-requirements.txt",
                     "requirements-*.txt",
                     "constraints-*.txt",
@@ -1953,26 +1953,26 @@
             },
             {
                 "id": "yaml",
-                "filenames": [
+                "FILENAMEs": [
                     ".condarc"
                 ]
             },
             {
                 "id": "toml",
-                "filenames": [
+                "FILENAMEs": [
                     "poetry.lock",
                     "Pipfile"
                 ]
             },
             {
                 "id": "json",
-                "filenames": [
+                "FILENAMEs": [
                     "Pipfile.lock"
                 ]
             },
             {
                 "id": "ini",
-                "filenames": [
+                "FILENAMEs": [
                     ".flake8",
                     ".pep8",
                     ".pylintrc",

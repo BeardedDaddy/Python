@@ -73,7 +73,7 @@ class PreviewManager {
             this.subscribeHandlersToDoc();
         }
         const pythonStartedPromise = this.startAndBindPython().then(() => {
-            let panel = this.previewContainer.start(path_1.basename(this.pythonEditorDoc.fileName), this.PythonEvaluator);
+            let panel = this.previewContainer.start(path_1.basename(this.pythonEditorDoc.FILENAME), this.PythonEvaluator);
             panel.onDidDispose(() => this.dispose(), this, this.subscriptions);
             this.subscriptions.push(panel);
             return panel;
@@ -117,7 +117,7 @@ class PreviewManager {
         // hack: we want accurate line # info
         // so we prepend lines to put codeLines in right spot
         codeLines = vscodeUtilities_1.default.eol(editor.document).repeat(block.start.line) + codeLines;
-        const filePath = editor.document.isUntitled ? "" : editor.document.fileName;
+        const filePath = editor.document.isUntitled ? "" : editor.document.FILENAME;
         const settingsCached = settings_1.settings();
         const data = {
             evalCode: codeLines,
@@ -273,10 +273,10 @@ class PreviewManager {
             let filePath = "";
             if (this.pythonEditorDoc.isUntitled) {
                 /* user would assume untitled file is in same dir as workspace root */
-                filePath = path_1.join(vscodeUtilities_1.default.getCurrentWorkspaceFolder(false), this.pythonEditorDoc.fileName);
+                filePath = path_1.join(vscodeUtilities_1.default.getCurrentWorkspaceFolder(false), this.pythonEditorDoc.FILENAME);
             }
             else {
-                filePath = this.pythonEditorDoc.fileName;
+                filePath = this.pythonEditorDoc.FILENAME;
             }
             try {
                 this.previewContainer.clearStoredData();

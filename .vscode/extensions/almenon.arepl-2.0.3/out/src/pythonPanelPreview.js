@@ -112,8 +112,8 @@ if r.status_code == 200:
         else
             this.throttledUpdate = this.updateContent;
     }
-    start(linkedFileName) {
-        this.panel = vscode.window.createWebviewPanel("arepl", "AREPL - " + linkedFileName, vscode.ViewColumn.Two, {
+    start(linkedFILENAME) {
+        this.panel = vscode.window.createWebviewPanel("arepl", "AREPL - " + linkedFILENAME, vscode.ViewColumn.Two, {
             enableScripts: true
         });
         this.css = `<link rel="stylesheet" type="text/css" href="${this.getMediaPath("pythonPanelPreview.css", this.panel.webview)}">`;

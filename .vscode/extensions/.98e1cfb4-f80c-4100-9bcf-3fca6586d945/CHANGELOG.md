@@ -4474,7 +4474,7 @@ part of!
    ([#8019](https://github.com/Microsoft/vscode-python/issues/8019))
 1. Clear up wording around jupyterServerURI and remove the quick pick from the flow of setting that.
    ([#8021](https://github.com/Microsoft/vscode-python/issues/8021))
-1. Use actual filename comparison for filename equality checks.
+1. Use actual FILENAME comparison for FILENAME equality checks.
    ([#8022](https://github.com/Microsoft/vscode-python/issues/8022))
 1. Opening a notebook a second time round with changes (made from another editor) should be preserved.
    ([#8025](https://github.com/Microsoft/vscode-python/issues/8025))
@@ -7328,7 +7328,7 @@ part of!
    ([#2167](https://github.com/Microsoft/vscode-python/issues/2167))
 1. Stop duplicate initializations of the Python Language Server's progress reporter.
    ([#2297](https://github.com/Microsoft/vscode-python/issues/2297))
-1. Fix the regex expression to match MyPy linter messages that expects the file name to have a `.py` extension, that isn't always the case, to catch any filename.
+1. Fix the regex expression to match MyPy linter messages that expects the file name to have a `.py` extension, that isn't always the case, to catch any FILENAME.
    E.g., .pyi files that describes interfaces wouldn't get the linter messages to Problems tab.
    ([#2380](https://github.com/Microsoft/vscode-python/issues/2380))
 1. Do not use variable substitution when updating `python.pythonPath`. This matters
@@ -7490,7 +7490,7 @@ part of!
    ([#2345](https://github.com/Microsoft/vscode-python/issues/2345))
 1. Fix pytest >= 3.7 test discovery.
    ([#2347](https://github.com/Microsoft/vscode-python/issues/2347))
-1. Update the downloaded Python language server nuget package filename to
+1. Update the downloaded Python language server nuget package FILENAME to
    `Python-Language-Server-{OSType}.beta.nupkg`.
    ([#2362](https://github.com/Microsoft/vscode-python/issues/2362))
 1. Added setting to control language server log output. Default is now 'error' so there should be much less noise in the output.

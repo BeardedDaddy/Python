@@ -17,10 +17,10 @@ class PreviewContainer {
         this.pythonInlinePreview = new pythonInlinePreview_1.default(reporter, context);
         this.errorDecorationType = this.pythonInlinePreview.errorDecorationType;
     }
-    start(linkedFileName, pythonEvaluator) {
+    start(linkedFILENAME, pythonEvaluator) {
         this.clearStoredData();
         this.pythonEvaluator = pythonEvaluator;
-        return this.pythonPanelPreview.start(linkedFileName);
+        return this.pythonPanelPreview.start(linkedFILENAME);
     }
     /**
      * clears stored data (preview gui is unaffected)

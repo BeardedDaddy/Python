@@ -123,7 +123,7 @@ def _find_module(string, path=None, full_name=None, is_global_search=True):
 
     This function isolates the differences in importing libraries introduced with
     python 3.3 on; it gets a module name and optionally a path. It will return a
-    tuple containin an open file for the module (if not builtin), the filename
+    tuple containin an open file for the module (if not builtin), the FILENAME
     or the name of the module if it is a builtin one and a boolean indicating
     if the module is contained in a package.
     """
@@ -148,7 +148,8 @@ def _find_module(string, path=None, full_name=None, is_global_search=True):
             if loader is None and not spec.has_location:
                 # This is a namespace package.
                 full_name = string if not path else full_name
-                implicit_ns_info = ImplicitNSInfo(full_name, spec.submodule_search_locations._path)
+                implicit_ns_info = ImplicitNSInfo(
+                    full_name, spec.submodule_search_locations._path)
                 return implicit_ns_info, True
             break
 
@@ -186,11 +187,11 @@ def _from_loader(loader, string):
     else:
         is_package = is_package_method(string)
     try:
-        get_filename = loader.get_filename
+        get_FILENAME = loader.get_FILENAME
     except AttributeError:
         return None, is_package
     else:
-        module_path = cast_path(get_filename(string))
+        module_path = cast_path(get_FILENAME(string))
 
     # To avoid unicode and read bytes, "overwrite" loader.get_source if
     # possible.
@@ -222,7 +223,7 @@ def _get_source(loader, fullname):
     This method is here as a replacement for SourceLoader.get_source. That
     method returns unicode, but we prefer bytes.
     """
-    path = loader.get_filename(fullname)
+    path = loader.get_FILENAME(fullname)
     try:
         return loader.get_data(path)
     except OSError:
@@ -232,6 +233,7 @@ def _get_source(loader, fullname):
 
 class ImplicitNSInfo:
     """Stores information returned from an implicit namespace spec"""
+
     def __init__(self, name, paths):
         self.name = name
         self.paths = paths

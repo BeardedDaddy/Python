@@ -15,12 +15,12 @@ async function initLog() {
         mkdirp_1.sync(logPath);
     }
     const datePrefix = dateformat(Date.now(), 'yyyymmdd_HHMMss', /*utc*/ true);
-    const logFilename = path.join(logPath, `${datePrefix}_Launcher_Uninstall.log`);
+    const logFILENAME = path.join(logPath, `${datePrefix}_Launcher_Uninstall.log`);
     try {
-        logFd = await vscode_command_framework_1.fileAccess.openAsync(logFilename, 'a');
+        logFd = await vscode_command_framework_1.fileAccess.openAsync(logFILENAME, 'a');
     }
     catch (e) {
-        console.error(`Could not open log file ${logFilename}: ${e}`);
+        console.error(`Could not open log file ${logFILENAME}: ${e}`);
     }
 }
 function log(message, level) {

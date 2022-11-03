@@ -20,9 +20,9 @@ def _start_linter():
             import os
 
             paths = []
-            for root, dirnames, filenames in os.walk(path):
-                for filename in fnmatch.filter(filenames, '*.py'):
-                    paths.append(os.path.join(root, filename))
+            for root, dirnames, FILENAMEs in os.walk(path):
+                for FILENAME in fnmatch.filter(FILENAMEs, '*.py'):
+                    paths.append(os.path.join(root, FILENAME))
         else:
             paths = [path]
 

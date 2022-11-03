@@ -87,7 +87,7 @@ Examples:
     )
     if args.log_file:
         logging.basicConfig(
-            filename=args.log_file,
+            FILENAME=args.log_file,
             filemode="w",
             level=log_level,
         )

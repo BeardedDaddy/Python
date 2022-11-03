@@ -79,7 +79,7 @@
 
 🚀 AREPL now automatically loads vars in your .env file. This feature is customizable in settings
 
-🚀 Filename is now included in preview title so you know what file the preview is linked to
+🚀 FILENAME is now included in preview title so you know what file the preview is linked to
 
 🚀 `arepl_filter` var added so you can filter out vars you don't want to see in preview
 
@@ -226,7 +226,7 @@ jsonPickle version upgrade w/ slightly better numpy and pandas support
 🐛 Fixed error with using gui
 
 ## v1.0.1 🐛
-🐛 Fixed error on mac due to a filename having the wrong case when packaging extension
+🐛 Fixed error on mac due to a FILENAME having the wrong case when packaging extension
 
 ## [v1.0.0](https://github.com/Almenon/AREPL-vscode/milestone/16?closed=1) 🐛
 

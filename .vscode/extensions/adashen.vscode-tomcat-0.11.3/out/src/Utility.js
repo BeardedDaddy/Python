@@ -80,10 +80,10 @@ var Utility;
         return __awaiter(this, void 0, void 0, function* () {
             const workspace = yield getWorkspace(defaultStoragePath);
             yield fse.ensureDir(workspace);
-            const fileNames = yield fse.readdir(workspace);
+            const FILENAMEs = yield fse.readdir(workspace);
             let serverName = path.basename(installPath);
             let index = 1;
-            while (fileNames.indexOf(serverName) >= 0 || existingServerNames.indexOf(serverName) >= 0) {
+            while (FILENAMEs.indexOf(serverName) >= 0 || existingServerNames.indexOf(serverName) >= 0) {
                 serverName = path.basename(installPath).concat(`-${index}`);
                 index += 1;
             }

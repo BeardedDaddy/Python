@@ -76,7 +76,7 @@ description = 'A file-upload field.'
 prefix = 'file_path_field'
 body = 'models.FilePathField(_("$1"), path=${3:None}, match=${4:None}, recursive=${5:recursive}, max_length=${6:100})'
 detail = 'models.FilePathField()'
-description = 'A CharField whose choices are limited to the filenames in a certain directory on the filesystem.'
+description = 'A CharField whose choices are limited to the FILENAMEs in a certain directory on the filesystem.'
 
 [[snippets]]
 prefix = 'float_field'

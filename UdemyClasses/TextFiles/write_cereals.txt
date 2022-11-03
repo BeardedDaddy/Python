@@ -17,5 +17,5 @@ cereals = [
 
 column_headings = ["Cereal", "Calories", "Fat", "Protein", "Fibre", "Vitamin E"]
 
-output_filename = 'my_cereals.csv'
+output_FILENAME = 'my_cereals.csv'
 

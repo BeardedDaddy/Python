@@ -6,16 +6,21 @@ from django.utils.safestring import SafeText
 
 from .base import Node, Template
 
-class InvalidTemplateLibrary(Exception): ...
+
+class InvalidTemplateLibrary(Exception):
+    ...
+
 
 class Library:
     filters: Dict[str, Callable] = ...
     tags: Dict[str, Callable] = ...
     def __init__(self) -> None: ...
+
     def tag(
         self, name: Optional[Union[Callable, str]] = ..., compile_function: Optional[Union[Callable, str]] = ...
     ) -> Callable: ...
     def tag_function(self, func: Callable) -> Callable: ...
+
     def filter(
         self,
         name: Optional[Union[Callable, str]] = ...,
@@ -23,22 +28,26 @@ class Library:
         **flags: Any
     ) -> Callable: ...
     def filter_function(self, func: Callable, **flags: Any) -> Callable: ...
+
     def simple_tag(
         self, func: Optional[Union[Callable, str]] = ..., takes_context: Optional[bool] = ..., name: Optional[str] = ...
     ) -> Callable: ...
+
     def inclusion_tag(
         self,
-        filename: Union[Template, str],
+        FILENAME: Union[Template, str],
         func: None = ...,
         takes_context: Optional[bool] = ...,
         name: Optional[str] = ...,
     ) -> Callable: ...
+
 
 class TagHelperNode(Node):
     func: Any = ...
     takes_context: Any = ...
     args: Any = ...
     kwargs: Any = ...
+
     def __init__(
         self,
         func: Callable,
@@ -46,7 +55,9 @@ class TagHelperNode(Node):
         args: List[FilterExpression],
         kwargs: Dict[str, FilterExpression],
     ) -> None: ...
-    def get_resolved_arguments(self, context: Context) -> Tuple[List[int], Dict[str, Union[SafeText, int]]]: ...
+    def get_resolved_arguments(
+        self, context: Context) -> Tuple[List[int], Dict[str, Union[SafeText, int]]]: ...
+
 
 class SimpleNode(TagHelperNode):
     args: List[FilterExpression]
@@ -56,6 +67,7 @@ class SimpleNode(TagHelperNode):
     takes_context: Optional[bool]
     token: Token
     target_var: Optional[str] = ...
+
     def __init__(
         self,
         func: Callable,
@@ -65,6 +77,7 @@ class SimpleNode(TagHelperNode):
         target_var: Optional[str],
     ) -> None: ...
 
+
 class InclusionNode(TagHelperNode):
     args: List[FilterExpression]
     func: Callable
@@ -72,15 +85,17 @@ class InclusionNode(TagHelperNode):
     origin: Origin
     takes_context: Optional[bool]
     token: Token
-    filename: Union[Template, str] = ...
+    FILENAME: Union[Template, str] = ...
+
     def __init__(
         self,
         func: Callable,
         takes_context: Optional[bool],
         args: List[FilterExpression],
         kwargs: Dict[str, FilterExpression],
-        filename: Optional[Union[Template, str]],
+        FILENAME: Optional[Union[Template, str]],
     ) -> None: ...
+
 
 def parse_bits(
     parser: Parser,

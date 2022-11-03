@@ -60,7 +60,7 @@ class PythonInlinePreview {
         };
     }
     /**
-     * converts error to dictionary of error decorations indexed by filename
+     * converts error to dictionary of error decorations indexed by FILENAME
      */
     convertErrorToDecorationOptions(error) {
         const decorations = new utilities_1.DefaultDict(Array);
@@ -69,7 +69,7 @@ class PythonInlinePreview {
         const flattenedErrors = utilities_1.default.flattenNestedObjectWithMultipleKeys(error, ["__context__", "__cause__"]);
         flattenedErrors.forEach(error => {
             error.stack["py/seq"].forEach(frame => {
-                decorations[frame.filename].push(this.convertFrameToDecorationOption(frame));
+                decorations[frame.FILENAME].push(this.convertFrameToDecorationOption(frame));
             });
         });
         // @ts-ignore no idea how to type defaultdict properly

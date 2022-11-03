@@ -41,6 +41,7 @@ class MixedObject(ValueWrapper):
     fewer special cases, because we in Python you don't have the same freedoms
     to modify the runtime.
     """
+
     def __init__(self, compiled_value, tree_value):
         super().__init__(tree_value)
         self.compiled_value = compiled_value
@@ -112,6 +113,7 @@ class MixedName(NameWrapper):
     """
     The ``CompiledName._compiled_value`` is our MixedObject.
     """
+
     def __init__(self, wrapped_name, parent_tree_value):
         super().__init__(wrapped_name)
         self._parent_tree_value = parent_tree_value
@@ -198,7 +200,7 @@ def _find_syntax_node_name(inference_state, python_object):
     except OSError:
         # Might raise an OSError on Windows:
         #
-        #     [WinError 123] The filename, directory name, or volume label
+        #     [WinError 123] The FILENAME, directory name, or volume label
         #     syntax is incorrect: '<string>'
         return None
 
@@ -294,7 +296,8 @@ def _create(inference_state, compiled_value, module_context):
                 is_package=root_compiled_value.is_package(),
             )
             if name is not None:
-                inference_state.module_cache.add(string_names, ValueSet([module_value]))
+                inference_state.module_cache.add(
+                    string_names, ValueSet([module_value]))
             module_context = module_value.as_context()
 
         tree_values = ValueSet({module_context.create_value(tree_node)})

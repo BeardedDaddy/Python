@@ -33,7 +33,8 @@ class InvalidPythonEnvironment(Exception):
 class _BaseEnvironment:
     @memoize_method
     def get_grammar(self):
-        version_string = '%s.%s' % (self.version_info.major, self.version_info.minor)
+        version_string = '%s.%s' % (
+            self.version_info.major, self.version_info.minor)
         return parso.load_grammar(version=version_string)
 
     @property
@@ -197,7 +198,7 @@ def _try_get_same_env():
         # This tries to counter issues with embedding. In some cases (e.g.
         # VIM's Python Mac/Windows, sys.executable is /foo/bar/vim. This
         # happens, because for Mac a function called `_NSGetExecutablePath` is
-        # used and for Windows `GetModuleFileNameW`. These are both platform
+        # used and for Windows `GetModuleFILENAMEW`. These are both platform
         # specific functions. For all other systems sys.executable should be
         # alright. However here we try to generalize:
         #
@@ -350,7 +351,8 @@ def get_system_environment(version, *, env_vars=None):
                 return Environment(exe, env_vars=env_vars)
             except InvalidPythonEnvironment:
                 pass
-    raise InvalidPythonEnvironment("Cannot find executable python%s." % version)
+    raise InvalidPythonEnvironment(
+        "Cannot find executable python%s." % version)
 
 
 def create_environment(path, *, safe=True, env_vars=None):

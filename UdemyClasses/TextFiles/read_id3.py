@@ -2,12 +2,12 @@
 Reading tags in an mp3 file.
 """
 
-from id3_types import id3_field_encodings, apic_picture_types, frame_types
-# Import the data that we defined in id3_types.py.
 from os import SEEK_CUR, path
 # Import the constant SEEK_CUR.
 from typing import BinaryIO
 # Imports the binary file type from the typing module.
+from id3_types import id3_field_encodings, apic_picture_types, frame_types
+# Import the data that we defined in id3_types.py.
 
 FILENAME = 'Someday.mp3'
 
@@ -157,16 +157,44 @@ with open(FILENAME, 'rb') as mp3_file:
                     print(f'APIC text encoding: {encoding}')
 
                     # Next we have a null-terminated string.
-                    Block_5
+                    MIME_TYPE = read_c_string(mp3_file, 'iso=8859-1')
+                    if MIME_TYPE == '':
+                        MIME_TYPE = 'image/'
+                    print(f'Mime type: {MIME_TYPE}')
 
                     # read 1 byte picture type
-                    Block_6
+                    picture_type = int.from_bytes(mp3_file.read(1), 'big')
+                    # and get its human name
+                    apic_picture_name = apic_picture_types[picture_type]
+                    print(f'Found {apic_picture_name} image')
 
                     # Description is also a null-terminated string
-                    Block_7
+                    description = read_c_string(mp3_file, encoding)
+                    print(f'Image description: {description}')
 
                     # Now write the image to a new file.
-                    Block_8
+                    if MIME_TYPE.startswith('image/'):
+                        image_data_start = mp3_file.tell()
+                        print(f'Image data starts at {image_data_start}')
+                        image_size = frame_size - \
+                            (image_data_start - frame_data_start)
+                        print(f'Image size = {image_size}')
+                        image_data = mp3_file.read(image_size)
+
+                        # Create a file name from the picture name
+                        image_type = MIME_TYPE.split('/')[-1]
+
+                        # get filename part only (without the path)
+                        base_filename = path.split(FILENAME)[1]
+
+                        # Now remove the extension
+                        base_filename = path.splitext(base_filename)[0]
+
+                        picture_filename = f'{base_filename}_{apic_picture_name}.{image_type}'
+                        print(f'Writing image file {picture_filename}')
+
+                        with open(picture_filename, 'wb') as output_file:
+                            output_file.write(image_data)
 
                 else:
                     # Found a frame that we're not going to process.

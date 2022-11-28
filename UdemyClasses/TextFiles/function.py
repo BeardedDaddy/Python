@@ -1,13 +1,15 @@
 """ Practicing functions in python."""
 def python_food():
-    Width = 80
+    width = 80
     text = "Spam and Eggs"
-    left_margin = (WIDTH - len(text)) // 2
+    left_margin = (width - len(text)) // 2
     print(" " * left_margin, text)
-    
+   
 
-""" Centering spam and eggs."""
+""" Creating centering """
+
 def centre_text(text):
+    width = 80
     left_margin = (width - len(text)) // 2
     print(" " * left_margin, text)
     

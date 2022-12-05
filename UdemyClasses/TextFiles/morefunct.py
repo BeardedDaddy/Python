@@ -10,6 +10,13 @@ except ImportError:  # python 2
 
 
 def parablola(x):
+    """ Create a function for parablola.
+
+    :param x: X is the parameter for the horizontal axies.
+    :type x: The x is the variable for the horizontal axies.
+    :return: Return a x origin creating a horizontal line.
+    :rtype: Returns an interger of -100.
+    """
     y = x * x
     return y
 

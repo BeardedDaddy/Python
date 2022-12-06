@@ -1,4 +1,4 @@
-""" Import a the tkinter module to create a parablola
+""" Import a the tkinter module to create a parabola
 :return: import tkinter as Tkinter
 :rtype: also expressing a try statement
 """
@@ -9,34 +9,30 @@ except ImportError:  # python 2
     import Tkinter as tkinter
 
 
-def parablola(x):
-    """ Create a function for parablola.
-
-    :param x: X is the parameter for the horizontal axies.
-    :type x: The x is the variable for the horizontal axies.
-    :return: Return a x origin creating a horizontal line.
-    :rtype: Returns an interger of -100.
-    """
-    y = x * x
-    return y
+def parabola(page, size):
+    for x in range(size):
+        y = x * x / size
+        plot(page, x, y)
+        plot(page, -x, y)
 
 
-def draw_axes(_canvas):
-    canvas.update()
-    x_origin = canvas.winfo_width() / 2
-    y_origin = canvas.winfo_height() / 2
-    canvas.configure(scrollregion=(-x_origin, -y_origin, x_origin, y_origin))
-    canvas.create_line(-x_origin, 0, x_origin, 0, fill="black")
-    canvas.create_line(0, y_origin, 0, -y_origin, fill="black")
+def draw_axes(page):
+    page.update()
+    x_origin = page.winfo_width() / 2
+    y_origin = page.winfo_height() / 2
+    page.configure(scrollregion=(-x_origin, -y_origin, x_origin, y_origin))
+    page.create_line(-x_origin, 0, x_origin, 0, fill="black")
+    page.create_line(0, y_origin, 0, -y_origin, fill="black")
+    print(locals())
 
 
-def plot(canvas, x, y):
-    canvas.create_line(x, y, x + 1, fill="red")
+def plot(page, x, y):
+    page.create_line(x, -y, x + 1, -y + 1, fill="red")
 
 
 mainWindow = tkinter.Tk()
 
-mainWindow.title("Parablola")
+mainWindow.title("Parabola")
 mainWindow.geometry("640x480")
 
 canvas = tkinter.Canvas(mainWindow, width=640, height=480)
@@ -44,8 +40,7 @@ canvas.grid(row=0, column=0)
 
 draw_axes(canvas)
 
-for x in range(-100, 100):
-    y = parablola(x)
-    plot(canvas, x, y)
+parabola(canvas, 100)
+parabola(canvas, 200)
 
 mainWindow.mainloop()

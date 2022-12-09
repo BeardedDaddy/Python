@@ -1,4 +1,5 @@
 import math
+
 """ Import a the tkinter module to create a parabola
 :return: import tkinter as Tkinter
 :rtype: also expressing a try statement
@@ -19,7 +20,7 @@ def parabola(page, size):
 
 def circle(page, radius, g, h):
     for x in range(g, g + radius):
-        y = h + (math.sqrt(radius ** 2 - ((x-g))))
+        y = h + (math.sqrt(radius ** 2 - ((x-g) ** 2)))
         plot(page, x, y)
         plot(page, x, 2 * h - y)
         plot(page, 2 * g - x, y)

@@ -9,10 +9,10 @@ mainWindow = tkinter.Tk()
 
 
 def load_images(card_images):
-    suits = ['heart', 'club', 'diamond', 'spades']
+    suits = ['heart', 'club', 'diamond', 'spade']
     face_cards = ['jack', 'queen', 'king']
 
-    if tkinter.Tkinter >= 8.6:
+    if tkinter.TkVersion >= 8.6:
         extension = 'png'
     else:
         extension = 'ppm'
@@ -28,6 +28,8 @@ def load_images(card_images):
         # Next the face cards
         for card in face_cards:
             name = 'cards/{}_{}.{}'.format(str(card), suit, extension)
+            image = tkinter.PhotoImage(file=name)
+            image = tkinter.PhotoImage(file=name)
             card_images.append((10, image,))
 
 

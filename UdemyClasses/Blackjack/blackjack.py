@@ -1,7 +1,5 @@
 import random
 
-import cards
-
 try:
     import tkinter
 except ImportError:  # python 2

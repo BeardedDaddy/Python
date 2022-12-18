@@ -46,21 +46,36 @@ def score_hand(hand):
     # Only one ace can have the value of 11, and this will be reduce to 1 if the hand would bust.
     score = 0
     ace = False
-    for next_ccard in hand:
+    for next_card in hand:
         card_value = next_card[0]
         if card_value == 1 and not ace:
             ace = True
             card_value = 11
-            score += card_value
-            # if we would bust, check if there is an ace and subtract 10
-            if score > 21 and ace:
-                score -= 10
-                ace = False
-            return score
+        score += card_value
+        # if we would bust, check if there is an ace and subtract 10
+        if score > 21 and ace:
+            score -= 10
+            ace = False
+    return score
 
 
 def deal_dealer():
-    deal_card(dealer_card_frame)
+    dealer_score = score_hand(dealer_hand)
+    while 0 < dealer_score < 17:
+        dealer_hand.append(deal_card(dealer_card_frame))
+        dealer_score = score_hand(dealer_hand)
+        dealer_score_label.set(dealer_score)
+        
+
+    player_score = score_hand(player_hand)
+    if player_score > 21:
+        result_text.set("Dealer Wins!")
+    elif dealer_score > 21 or dealer_score < player_score:
+        result_text.set("Player Wins!")
+    elif dealer_score > player_score:
+        result_text.set("Dealer Wins!")
+    else:
+        result_text.set("Draw!")
 
 
 def deal_player():
@@ -92,7 +107,7 @@ mainWindow = tkinter.Tk()
 
 # Set up the screen and frames for the dealer and player
 mainWindow.title("Black Jack")
-mainWindow.geometry("300x325")
+mainWindow.geometry("640x480")
 mainWindow.configure(background="green")
 
 result_text = tkinter.StringVar()
@@ -104,9 +119,6 @@ card_frame = tkinter.Frame(mainWindow, relief="sunken",
 card_frame.grid(row=1, column=0, sticky="ew", columnspan=3, rowspan=2)
 
 dealer_score_label = tkinter.IntVar()
-player_score = 0
-player_ace = False
-
 tkinter.Label(card_frame, text="Dealer", background="green",
               fg="white").grid(row=0, column=0)
 tkinter.Label(card_frame, textvariable=dealer_score_label,
@@ -116,6 +128,7 @@ dealer_card_frame = tkinter.Frame(card_frame, background="green")
 dealer_card_frame.grid(row=0, column=1, sticky="ew", rowspan=2)
 
 player_score_label = tkinter.IntVar()
+
 tkinter.Label(card_frame, text="Player", background="green",
               fg="white").grid(row=2, column=0)
 tkinter.Label(card_frame, textvariable=player_score_label,
@@ -141,10 +154,15 @@ load_images(cards)
 print(cards)
 # Create a new deck of cards and shuffle them
 deck = list(cards)
+
 random.shuffle(deck)
 
 # Create the list to store the dealer's and player's hands
 dealer_hand = []
 player_hand = []
+
+deal_player()
+dealer_hand.append(deal_card(dealer_card_frame))
+deal_player()
 
 mainWindow.mainloop()

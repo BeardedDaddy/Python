@@ -65,7 +65,6 @@ def deal_dealer():
         dealer_hand.append(deal_card(dealer_card_frame))
         dealer_score = score_hand(dealer_hand)
         dealer_score_label.set(dealer_score)
-        
 
     player_score = score_hand(player_hand)
     if player_score > 21:
@@ -86,6 +85,9 @@ def deal_player():
     if player_score > 21:
         result_text.set("Dealer Wins!")
 
+
+def new_deal():
+    new_deal.append()
     # global player_score
     # global player_ace
     # card_value = deal_card(player_card_frame)[0]
@@ -148,6 +150,10 @@ player_button = tkinter.Button(
     button_frame, text="Player", command=deal_player)
 player_button.grid(row=0, column=1)
 
+new_deal_button = tkinter.Button(
+    button_frame, text="New Deal", command=new_deal)
+new_deal_button.grid(row=, column=)
+
 # Load cards
 cards = []
 load_images(cards)
@@ -160,9 +166,11 @@ random.shuffle(deck)
 # Create the list to store the dealer's and player's hands
 dealer_hand = []
 player_hand = []
+new_deal = []
 
 deal_player()
 dealer_hand.append(deal_card(dealer_card_frame))
+dealer_score_label.set(score_hand(dealer_hand))
 deal_player()
 
 mainWindow.mainloop()

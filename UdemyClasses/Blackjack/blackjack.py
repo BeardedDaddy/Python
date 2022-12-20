@@ -62,10 +62,12 @@ def score_hand(hand):
 def deal_dealer():
     dealer_score = score_hand(dealer_hand)
     while 0 < dealer_score < 17:
+        #TODO learn what append does here.
         dealer_hand.append(deal_card(dealer_card_frame))
         dealer_score = score_hand(dealer_hand)
+        # what does label.set do?
         dealer_score_label.set(dealer_score)
-
+#TODO Understand what is partion of the code does to add score.
     player_score = score_hand(player_hand)
     if player_score > 21:
         result_text.set("Dealer Wins!")

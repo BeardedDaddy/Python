@@ -78,37 +78,48 @@ def deal_dealer():
 
 
 def deal_player():
-    player_hand.append(deal_card(player_card_frame))
     player_score = score_hand(player_hand)
+    while 0 < player_score < 17:
+        player_hand.append(deal_card(player_card_frame))
+        player_score = score_hand(dealer_hand)
+        player_score_label.set(player_score)
 
-    player_score_label.set(player_score)
     if player_score > 21:
         result_text.set("Dealer Wins!")
 
 
 def new_deal():
-    new_deal.append()
-    # global player_score
-    # global player_ace
-    # card_value = deal_card(player_card_frame)[0]
-    # if card_value == 1 and not player_ace:
-    #     player_ace = True
-    #     card_value = 11
-    # player_score += card_value
-    # # If we would bust, check if there is an ace and subtract
-    # if player_score > 21 and player_ace:
-    #     player_score -= 10
-    #     player_score = False
-    # player_score_label.set(player_score)
-    # if player_score > 21:
-    #     result_text.set("Dealer wins!")
-    # print(locals())
+    global dealer_card_frame
+    global player_card_frame
+    global dealer_hand
+
+    # Embedded frame to hold the card images
+    dealer_card_frame.destroy()
+    dealer_card_frame = tkinter.Frame(card_frame, background='green')
+    dealer_card_frame.grid(row=0, column=1, sticky='ew', rowspan=2)
+    # Embedded frame to hold the card images
+    player_card_frame.destroy()
+    player_card_frame = tkinter.Frame(card_frame, background='green')
+    player_card_frame.grid(row=2, column=1, sticky='ew', rowspan=2)
+
+    result_text.set("")
+
+    # Create the list to store the dealer's and player's hands
+    dealer_hand = []
+    player_hand = []
+
+    deal_dealer()
+    dealer_hand.append(deal_card(dealer_card_frame))
+    dealer_score_label.set(score_hand(dealer_hand))
+    deal_player()
+    player_hand.append(deal_card(player_card_frame))
+    player_score_label.set(score_hand(player_hand))
 
 
 mainWindow = tkinter.Tk()
 
 # Set up the screen and frames for the dealer and player
-mainWindow.title("Black Jack")
+mainWindow.title("Grevy's Black Jack")
 mainWindow.geometry("640x480")
 mainWindow.configure(background="green")
 
@@ -152,25 +163,27 @@ player_button.grid(row=0, column=1)
 
 new_deal_button = tkinter.Button(
     button_frame, text="New Deal", command=new_deal)
-new_deal_button.grid(row=, column=)
+new_deal_button.grid(row=0, column=2)
 
 # Load cards
 cards = []
 load_images(cards)
 print(cards)
-# Create a new deck of cards and shuffle them
-deck = list(cards)
 
+# Create a new deck of cards and shuffle them.
+deck = list(cards)
 random.shuffle(deck)
 
 # Create the list to store the dealer's and player's hands
 dealer_hand = []
 player_hand = []
-new_deal = []
 
-deal_player()
-dealer_hand.append(deal_card(dealer_card_frame))
-dealer_score_label.set(score_hand(dealer_hand))
-deal_player()
+# deal_player()
+# dealer_hand.append(deal_card(dealer_card_frame))
+# dealer_score_label.set(score_hand(dealer_hand))
+# deal_player()
+
+new_deal()
+
 
 mainWindow.mainloop()

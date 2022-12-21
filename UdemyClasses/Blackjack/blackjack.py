@@ -65,7 +65,7 @@ def deal_dealer():
         #TODO learn what append does here.
         dealer_hand.append(deal_card(dealer_card_frame))
         dealer_score = score_hand(dealer_hand)
-        # what does label.set do?
+        #TODO what does label.set do?
         dealer_score_label.set(dealer_score)
 #TODO Understand what is partion of the code does to add score.
     player_score = score_hand(player_hand)
@@ -80,11 +80,13 @@ def deal_dealer():
 
 
 def deal_player():
-    player_score = score_hand(player_hand)
-    while 0 < player_score < 17:
+    # player_score = score_hand(player_hand)
+    #TODO undo the comments above
+    # while 0 < player_score < 17:
+    #TODO undo the comments above
         player_hand.append(deal_card(player_card_frame))
         player_score = score_hand(dealer_hand)
-        player_score_label.set(player_score)
+        #TODO undo the comments above
 
     if player_score > 21:
         result_text.set("Dealer Wins!")
@@ -94,13 +96,14 @@ def new_deal():
     global dealer_card_frame
     global player_card_frame
     global dealer_hand
-
+    global player_hand
     # Embedded frame to hold the card images
     dealer_card_frame.destroy()
     dealer_card_frame = tkinter.Frame(card_frame, background='green')
     dealer_card_frame.grid(row=0, column=1, sticky='ew', rowspan=2)
     # Embedded frame to hold the card images
-    player_card_frame.destroy()
+    # player_card_frame.destroy()
+    #TODO undo the comments above
     player_card_frame = tkinter.Frame(card_frame, background='green')
     player_card_frame.grid(row=2, column=1, sticky='ew', rowspan=2)
 
@@ -114,9 +117,9 @@ def new_deal():
     dealer_hand.append(deal_card(dealer_card_frame))
     dealer_score_label.set(score_hand(dealer_hand))
     deal_player()
-    player_hand.append(deal_card(player_card_frame))
-    player_score_label.set(score_hand(player_hand))
-
+    # player_hand.append(deal_card(player_card_frame))
+    # player_score_label.set(score_hand(player_hand))
+#TODO undo the comments above
 
 mainWindow = tkinter.Tk()
 

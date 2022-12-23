@@ -3,7 +3,7 @@ import random
 try:
     import tkinter
 except ImportError:  # python 2
-    import Tkinter as tkinter
+    import tkinter as tkinter
 
 
 def load_images(card_images):
@@ -46,7 +46,7 @@ def score_hand(hand):
     # Only one ace can have the value of 11, and this will be reduce to 1 if the hand would bust.
     score = 0
     ace = False
-    for next_ccard in hand:
+    for next_card in hand:
         card_value = next_card[0]
         if card_value == 1 and not ace:
             ace = True

@@ -68,22 +68,30 @@ def deal_dealer():
         dealer_score = score_hand(dealer_hand)
         #TODO what does label.set do?
         dealer_score_label.set(dealer_score)
-    player_score = score_hand(player_hand)
-    if player_score > 21:
-        result_text.set("Dealer Wins!")
-    elif dealer_score > 21 or dealer_score < player_score:
-        result_text.set("Player Wins!")
-    elif dealer_score > player_score:
-        result_text.set("Dealer Wins!")
-    else:
-        result_text.set("Draw!")
+
+        player_score = score_hand(player_hand)
+        # while 0 < player_score < 17:
+        if player_score > 21:
+            result_text.set("Dealer Wins!")
+        elif dealer_score > 21:
+            result_text.set("Player Wins!")
+        elif player_score > 21:
+            result_text.set("Dealer Wins")
+        elif dealer_score > player_score:
+            result_text.set("Dealer Wins!")
+        elif player_score == 21 and dealer_score < 21:
+            result_text.set("Player Wins!")
+        elif dealer_score == player_score:
+            result_text.set("Draw!")
+        else:
+            result_text.set("Draw!")
 
 def deal_player():
     player_hand.append(deal_card(player_card_frame))
     player_score = score_hand(player_hand)      
     player_score_label.set(score_hand(player_hand))
-    if player_score > 21:
-            result_text.set("Dealer Wins!")
+    # if player_score > 21:
+    #         result_text.set("Dealer Wins!")
 
 def initial_deal():
     deal_dealer()       

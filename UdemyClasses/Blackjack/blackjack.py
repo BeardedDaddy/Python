@@ -163,7 +163,7 @@ tkinter.Label(card_frame, textvariable=player_score_label,
             background="green", fg="white").grid(row=3, column=0)
 # Embedded frame to hold the card images
 player_card_frame = tkinter.Frame(card_frame, background="green")
-player_card_frame.grid(row=2, column=1, sticky="ew", rowspan=2) 
+player_card_frame.grid(row=2, column=1, sticky="ew", rowspan=2)
 
 button_frame = tkinter.Frame(mainWindow)
 button_frame.grid(row=3, column=0, columnspan=3, sticky="w")

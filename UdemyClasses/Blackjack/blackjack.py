@@ -75,12 +75,18 @@ def deal_dealer():
             result_text.set("Dealer Wins!")
         elif dealer_score > 21:
             result_text.set("Player Wins!")
-        elif player_score > 21:
-            result_text.set("Dealer Wins")
+        elif player_score < 21:
+            result_text.set("Dealer Wins!")
+        elif dealer_score < 21:
+            result_text.set("Player Wins!")
+        elif player_score > dealer_score:
+            result_text.set("Player Wins!")
         elif dealer_score > player_score:
             result_text.set("Dealer Wins!")
-        elif player_score == 21 and dealer_score < 21:
+        elif player_score == 21 and dealer_score > 21 < 21:
             result_text.set("Player Wins!")
+        elif dealer_score == 21 and player_score < 21 < 21:
+            result_text.set("Dealer Wins!")    
         elif dealer_score == player_score:
             result_text.set("Draw!")
         else:

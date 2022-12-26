@@ -1,9 +1,0 @@
-import csv
-
-INPUT_FILENAME = 'country_info.txt'
-
-with open(INPUT_FILENAME, encoding='utf-8', newline='') as countries_data:
-    country_reader = csv.reader(countries_data)
-    for row in country_reader:
-        print(row)
-

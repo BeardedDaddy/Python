@@ -32,7 +32,7 @@ def load_images(card_images):
             card_images.append((10, image,))
 
 
-def deal_card(frame):
+def _deal_card(frame):
     # Pop the next card off the top of the deck
     next_card = deck.pop(0)
     # And add it to the back of the pack
@@ -64,36 +64,23 @@ def score_hand(hand):
 def deal_dealer():
     dealer_score = score_hand(dealer_hand)
     while 0 < dealer_score < 17:
-        dealer_hand.append(deal_card(dealer_card_frame))
+        dealer_hand.append(_deal_card(dealer_card_frame))
         dealer_score = score_hand(dealer_hand)
         #TODO what does label.set do?
         dealer_score_label.set(dealer_score)
 
-        player_score = score_hand(player_hand)
-        # while 0 < player_score < 17:
-        if player_score > 21:
-            result_text.set("Dealer Wins!")
-        elif dealer_score > 21:
-            result_text.set("Player Wins!")
-        elif player_score < 21:
-            result_text.set("Dealer Wins!")
-        elif dealer_score < 21:
-            result_text.set("Player Wins!")
-        elif player_score > dealer_score:
-            result_text.set("Player Wins!")
-        elif dealer_score > player_score:
-            result_text.set("Dealer Wins!")
-        elif player_score == 21 and dealer_score > 21 < 21:
-            result_text.set("Player Wins!")
-        elif dealer_score == 21 and player_score < 21 < 21:
-            result_text.set("Dealer Wins!")    
-        elif dealer_score == player_score:
-            result_text.set("Draw!")
-        else:
-            result_text.set("Draw!")
+    player_score = score_hand(player_hand)
+    if player_score > 21:
+        result_text.set("Dealer Wins!")
+    elif dealer_score > 21 or dealer_score < player_score:
+        result_text.set("Player Wins!")
+    elif dealer_score > player_score:
+        result_text.set("Dealer Wins!")
+    else:
+        result_text.set("Draw!")
 
 def deal_player():
-    player_hand.append(deal_card(player_card_frame))
+    player_hand.append(_deal_card(player_card_frame))
     player_score = score_hand(player_hand)      
     player_score_label.set(score_hand(player_hand))
     # if player_score > 21:
@@ -101,10 +88,10 @@ def deal_player():
 
 def initial_deal():
     deal_dealer()       
-    dealer_hand.append(deal_card(dealer_card_frame))        
+    dealer_hand.append(_deal_card(dealer_card_frame))        
     dealer_score_label.set(score_hand(dealer_hand))        
     deal_player()
-    player_hand.append(deal_card(player_card_frame))
+    player_hand.append(_deal_card(player_card_frame))
     player_score_label.set(score_hand(player_hand))
 
 def new_deal():
@@ -136,7 +123,6 @@ def play():
     initial_deal()
     mainWindow.mainloop()
 
-        
 mainWindow = tkinter.Tk()
 
 # Set up the screen and frames for the dealer and player
@@ -202,7 +188,7 @@ dealer_hand = []
 player_hand = []
 
 # deal_player()
-# dealer_hand.append(deal_card(dealer_card_frame))
+# dealer_hand.append(_deal_card(dealer_card_frame))
 # dealer_score_label.set(score_hand(dealer_hand))
 # deal_player()
 

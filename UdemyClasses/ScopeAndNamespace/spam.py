@@ -8,14 +8,18 @@ def spam1():
             print("In spam3, locals are {}".format(locals()))
             return z
 
-        y = " more" + x
-        y += spam3()
+        y = " more " + x # y must exist before spam3 is called.
+        y += spam3() # do not combine these assignments.
         print("In spam2, locals are {}".format(locals()))
         return y
     
-    x = " spam"
-    x += spam2()
+    x = " spam" # x must exist before spam2 is called
+    x += spam2() # do not combine these assignments
     print("In spam1, locals are {}".format(locals()))
     return x
 
 print(spam1())
+print()
+print(locals())
+print()
+print(globals())

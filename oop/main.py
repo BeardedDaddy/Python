@@ -1,7 +1,17 @@
-a = 3
-b = "grevy"
-c = 1, 2, 3
+from player import Player
 
-print(a)
-print(b)
-print(c)
+grevy = Player("Grevy")
+
+print(grevy.name)
+print(grevy.lives)
+grevy.lives -= 1
+print(grevy)
+
+grevy.lives -= 1
+print(grevy)
+
+grevy.lives -= 1
+print(grevy)
+
+grevy.lives -= 1
+print(grevy)

@@ -1,21 +1,25 @@
 class Player(object):
-
     def __init__(self, name):
         self.name = name
-        self.lives = 3
+        self._lives = 3
         self.level = 1
         self.score = 0
 
     def _get_lives(self):
-        return self.lives
-
+        return self._lives
+    
     def _set_lives(self, lives):
         if lives >= 0:
             self._lives = lives
         else:
-            print("Lives cannot be negative")
+            print("Lives cannot be negative.")
             self._lives = 0
-
+    # Create a function that to where the player's scores are increased by one thousand every time their level increases by one.
+    # So if they jump up two levels, they'll get a bonus of two thousand added to their score.
+    # If the player drops back a level, they'll lose one thousand for each level they drop back.
+    # They can't go below a level One, so the solution should prevent that from happening.
+    # Use properties to create this function.
+    
     lives = property(_get_lives, _set_lives)
 
     def __str__(self):

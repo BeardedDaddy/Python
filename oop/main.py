@@ -1,19 +1,13 @@
-from player import Player
+from enemy import Enemy
 
-grevy = Player("Grevy")
-print(grevy.name)
-print(grevy.lives)
-grevy.lives -= 1
-print(grevy)
+random_monster = Enemy("Basic enemy", 12, 1)
+print(random_monster)
 
-grevy.lives -= 1
-print(grevy)
+random_monster.take_damage(4)
+print(random_monster)
 
-grevy.lives -= 1
-print(grevy)
+random_monster.take_damage(8)
+print(random_monster)
 
-grevy.lives -= 1
-print(grevy)
-
-grevy._lives = 9
-print(grevy)
+random_monster.take_damage(9)
+print(random_monster)

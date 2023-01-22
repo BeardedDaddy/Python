@@ -15,13 +15,13 @@ class Enemy:
         else:
             self._lives -= 1
             if self._lives > 0:
-                print("{0.name} lost a life".format(self))
+                print("{0._name} lost a life".format(self))
             else:
-                print("{0.name} is dead".format(self))
+                print("{0._name} is dead".format(self))
                 self._alive = False
 
     def __str__(self):
-        return "Name: {0.name}, Lives: {0.lives}, Hit points: {0.hit_points}".format(self)
+        return "Name: {0._name}, Lives: {0._lives}, Hit points: {0._hit_points}".format(self)
 
 class Troll(Enemy):
     
@@ -30,7 +30,7 @@ class Troll(Enemy):
        super().__init__(name = name, lives = 1, hit_points = 23)
 
     def grunt(self):
-        print("Me {0.name}, {0.name}, stomp you".format(self))
+        print("Me {0._name}, {0._name}, stomp you".format(self))
     
 class Vampyre(Enemy):
 
@@ -39,7 +39,7 @@ class Vampyre(Enemy):
     
     def dodges(self):
         if random.randint(1, 3) == 3:
-            print("***** {0.name} dodges *****".format(self))
+            print("***** {0._name} dodges *****".format(self))
             return True
         else:
             return False
@@ -47,3 +47,17 @@ class Vampyre(Enemy):
     def take_damage(self, damage):
         if not self.dodges():
             super().take_damage(damage=damage)
+
+
+class VampyreKing(Vampyre):
+
+    def __init__(self, name):
+        super().__init__(name)
+        self._hit_points = 140
+
+    # A VampyreKing is going to be incredibly powerful, and any points of damage inflicted will be divided by 4.
+    #todo I need to create a damage inflicted function that when attacking will divide by 4.
+    # VampyreKing objects will also start off with 140 hit points and only takes a quarter of the damage inflicted.
+
+    def take_damage(self, damage):
+        super().take_damage(damage // 4)

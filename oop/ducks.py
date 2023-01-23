@@ -5,7 +5,7 @@ class Wing(object):
 
     def fly(self):
         if self.ratio > 1:
-            print("Week this is fun.")
+            print("Wee, this is fun.")
         elif self.ratio == 1:
             print("This is hard work, but I'm flying.")
         else:

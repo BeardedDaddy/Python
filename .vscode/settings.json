@@ -1,5 +1,32 @@
 {
     "C_Cpp.errorSquiggles": "Enabled",
     "git.ignoreLimitWarning": true,
-    "terminal.integrated.cursorBlinking": true
+    "terminal.integrated.cursorBlinking": true,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Sqlconnection",
+            "database": "text.db",
+            "username": "root"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Sqlconnections",
+            "database": "text.db",
+            "username": "root",
+            "password": "mayhew"
+        }
+    ]
 }

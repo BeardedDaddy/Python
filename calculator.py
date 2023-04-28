@@ -2,9 +2,8 @@ import tkinter as Tk
 from tkinter import Entry
 from tkinter import END
 from tkinter import Button
-from tkinter import title
 
-root = Tk
+root = Tk()
 
 root.title("Grevy's Calculator")
 

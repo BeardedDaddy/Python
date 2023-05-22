@@ -28,6 +28,23 @@ print(c.fetcheone()) #This one will fetch the last item in the table.
 # print(c.fetchall())
 
 print("Command executed successfully")
+=======
+many_customers = [
+    ('Mia', 'Marcelin', 'mia@gmail.com'),
+   ('Brittany', 'Johnson', 'brittany@gmail.com'),
+   ('Jennifer', 'Smith', 'jennifer@gmail.com'),
+]
+c.executemany("INSERT INTO customers VALUES(?,?,?)",many_customers)
+
+c.execute("SELECT * FROM customers")
+# print(c.fetchone()) #This one will fetch the first item in the table.
+print(c.fetchmany(3)) #This one will fetch the number you enter in the paratheses.
+#print(C.fetchall()) #This one will fetch all of them.  
+
+#print(c.fetchall())
+
+#print("Command executed successfully")
+>>>>>>> d03d178b8baf04e3027a65799e278f5f294d7b83
 
 # The five DATATYPES below are
 # NULL [NO CHAR]

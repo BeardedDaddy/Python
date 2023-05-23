@@ -20,7 +20,14 @@ many_customers = [
 ]
 c.executemany("INSERT INTO customers VALUES(?,?,?)",many_customers)
 
-c.execute("SELECT * FROM customers")
+# Query the database
+c.execute("SELECT * FROM customers WHERE first_name = 'Mia'")
+
+items = c.fetchall()
+
+for item in items:
+    print(item)
+    
 # print(c.fetchone()) #This one will fetch the first item in the table.
 # print(c.fetchmany(3)) #This one will fetch the number you enter in the paratheses.
 #print(C.fetchall()) #This one will fetch all of them.  

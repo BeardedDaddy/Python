@@ -21,7 +21,7 @@ many_customers = [
 c.executemany("INSERT INTO customers VALUES(?,?,?)",many_customers)
 
 # Query the database
-c.execute("SELECT * FROM customers WHERE first_name = 'Mia'")
+c.execute("SELECT * FROM customers WHERE first_name LIKE 'M%' ")
 
 items = c.fetchall()
 

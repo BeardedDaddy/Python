@@ -6,14 +6,15 @@ def getint(prompt):
         try:
             number = int(input(prompt))
             return number
-        except ValueError:
-            print("Invalid number entered, please try again")
         except EOFError:
             sys.exit(1)
-        except KeyboardInterrupt:
-            print("You have exited the program.")
-            sys.exit(0)
-            
+        except: # You should really use except ValueError.
+            print("Invalid number entered, please try again")
+        # except KeyboardInterrupt:
+        #     print("You have exited the program.")
+        #     sys.exit(0)
+        finally:
+            print("The finally clause alway executes")
         
 first_number = getint("Please enter first number ")
 second_number = getint("Please enter second number ")
@@ -25,5 +26,6 @@ except ZeroDivisionError:
     print()
     print("You can't divide by zero")
     sys.exit(2)
-
+else:
+    print("Division performed succussfully")
            

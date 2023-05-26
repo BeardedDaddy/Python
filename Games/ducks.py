@@ -41,6 +41,28 @@ class Penguin(object):
     def quack(self):
         print("Are you 'avin' a larf? I'm a penguin")
 
+
+class Flock(object):
+    
+    def __init__(self):
+        self.flock = []
+        
+    def add_duck(self, duck: Duck) -> None:
+        self.flock.append(duck)
+    
+    def migrate(self):
+        problem = None
+        for duck in self.flock:
+            try:
+                duck.fly()
+            except AttributeError as e:
+                print("One duck down")
+                problem = e
+                # raise
+        if problem:
+            raise problem 
+
+    
 if __name__ == '__main__':
     donald = Duck()
     donald.fly()

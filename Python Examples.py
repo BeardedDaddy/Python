@@ -1,10 +1,14 @@
-marks = [80, 90, 100, 98, 99]
-# Find the average marks.
-# Based on the average marks find the grade.
-# A = >80/ B = >60 - 80/ C = >50 -  60/ F = < 50
+# sample.py
 
-def average_grade(marks):
-   sum 
+def read_data():
+   return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+sample = read_data()
 
-average_grade(result)
+def mean(data):
+   return sum(data) / len(data)
+
+average = mean(sample)
+
+python -i sample.py
+

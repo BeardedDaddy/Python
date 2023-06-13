@@ -46,11 +46,10 @@ class Account(object):
         new_balance = self._balance + amount
         deposit_time, zone = Account._current_time()  # <-- unpack the returned tuple
         picked_zone = pickle.dumps(zone)
+        
 
-        db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, 
-                                                                        self.name))
-        db.execute("INSERT INTO history VALUES(?, ?, ?, ?)", (deposit_time, self.name,
-                                                              amount, picked_zone))
+        db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))  # noqa: E501
+        db.execute("INSERT INTO history VALUES(?, ?, ?, ?)", (deposit_time, self.name, amount, picked_zone))  # noqa: E501
         db.commit()
         self._balance = new_balance
 
@@ -58,8 +57,10 @@ class Account(object):
         if amount > 0.0:
             # new_balance = self._balance + amount
             # deposit_time = Account._current_time()
-            # db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))
-            # db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))
+            # db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", 
+            # (new_balance, self.name))
+            # db.execute("INSERT INTO history VALUES(?, ?, ?)", 
+            # (deposit_time, self.name, amount))
             # db.commit()
             # self._balance = new_balance
             self._save_update(amount)
@@ -70,8 +71,10 @@ class Account(object):
         if 0 < amount <= self._balance:
             # new_balance = self._balance - amount
             # withdrawal_time = Account._current_time()
-            # db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))
-            # db.execute("INSERT INTO history VALUES(?, ?, ?)", (withdrawal_time, self.name, -amount))
+            # db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", 
+            # (new_balance, self.name))
+            # db.execute("INSERT INTO history VALUES(?, ?, ?)", 
+            # (withdrawal_time, self.name, -amount))
             # db.commit()
             # self._balance = new_balance
             self._save_update(-amount)

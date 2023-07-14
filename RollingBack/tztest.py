@@ -17,7 +17,7 @@ class Account(object):
 
     @staticmethod
     def _current_time():
-        return pytz.utc.localize(datetime.datetime.utcnow())
+        #return pytz.utc.localize(datetime.datetime.utcnow())
         # local_time = pytz.utc.localize(datetime.datetime.utcnow())
         # return local_time.astimezone()
 
@@ -25,7 +25,6 @@ class Account(object):
         local_time = utc_time.astimezone()
         zone = local_time.tzinfo
         return utc_time, zone
-
 
     def __init__(self, name: str, opening_balance: int = 0):
         cursor = db.execute("SELECT name, balance FROM accounts WHERE (name = ?)", (name,))
@@ -46,8 +45,9 @@ class Account(object):
         new_balance = self._balance + amount
         deposit_time, zone = Account._current_time()  # <-- unpack the returned tuple
         picked_zone = pickle.dumps(zone)
-        db.execute("UPDATE accounts SET balance = ? WHERE (name = ?);", (new_balance, self.name))  # noqa: E501
-        db.execute("INSERT INTO history VALUES (?, ?, ?, ?);", (deposit_time, self.name, amount, picked_zone))
+        
+        db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))  # noqa: E501
+        db.execute("INSERT INTO history VALUES(?, ?, ?, ?)", (deposit_time, self.name, amount, picked_zone))
         db.commit()
         self._balance = new_balance
 

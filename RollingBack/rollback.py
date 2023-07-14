@@ -9,9 +9,6 @@ db.execute("CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL,"
 db.execute("CREATE VIEW IF NOT EXISTS localhistory AS"
            " SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,"  # noqa: E501
            " history.account, history.amount FROM history ORDER BY history.time")
-db.execute("CREATE VIEW IF NOT EXISTS localhistory AS" 
-           "SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,"
-                      " history.account, history.amount FROM history ORDER BY history.time")
 
 class Account(object):
 
@@ -88,7 +85,7 @@ class Account(object):
            
 if __name__ == '__main__':
     john = Account("John")
-    john.deposit(0)
+    john.deposit(1010)
     john.deposit(10)
     john.deposit(10)
     john.withdraw(30)

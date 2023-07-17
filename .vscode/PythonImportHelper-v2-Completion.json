@@ -27,6 +27,24 @@
         "documentation": {}
     },
     {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "Employee",
         "importPath": "employee",
         "description": "employee",
@@ -180,15 +198,6 @@
         "description": "decimal",
         "isExtraImport": true,
         "detail": "decimal",
-        "documentation": {}
-    },
-    {
-        "label": "pickle",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pickle",
-        "description": "pickle",
-        "detail": "pickle",
         "documentation": {}
     },
     {
@@ -531,6 +540,15 @@
         "description": "Games.migration",
         "peekOfCode": "percy = ducks.Penguin()\nflock.add_duck(donald)\nflock.add_duck(daisy)\nflock.add_duck(duck3)\nflock.add_duck(duck4)\nflock.add_duck(percy)\nflock.add_duck(duck5)\nflock.add_duck(duck6)\nflock.add_duck(duck7)\nflock.migrate()",
         "detail": "Games.migration",
+        "documentation": {}
+    },
+    {
+        "label": "Fruit",
+        "kind": 6,
+        "importPath": "Json Tutorial.py.__pycache__.preview.main",
+        "description": "Json Tutorial.py.__pycache__.preview.main",
+        "peekOfCode": "class Fruit:\n    def __init__(self, name: str, calories: float):\n        self.name = name\n        self.calories = calories\n    def describe_fruit(self):\n        print(self.name, self.calories, sep=': ')\nif __name__== '__main__':\n    fruit: Fruit = Fruit('Banana', 100)\n    fruit.describe_fruit()\n    fruit.calories = 150",
+        "detail": "Json Tutorial.py.__pycache__.preview.main",
         "documentation": {}
     },
     {
@@ -1101,6 +1119,15 @@
         "documentation": {}
     },
     {
+        "label": "carlist",
+        "kind": 5,
+        "importPath": "RollingBack.pickling",
+        "description": "RollingBack.pickling",
+        "peekOfCode": "carlist = ['Toyota', 'BMW', 'Audi', 'Suzuki', 'Honda']\n# open a file to store the pickle of cars\nwith open('carlist.pkl','wb') as carpickle: # To open you need parameters, the file name and the \n    pickle.dump(carlist, carpickle) # Dump is the functions that creates the pickle file. It takes two agruements.\n    # The first is the file we want to pickle and the second arguement is the file object.",
+        "detail": "RollingBack.pickling",
+        "documentation": {}
+    },
+    {
         "label": "Account",
         "kind": 6,
         "importPath": "RollingBack.rollback",
@@ -1132,7 +1159,7 @@
         "kind": 5,
         "importPath": "RollingBack.tzcheck",
         "description": "RollingBack.tzcheck",
-        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\nfor row in db.execute (\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\" \" history.account, history.amount FROM history ORDER BY history.time\"):\nfor row in db.execute(\"SELECT * FROM history\"):\n    utc_time = row[0]\n    picked_zone = row[3]\n    zone = pickle.loads(picked_zone)\n    #zone = pytz.timezone(\"Australia/Adelaide\")\n    local_time = pytz.utc.localize(utc_time).astimezone(zone)\n    print(\"{}\\t{}\\t{}\".format(utc_time, local_time, local_time.tzinfo))\ndb.close()",
+        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n#for row in db.execute (\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\" \" history.account, history.amount FROM history ORDER BY history.time\"):\nfor row in db.execute(\"SELECT * FROM history\"):\n    utc_time = row[0]\n    picked_zone = row[2]\n    zone = pickle.loads(picked_zone)\n    #zone = pytz.timezone(\"Australia/Adelaide\")\n    local_time = pytz.utc.localize(utc_time).astimezone(zone)\n    print(\"{}\\t{}\\t{}\".format(utc_time, local_time, local_time.tzinfo))\ndb.close()",
         "detail": "RollingBack.tzcheck",
         "documentation": {}
     },

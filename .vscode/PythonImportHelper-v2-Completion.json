@@ -9,6 +9,14 @@
         "documentation": {}
     },
     {
+        "label": "Error",
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "isExtraImport": true,
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -42,6 +50,23 @@
         "importPath": "json",
         "description": "json",
         "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
         "documentation": {}
     },
     {
@@ -558,6 +583,51 @@
         "description": "MySQL.employee",
         "peekOfCode": "class Employee:\n    \"\"\"A sample Employee class\"\"\"\n    def __init__(self, first, last, pay):\n        self.first = first\n        self.last = last\n        self.pay = pay\n    @property\n    def email(self):\n        return '{}.{}@email.com'.format(self.first, self.last)\n    @property",
         "detail": "MySQL.employee",
+        "documentation": {}
+    },
+    {
+        "label": "create_connection",
+        "kind": 2,
+        "importPath": "MySQL.MySQL_Connection_Created",
+        "description": "MySQL.MySQL_Connection_Created",
+        "peekOfCode": "def create_connection(host_name, user_name, user_password):\n    connection = None\n    try:\n        connection = mysql.connector.connect(\n                host=host_name,\n                user=user_name,\n                passwd=user_password\n        )\n        print(\"Connection to MySQL DB successful\")\n    except Error as e:",
+        "detail": "MySQL.MySQL_Connection_Created",
+        "documentation": {}
+    },
+    {
+        "label": "create_database",
+        "kind": 2,
+        "importPath": "MySQL.MySQL_Connection_Created",
+        "description": "MySQL.MySQL_Connection_Created",
+        "peekOfCode": "def create_database(connection, query):\n    cursor = connection.cursor()\n    try:\n        cursor.execute(query)\n        print(\"Database created successfully\")\n    except Error as e:\n        print(f\"The error '{e}' occurred\")",
+        "detail": "MySQL.MySQL_Connection_Created",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "MySQL.MySQL_Connection_Created",
+        "description": "MySQL.MySQL_Connection_Created",
+        "peekOfCode": "connection = create_connection(\"localhost\", \"root\", \"\")\ndef create_database(connection, query):\n    cursor = connection.cursor()\n    try:\n        cursor.execute(query)\n        print(\"Database created successfully\")\n    except Error as e:\n        print(f\"The error '{e}' occurred\")",
+        "detail": "MySQL.MySQL_Connection_Created",
+        "documentation": {}
+    },
+    {
+        "label": "create_connection",
+        "kind": 2,
+        "importPath": "MySQL.Python_Sqlite",
+        "description": "MySQL.Python_Sqlite",
+        "peekOfCode": "def create_connection(path):\n    connection = None\n    try:\n        connection = sqlite3.connect(path)\n        print(\"Connection to SQLite DB successful\")\n    except Error as e:\n        print(f\"The error '{e}' occurred\")\n    return connection\nconnection = create_connection(\"E:\\\\sm_app.sqlite\")",
+        "detail": "MySQL.Python_Sqlite",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "MySQL.Python_Sqlite",
+        "description": "MySQL.Python_Sqlite",
+        "peekOfCode": "connection = create_connection(\"E:\\\\sm_app.sqlite\")",
+        "detail": "MySQL.Python_Sqlite",
         "documentation": {}
     },
     {
@@ -1132,7 +1202,7 @@
         "kind": 6,
         "importPath": "RollingBack.rollback",
         "description": "RollingBack.rollback",
-        "peekOfCode": "class Account(object):\n    @staticmethod\n    def _current_time():\n        return pytz.utc.localize(datetime.datetime.utcnow())\n        # return 1\n        # local_time = pytz.utc.localize(datetime.datetime.utcnow())\n        # return local_time.astimezone()\n    def __init__(self, name: str, opening_balance: int = 0):\n        cursor = db.execute(\"SELECT name, balance FROM accounts WHERE (name = ?)\", (name,))  # noqa: E501\n        row = cursor.fetchone()",
+        "peekOfCode": "class Account(object):\n    @staticmethod\n    def _current_time():\n        #return pytz.utc.localize(datetime.datetime.utcnow())\n        return 1\n    def __init__(self, name: str, opening_balance: int = 0):\n        cursor = db.execute(\"SELECT name, balance FROM accounts WHERE (name = ?)\", (name,))  # noqa: E501\n        row = cursor.fetchone()\n        if row:\n            self.name, self._balance = row",
         "detail": "RollingBack.rollback",
         "documentation": {}
     },
@@ -1159,7 +1229,7 @@
         "kind": 5,
         "importPath": "RollingBack.tzcheck",
         "description": "RollingBack.tzcheck",
-        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n#for row in db.execute (\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\" \" history.account, history.amount FROM history ORDER BY history.time\"):\nfor row in db.execute(\"SELECT * FROM history\"):\n    utc_time = row[0]\n    picked_zone = row[2]\n    zone = pickle.loads(picked_zone)\n    #zone = pytz.timezone(\"Australia/Adelaide\")\n    local_time = pytz.utc.localize(utc_time).astimezone(zone)\n    print(\"{}\\t{}\\t{}\".format(utc_time, local_time, local_time.tzinfo))\ndb.close()",
+        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n#for row in db.execute (\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\" \"             # noqa: E501\n#                       history.account, history.amount FROM history ORDER BY history.time\"):  # noqa: E501\nfor row in db.execute(\"SELECT * FROM history\"):\n    utc_time = row[0]\n    # picked_zone = row[3]\n    # zone = pickle.loads(picked_zone)\n    zone = pytz.timezone(\"Australia/Adelaide\")\n    local_time = pytz.utc.localize(utc_time).astimezone(zone)\n    print(\"{}\\t{}\\t{}\".format(utc_time, local_time, local_time.tzinfo))",
         "detail": "RollingBack.tzcheck",
         "documentation": {}
     },

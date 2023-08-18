@@ -36,11 +36,21 @@ class Account(object):
     def _save_update(self, amount):
         new_balance = self._balance + amount
         deposit_time = Account._current_time()
-        db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)",
-        (new_balance, self.name))
-        db.execute("INSERT INTO history VALUES(?, ?, ?)",
-        (deposit_time, self.name, amount))
-        db.commit()
+        
+        try:
+            db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)",
+            (new_balance, self.name))
+            db.execute("INSERT INTO history VALUES(?, ?, ?)",
+            (deposit_time, self.name, amount))
+            
+        except sqlite3.Error:
+           # db.rollback()
+           pass
+        else:
+            db.commit()
+            self._balance = new_balance
+            
+            
         self._balance = new_balance
             
             
@@ -83,7 +93,7 @@ class Account(object):
            
 if __name__ == '__main__':
     john = Account("John")
-    john.deposit(1010)
+    john.deposit(5000)
     john.deposit(10)
     john.deposit(10)
     john.withdraw(30)

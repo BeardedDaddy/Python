@@ -53,74 +53,6 @@
         "documentation": {}
     },
     {
-        "label": "mysql.connector",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "mysql.connector",
-        "description": "mysql.connector",
-        "detail": "mysql.connector",
-        "documentation": {}
-    },
-    {
-        "label": "Error",
-        "importPath": "mysql.connector",
-        "description": "mysql.connector",
-        "isExtraImport": true,
-        "detail": "mysql.connector",
-        "documentation": {}
-    },
-    {
-        "label": "Employee",
-        "importPath": "employee",
-        "description": "employee",
-        "isExtraImport": true,
-        "detail": "employee",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "datetime",
-        "description": "datetime",
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "pytz",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pytz",
-        "description": "pytz",
-        "detail": "pytz",
-        "documentation": {}
-    },
-    {
-        "label": "random",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "random",
-        "description": "random",
-        "detail": "random",
-        "documentation": {}
-    },
-    {
-        "label": "Player",
-        "importPath": "player",
-        "description": "player",
-        "isExtraImport": true,
-        "detail": "player",
-        "documentation": {}
-    },
-    {
-        "label": "Player",
-        "importPath": "player",
-        "description": "player",
-        "isExtraImport": true,
-        "detail": "player",
-        "documentation": {}
-    },
-    {
         "label": "tkinter",
         "kind": 6,
         "isExtraImport": true,
@@ -215,6 +147,74 @@
         "description": "tkinter",
         "isExtraImport": true,
         "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Employee",
+        "importPath": "employee",
+        "description": "employee",
+        "isExtraImport": true,
+        "detail": "employee",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "pytz",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytz",
+        "description": "pytz",
+        "detail": "pytz",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "importPath": "player",
+        "description": "player",
+        "isExtraImport": true,
+        "detail": "player",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "importPath": "player",
+        "description": "player",
+        "isExtraImport": true,
+        "detail": "player",
         "documentation": {}
     },
     {
@@ -574,6 +574,114 @@
         "description": "Json Tutorial.py.__pycache__.preview.main",
         "peekOfCode": "class Fruit:\n    def __init__(self, name: str, calories: float):\n        self.name = name\n        self.calories = calories\n    def describe_fruit(self):\n        print(self.name, self.calories, sep=': ')\nif __name__== '__main__':\n    fruit: Fruit = Fruit('Banana', 100)\n    fruit.describe_fruit()\n    fruit.calories = 150",
         "detail": "Json Tutorial.py.__pycache__.preview.main",
+        "documentation": {}
+    },
+    {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "conn = sqlite3.connect('music.sqlite')\n# I'm going to to need three columns\n# I'm going to need two rows\n# I will all together four rows\nmainWindow = tkinter.Tk()\nmainWindow.title('Music DB Browser')\nmainWindow.geometry('1024x768')\nmainWindow.columnconfigure(0, weight=2)\nmainWindow.columnconfigure(1, weight=2)\nmainWindow.columnconfigure(2, weight=2)",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "mainWindow",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "mainWindow = tkinter.Tk()\nmainWindow.title('Music DB Browser')\nmainWindow.geometry('1024x768')\nmainWindow.columnconfigure(0, weight=2)\nmainWindow.columnconfigure(1, weight=2)\nmainWindow.columnconfigure(2, weight=2)\nmainWindow.columnconfigure(3, weight=1) # spacer column on right\nmainWindow.rowconfigure(0, weight=1)\nmainWindow.rowconfigure(1, weight=5)\nmainWindow.rowconfigure(2, weight=5)",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "artistList",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "artistList = tkinter.Listbox(mainWindow)\nartistList.grid(row=1, column=0, sticky='nsew', rowspan= 2, padx=(30, 0))\nartistList.config(border=2, relief='sunken')\nartistScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL, command=artistList.yview)  # noqa: E501\nartistScroll.grid(row=1, column=0, sticky='nse', rowspan=2)\nartistList['yscrollcommand'] = artistScroll.set\n# ======= Albums Listbox =======\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "artistScroll",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "artistScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL, command=artistList.yview)  # noqa: E501\nartistScroll.grid(row=1, column=0, sticky='nse', rowspan=2)\nartistList['yscrollcommand'] = artistScroll.set\n# ======= Albums Listbox =======\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\nalbumScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL, command=albumList.yview)  # noqa: E501",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "artistList['yscrollcommand']",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "artistList['yscrollcommand'] = artistScroll.set\n# ======= Albums Listbox =======\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\nalbumScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL, command=albumList.yview)  # noqa: E501\nalbumScroll.grid(row=1, column=1, sticky='nse', rowspan=2)\nalbumList['yscrollcommand'] = albumScroll.set",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "albumLV",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "albumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\nalbumScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL, command=albumList.yview)  # noqa: E501\nalbumScroll.grid(row=1, column=1, sticky='nse', rowspan=2)\nalbumList['yscrollcommand'] = albumScroll.set\n# ======= Songs Listbox =======\nsongLV = tkinter.Variable(mainWindow)",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "albumList",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "albumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\nalbumScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL, command=albumList.yview)  # noqa: E501\nalbumScroll.grid(row=1, column=1, sticky='nse', rowspan=2)\nalbumList['yscrollcommand'] = albumScroll.set\n# ======= Songs Listbox =======\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "albumScroll",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "albumScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL, command=albumList.yview)  # noqa: E501\nalbumScroll.grid(row=1, column=1, sticky='nse', rowspan=2)\nalbumList['yscrollcommand'] = albumScroll.set\n# ======= Songs Listbox =======\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ======= Main Loop =======",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "albumList['yscrollcommand']",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "albumList['yscrollcommand'] = albumScroll.set\n# ======= Songs Listbox =======\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ======= Main Loop =======\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "songLV",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "songLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ======= Main Loop =======\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"Closing database connection\")",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "songList",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "songList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ======= Main Loop =======\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"Closing database connection\")\nconn.close()",
+        "detail": "MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "testList",
+        "kind": 5,
+        "importPath": "MusicBrowser.jukebox",
+        "description": "MusicBrowser.jukebox",
+        "peekOfCode": "testList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"Closing database connection\")\nconn.close()",
+        "detail": "MusicBrowser.jukebox",
         "documentation": {}
     },
     {

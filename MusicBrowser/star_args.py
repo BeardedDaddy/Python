@@ -1,7 +1,7 @@
 def build_tuple(*args):
     return args
 
-message_tuple = build_tuple("hello", "planet", "earth", "take", "me", "to", "your", "leader")
+message_tuple = build_tuple("hello", "planet", "earth", "take", "me", "to", "your", "leader")  # noqa: E501
 print(type(message_tuple))
 print(message_tuple)
 

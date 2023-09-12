@@ -608,7 +608,7 @@
         "kind": 5,
         "importPath": "MusicBrowser.jukebox",
         "description": "MusicBrowser.jukebox",
-        "peekOfCode": "artistList = Scrollbox(mainWindow, background=\"red\")\nartistList.grid(row=1, column=0, sticky=\"nsew\", rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief=\"sunken\")\n# ======= Albums Listbox =======\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose An Album\",))\nalbumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky=\"nsew\", padx=(30, 0))\nalbumList.config(border=2, relief=\"sunken\")\n# ======= Songs Listbox =======",
+        "peekOfCode": "artistList = Scrollbox(mainWindow, background=\"red\")\nartistList.grid(row=1, column=0, sticky=\"nsew\", rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief=\"sunken\")\nfor artist in conn.execute(\"SELECT artists.name From artists ORDER BY artists.name\"):\n    artistList.insert(tkinter.END, artist[0])\n# ======= Albums Listbox =======\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose An Album\",))\nalbumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky=\"nsew\", padx=(30, 0))",
         "detail": "MusicBrowser.jukebox",
         "documentation": {}
     },

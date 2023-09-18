@@ -1,6 +1,7 @@
 import sqlite3
 from sqlite3 import Error
 
+
 def create_connection(path):
     connection = None
     try:
@@ -10,5 +11,6 @@ def create_connection(path):
         print(f"The error '{e}' occurred")
 
     return connection
+
 
 connection = create_connection("E:\\sm_app.sqlite")

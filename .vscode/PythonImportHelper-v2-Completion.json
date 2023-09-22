@@ -1909,6 +1909,15 @@
         "documentation": {}
     },
     {
+        "label": "db",
+        "kind": 5,
+        "importPath": "UdemyClasses.create.db.contacts",
+        "description": "UdemyClasses.create.db.contacts",
+        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\ndb.execute(\"CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone INTEGER, email TEXT)\")# noqa\ndb.execute(\"INSERT INTO contacts(name, phone, email) VALUES('Grevy, 9542179824, grevy@gmail.com')\")  # noqa: E501\ndb.execute(\"INSERT INTO contacts VALUES('Mia', 37373,'mia@gmail.com' )\") # noqa\ndb.close()",
+        "detail": "UdemyClasses.create.db.contacts",
+        "documentation": {}
+    },
+    {
         "label": "list_directories",
         "kind": 2,
         "importPath": "UdemyClasses.ScopeAndNamespace.filesanddirectories",

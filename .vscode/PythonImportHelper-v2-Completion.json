@@ -307,87 +307,6 @@
         "documentation": {}
     },
     {
-        "label": "conn",
-        "kind": 5,
-        "importPath": "createDB.checkdb",
-        "description": "createDB.checkdb",
-        "peekOfCode": "conn = sqlite3.connect(\"contacts.sqlite\")\nname = input(\"Please enter a name to search for \")\n# for row in conn.execute(\"SELECT * FROM contacts WHERE name = ?\", (name,)):\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name LIKE ?\", (name,)):\n    print(row)\nconn.close()",
-        "detail": "createDB.checkdb",
-        "documentation": {}
-    },
-    {
-        "label": "name",
-        "kind": 5,
-        "importPath": "createDB.checkdb",
-        "description": "createDB.checkdb",
-        "peekOfCode": "name = input(\"Please enter a name to search for \")\n# for row in conn.execute(\"SELECT * FROM contacts WHERE name = ?\", (name,)):\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name LIKE ?\", (name,)):\n    print(row)\nconn.close()",
-        "detail": "createDB.checkdb",
-        "documentation": {}
-    },
-    {
-        "label": "db",
-        "kind": 5,
-        "importPath": "createDB.contacts",
-        "description": "createDB.contacts",
-        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\ndb.execute(\"CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone INTEGER, email TEXT)\")\ndb.execute(\"INSERT INTO contacts(name, phone, email) VALUES('Grevy', 7542134200, 'grevyjr@gmail.com')\")  # noqa: E501\ndb.execute(\"INSERT INTO contacts VALUES('Mia', 7542314300, 'mia@gmail.com')\")\ncursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print (cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())",
-        "detail": "createDB.contacts",
-        "documentation": {}
-    },
-    {
-        "label": "cursor",
-        "kind": 5,
-        "importPath": "createDB.contacts",
-        "description": "createDB.contacts",
-        "peekOfCode": "cursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print (cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nfor name, phone, email in cursor:\n    print(name)\n    print(phone)\n    print(email)",
-        "detail": "createDB.contacts",
-        "documentation": {}
-    },
-    {
-        "label": "db",
-        "kind": 5,
-        "importPath": "createDB.contacts2",
-        "description": "createDB.contacts2",
-        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\nnew_email = \"newemail@update.com\"\nphone = input(\"Please enter a phone number \")\n# update_sql = \"UPDATE contacts SET email = '{}' WHERE phone = {}\".format(new_email, phone)\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format (update_cursor.rowcount))\nprint()",
-        "detail": "createDB.contacts2",
-        "documentation": {}
-    },
-    {
-        "label": "new_email",
-        "kind": 5,
-        "importPath": "createDB.contacts2",
-        "description": "createDB.contacts2",
-        "peekOfCode": "new_email = \"newemail@update.com\"\nphone = input(\"Please enter a phone number \")\n# update_sql = \"UPDATE contacts SET email = '{}' WHERE phone = {}\".format(new_email, phone)\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format (update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))",
-        "detail": "createDB.contacts2",
-        "documentation": {}
-    },
-    {
-        "label": "phone",
-        "kind": 5,
-        "importPath": "createDB.contacts2",
-        "description": "createDB.contacts2",
-        "peekOfCode": "phone = input(\"Please enter a phone number \")\n# update_sql = \"UPDATE contacts SET email = '{}' WHERE phone = {}\".format(new_email, phone)\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format (update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()",
-        "detail": "createDB.contacts2",
-        "documentation": {}
-    },
-    {
-        "label": "update_sql",
-        "kind": 5,
-        "importPath": "createDB.contacts2",
-        "description": "createDB.contacts2",
-        "peekOfCode": "update_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format (update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\nupdate_cursor.close()",
-        "detail": "createDB.contacts2",
-        "documentation": {}
-    },
-    {
-        "label": "update_cursor",
-        "kind": 5,
-        "importPath": "createDB.contacts2",
-        "description": "createDB.contacts2",
-        "peekOfCode": "update_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format (update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\nupdate_cursor.close()\nfor name, phone, email in db.execute(\"SELECT * FROM contacts\"):\n    print(name)",
-        "detail": "createDB.contacts2",
-        "documentation": {}
-    },
-    {
         "label": "factorial",
         "kind": 2,
         "importPath": "ExceptionHanding.examples",
@@ -1909,12 +1828,84 @@
         "documentation": {}
     },
     {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.checkdb",
+        "description": "UdemyClasses.createDB.checkdb",
+        "peekOfCode": "conn = sqlite3.connect(\"contacts.sqlite\")\nname = input(\"Please enter a name to search for \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name LIKE ?\", (name,)):\n# the name at the end in parathesis has comma with it to make it a tuple. \n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied. #noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative. #noqa\n    print(row)  \nconn.close()",
+        "detail": "UdemyClasses.createDB.checkdb",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.checkdb",
+        "description": "UdemyClasses.createDB.checkdb",
+        "peekOfCode": "name = input(\"Please enter a name to search for \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name LIKE ?\", (name,)):\n# the name at the end in parathesis has comma with it to make it a tuple. \n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied. #noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative. #noqa\n    print(row)  \nconn.close()",
+        "detail": "UdemyClasses.createDB.checkdb",
+        "documentation": {}
+    },
+    {
         "label": "db",
         "kind": 5,
-        "importPath": "UdemyClasses.create.db.contacts",
-        "description": "UdemyClasses.create.db.contacts",
-        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\ndb.execute(\"CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone INTEGER, email TEXT)\")# noqa\ndb.execute(\"INSERT INTO contacts(name, phone, email) VALUES('Grevy, 9542179824, grevy@gmail.com')\")  # noqa: E501\ndb.execute(\"INSERT INTO contacts VALUES('Mia', 37373,'mia@gmail.com' )\") # noqa\ndb.close()",
-        "detail": "UdemyClasses.create.db.contacts",
+        "importPath": "UdemyClasses.createDB.contacts",
+        "description": "UdemyClasses.createDB.contacts",
+        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\ndb.execute(\"CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone INTEGER, email TEXT)\")\ndb.execute(\"INSERT INTO contacts(name, phone, email) VALUES('Grevy', 7542134200, 'grevyjr@gmail.com')\")  # noqa: E501\ndb.execute(\"INSERT INTO contacts VALUES('Mia', 7542314300, 'mia@gmail.com')\")\ncursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print (cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())",
+        "detail": "UdemyClasses.createDB.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.contacts",
+        "description": "UdemyClasses.createDB.contacts",
+        "peekOfCode": "cursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print (cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nfor name, phone, email in cursor:\n    print(name)\n    print(phone)\n    print(email)",
+        "detail": "UdemyClasses.createDB.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.contacts2",
+        "description": "UdemyClasses.createDB.contacts2",
+        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\nnew_email = \"newupdate@update.com\"\nphone = input(\"Please enter a phone number \")\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))",
+        "detail": "UdemyClasses.createDB.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "new_email",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.contacts2",
+        "description": "UdemyClasses.createDB.contacts2",
+        "peekOfCode": "new_email = \"newupdate@update.com\"\nphone = input(\"Please enter a phone number \")\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()",
+        "detail": "UdemyClasses.createDB.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "phone",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.contacts2",
+        "description": "UdemyClasses.createDB.contacts2",
+        "peekOfCode": "phone = input(\"Please enter a phone number \")\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()",
+        "detail": "UdemyClasses.createDB.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "update_sql",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.contacts2",
+        "description": "UdemyClasses.createDB.contacts2",
+        "peekOfCode": "update_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\n# this is the same as db.commit() # calling dot commit on the wrong connection could cause bugs. # noqa",
+        "detail": "UdemyClasses.createDB.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "update_cursor",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.contacts2",
+        "description": "UdemyClasses.createDB.contacts2",
+        "peekOfCode": "update_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\n# this is the same as db.commit() # calling dot commit on the wrong connection could cause bugs. # noqa\nupdate_cursor.close()\nfor name, phone, email in db.execute(\"SELECT * FROM contacts\"):",
+        "detail": "UdemyClasses.createDB.contacts2",
         "documentation": {}
     },
     {

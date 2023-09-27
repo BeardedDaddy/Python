@@ -1819,6 +1819,15 @@
         "documentation": {}
     },
     {
+        "label": "x",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.get_ints",
+        "description": "UdemyClasses.Blackjack.get_ints",
+        "peekOfCode": "x = int(input(\"Enter a number \"))",
+        "detail": "UdemyClasses.Blackjack.get_ints",
+        "documentation": {}
+    },
+    {
         "label": "personal_details",
         "kind": 5,
         "importPath": "UdemyClasses.Blackjack.import_test",
@@ -1960,6 +1969,42 @@
         "description": "UdemyClasses.ScopeAndNamespace.spam",
         "peekOfCode": "def spam1():\n    def spam2():\n        def spam3():\n            z = \" even\"\n            z += y\n            print(\"In spam3, locals are {}\".format(locals()))\n            return z\n        y = \" more \" + x # y must exist before spam3 is called.\n        y += spam3() # do not combine these assignments.\n        print(\"In spam2, locals are {}\".format(locals()))",
         "detail": "UdemyClasses.ScopeAndNamespace.spam",
+        "documentation": {}
+    },
+    {
+        "label": "DivideTwoNumbers",
+        "kind": 2,
+        "importPath": "UdemyClasses.DivideTwoNumber",
+        "description": "UdemyClasses.DivideTwoNumber",
+        "peekOfCode": "def DivideTwoNumbers(n1, n2):\n    return n1 / n2\nprint(\"Pick two numbers to divide: \")\nn1 = input('First Number ')\nn2 = input('Second Number ')\nx = DivideTwoNumbers()\nprint(\"Your answer is \")",
+        "detail": "UdemyClasses.DivideTwoNumber",
+        "documentation": {}
+    },
+    {
+        "label": "n1",
+        "kind": 5,
+        "importPath": "UdemyClasses.DivideTwoNumber",
+        "description": "UdemyClasses.DivideTwoNumber",
+        "peekOfCode": "n1 = input('First Number ')\nn2 = input('Second Number ')\nx = DivideTwoNumbers()\nprint(\"Your answer is \")",
+        "detail": "UdemyClasses.DivideTwoNumber",
+        "documentation": {}
+    },
+    {
+        "label": "n2",
+        "kind": 5,
+        "importPath": "UdemyClasses.DivideTwoNumber",
+        "description": "UdemyClasses.DivideTwoNumber",
+        "peekOfCode": "n2 = input('Second Number ')\nx = DivideTwoNumbers()\nprint(\"Your answer is \")",
+        "detail": "UdemyClasses.DivideTwoNumber",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "UdemyClasses.DivideTwoNumber",
+        "description": "UdemyClasses.DivideTwoNumber",
+        "peekOfCode": "x = DivideTwoNumbers()\nprint(\"Your answer is \")",
+        "detail": "UdemyClasses.DivideTwoNumber",
         "documentation": {}
     },
     {

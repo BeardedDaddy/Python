@@ -1918,6 +1918,33 @@
         "documentation": {}
     },
     {
+        "label": "getint",
+        "kind": 2,
+        "importPath": "UdemyClasses.createDB.get_ints",
+        "description": "UdemyClasses.createDB.get_ints",
+        "peekOfCode": "def getint(prompt):\n    while True:\n        try:\n            number = int(input(prompt))\n            return number\n        except ValueError:\n            print(\"Invalid number entered, please try again\")\nfirst_number = getint(\"Please enter first number \")\nsecond_number = getint(\"Please enter second number \")\ntry:",
+        "detail": "UdemyClasses.createDB.get_ints",
+        "documentation": {}
+    },
+    {
+        "label": "first_number",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.get_ints",
+        "description": "UdemyClasses.createDB.get_ints",
+        "peekOfCode": "first_number = getint(\"Please enter first number \")\nsecond_number = getint(\"Please enter second number \")\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))   # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
+        "detail": "UdemyClasses.createDB.get_ints",
+        "documentation": {}
+    },
+    {
+        "label": "second_number",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.get_ints",
+        "description": "UdemyClasses.createDB.get_ints",
+        "peekOfCode": "second_number = getint(\"Please enter second number \")\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))   # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
+        "detail": "UdemyClasses.createDB.get_ints",
+        "documentation": {}
+    },
+    {
         "label": "list_directories",
         "kind": 2,
         "importPath": "UdemyClasses.ScopeAndNamespace.filesanddirectories",
@@ -1976,7 +2003,7 @@
         "kind": 2,
         "importPath": "UdemyClasses.DivideTwoNumber",
         "description": "UdemyClasses.DivideTwoNumber",
-        "peekOfCode": "def DivideTwoNumbers(n1, n2):\n    return n1 / n2\nprint(\"Pick two numbers to divide: \")\nn1 = input('First Number ')\nn2 = input('Second Number ')\nx = DivideTwoNumbers()\nprint(\"Your answer is \")",
+        "peekOfCode": "def DivideTwoNumbers(n1, n2):\n    return n1 / n2\nprint(\"Pick two numbers to divide: \")\nn1 = input('First Number ')\nn2 = input('Second Number ')\nprint(\"Your answer is \")",
         "detail": "UdemyClasses.DivideTwoNumber",
         "documentation": {}
     },
@@ -1985,7 +2012,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.DivideTwoNumber",
         "description": "UdemyClasses.DivideTwoNumber",
-        "peekOfCode": "n1 = input('First Number ')\nn2 = input('Second Number ')\nx = DivideTwoNumbers()\nprint(\"Your answer is \")",
+        "peekOfCode": "n1 = input('First Number ')\nn2 = input('Second Number ')\nprint(\"Your answer is \")",
         "detail": "UdemyClasses.DivideTwoNumber",
         "documentation": {}
     },
@@ -1994,16 +2021,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.DivideTwoNumber",
         "description": "UdemyClasses.DivideTwoNumber",
-        "peekOfCode": "n2 = input('Second Number ')\nx = DivideTwoNumbers()\nprint(\"Your answer is \")",
-        "detail": "UdemyClasses.DivideTwoNumber",
-        "documentation": {}
-    },
-    {
-        "label": "x",
-        "kind": 5,
-        "importPath": "UdemyClasses.DivideTwoNumber",
-        "description": "UdemyClasses.DivideTwoNumber",
-        "peekOfCode": "x = DivideTwoNumbers()\nprint(\"Your answer is \")",
+        "peekOfCode": "n2 = input('Second Number ')\nprint(\"Your answer is \")",
         "detail": "UdemyClasses.DivideTwoNumber",
         "documentation": {}
     },

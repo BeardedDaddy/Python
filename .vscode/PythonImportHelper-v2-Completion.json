@@ -1931,7 +1931,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.createDB.get_ints",
         "description": "UdemyClasses.createDB.get_ints",
-        "peekOfCode": "first_number = getint(\"Please enter first number \")\nsecond_number = getint(\"Please enter second number \")\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))   # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
+        "peekOfCode": "first_number = getint(\"Please enter first number \")\nsecond_number = getint(\"Please enter second number \")\ntry:\n    print(\"{} divided by {} is {:.2f}\".format(first_number, second_number, first_number / second_number))   # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
         "detail": "UdemyClasses.createDB.get_ints",
         "documentation": {}
     },
@@ -1940,7 +1940,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.createDB.get_ints",
         "description": "UdemyClasses.createDB.get_ints",
-        "peekOfCode": "second_number = getint(\"Please enter second number \")\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))   # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
+        "peekOfCode": "second_number = getint(\"Please enter second number \")\ntry:\n    print(\"{} divided by {} is {:.2f}\".format(first_number, second_number, first_number / second_number))   # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
         "detail": "UdemyClasses.createDB.get_ints",
         "documentation": {}
     },
@@ -1999,29 +1999,29 @@
         "documentation": {}
     },
     {
-        "label": "DivideTwoNumbers",
+        "label": "divide_two_numbers",
         "kind": 2,
         "importPath": "UdemyClasses.DivideTwoNumber",
         "description": "UdemyClasses.DivideTwoNumber",
-        "peekOfCode": "def DivideTwoNumbers(n1, n2):\n    return n1 / n2\nprint(\"Pick two numbers to divide: \")\nn1 = input('First Number ')\nn2 = input('Second Number ')\nprint(\"Your answer is \")",
+        "peekOfCode": "def divide_two_numbers(prompt):\n    while True:\n        try:\n            number = int(input(prompt))\n            return number\n        except ValueError:\n            print(\"Invalid number entered, please try again\")\nprint(\"Pick two numbers to divide: \")\nfirst_number = divide_two_numbers('First Number ')\nsecond_number = divide_two_numbers('Second Number ')",
         "detail": "UdemyClasses.DivideTwoNumber",
         "documentation": {}
     },
     {
-        "label": "n1",
+        "label": "first_number",
         "kind": 5,
         "importPath": "UdemyClasses.DivideTwoNumber",
         "description": "UdemyClasses.DivideTwoNumber",
-        "peekOfCode": "n1 = input('First Number ')\nn2 = input('Second Number ')\nprint(\"Your answer is \")",
+        "peekOfCode": "first_number = divide_two_numbers('First Number ')\nsecond_number = divide_two_numbers('Second Number ')\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))  # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
         "detail": "UdemyClasses.DivideTwoNumber",
         "documentation": {}
     },
     {
-        "label": "n2",
+        "label": "second_number",
         "kind": 5,
         "importPath": "UdemyClasses.DivideTwoNumber",
         "description": "UdemyClasses.DivideTwoNumber",
-        "peekOfCode": "n2 = input('Second Number ')\nprint(\"Your answer is \")",
+        "peekOfCode": "second_number = divide_two_numbers('Second Number ')\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))  # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
         "detail": "UdemyClasses.DivideTwoNumber",
         "documentation": {}
     },

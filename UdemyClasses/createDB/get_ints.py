@@ -11,6 +11,6 @@ first_number = getint("Please enter first number ")
 second_number = getint("Please enter second number ")
 
 try:
-    print("{} divided by {} is {}".format(first_number, second_number, first_number / second_number))   # noqa
+    print("{} divided by {} is {:.2f}".format(first_number, second_number, first_number / second_number))   # noqa
 except ZeroDivisionError:
     print("You can't divide by zero")

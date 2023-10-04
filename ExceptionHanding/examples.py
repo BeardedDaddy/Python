@@ -5,10 +5,11 @@ def factorial(n):
         return 1
     else:
         return n * factorial(n-1)
-    
-try:   
+
+
+try:
     print(factorial(900))
 except (RecursionError, ZeroDivisionError, OverflowError):
     print("Whoa whoa whoa, you can't do that.")
-          
+
 print("Program terminating")

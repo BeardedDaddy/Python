@@ -15,7 +15,7 @@ def getint(prompt):
             # print("You have exited the program.")
             # sys.exit is used to exit the program.
             sys.exit(0)
-        except Exception:
+        except ValueError:  # Should really be except ValueError:
             print("Invalid number entered, please try again")
         # a finally clause always comes after the except clause.The finally 
         # block can be used to closing your cursor or connectioning or closing any open files.  # noqa

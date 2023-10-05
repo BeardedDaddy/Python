@@ -1,4 +1,4 @@
-from player import Player
+from Games.player import Player
 
 grevy = Player("Grevy")
 

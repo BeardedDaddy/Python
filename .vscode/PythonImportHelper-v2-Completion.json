@@ -26,6 +26,15 @@
         "documentation": {}
     },
     {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
         "label": "ducks",
         "kind": 6,
         "isExtraImport": true,
@@ -193,28 +202,19 @@
         "documentation": {}
     },
     {
-        "label": "random",
-        "kind": 6,
+        "label": "Player",
+        "importPath": "Games.player",
+        "description": "Games.player",
         "isExtraImport": true,
-        "importPath": "random",
-        "description": "random",
-        "detail": "random",
+        "detail": "Games.player",
         "documentation": {}
     },
     {
         "label": "Player",
-        "importPath": "player",
-        "description": "player",
+        "importPath": "Games.player",
+        "description": "Games.player",
         "isExtraImport": true,
-        "detail": "player",
-        "documentation": {}
-    },
-    {
-        "label": "Player",
-        "importPath": "player",
-        "description": "player",
-        "isExtraImport": true,
-        "detail": "player",
+        "detail": "Games.player",
         "documentation": {}
     },
     {
@@ -365,7 +365,7 @@
         "kind": 6,
         "importPath": "Games.ducks",
         "description": "Games.ducks",
-        "peekOfCode": "class Wing(object):\n    def __init__(self, ratio):\n        self.ratio = ratio\n    def fly(self):\n        if self.ratio > 1:\n            print(\"Weee, this is fun\")\n        elif self.ratio == 1:\n            print(\"This is hard work, but I'm flying\")\n        else:\n            print(\"I think I'll just walk\")",
+        "peekOfCode": "class Wing(object):\n    def __init__(self, ratio):\n        self.ratio = ratio\n    def fly(self):\n        if self.ratio > 1:\n            print(\"Wee, this is fun.\")\n        elif self.ratio == 1:\n            print(\"This is hard work, but I'm flying.\")\n        else:\n            print(\"I think I'll just walk.\")",
         "detail": "Games.ducks",
         "documentation": {}
     },
@@ -383,16 +383,7 @@
         "kind": 6,
         "importPath": "Games.ducks",
         "description": "Games.ducks",
-        "peekOfCode": "class Penguin(object):\n    def __init__(self):\n        self.fly = self.aviate\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you 'avin' a larf? I'm a penguin\")\n    def aviate(self):",
-        "detail": "Games.ducks",
-        "documentation": {}
-    },
-    {
-        "label": "Mallard",
-        "kind": 6,
-        "importPath": "Games.ducks",
-        "description": "Games.ducks",
-        "peekOfCode": "class Mallard(Duck):\n    pass\nclass Flock(object):\n    def __init__(self):\n        self.flock = []\n    def add_duck(self, duck: Duck) -> None:\n        fly_method = getattr(duck, 'fly', None)\n        #if isinstance(duck, Duck):\n        if callable(fly_method):\n            self.flock.append(duck)",
+        "peekOfCode": "class Penguin(object):\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you having a laugh? I'm a penguin!\")\nclass Flock(object):\n    def __init__(self):\n        self.flock = []",
         "detail": "Games.ducks",
         "documentation": {}
     },
@@ -401,8 +392,116 @@
         "kind": 6,
         "importPath": "Games.ducks",
         "description": "Games.ducks",
-        "peekOfCode": "class Flock(object):\n    def __init__(self):\n        self.flock = []\n    def add_duck(self, duck: Duck) -> None:\n        fly_method = getattr(duck, 'fly', None)\n        #if isinstance(duck, Duck):\n        if callable(fly_method):\n            self.flock.append(duck)\n        else:\n            raise TypeError(\"Cannot add duck, are you sure it's a \" + str(duck).__name__)",
+        "peekOfCode": "class Flock(object):\n    def __init__(self):\n        self.flock = []\n# In the following we added hints to the add_duck method. The hints lets\n# anyone using the add_duck module understands what they should be providing\n# to the method.  We added annonation Inside the paratheses of the method we\n# added a parameter, duck.\n    def add_duck(self, duck: Duck) -> None:\n        self.flock.append(duck)\n    def migrate(self):",
         "detail": "Games.ducks",
+        "documentation": {}
+    },
+    {
+        "label": "Enemy",
+        "kind": 6,
+        "importPath": "Games.enemy",
+        "description": "Games.enemy",
+        "peekOfCode": "class Enemy:\n    def __init__(self, name=\"Enemy\", hit_points=0, lives=1):\n        self._name = name\n        self._hit_points = hit_points\n        self._lives = lives\n        self._alive = True\n    def take_damage(self, damage):\n        remaining_points = self._hit_points - damage\n        if remaining_points >= 0:\n            self._hit_points = remaining_points",
+        "detail": "Games.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "Troll",
+        "kind": 6,
+        "importPath": "Games.enemy",
+        "description": "Games.enemy",
+        "peekOfCode": "class Troll(Enemy):\n    def __init__(self, name):\n    #  super(Troll, self).__init__(name = name, lives = 1, hit_points = 23)\n       super().__init__(name = name, lives = 1, hit_points = 23)\n    def grunt(self):\n        print(\"Me {0._name}, {0._name}, stomp you\".format(self))\nclass Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):",
+        "detail": "Games.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "Vampyre",
+        "kind": 6,
+        "importPath": "Games.enemy",
+        "description": "Games.enemy",
+        "peekOfCode": "class Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):\n        if random.randint(1, 3) == 3:\n            print(\"***** {0._name} dodges *****\".format(self))\n            return True\n        else:\n            return False\n    def take_damage(self, damage):",
+        "detail": "Games.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "VampyreKing",
+        "kind": 6,
+        "importPath": "Games.enemy",
+        "description": "Games.enemy",
+        "peekOfCode": "class VampyreKing(Vampyre):\n    def __init__(self, name):\n        super().__init__(name)\n        self._hit_points = 140\n    # A VampyreKing is going to be incredibly powerful, and any points of damage inflicted will be divided by 4.\n    #todo I need to create a damage inflicted function that when attacking will divide by 4.\n    # VampyreKing objects will also start off with 140 hit points and only takes a quarter of the damage inflicted.\n    def take_damage(self, damage):\n        super().take_damage(damage // 4)",
+        "detail": "Games.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "Tag",
+        "kind": 6,
+        "importPath": "Games.html_duck",
+        "description": "Games.html_duck",
+        "peekOfCode": "class Tag(object):\n    def __init__(self, name, contents):\n        self.start_tag = '<()>'.format(name)\n        self.end_tag = '</()>'.format(name)\n        self.contents = contents\n    def __str__(self):\n        return \"{0.start_tag}{0.contents}{0.end_tag}\".format(self)\n    def display(self, file=None):\n        print(self, file=file)\nclass DocType(Tag):",
+        "detail": "Games.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "DocType",
+        "kind": 6,
+        "importPath": "Games.html_duck",
+        "description": "Games.html_duck",
+        "peekOfCode": "class DocType(Tag):\n    def __init__(self):\n        super().__init__('!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" http://www.w3.org/TR/html4/strict.dtd', '')\n        self.end_tag = ''   # DOCTYPE doesn't have an end tag\nclass Head(Tag):\n    def __init__(self, title=None):\n        super().__init__('head', '')\n        if title:\n            self._title_tag = Tag('title', title)\n            self.contents = str(self._title_tag)",
+        "detail": "Games.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "Head",
+        "kind": 6,
+        "importPath": "Games.html_duck",
+        "description": "Games.html_duck",
+        "peekOfCode": "class Head(Tag):\n    def __init__(self, title=None):\n        super().__init__('head', '')\n        if title:\n            self._title_tag = Tag('title', title)\n            self.contents = str(self._title_tag)\nclass Body(Tag):\n    def __init__(self):\n        super().__init__('body', '')    # body contents will be built up separatly\n        self._body_contents = []",
+        "detail": "Games.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "Body",
+        "kind": 6,
+        "importPath": "Games.html_duck",
+        "description": "Games.html_duck",
+        "peekOfCode": "class Body(Tag):\n    def __init__(self):\n        super().__init__('body', '')    # body contents will be built up separatly\n        self._body_contents = []\n    def add_tag(self, name, contents):\n        new_tag = Tag(name, contents)\n        self._body_contents.append(new_tag)\n    def display(self, file=None):\n        for tag in self._body_contents:\n            self.contents += str(tag)",
+        "detail": "Games.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "HtmlDoc",
+        "kind": 6,
+        "importPath": "Games.html_duck",
+        "description": "Games.html_duck",
+        "peekOfCode": "class HtmlDoc(object):\n    def __init__(self, doc_type, head, body):\n        self._doc_type = doc_type\n        self._head = head\n        self._body = body\n    def add_tag(self, name, contents):\n        self._body.add_tag(name, contents)\n    def display(self, file=None):\n        self._doc_type.display(file=file)\n        print('<html>', file=file)",
+        "detail": "Games.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Games.main",
+        "description": "Games.main",
+        "peekOfCode": "a = 3\n# This is a string.\nb = \"grevy\"\n# This is a tuple.\nc = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
+        "detail": "Games.main",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "Games.main",
+        "description": "Games.main",
+        "peekOfCode": "b = \"grevy\"\n# This is a tuple.\nc = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
+        "detail": "Games.main",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "Games.main",
+        "description": "Games.main",
+        "peekOfCode": "c = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
+        "detail": "Games.main",
         "documentation": {}
     },
     {
@@ -484,6 +583,15 @@
         "description": "Games.migration",
         "peekOfCode": "percy = ducks.Penguin()\nflock.add_duck(donald)\nflock.add_duck(daisy)\nflock.add_duck(duck3)\nflock.add_duck(duck4)\nflock.add_duck(percy)\nflock.add_duck(duck5)\nflock.add_duck(duck6)\nflock.add_duck(duck7)\nflock.migrate()",
         "detail": "Games.migration",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "kind": 6,
+        "importPath": "Games.player",
+        "description": "Games.player",
+        "peekOfCode": "class Player(object):\n    def __init__(self, name):\n        self.name = name\n        self._lives = 3\n        self._level = 1\n        self._score = 0\n    def _get_lives(self):\n        return self._lives\n    def _set_lives(self, lives):\n        if lives >= 0:",
+        "detail": "Games.player",
         "documentation": {}
     },
     {
@@ -901,123 +1009,6 @@
         "documentation": {}
     },
     {
-        "label": "Wing",
-        "kind": 6,
-        "importPath": "oop.ducks",
-        "description": "oop.ducks",
-        "peekOfCode": "class Wing(object):\n    def __init__(self, ratio):\n        self.ratio = ratio\n    def fly(self):\n        if self.ratio > 1:\n            print(\"Wee, this is fun.\")\n        elif self.ratio == 1:\n            print(\"This is hard work, but I'm flying.\")\n        else:\n            print(\"I think I'll just walk.\")",
-        "detail": "oop.ducks",
-        "documentation": {}
-    },
-    {
-        "label": "Duck",
-        "kind": 6,
-        "importPath": "oop.ducks",
-        "description": "oop.ducks",
-        "peekOfCode": "class Duck(object):\n    def __init__(self):\n        self._wing = Wing(1.8)\n    def walk(self):\n        print(\"Waddle, waddle, waddle\")\n    def swim(self):\n        print(\"Come on in, the water's lovely\")\n    def quack(self):\n        print(\"Quack quack\")\n    def fly(self):",
-        "detail": "oop.ducks",
-        "documentation": {}
-    },
-    {
-        "label": "Penguin",
-        "kind": 6,
-        "importPath": "oop.ducks",
-        "description": "oop.ducks",
-        "peekOfCode": "class Penguin(object):\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you having a laugh? I'm a penguin!\")\ndef test_duck(duck):\n    duck.walk()\n    duck.swim()",
-        "detail": "oop.ducks",
-        "documentation": {}
-    },
-    {
-        "label": "test_duck",
-        "kind": 2,
-        "importPath": "oop.ducks",
-        "description": "oop.ducks",
-        "peekOfCode": "def test_duck(duck):\n    duck.walk()\n    duck.swim()\n    duck.quack()\nif __name__ == '__main__':\n    donald = Duck()\n    donald.fly()\n    test_duck(donald)\n    # percy = Penguin()\n    # test_duck(percy)",
-        "detail": "oop.ducks",
-        "documentation": {}
-    },
-    {
-        "label": "Enemy",
-        "kind": 6,
-        "importPath": "oop.enemy",
-        "description": "oop.enemy",
-        "peekOfCode": "class Enemy:\n    def __init__(self, name=\"Enemy\", hit_points=0, lives=1):\n        self._name = name\n        self._hit_points = hit_points\n        self._lives = lives\n        self._alive = True\n    def take_damage(self, damage):\n        remaining_points = self._hit_points - damage\n        if remaining_points >= 0:\n            self._hit_points = remaining_points",
-        "detail": "oop.enemy",
-        "documentation": {}
-    },
-    {
-        "label": "Troll",
-        "kind": 6,
-        "importPath": "oop.enemy",
-        "description": "oop.enemy",
-        "peekOfCode": "class Troll(Enemy):\n    def __init__(self, name):\n    #  super(Troll, self).__init__(name = name, lives = 1, hit_points = 23)\n       super().__init__(name = name, lives = 1, hit_points = 23)\n    def grunt(self):\n        print(\"Me {0._name}, {0._name}, stomp you\".format(self))\nclass Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):",
-        "detail": "oop.enemy",
-        "documentation": {}
-    },
-    {
-        "label": "Vampyre",
-        "kind": 6,
-        "importPath": "oop.enemy",
-        "description": "oop.enemy",
-        "peekOfCode": "class Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):\n        if random.randint(1, 3) == 3:\n            print(\"***** {0._name} dodges *****\".format(self))\n            return True\n        else:\n            return False\n    def take_damage(self, damage):",
-        "detail": "oop.enemy",
-        "documentation": {}
-    },
-    {
-        "label": "VampyreKing",
-        "kind": 6,
-        "importPath": "oop.enemy",
-        "description": "oop.enemy",
-        "peekOfCode": "class VampyreKing(Vampyre):\n    def __init__(self, name):\n        super().__init__(name)\n        self._hit_points = 140\n    # A VampyreKing is going to be incredibly powerful, and any points of damage inflicted will be divided by 4.\n    #todo I need to create a damage inflicted function that when attacking will divide by 4.\n    # VampyreKing objects will also start off with 140 hit points and only takes a quarter of the damage inflicted.\n    def take_damage(self, damage):\n        super().take_damage(damage // 4)",
-        "detail": "oop.enemy",
-        "documentation": {}
-    },
-    {
-        "label": "Tag",
-        "kind": 6,
-        "importPath": "oop.html_duck",
-        "description": "oop.html_duck",
-        "peekOfCode": "class Tag(object):\n    def __init__(self, name, contents):\n        self.start_tag = '<()>'.format(name)\n        self.end_tag = '</()>'.format(name)\n        self.contents = contents\n    def __str__(self):\n        return \"{0.start_tag}{0.contents}{0.end_tag}\".format(self)\n    def display(self, file=None):\n        print(self, file=file)\nclass DocType(Tag):",
-        "detail": "oop.html_duck",
-        "documentation": {}
-    },
-    {
-        "label": "DocType",
-        "kind": 6,
-        "importPath": "oop.html_duck",
-        "description": "oop.html_duck",
-        "peekOfCode": "class DocType(Tag):\n    def __init__(self):\n        super().__init__('!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" http://www.w3.org/TR/html4/strict.dtd', '')\n        self.end_tag = ''   # DOCTYPE doesn't have an end tag\nclass Head(Tag):\n    def __init__(self, title=None):\n        super().__init__('head', '')\n        if title:\n            self._title_tag = Tag('title', title)\n            self.contents = str(self._title_tag)",
-        "detail": "oop.html_duck",
-        "documentation": {}
-    },
-    {
-        "label": "Head",
-        "kind": 6,
-        "importPath": "oop.html_duck",
-        "description": "oop.html_duck",
-        "peekOfCode": "class Head(Tag):\n    def __init__(self, title=None):\n        super().__init__('head', '')\n        if title:\n            self._title_tag = Tag('title', title)\n            self.contents = str(self._title_tag)\nclass Body(Tag):\n    def __init__(self):\n        super().__init__('body', '')    # body contents will be built up separatly\n        self._body_contents = []",
-        "detail": "oop.html_duck",
-        "documentation": {}
-    },
-    {
-        "label": "Body",
-        "kind": 6,
-        "importPath": "oop.html_duck",
-        "description": "oop.html_duck",
-        "peekOfCode": "class Body(Tag):\n    def __init__(self):\n        super().__init__('body', '')    # body contents will be built up separatly\n        self._body_contents = []\n    def add_tag(self, name, contents):\n        new_tag = Tag(name, contents)\n        self._body_contents.append(new_tag)\n    def display(self, file=None):\n        for tag in self._body_contents:\n            self.contents += str(tag)",
-        "detail": "oop.html_duck",
-        "documentation": {}
-    },
-    {
-        "label": "HtmlDoc",
-        "kind": 6,
-        "importPath": "oop.html_duck",
-        "description": "oop.html_duck",
-        "peekOfCode": "class HtmlDoc(object):\n    def __init__(self, doc_type, head, body):\n        self._doc_type = doc_type\n        self._head = head\n        self._body = body\n    def add_tag(self, name, contents):\n        self._body.add_tag(name, contents)\n    def display(self, file=None):\n        self._doc_type.display(file=file)\n        print('<html>', file=file)",
-        "detail": "oop.html_duck",
-        "documentation": {}
-    },
-    {
         "label": "grevy",
         "kind": 5,
         "importPath": "oop.main-Bearded-Daddy",
@@ -1042,33 +1033,6 @@
         "description": "oop.main-LivingRoom-Computer",
         "peekOfCode": "grevy = Player(\"Grevy\")\nprint(grevy.name)\nprint(grevy.lives)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1",
         "detail": "oop.main-LivingRoom-Computer",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "oop.main",
-        "description": "oop.main",
-        "peekOfCode": "a = 3\n# This is a string.\nb = \"grevy\"\n# This is a tuple.\nc = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
-        "detail": "oop.main",
-        "documentation": {}
-    },
-    {
-        "label": "b",
-        "kind": 5,
-        "importPath": "oop.main",
-        "description": "oop.main",
-        "peekOfCode": "b = \"grevy\"\n# This is a tuple.\nc = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
-        "detail": "oop.main",
-        "documentation": {}
-    },
-    {
-        "label": "c",
-        "kind": 5,
-        "importPath": "oop.main",
-        "description": "oop.main",
-        "peekOfCode": "c = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
-        "detail": "oop.main",
         "documentation": {}
     },
     {
@@ -1123,15 +1087,6 @@
         "description": "oop.player-LivingRoom-Computer",
         "peekOfCode": "class Player(object):\n<<<<<<< HEAD\n    def __init__(self, name):\n        self.name = name\n        self._lives = 3\n=======\n    def __init__(self, name):\n        self.name = name\n        self.lives = 3\n>>>>>>> d8d76de5c5eaf5716245077a1bd736626a24dd52",
         "detail": "oop.player-LivingRoom-Computer",
-        "documentation": {}
-    },
-    {
-        "label": "Player",
-        "kind": 6,
-        "importPath": "oop.player",
-        "description": "oop.player",
-        "peekOfCode": "class Player(object):\n    def __init__(self, name):\n        self.name = name\n        self._lives = 3\n        self._level = 1\n        self._score = 0\n    def _get_lives(self):\n        return self._lives\n    def _set_lives(self, lives):\n        if lives >= 0:",
-        "detail": "oop.player",
         "documentation": {}
     },
     {

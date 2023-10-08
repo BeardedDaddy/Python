@@ -42,6 +42,10 @@ class Penguin(object):
         print("Are you having a laugh? I'm a penguin!")
 
 
+class Mallard(Duck):
+    pass
+
+
 class Flock(object):
 
     def __init__(self):
@@ -52,11 +56,20 @@ class Flock(object):
 # added a parameter, duck.
 
     def add_duck(self, duck: Duck) -> None:
-        self.flock.append(duck)
+        fly_method = getattr(duck, 'fly', None)
+        if callable(fly_method):
+            self.flock.append(duck)
 
     def migrate(self):
+        problem = None
         for duck in self.flock:
-            duck.fly()
+            try:
+                duck.fly()
+            except AttributeError as e:
+                print("One duck down")
+                problem = e
+        if problem:
+            raise problem
 
 
 if __name__ == '__main__':

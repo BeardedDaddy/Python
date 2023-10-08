@@ -383,7 +383,16 @@
         "kind": 6,
         "importPath": "Games.ducks",
         "description": "Games.ducks",
-        "peekOfCode": "class Penguin(object):\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you having a laugh? I'm a penguin!\")\nclass Flock(object):\n    def __init__(self):\n        self.flock = []",
+        "peekOfCode": "class Penguin(object):\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you having a laugh? I'm a penguin!\")\nclass Mallard(Duck):\n    pass\nclass Flock(object):",
+        "detail": "Games.ducks",
+        "documentation": {}
+    },
+    {
+        "label": "Mallard",
+        "kind": 6,
+        "importPath": "Games.ducks",
+        "description": "Games.ducks",
+        "peekOfCode": "class Mallard(Duck):\n    pass\nclass Flock(object):\n    def __init__(self):\n        self.flock = []\n# In the following we added hints to the add_duck method. The hints lets\n# anyone using the add_duck module understands what they should be providing\n# to the method.  We added annonation Inside the paratheses of the method we\n# added a parameter, duck.\n    def add_duck(self, duck: Duck) -> None:",
         "detail": "Games.ducks",
         "documentation": {}
     },
@@ -392,7 +401,7 @@
         "kind": 6,
         "importPath": "Games.ducks",
         "description": "Games.ducks",
-        "peekOfCode": "class Flock(object):\n    def __init__(self):\n        self.flock = []\n# In the following we added hints to the add_duck method. The hints lets\n# anyone using the add_duck module understands what they should be providing\n# to the method.  We added annonation Inside the paratheses of the method we\n# added a parameter, duck.\n    def add_duck(self, duck: Duck) -> None:\n        self.flock.append(duck)\n    def migrate(self):",
+        "peekOfCode": "class Flock(object):\n    def __init__(self):\n        self.flock = []\n# In the following we added hints to the add_duck method. The hints lets\n# anyone using the add_duck module understands what they should be providing\n# to the method.  We added annonation Inside the paratheses of the method we\n# added a parameter, duck.\n    def add_duck(self, duck: Duck) -> None:\n        fly_method = getattr(duck, 'fly', None)\n        if callable(fly_method):",
         "detail": "Games.ducks",
         "documentation": {}
     },

@@ -383,7 +383,7 @@
         "kind": 6,
         "importPath": "Games.ducks",
         "description": "Games.ducks",
-        "peekOfCode": "class Penguin(object):\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you having a laugh? I'm a penguin!\")\nclass Mallard(Duck):\n    pass\nclass Flock(object):",
+        "peekOfCode": "class Penguin(object):\n    def __init__(self):\n        self.fly = self.aviate\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you having a laugh? I'm a penguin!\")\n    def aviate(self):",
         "detail": "Games.ducks",
         "documentation": {}
     },
@@ -419,7 +419,7 @@
         "kind": 6,
         "importPath": "Games.enemy",
         "description": "Games.enemy",
-        "peekOfCode": "class Troll(Enemy):\n    def __init__(self, name):\n    #  super(Troll, self).__init__(name = name, lives = 1, hit_points = 23)\n       super().__init__(name = name, lives = 1, hit_points = 23)\n    def grunt(self):\n        print(\"Me {0._name}, {0._name}, stomp you\".format(self))\nclass Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):",
+        "peekOfCode": "class Troll(Enemy):\n    def __init__(self, name):\n        #  super(Troll, self).__init__(name = name, lives = 1, hit_points = 23)\n        super().__init__(name=name, lives=1, hit_points=23)\n    def grunt(self):\n        print(\"Me {0._name}, {0._name}, stomp you\".format(self))\nclass Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):",
         "detail": "Games.enemy",
         "documentation": {}
     },
@@ -437,7 +437,7 @@
         "kind": 6,
         "importPath": "Games.enemy",
         "description": "Games.enemy",
-        "peekOfCode": "class VampyreKing(Vampyre):\n    def __init__(self, name):\n        super().__init__(name)\n        self._hit_points = 140\n    # A VampyreKing is going to be incredibly powerful, and any points of damage inflicted will be divided by 4.\n    #todo I need to create a damage inflicted function that when attacking will divide by 4.\n    # VampyreKing objects will also start off with 140 hit points and only takes a quarter of the damage inflicted.\n    def take_damage(self, damage):\n        super().take_damage(damage // 4)",
+        "peekOfCode": "class VampyreKing(Vampyre):\n    def __init__(self, name):\n        super().__init__(name)\n        self._hit_points = 140\n    # A VampyreKing is going to be incredibly powerful, and any points of\n    # damage inflicted will be divided by 4.\n    # todo I need to create a damage inflicted function that when attacking\n    # will divide by 4.\n    # VampyreKing objects will also start off with 140 hit points and only\n    # takes a quarter of the damage inflicted.",
         "detail": "Games.enemy",
         "documentation": {}
     },

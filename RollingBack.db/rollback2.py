@@ -1,9 +1,8 @@
-# TODO Fix the errors in this module.
-from decimal import *
+from decimal import Decimal
 
 
 class Account(object):
-    _qb = Decimal('0.00')  # class constant, accessible without creating an instance.
+    _qb = Decimal('0.00')  # class constant, accessible without creating an instance.  # noqa
 
     def __init__(self, name: str, opening_balance: float = 0.0):
         self.name = name

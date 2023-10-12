@@ -15,7 +15,9 @@ class Account(object):
 
     @staticmethod
     def _current_time():
-        return pytz.utc.localize(datetime.datetime.utcnow())
+        # return pytz.utc.localize(datetime.datetime.utcnow())
+        local_time = pytz.utc.localize(datetime.datetime.utcnow())
+        return local_time.astimezone()
 
     def __init__(self, name: str, opening_balance: int = 0):
         cursor = db.execute("SELECT name, balance FROM accounts WHERE (name = ?)", (name,))  # noqa: E501
@@ -59,24 +61,24 @@ class Account(object):
 
     def deposit(self, amount: int) -> float:
         if amount > 0.0:
-            #new_balance = self._balance + amount
-            #deposit_time = Account._current_time()
-            #db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))  # noqa
-            #db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))  # noqa
-            #db.commit()
-            #self._balance = new_balance
+            # new_balance = self._balance + amount
+            # deposit_time = Account._current_time()
+            # db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))  # noqa
+            # db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))  # noqa
+            # db.commit()
+            # self._balance = new_balance
             self._save_update(amount)
             print("{:.2f} deposited".format(amount / 100))
         return self._balance / 100
 
     def withdraw(self, amount: int) -> float:
         if 0 < amount <= self._balance:
-            #new_balance = self._balance - amount
-            #withdrawal_time = Account._current_time()
-            #db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))  # noqa
-            #db.execute("INSERT INTO history VALUES(?, ?, ?)", (withdrawal_time, self.name, -amount))  # noqa
-            #db.commit()
-            #self.balance = new_balance
+            # new_balance = self._balance - amount
+            # withdrawal_time = Account._current_time()
+            # db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))  # noqa
+            # db.execute("INSERT INTO history VALUES(?, ?, ?)", (withdrawal_time, self.name, -amount))  # noqa
+            # db.commit()
+            # self.balance = new_balance
             # self._save_update(-amount)
             self._save_update(-amount)
             print("{:.2f} withdrawn".format(amount / 100))

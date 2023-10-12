@@ -218,7 +218,7 @@
         "documentation": {}
     },
     {
-        "label": "*",
+        "label": "Decimal",
         "importPath": "decimal",
         "description": "decimal",
         "isExtraImport": true,
@@ -1193,7 +1193,7 @@
         "kind": 5,
         "importPath": "RollingBack.db.checkdb",
         "description": "RollingBack.db.checkdb",
-        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n#for row in db.execute(\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\"\n#                      \" history.account, history.amount FROM history ORDER BY history.time\"):\nfor row in db.execute(\"SELECT * FROM localhistory\"):\n    print(row)\ndb.close()",
+        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\nfor row in db.execute(\"SELECT * FROM history\"):\n    utc_time = row[0]\n    local_time = pytz.utc.localize(utc_time).astimezone()\n    # print(row)\n    local_time = row[0]\n    print(\"{}\\t{}\".format(utc_time, local_time))\ndb.close()",
         "detail": "RollingBack.db.checkdb",
         "documentation": {}
     },
@@ -1202,7 +1202,7 @@
         "kind": 5,
         "importPath": "RollingBack.db.pickling",
         "description": "RollingBack.db.pickling",
-        "peekOfCode": "carlist = ['Toyota', 'BMW', 'Audi', 'Suzuki', 'Honda']\n# open a file to store the pickle of cars\nwith open('carlist.pkl','wb') as carpickle: # To open you need parameters, the file name and the \n    pickle.dump(carlist, carpickle) # Dump is the functions that creates the pickle file. It takes two agruements.\n    # The first is the file we want to pickle and the second arguement is the file object.",
+        "peekOfCode": "carlist = ['Toyota', 'BMW', 'Audi', 'Suzuki', 'Honda']\n# open a file to store the pickle of cars\nwith open('carlist.pkl','wb') as carpickle: # To open you need parameters, the file name and the  # noqa\n    pickle.dump(carlist, carpickle) # Dump is the functions that creates the pickle file. It takes two agruements.  # noqa\n    # The first is the file we want to pickle and the second arguement is the file object.  # noqa",
         "detail": "RollingBack.db.pickling",
         "documentation": {}
     },
@@ -1229,7 +1229,7 @@
         "kind": 6,
         "importPath": "RollingBack.db.rollback2",
         "description": "RollingBack.db.rollback2",
-        "peekOfCode": "class Account(object):\n    _qb = Decimal('0.00')  # class constant, accessible without creating an instance.\n    def __init__(self, name: str, opening_balance: float = 0.0):\n        self.name = name\n        self._balance = Decimal(opening_balance).quantize(Account._qb)\n        print(\"Account created for {}. \".format(self.name), end='')\n        self.show_balance()\n    def deposit(self, amount: float) -> Decimal:\n        decimal_amount = Decimal(amount).quantize(Account._qb)\n        if decimal_amount > Account._qb:",
+        "peekOfCode": "class Account(object):\n    _qb = Decimal('0.00')  # class constant, accessible without creating an instance.  # noqa\n    def __init__(self, name: str, opening_balance: float = 0.0):\n        self.name = name\n        self._balance = Decimal(opening_balance).quantize(Account._qb)\n        print(\"Account created for {}. \".format(self.name), end='')\n        self.show_balance()\n    def deposit(self, amount: float) -> Decimal:\n        decimal_amount = Decimal(amount).quantize(Account._qb)\n        if decimal_amount > Account._qb:",
         "detail": "RollingBack.db.rollback2",
         "documentation": {}
     },

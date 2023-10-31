@@ -1153,6 +1153,51 @@
         "documentation": {}
     },
     {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "PythonPractice.sqlite3",
+        "description": "PythonPractice.sqlite3",
+        "peekOfCode": "conn = sqlite3.connect('store_transactions.db')\ncursor = conn.cursor()\n# create a store table\ncommand1 = \"\"\"CREATE TABLE IF NOT EXISTS\nstores(store_id INTEGER PRIMARY KEY, location TEXT)\"\"\"\ncursor.execute(command1)\n# create a purchase table\ncommand2 = \"\"\"CREATE TABLE IF NOT EXISTS\npurchases(purchase_id INTEGER PRIMARY KEY, store_id INTEGER, total_cost FLOAT,\nFOREIGN KEY(store_id) REFERENCES stores(store_id))\"\"\"",
+        "detail": "PythonPractice.sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "PythonPractice.sqlite3",
+        "description": "PythonPractice.sqlite3",
+        "peekOfCode": "cursor = conn.cursor()\n# create a store table\ncommand1 = \"\"\"CREATE TABLE IF NOT EXISTS\nstores(store_id INTEGER PRIMARY KEY, location TEXT)\"\"\"\ncursor.execute(command1)\n# create a purchase table\ncommand2 = \"\"\"CREATE TABLE IF NOT EXISTS\npurchases(purchase_id INTEGER PRIMARY KEY, store_id INTEGER, total_cost FLOAT,\nFOREIGN KEY(store_id) REFERENCES stores(store_id))\"\"\"\ncursor.execute(command2)",
+        "detail": "PythonPractice.sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "command1",
+        "kind": 5,
+        "importPath": "PythonPractice.sqlite3",
+        "description": "PythonPractice.sqlite3",
+        "peekOfCode": "command1 = \"\"\"CREATE TABLE IF NOT EXISTS\nstores(store_id INTEGER PRIMARY KEY, location TEXT)\"\"\"\ncursor.execute(command1)\n# create a purchase table\ncommand2 = \"\"\"CREATE TABLE IF NOT EXISTS\npurchases(purchase_id INTEGER PRIMARY KEY, store_id INTEGER, total_cost FLOAT,\nFOREIGN KEY(store_id) REFERENCES stores(store_id))\"\"\"\ncursor.execute(command2)\n# add three rows to our stores table\ncursor.execute(\"INSERT INTO store VALUES (21, 'Minneapolis, MN')\")",
+        "detail": "PythonPractice.sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "command2",
+        "kind": 5,
+        "importPath": "PythonPractice.sqlite3",
+        "description": "PythonPractice.sqlite3",
+        "peekOfCode": "command2 = \"\"\"CREATE TABLE IF NOT EXISTS\npurchases(purchase_id INTEGER PRIMARY KEY, store_id INTEGER, total_cost FLOAT,\nFOREIGN KEY(store_id) REFERENCES stores(store_id))\"\"\"\ncursor.execute(command2)\n# add three rows to our stores table\ncursor.execute(\"INSERT INTO store VALUES (21, 'Minneapolis, MN')\")\ncursor.execute(\"INSERT INTO store VALUES (95, 'Chicago, IL')\")\ncursor.execute(\"INSERT INTO store VALUES (64, 'Iowa City, IA')\")\n# add to our purchases table\ncursor.execute(\"INSERT INTO purchases VALUES (54, 21, 15.49)\")",
+        "detail": "PythonPractice.sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "PythonPractice.sqlite3",
+        "description": "PythonPractice.sqlite3",
+        "peekOfCode": "results = cursor.fetchall()\nprint(results)",
+        "detail": "PythonPractice.sqlite3",
+        "documentation": {}
+    },
+    {
         "label": "Person",
         "kind": 6,
         "importPath": "Python_Projects.DeletingObjectProperties",

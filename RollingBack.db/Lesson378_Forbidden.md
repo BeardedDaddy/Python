@@ -1,8 +1,13 @@
 # This is the Udemy lesson 378
 
-1. Select the titles of all the songs on the album "Forbidden"
-2. Repeat the previous query but this time display the songs in track order. You may want to include the track number in the output to verify that it worked ok
+1. Select the titles of all the songs on the album "Forbidden" [X] Done
+sqlite> SELECT songs.title FROM songs INNER JOIN albums ON songs.album = albums._id WHERE albums.name = "Forbidden" ORDER BY track;
+
+2. Repeat the previous query but this time display the songs in track order. You may want to include the track number in the output to verify that it worked ok [X] Done
+sqlite> SELECT songs.title, songs.track FROM songs INNER JOIN albums ON songs.album = albums._id WHERE albums.name = "Forbidden" ORDER BY track;
+
 3. Display all songs for the band "Deep Purple"
+
 4. Rename the band "Mehitabel" to "One Kitten". Note that this is an exception to the advice to always fully qualify your column names. SET artists.name won't work, you just need to specify name
 5. Check that the record was correctly renamed.
 6. Select the titles of all the songs by Aerosmith in alphabetical order. Include only the title in the output.

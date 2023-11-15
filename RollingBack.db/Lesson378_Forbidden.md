@@ -20,7 +20,8 @@ _id|name
 6. Select the titles of all the songs by Aerosmith in alphabetical order. Include only the title in the output. [X]
 sqlite> SELECT title FROM artist_list WHERE artis = "Aerosmith" ORDER BY title;
 
-7. Replace the column that you used in the previous answer with count(title) to get just a count of the number songs. [ ]
+7. Replace the column that you used in the previous answer with count(title) to get just a count of the number songs. [X]
+sqlite> SELECT count(title) FROM artist_list WHERE artists = "Aerosmith" ORDER BY title;
 
 8. Search the internet to find out how to get a list of the songs from step 6 without any duplicates. [ ]
 

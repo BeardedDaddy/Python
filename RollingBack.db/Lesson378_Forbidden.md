@@ -23,12 +23,14 @@ sqlite> SELECT title FROM artist_list WHERE artis = "Aerosmith" ORDER BY title;
 7. Replace the column that you used in the previous answer with count(title) to get just a count of the number songs. [X]
 sqlite> SELECT count(title) FROM artist_list WHERE artists = "Aerosmith" ORDER BY title;
 
-8. Search the internet to find out how to get a list of the songs from step 6 without any duplicates. [ ]
+8. Search the internet to find out how to get a list of the songs from step 6 without any duplicates. [X]
+sqlite> SELECT DISTINCT title FROM artist_list WHERE artists = "Aerosmith" ORDER BY title;
 
-9. Search the internet again to find out how to get a count of the songs without duplicates. Hint: It uses the same keyword as step 8 but the syntax may not be obvious. [ ]
+9. Search the internet again to find out how to get a count of the songs without duplicates. Hint: It uses the same keyword as step 8 but the syntax may not be obvious. [X]
+sqlite> SELECT count(DISTINCT title) FROM artist_list WHERE artists = "Aerosmith";
 
-10. Repeat the previous query to find the number of artists (which, obviously, should be one) and the number of albums. [ ]
-
+10. Repeat the previous query to find the number of artists (which, obviously, should be one) and the number of albums. [X]
+sqlite> SELECT count(DISTINCT artists) FROM artist_list WHERE artists = "Aerosmith";
 
 CREATE TABLE songs (_id INTEGER PRIMARY KEY, track INTEGER, title TEXT NOT NULL, album INTEGER);
 CREATE TABLE albums (_id INTEGER PRIMARY KEY, name TEXT NOT NULL, artist INTEGER);

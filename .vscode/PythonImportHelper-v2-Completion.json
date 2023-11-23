@@ -1828,6 +1828,24 @@
         "documentation": {}
     },
     {
+        "label": "db",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.contacts",
+        "description": "UdemyClasses.Blackjack.contacts",
+        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\ndb.execute(\"CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone INTEGER, email TEXT)\")  # noqa\ndb.execute(\"INSERT INTO contacts(name, phone, email) VALUES('Grevy', 7542134200, 'grevyjr@gmail.com')\")  # noqa\ndb.execute(\"INSERT INTO contacts VALUES('MIA', 7542134300, 'mia@gmail.com')\")\ncursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print(cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())",
+        "detail": "UdemyClasses.Blackjack.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.contacts",
+        "description": "UdemyClasses.Blackjack.contacts",
+        "peekOfCode": "cursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print(cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nfor name, phone, email in cursor:\n    print(name)\n    print(phone)\n    print(email)",
+        "detail": "UdemyClasses.Blackjack.contacts",
+        "documentation": {}
+    },
+    {
         "label": "x",
         "kind": 5,
         "importPath": "UdemyClasses.Blackjack.get_ints",

@@ -31,5 +31,4 @@ for row in db.execute("SELECT * FROM contacts"):
     # print("-" * 20)
 
 # cursor.close()
-# db.commit()
 db.close()

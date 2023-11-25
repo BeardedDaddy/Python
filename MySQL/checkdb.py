@@ -4,7 +4,7 @@ conn = sqlite3.connect("contacts.sqlite")
 
 name = input("Please enter a name to search for? ")
 
-for row in conn.execute("SELECT * FROM contacts WHERE name = ?"):
+for row in conn.execute("SELECT * FROM contacts WHERE name = ?", (name,)):
     print(row)
 # the name at the end in parathesis has comma with it to make it a tuple.
 # If you do not use a comma you will get a ProgrammingError:

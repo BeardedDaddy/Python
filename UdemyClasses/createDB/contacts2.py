@@ -5,7 +5,6 @@ db = sqlite3.connect("contacts.sqlite")
 new_email = "newemail@update.com"
 phone = input("Please enter a phone number ")
 
-
 # update_sql = "UPDATE contacts SET email = '{}' WHERE phone = {}".format(new_email, phone)  # noqa
 update_sql = "UPDATE contacts SET email = ? WHERE phone = ?"  # noqa
 

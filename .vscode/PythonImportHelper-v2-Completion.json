@@ -1850,16 +1850,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.createDB.checkdb",
         "description": "UdemyClasses.createDB.checkdb",
-        "peekOfCode": "conn = sqlite3.connect(\"contacts.sqlite\")\nname = input(\"Please enter a name to search for \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name LIKE ?\", (name,)):\n# the name at the end in parathesis has comma with it to make it a tuple. \n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied. #noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative. #noqa\n    print(row)  \nconn.close()",
-        "detail": "UdemyClasses.createDB.checkdb",
-        "documentation": {}
-    },
-    {
-        "label": "name",
-        "kind": 5,
-        "importPath": "UdemyClasses.createDB.checkdb",
-        "description": "UdemyClasses.createDB.checkdb",
-        "peekOfCode": "name = input(\"Please enter a name to search for \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name LIKE ?\", (name,)):\n# the name at the end in parathesis has comma with it to make it a tuple. \n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied. #noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative. #noqa\n    print(row)  \nconn.close()",
+        "peekOfCode": "conn = sqlite3.connect(\"contacts.sqlite\")\n# name = input(\"Please enter a name to search for \")\nfor row in conn.execute(\"SELECT * FROM sqlite_master\"):\n# the name at the end in parathesis has comma with it to make it a tuple. \n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied. #noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative. #noqa\n    print(row)\nconn.close()",
         "detail": "UdemyClasses.createDB.checkdb",
         "documentation": {}
     },
@@ -1886,7 +1877,43 @@
         "kind": 5,
         "importPath": "UdemyClasses.createDB.contacts2",
         "description": "UdemyClasses.createDB.contacts2",
-        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\n# new_email = \"newupdate@update.com\"\n# phone = input(\"Please enter a phone number \")\n# update_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\n# print(update_sql)\n# update_cursor = db.cursor()\n# update_cursor.execute(update_sql, (new_email, phone))\n# print(\"{} rows updated\".format(update_cursor.rowcount))\n# print()\n# print(\"Are connections the same: {}\".format(update_cursor.connection == db))",
+        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\nnew_email = \"newemail@update.com\"\nphone = input(\"Please enter a phone number \")\n# update_sql = \"UPDATE contacts SET email = '{}' WHERE phone = {}\".format(new_email, phone)  # noqa\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"  # noqa\n# print(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()",
+        "detail": "UdemyClasses.createDB.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "new_email",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.contacts2",
+        "description": "UdemyClasses.createDB.contacts2",
+        "peekOfCode": "new_email = \"newemail@update.com\"\nphone = input(\"Please enter a phone number \")\n# update_sql = \"UPDATE contacts SET email = '{}' WHERE phone = {}\".format(new_email, phone)  # noqa\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"  # noqa\n# print(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))",
+        "detail": "UdemyClasses.createDB.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "phone",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.contacts2",
+        "description": "UdemyClasses.createDB.contacts2",
+        "peekOfCode": "phone = input(\"Please enter a phone number \")\n# update_sql = \"UPDATE contacts SET email = '{}' WHERE phone = {}\".format(new_email, phone)  # noqa\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"  # noqa\n# print(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()",
+        "detail": "UdemyClasses.createDB.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "update_sql",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.contacts2",
+        "description": "UdemyClasses.createDB.contacts2",
+        "peekOfCode": "update_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"  # noqa\n# print(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\n# this is the same as db.commit() # calling dot commit on the wrong connection could cause bugs. # noqa",
+        "detail": "UdemyClasses.createDB.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "update_cursor",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.contacts2",
+        "description": "UdemyClasses.createDB.contacts2",
+        "peekOfCode": "update_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\n# this is the same as db.commit() # calling dot commit on the wrong connection could cause bugs. # noqa\nupdate_cursor.close()\nfor name, phone, email in db.execute(\"SELECT * FROM contacts\"):",
         "detail": "UdemyClasses.createDB.contacts2",
         "documentation": {}
     },

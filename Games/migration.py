@@ -18,5 +18,4 @@ flock.add_duck(percy)
 flock.add_duck(duck5)
 flock.add_duck(duck6)
 flock.add_duck(duck7)
-
 flock.migrate()

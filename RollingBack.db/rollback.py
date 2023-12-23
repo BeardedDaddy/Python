@@ -2,8 +2,8 @@ import sqlite3
 import datetime
 import pytz
 
-db = sqlite3.connect("accounts.sqlite", detect_types=sqlite3.PARSE_DECLTYPES)
-db.execute("CREATE TABLE IF NOT EXISTS accounts (name TEXT PRIMARY KEY NOT NULL, balance INTEGER NOT NULL)")  # noqa: E501
+db = sqlite3.connect("accounts.sqlite", detect_types=sqlite3.PARSE_DECLTYPES) # this is the database connection to sqlite with a .sqlite extention # noqa
+db.execute("CREATE TABLE IF NOT EXISTS accounts (name TEXT PRIMARY KEY NOT NULL, balance INTEGER NOT NULL)")  # noqa: #E501 This is the accounts table.
 db.execute("CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL,"
            " account TEXT NOT NULL, amount INTEGER NOT NULL, PRIMARY KEY (time, account))")  # noqa: E501
 db.execute("CREATE VIEW IF NOT EXISTS localhistory AS"
@@ -28,27 +28,27 @@ class Account(object):
             self.name = name
             self._balance = opening_balance
             cursor.execute("INSERT INTO accounts VALUES(?, ?)", (name, opening_balance))  # noqa
-            cursor.connection.commit()
+            cursor.connection.commit()  # this line saves the information above
             print("Account created for {}. ".format(self.name), end='')
         self.show_balance()
 
-    def _save_update(self, amount):
-        new_balance = self._balance + amount
-        deposit_time = Account._current_time()
-
-        try:
-            db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))  # noqa
-            db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))  # noqa
-
-        except sqlite3.Error:
-            # db.rollback()
-            pass
-        else:
-            db.commit()
-            self._balance = new_balance
-
-        self._balance = new_balance
-
+#    def _save_update(self, amount):
+#        new_balance = self._balance + amount
+#        deposit_time = Account._current_time()
+#
+#        try:
+#            db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))  # noqa
+#            db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))  # noqa
+#
+#        except sqlite3.Error:
+#            # db.rollback()
+#            pass
+#        else:
+#            db.commit()
+#            self._balance = new_balance
+#
+#        self._balance = new_balance
+#
     def _save_update(self, amount):
         new_balance = self._balance + amount
         deposit_time = Account._current_time()
@@ -65,7 +65,7 @@ class Account(object):
             # db.execute("INSERT INTO history VALUES(?, ?, ?)", (deposit_time, self.name, amount))  # noqa
             # db.commit()
             # self._balance = new_balance
-            self._save_update(amount)
+            self._save_update(amount)          
             print("{:.2f} deposited".format(amount / 100))
         return self._balance / 100
 
@@ -77,7 +77,6 @@ class Account(object):
             # db.execute("INSERT INTO history VALUES(?, ?, ?)", (withdrawal_time, self.name, -amount))  # noqa
             # db.commit()
             # self.balance = new_balance
-            # self._save_update(-amount)
             self._save_update(-amount)
             print("{:.2f} withdrawn".format(amount / 100))
             return amount / 100

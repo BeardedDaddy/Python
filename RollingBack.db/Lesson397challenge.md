@@ -4,6 +4,7 @@ Read the documentation in SQLite to determine how to store time.
 
 ## Modify the rollback program so that it includes an extra column in the database. The extra column could be used to store either timezone information, or the original time's offset from UTC, or the tzinfo. It's up to you what you store
 
+Find out how to add a column to the database.
 Store the local time as a string.
 
 ### Modify the code store the correct information, then modify checkdb to retrieve the original time and display it along with the UTC time

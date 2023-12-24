@@ -15,6 +15,8 @@ db.execute("CREATE VIEW IF NOT EXISTS localhistory AS"
 db.execute("CREATE VIEW IF NOT EXISTS localhistory AS SELECT"
            "strftime('%Y-%m-%d %H:%M:%f', history.time,'localtime') AS localtime,"  # noqa
            " history.account, history.amount FROM history ORDER BY history.time")  # noqa
+db.execute('ALTER TABLE accounts ADD COLUMN time zone TEXT')
+
 
 class Account(object):
     """This class creates an object called Account."""

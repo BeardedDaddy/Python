@@ -1275,34 +1275,7 @@
         "kind": 6,
         "importPath": "RollingBack.db.rollback",
         "description": "RollingBack.db.rollback",
-        "peekOfCode": "class Account(object):\n    \"\"\"This class creates an object called Account.\"\"\"\n    @staticmethod\n    def _current_time():\n        return pytz.utc.localize(datetime.datetime.utcnow())\n        # local_time = pytz.utc.localize(datetime.datetime.utcnow)\n        # return local_time.astimezone()\ndef __init__(self, name: str, opening_balance: int = 0):\n    cursor = db.execute(\"SELECT name, balance FROM accounts WHERE (name = ?)\", (name,))  # noqa\n    row = cursor.fetchone()",
-        "detail": "RollingBack.db.rollback",
-        "documentation": {}
-    },
-    {
-        "label": "deposit",
-        "kind": 2,
-        "importPath": "RollingBack.db.rollback",
-        "description": "RollingBack.db.rollback",
-        "peekOfCode": "def deposit(self, amount: int) -> float:\n    \"\"\"deposit function indicates a deposit.\n    Parameters\n    ----------\n    amount\n        The amount indicates the total of the deposit.\n    Returns\n    -------\n        Once this function is run we will return a floating number.\n    \"\"\"",
-        "detail": "RollingBack.db.rollback",
-        "documentation": {}
-    },
-    {
-        "label": "withdraw",
-        "kind": 2,
-        "importPath": "RollingBack.db.rollback",
-        "description": "RollingBack.db.rollback",
-        "peekOfCode": "def withdraw(self, amount: int) -> float:\n    \"\"\"withdraw function shows the amount taken out.\n    Parameters\n    ----------\n    amount\n        This indicates the total taken out.\n    Returns\n    -------\n        The return function will indicate a floating number.\n    \"\"\"",
-        "detail": "RollingBack.db.rollback",
-        "documentation": {}
-    },
-    {
-        "label": "show_balance",
-        "kind": 2,
-        "importPath": "RollingBack.db.rollback",
-        "description": "RollingBack.db.rollback",
-        "peekOfCode": "def show_balance(self):\n    \"\"\"show_balance This line indicates the balance.\n    \"\"\"\n    print(\"Balance on account {} is {:.2f}\".format(self.name, self._balance / 100))  # noqa\nif __name__ == '__main__':\n    john = Account()\n    john.deposit(5000)\n    john.deposit(10)\n    john.deposit(10)\n    john.withdraw(30)",
+        "peekOfCode": "class Account(object):\n    \"\"\"This class creates an object called Account.\"\"\"\n    @staticmethod\n    def _current_time():\n        return pytz.utc.localize(datetime.datetime.now(datetime.UTC))\n        # local_time = pytz.utc.localize(datetime.datetime.utcnow)\n        # return local_time.astimezone()\n    def __init__(self, name: str, opening_balance: int = 0) -> None:\n        cursor = db.execute(\"SELECT name, balance FROM accounts WHERE (name = ?)\", (name,))  # noqa\n        row = cursor.fetchone()",
         "detail": "RollingBack.db.rollback",
         "documentation": {}
     },
@@ -1311,7 +1284,7 @@
         "kind": 5,
         "importPath": "RollingBack.db.rollback",
         "description": "RollingBack.db.rollback",
-        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n# this is the database connection to sqlite with a .sqlite extention # noqa\ndb.execute(\"\"\"CREATE TABLE IF NOT EXISTS accounts\n(name TEXT PRIMARY KEY NOT NULL, balance INTEGER NOT NULL)\"\"\")\n# noqa: #E501 This is the accounts table.\ndb.execute(\"CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL,\"\n           \" account TEXT NOT NULL, amount INTEGER NOT NULL, PRIMARY KEY (time, account))\") # noqa\ndb.execute(\"CREATE VIEW IF NOT EXISTS localhistory AS\"\n           \" SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\"  # noqa\n           \" history.account, history.amount FROM history ORDER BY history.time\")  # noqa",
+        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n# this is the database connection to sqlite with a .sqlite extention # noqa\ndb.execute(\"\"\"CREATE TABLE IF NOT EXISTS accounts\n(name TEXT PRIMARY KEY NOT NULL, balance INTEGER NOT NULL)\"\"\")\n# noqa: #E501 This is the accounts table.\ndb.execute(\"CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL, account TEXT NOT NULL, amount INTEGER NOT NULL, PRIMARY KEY (time, account))\")  # noqa\ndb.execute(\"CREATE VIEW IF NOT EXISTS localhistory AS SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime, history.account, history.amount FROM history ORDER BY history.time\")  # noqa\ndb.execute(\"CREATE VIEW IF NOT EXISTS localhistory AS SELECT strftime('%Y-%m-%d %H:%M:%f', history.time,'localtime') AS localtime, history.account, history.amount FROM history ORDER BY history.time\")  # noqa\nclass Account(object):\n    \"\"\"This class creates an object called Account.\"\"\"",
         "detail": "RollingBack.db.rollback",
         "documentation": {}
     },
@@ -1320,7 +1293,7 @@
         "kind": 5,
         "importPath": "RollingBack.db.tzcheck",
         "description": "RollingBack.db.tzcheck",
-        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n#for row in db.execute (\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\" \"             # noqa: E501\n#                       history.account, history.amount FROM history ORDER BY history.time\"):  # noqa: E501\nfor row in db.execute(\"SELECT * FROM history\"):\n    utc_time = row[0]\n    # picked_zone = row[3]\n    # zone = pickle.loads(picked_zone)\n    zone = pytz.timezone(\"Australia/Adelaide\")\n    local_time = pytz.utc.localize(utc_time).astimezone(zone)\n    print(\"{}\\t{}\\t{}\".format(utc_time, local_time, local_time.tzinfo))",
+        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n# for row in db.execute (\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time,\n# 'localtime') AS localtime,\" \"history.account, history.amount FROM history\n# ORDER BY history.time\"):\nfor row in db.execute(\"SELECT * FROM history\"):\n    utc_time = row[0]\n#    picked_zone = row[3]\n#    zone = pickle.loads(picked_zone)\n    zone = pytz.timezone(\"Australia/Adelaide\")\n    local_time = pytz.utc.localize(utc_time).astimezone(zone)",
         "detail": "RollingBack.db.tzcheck",
         "documentation": {}
     },

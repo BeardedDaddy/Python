@@ -1,3 +1,4 @@
+"""This line imports sqlite3 module."""
 import sqlite3
 
 

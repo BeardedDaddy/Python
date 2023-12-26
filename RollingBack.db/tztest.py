@@ -1,7 +1,9 @@
+"""This line imports sqlite3 module."""
 import sqlite3
 import datetime
-import pytz
 import pickle
+import dataclasses
+import pytz
 
 db = sqlite3.connect("accounts.sqlite", detect_types=sqlite3.PARSE_DECLTYPES)
 # this is the database connection to sqlite with a .sqlite extention # noqa
@@ -18,7 +20,8 @@ db.execute("CREATE VIEW IF NOT EXISTS localhistory AS"
 db.execute("CREATE VIEW IF NOT EXISTS localhistory AS SELECT strftime('%Y-%m-%d %H:%M:%f', history.time,'localtime') AS localtime, history.account, history.amount FROM history ORDER BY history.time")  # noqa
 
 
-class Account(object):
+@dataclasses.dataclass
+class Account(object, name, balance):
     """This class creates an object called Account."""
     @staticmethod
     def _current_time():
@@ -30,6 +33,7 @@ class Account(object):
         local_time = utc_time.astimezone()
         zone = local_time.tzinfo
         return utc_time, zone
+
 
 def __init__(self, name: str, opening_balance: int = 0):
     cursor = db.execute("SELECT name, balance FROM accounts WHERE (name = ?)", (name,))  # noqa
@@ -67,7 +71,7 @@ def __init__(self, name: str, opening_balance: int = 0):
 
 def _save_update(self, amount):
     new_balance = self._balance + amount
-    deposit_time, zone = Account._current_time() # <-- unpacking the return tuple
+    deposit_time, zone = Account._current_time()  # <-- unpacking the return tuple  # noqa
     pickled_zone = pickle.dumps(zone)
     
     db.execute("UPDATE accounts SET balance = ? WHERE (name = ?)", (new_balance, self.name))  # noqa

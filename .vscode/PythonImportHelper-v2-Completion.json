@@ -218,6 +218,15 @@
         "documentation": {}
     },
     {
+        "label": "dataclasses",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
         "label": "blackjack",
         "kind": 6,
         "isExtraImport": true,
@@ -1320,7 +1329,7 @@
         "kind": 6,
         "importPath": "RollingBack.db.tztest",
         "description": "RollingBack.db.tztest",
-        "peekOfCode": "class Account(object):\n    \"\"\"This class creates an object called Account.\"\"\"\n    @staticmethod\n    def _current_time():\n        # return pytz.utc.localize(datetime.datetime.utcnow())\n        # local_time = pytz.utc.localize(datetime.datetime.utcnow)\n        # return local_time.astimezone()\n        utc_time = pytz.utc.localize(datetime.datetime.utcnow())\n        local_time = utc_time.astimezone()\n        zone = local_time.tzinfo",
+        "peekOfCode": "class Account(object, name, balance):\n    \"\"\"This class creates an object called Account.\"\"\"\n    @staticmethod\n    def _current_time():\n        # return pytz.utc.localize(datetime.datetime.utcnow())\n        # local_time = pytz.utc.localize(datetime.datetime.utcnow)\n        # return local_time.astimezone()\n        utc_time = pytz.utc.localize(datetime.datetime.utcnow())\n        local_time = utc_time.astimezone()\n        zone = local_time.tzinfo",
         "detail": "RollingBack.db.tztest",
         "documentation": {}
     },

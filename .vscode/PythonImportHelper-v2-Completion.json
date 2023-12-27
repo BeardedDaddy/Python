@@ -2036,6 +2036,69 @@
         "documentation": {}
     },
     {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "conn = sqlite3.connect('music.sqlite')\nmainWindow = tkinter.Tk()\nmainWindow.title('Music DB Browser')\nmainWindow.geometry('1024x768')\nmainWindow.columnconfigure(0, weight=2)\nmainWindow.columnconfigure(1, weight=2)\nmainWindow.columnconfigure(2, weight=2)\nmainWindow.columnconfigure(3, weight=2)  # spacer column on right\nmainWindow.rowconfigure(0, weight=1)\nmainWindow.rowconfigure(1, weight=5)",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "mainWindow",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "mainWindow = tkinter.Tk()\nmainWindow.title('Music DB Browser')\nmainWindow.geometry('1024x768')\nmainWindow.columnconfigure(0, weight=2)\nmainWindow.columnconfigure(1, weight=2)\nmainWindow.columnconfigure(2, weight=2)\nmainWindow.columnconfigure(3, weight=2)  # spacer column on right\nmainWindow.rowconfigure(0, weight=1)\nmainWindow.rowconfigure(1, weight=5)\nmainWindow.rowconfigure(2, weight=5)",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "artistList",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "artistList = tkinter.Listbox(mainWindow)\nartistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief='sunken')\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "albumLV",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "albumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "albumList",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "albumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "songLV",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "songLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====\nmainWindow.mainloop()\nprint(\"closing database connection\")\nconn.close()",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "songList",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "songList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====\nmainWindow.mainloop()\nprint(\"closing database connection\")\nconn.close()",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
         "label": "list_directories",
         "kind": 2,
         "importPath": "UdemyClasses.ScopeAndNamespace.filesanddirectories",

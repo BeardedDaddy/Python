@@ -1,7 +1,6 @@
 """The line below imports the sqlite3 module."""
 import sqlite3
 import tkinter
-import Tkinter as tkinter
 
 conn = sqlite3.connect('music.sqlite')
 
@@ -29,14 +28,17 @@ artistList = tkinter.Listbox(mainWindow)
 artistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))
 artistList.config(border=2, relief='sunken')
 
+artistScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,
+                                 command=artistList.yview)
+artistScroll.grid(row=1, column=0, sticky='nse', rowspan=2)
+artistList['vscrollcommand'] = artistScroll.set
+
 # ===== Albums Listbox =====
 albumLV = tkinter.Variable(mainWindow)
 albumLV.set(("Choose an artist",))
 albumList = tkinter.Listbox(mainWindow, listvariable=albumLV)
 albumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))
 albumList.config(border=2, relief='sunken')
-
-artistScroll = tkinter.Scrollbar()
 
 # ===== Songs Listbox =====
 songLV = tkinter.Variable(mainWindow)

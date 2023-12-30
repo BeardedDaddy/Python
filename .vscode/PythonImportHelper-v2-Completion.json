@@ -2058,7 +2058,25 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "artistList = tkinter.Listbox(mainWindow)\nartistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief='sunken')\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====",
+        "peekOfCode": "artistList = tkinter.Listbox(mainWindow)\nartistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief='sunken')\nartistScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,\n                                 command=artistList.yview)\nartistScroll.grid(row=1, column=0, sticky='nse', rowspan=2)\nartistList['vscrollcommand'] = artistScroll.set\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "artistScroll",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "artistScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,\n                                 command=artistList.yview)\nartistScroll.grid(row=1, column=0, sticky='nse', rowspan=2)\nartistList['vscrollcommand'] = artistScroll.set\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "artistList['vscrollcommand']",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "artistList['vscrollcommand'] = artistScroll.set\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },

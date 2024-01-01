@@ -695,33 +695,6 @@
         "documentation": {}
     },
     {
-        "label": "build_tuple",
-        "kind": 2,
-        "importPath": "MusicBrowser.star_args",
-        "description": "MusicBrowser.star_args",
-        "peekOfCode": "def build_tuple(*args):\n    return args\nmessage_tuple = build_tuple(\"hello\", \"planet\", \"earth\", \"take\", \"me\", \"to\", \"your\", \"leader\")  # noqa: E501\nprint(type(message_tuple))\nprint(message_tuple)\nnumber_tuple = build_tuple(1, 2, 3, 4, 5, 6)\nprint(type(number_tuple))\nprint(number_tuple)",
-        "detail": "MusicBrowser.star_args",
-        "documentation": {}
-    },
-    {
-        "label": "message_tuple",
-        "kind": 5,
-        "importPath": "MusicBrowser.star_args",
-        "description": "MusicBrowser.star_args",
-        "peekOfCode": "message_tuple = build_tuple(\"hello\", \"planet\", \"earth\", \"take\", \"me\", \"to\", \"your\", \"leader\")  # noqa: E501\nprint(type(message_tuple))\nprint(message_tuple)\nnumber_tuple = build_tuple(1, 2, 3, 4, 5, 6)\nprint(type(number_tuple))\nprint(number_tuple)",
-        "detail": "MusicBrowser.star_args",
-        "documentation": {}
-    },
-    {
-        "label": "number_tuple",
-        "kind": 5,
-        "importPath": "MusicBrowser.star_args",
-        "description": "MusicBrowser.star_args",
-        "peekOfCode": "number_tuple = build_tuple(1, 2, 3, 4, 5, 6)\nprint(type(number_tuple))\nprint(number_tuple)",
-        "detail": "MusicBrowser.star_args",
-        "documentation": {}
-    },
-    {
         "label": "print_backwards",
         "kind": 2,
         "importPath": "MusicBrowser.star_kwargs",
@@ -2058,7 +2031,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "artistList = tkinter.Listbox(mainWindow)\nartistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief='sunken')\nartistScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,\n                                 command=artistList.yview)\nartistScroll.grid(row=1, column=0, sticky='nse', rowspan=2)\nartistList['vscrollcommand'] = artistScroll.set\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))",
+        "peekOfCode": "artistList = tkinter.Listbox(mainWindow)\nartistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief='sunken')\nartistScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,\n                                 command=artistList.yview)\nartistScroll.grid(row=1, column=0, sticky='nse', rowspan=2)\nartistList['yscrollcommand'] = artistScroll.set\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2067,16 +2040,16 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "artistScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,\n                                 command=artistList.yview)\nartistScroll.grid(row=1, column=0, sticky='nse', rowspan=2)\nartistList['vscrollcommand'] = artistScroll.set\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')",
+        "peekOfCode": "artistScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,\n                                 command=artistList.yview)\nartistScroll.grid(row=1, column=0, sticky='nse', rowspan=2)\nartistList['yscrollcommand'] = artistScroll.set\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
     {
-        "label": "artistList['vscrollcommand']",
+        "label": "artistList['yscrollcommand']",
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "artistList['vscrollcommand'] = artistScroll.set\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))",
+        "peekOfCode": "artistList['yscrollcommand'] = artistScroll.set\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\nalbumScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,\n                                command=albumList.yview)\nalbumScroll.grid(row=1, column=1, sticky='nse', rowspan=2)",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2085,7 +2058,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "albumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))",
+        "peekOfCode": "albumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\nalbumScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,\n                                command=albumList.yview)\nalbumScroll.grid(row=1, column=1, sticky='nse', rowspan=2)\nalbumList['yscrollcommand'] = albumScroll.set\n# ===== Songs Listbox =====",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2094,7 +2067,25 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "albumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====",
+        "peekOfCode": "albumList = tkinter.Listbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\nalbumScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,\n                                command=albumList.yview)\nalbumScroll.grid(row=1, column=1, sticky='nse', rowspan=2)\nalbumList['yscrollcommand'] = albumScroll.set\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "albumScroll",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "albumScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL,\n                                command=albumList.yview)\nalbumScroll.grid(row=1, column=1, sticky='nse', rowspan=2)\nalbumList['yscrollcommand'] = albumScroll.set\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "albumList['yscrollcommand']",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "albumList['yscrollcommand'] = albumScroll.set\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2103,7 +2094,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "songLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====\nmainWindow.mainloop()\nprint(\"closing database connection\")\nconn.close()",
+        "peekOfCode": "songLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"closing database connection\")",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2112,7 +2103,16 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "songList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====\nmainWindow.mainloop()\nprint(\"closing database connection\")\nconn.close()",
+        "peekOfCode": "songList = tkinter.Listbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"closing database connection\")\nconn.close()",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "testList",
+        "kind": 5,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "testList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"closing database connection\")\nconn.close()",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },

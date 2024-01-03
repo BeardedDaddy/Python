@@ -56,6 +56,7 @@ def backwards_print(*args, **kwargs):
     sep_character = kwargs.pop('sep', ' ')
     print(sep_character.join(word[::-1] for word in args[::-1]), **kwargs)
 
+
 with open("backwards.txt", 'w', encoding='utf-8') as backwards:
     print_backwards(
         "Hello planet earth take me to your leader", end='\n')

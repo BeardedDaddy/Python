@@ -2261,6 +2261,24 @@
         "documentation": {}
     },
     {
+        "label": "print_backwards",
+        "kind": 2,
+        "importPath": "UdemyClasses.star_args",
+        "description": "UdemyClasses.star_args",
+        "peekOfCode": "def print_backwards(*args, **kwargs):\n    \"\"\"This function creates a class called print_backwards \n    with *args and **kwargs as the argument.\"\"\"  # noqa+\n    end_character = kwargs.pop('end', '\\n')\n    sep_character = kwargs.pop('sep', ' ')\n    for word in args[:0:-1]:    # change the range\n        print(word[::-1], end=sep_character, **kwargs)\n    print(args[0][::-1], end=end_character, **kwargs)   # and print the first word seperately.  # noqa\n#    print(end=end_character)   # which means we don't need this line\ndef backwards_print(*args, **kwargs):",
+        "detail": "UdemyClasses.star_args",
+        "documentation": {}
+    },
+    {
+        "label": "backwards_print",
+        "kind": 2,
+        "importPath": "UdemyClasses.star_args",
+        "description": "UdemyClasses.star_args",
+        "peekOfCode": "def backwards_print(*args, **kwargs):\n    \"\"\"This function creates a class called backwards_print \n    with *args and **kwargs as the argument.\"\"\"  # noqa+\n    sep_character = kwargs.pop('sep', ' ')\n    print(sep_character.join(word[::-1] for word in args[::-1]), **kwargs)\nwith open(\"backwards.txt\", 'w', encoding='utf-8') as backwards:\n    print_backwards(\n        \"Hello planet earth take me to your leader\", end='\\n')\n    print(\"Another String\")\nprint()",
+        "detail": "UdemyClasses.star_args",
+        "documentation": {}
+    },
+    {
         "label": "button_click",
         "kind": 2,
         "importPath": "calculator",

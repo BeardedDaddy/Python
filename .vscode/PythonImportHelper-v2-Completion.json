@@ -2013,7 +2013,16 @@
         "kind": 6,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "class Scrollbox(tkinter.Listbox):\n    \"\"\"This class creates a function called Scrollbox with the method called tkinter.Listbox.\"\"\"  # noqa\n    def __init__(self, window, **kwargs):\n        # tkinter.Listbox.__init__(self, window, **kwargs) # Python 2\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL, command=self.yview)  # noqa\n    def grid(self, row, column, sticky='nsw', rowspan=1, columnspan=1, **kwargs):  # noqa\n        \"\"\"This line creates a function called grid that has several arguments.\"\"\"  # noqa\n        # tkinter.Listbox.gridself, row=row, column=column, sticky=sticky, rowspan=rowspan, **kwargs) # Python 2  # noqa\n        super().grid(row=row, column=column, sticky=sticky, rowspan=rowspan, columnspan=columnspan, **kwargs)  # noqa",
+        "peekOfCode": "class Scrollbox(tkinter.Listbox):\n    \"\"\" Line 11 creates a class called Scrollbox that has method as argument.\n    \"\"\"\n    def __init__(self, window, **kwargs):\n        # tkinter.Listbox.__init__(self, window, **kwargs)  # Python 2\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL,\n                                           command=self.yview)\n    def grid(self, row, column, sticky='nsw',\n             rowspan=1, columnspan=1, **kwargs):",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "get_albums",
+        "kind": 2,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "def get_albums(event):\n    \"\"\" This line of code creates a function called def get_albums()\nwith a argument called event.\n\"\"\"\n    lb = event.widget\n    index = lb.curselection()[0]\n    artist_name = lb.get(index),\n    # get the artist ID from the database row\n    artist_id = conn.execute\n    (\"SELECT artists._id FROM artists WHERE artists.name=?\", artist_name).fetchone()alist = []",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2022,7 +2031,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "conn = sqlite3.connect('music.sqlite')\nclass Scrollbox(tkinter.Listbox):\n    \"\"\"This class creates a function called Scrollbox with the method called tkinter.Listbox.\"\"\"  # noqa\n    def __init__(self, window, **kwargs):\n        # tkinter.Listbox.__init__(self, window, **kwargs) # Python 2\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL, command=self.yview)  # noqa\n    def grid(self, row, column, sticky='nsw', rowspan=1, columnspan=1, **kwargs):  # noqa\n        \"\"\"This line creates a function called grid that has several arguments.\"\"\"  # noqa\n        # tkinter.Listbox.gridself, row=row, column=column, sticky=sticky, rowspan=rowspan, **kwargs) # Python 2  # noqa",
+        "peekOfCode": "conn = sqlite3.connect('music.sqlite')\nclass Scrollbox(tkinter.Listbox):\n    \"\"\" Line 11 creates a class called Scrollbox that has method as argument.\n    \"\"\"\n    def __init__(self, window, **kwargs):\n        # tkinter.Listbox.__init__(self, window, **kwargs)  # Python 2\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL,\n                                           command=self.yview)\n    def grid(self, row, column, sticky='nsw',",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2031,7 +2040,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "mainWindow = tkinter.Tk()\nmainWindow.title('Music DB Browser')\nmainWindow.geometry('1024x768')\nmainWindow.columnconfigure(0, weight=2)\nmainWindow.columnconfigure(1, weight=2)\nmainWindow.columnconfigure(2, weight=2)\nmainWindow.columnconfigure(3, weight=2)  # spacer column on right\nmainWindow.rowconfigure(0, weight=1)\nmainWindow.rowconfigure(1, weight=5)\nmainWindow.rowconfigure(2, weight=5)",
+        "peekOfCode": "mainWindow = tkinter.Tk()\nmainWindow.title('Music DB Browser')\nmainWindow.geometry('1024x768')\nmainWindow.columnconfigure(0, weight=2)\nmainWindow.columnconfigure(1, weight=2)\nmainWindow.columnconfigure(2, weight=2)\nmainWindow.columnconfigure(3, weight=1)    # spacer column on right\nmainWindow.rowconfigure(0, weight=1)\nmainWindow.rowconfigure(1, weight=5)\nmainWindow.rowconfigure(2, weight=5)",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2040,7 +2049,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "artistList = Scrollbox(mainWindow, background=\"green\")\nartistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief='sunken')\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====",
+        "peekOfCode": "artistList = Scrollbox(mainWindow)\nartistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief='sunken')\nfor artist in conn.execute(\"SELECT artists.name FROM artists ORDER BY artists.name\"):\n    artistList.insert(tkinter.END, artist[0])\nartistList.bind('<<ListboxSelect>>', get_albums)\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = Scrollbox(mainWindow, listvariable=albumLV)",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2058,7 +2067,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "albumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====",
+        "peekOfCode": "albumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main loop =====",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2067,7 +2076,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "songLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"closing database connection\")",
+        "peekOfCode": "songLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main loop =====\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"closing database connection\")",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2076,7 +2085,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "songList = Scrollbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main Loop =====\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"closing database connection\")\nconn.close()",
+        "peekOfCode": "songList = Scrollbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main loop =====\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"closing database connection\")\nconn.close()",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2087,6 +2096,24 @@
         "description": "UdemyClasses.MusicBrowser.jukebox",
         "peekOfCode": "testList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"closing database connection\")\nconn.close()",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "print_backwards",
+        "kind": 2,
+        "importPath": "UdemyClasses.MusicBrowser.star_args",
+        "description": "UdemyClasses.MusicBrowser.star_args",
+        "peekOfCode": "def print_backwards(*args, **kwargs):\n    \"\"\" This line of code creates a function called\n    print_backwards that has two arguments * args and **kwargs.\n    \"\"\"\n    end_character = kwargs.pop('end', '\\n')\n    sep_character = kwargs.pop('sep', ' ')\n    for word in args[:0:-1]:    # change the range\n        print(word[::-1], end=sep_character, **kwargs)\n    print(args[0][::-1], end=end_character, **kwargs)\n    # and print the first word separately  # noqa",
+        "detail": "UdemyClasses.MusicBrowser.star_args",
+        "documentation": {}
+    },
+    {
+        "label": "backwards_print",
+        "kind": 2,
+        "importPath": "UdemyClasses.MusicBrowser.star_args",
+        "description": "UdemyClasses.MusicBrowser.star_args",
+        "peekOfCode": "def backwards_print(*args, **kwargs):\n    \"\"\"backwards_print is a function\n    that has two arguments * args and **kwargs.\n    \"\"\"\n    sep_character = kwargs.pop('sep', ' ')\n    print(sep_character.join(word[::-1] for word in args[::-1]), **kwargs)\nwith open(\"backwards.txt\", 'w', encoding='UTF-8') as backwards:\n    print_backwards(\"hello\", \"planet\", \"earth\",\n                    \"take\", \"me\", \"to\", \"your\", \"leader\", end='\\n')\n    print(\"Another String\")",
+        "detail": "UdemyClasses.MusicBrowser.star_args",
         "documentation": {}
     },
     {
@@ -2231,24 +2258,6 @@
         "description": "UdemyClasses.DivideTwoNumber",
         "peekOfCode": "second_number = divide_two_numbers('Second Number ')\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))  # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
         "detail": "UdemyClasses.DivideTwoNumber",
-        "documentation": {}
-    },
-    {
-        "label": "print_backwards",
-        "kind": 2,
-        "importPath": "UdemyClasses.star_args",
-        "description": "UdemyClasses.star_args",
-        "peekOfCode": "def print_backwards(*args, **kwargs):\n    \"\"\"This function creates a class called print_backwards \n    with *args and **kwargs as the argument.\"\"\"  # noqa+\n    end_character = kwargs.pop('end', '\\n')\n    sep_character = kwargs.pop('sep', ' ')\n    for word in args[:0:-1]:    # change the range\n        print(word[::-1], end=sep_character, **kwargs)\n    print(args[0][::-1], end=end_character, **kwargs)   # and print the first word seperately.  # noqa\n#    print(end=end_character)   # which means we don't need this line\ndef backwards_print(*args, **kwargs):",
-        "detail": "UdemyClasses.star_args",
-        "documentation": {}
-    },
-    {
-        "label": "backwards_print",
-        "kind": 2,
-        "importPath": "UdemyClasses.star_args",
-        "description": "UdemyClasses.star_args",
-        "peekOfCode": "def backwards_print(*args, **kwargs):\n    \"\"\"This function creates a class called backwards_print \n    with *args and **kwargs as the argument.\"\"\"  # noqa+\n    sep_character = kwargs.pop('sep', ' ')\n    print(sep_character.join(word[::-1] for word in args[::-1]), **kwargs)\nwith open(\"backwards.txt\", 'w', encoding='utf-8') as backwards:\n    print_backwards(\n        \"Hello planet earth take me to your leader\", end='\\n')\n    print(\"Another String\")\nprint()",
-        "detail": "UdemyClasses.star_args",
         "documentation": {}
     },
     {

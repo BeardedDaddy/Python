@@ -40,8 +40,8 @@ with a argument called event.
     artist_name = lb.get(index),
 
     # get the artist ID from the database row
-    artist_id = conn.execute
-    ("SELECT artists._id FROM artists WHERE artists.name=?", artist_name).fetchone()alist = []
+    artist_id = conn.execute("SELECT artists._id FROM artists WHERE artists.name=?", artist_name).fetchone()
+    alist = []
     for row in conn.execute("SELECT albums.name FROM albums WHERE albums.artist = ? ORDER BY albums.name", artist_id):
         alist.append(row[0])
     albumLV.set(tuple(alist))
@@ -71,7 +71,7 @@ artistList = Scrollbox(mainWindow)
 artistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))
 artistList.config(border=2, relief='sunken')
 
-for artist in conn.execute("SELECT artists.name FROM artists ORDER BY artists.name"):
+for artist in conn.execute('SELECT artists.name FROM artists ORDER BY artists.name'):  # noqa
     artistList.insert(tkinter.END, artist[0])
 
 artistList.bind('<<ListboxSelect>>', get_albums)

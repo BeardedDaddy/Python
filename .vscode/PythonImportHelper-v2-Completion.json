@@ -2013,7 +2013,7 @@
         "kind": 6,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "class Scrollbox(tkinter.Listbox):\n    \"\"\" Line 11 creates a class called Scrollbox that has method as argument.\n    \"\"\"\n    def __init__(self, window, **kwargs):\n        # tkinter.Listbox.__init__(self, window, **kwargs)  # Python 2\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL,\n                                           command=self.yview)\n    def grid(self, row, column, sticky='nsw',\n             rowspan=1, columnspan=1, **kwargs):",
+        "peekOfCode": "class Scrollbox(tkinter.Listbox):\n    \"\"\" Line 11 creates a class called Scrollbox that has method as argument.\n    \"\"\"\n    def __init__(self, window, **kwargs):\n        # tkinter.Listbox.__init__(self, window, **kwargs)  # Python 2\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL,\n                                           command=self.yview)\n        \"\"\" This function creates a grid with the parameters\n        of row, column, and sticky.",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2022,7 +2022,16 @@
         "kind": 2,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "def get_albums(event):\n    \"\"\" This line of code creates a function called def get_albums()\nwith a argument called event.\n\"\"\"\n    lb = event.widget\n    index = lb.curselection()[0]\n    artist_name = lb.get(index),\n    # get the artist ID from the database row\n    artist_id = conn.execute\n    (\"SELECT artists._id FROM artists WHERE artists.name=?\", artist_name).fetchone()alist = []",
+        "peekOfCode": "def get_albums(event):\n    \"\"\" This line of code creates a function called def get_albums()\nwith a argument called event.\n\"\"\"\n    lb = event.widget\n    index = lb.curselection()[0]\n    artist_name = lb.get(index),\n    # get the artist ID from the database row\n    artist_id = conn.execute('SELECT artists._id FROM artists WHERE artists.name=?', artist_name).fetchone()  # noqa\n    alist = []",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "get_songs",
+        "kind": 2,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "def get_songs(event):\n    \"\"\"get_songs is the function name.\n    Parameters\n    ----------\n    event\n        This function called get_songs creates a parameter called event.\n    \"\"\"\n    lb = event.widget\n    index = int(lb.curselection()[0])\n    album_name = lb.get(index),",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2031,7 +2040,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "conn = sqlite3.connect('music.sqlite')\nclass Scrollbox(tkinter.Listbox):\n    \"\"\" Line 11 creates a class called Scrollbox that has method as argument.\n    \"\"\"\n    def __init__(self, window, **kwargs):\n        # tkinter.Listbox.__init__(self, window, **kwargs)  # Python 2\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL,\n                                           command=self.yview)\n    def grid(self, row, column, sticky='nsw',",
+        "peekOfCode": "conn = sqlite3.connect('music.sqlite')\nclass Scrollbox(tkinter.Listbox):\n    \"\"\" Line 11 creates a class called Scrollbox that has method as argument.\n    \"\"\"\n    def __init__(self, window, **kwargs):\n        # tkinter.Listbox.__init__(self, window, **kwargs)  # Python 2\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL,\n                                           command=self.yview)\n        \"\"\" This function creates a grid with the parameters",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2049,7 +2058,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "artistList = Scrollbox(mainWindow)\nartistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief='sunken')\nfor artist in conn.execute(\"SELECT artists.name FROM artists ORDER BY artists.name\"):\n    artistList.insert(tkinter.END, artist[0])\nartistList.bind('<<ListboxSelect>>', get_albums)\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = Scrollbox(mainWindow, listvariable=albumLV)",
+        "peekOfCode": "artistList = Scrollbox(mainWindow)\nartistList.grid(row=1, column=0, sticky='nsew', rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief='sunken')\nfor artist in conn.execute('SELECT artists.name FROM artists ORDER BY artists.name'):  # noqa\n    artistList.insert(tkinter.END, artist[0])\nartistList.bind('<<ListboxSelect>>', get_albums)\n# ===== Albums Listbox =====\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = Scrollbox(mainWindow, listvariable=albumLV)",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2058,7 +2067,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "albumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))",
+        "peekOfCode": "albumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose an artist\",))\nalbumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\nalbumList.bind('<<ListboxSelect>>', get_songs)\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV)",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },
@@ -2067,7 +2076,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
         "description": "UdemyClasses.MusicBrowser.jukebox",
-        "peekOfCode": "albumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')\n# ===== Main loop =====",
+        "peekOfCode": "albumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))\nalbumList.config(border=2, relief='sunken')\nalbumList.bind('<<ListboxSelect>>', get_songs)\n# ===== Songs Listbox =====\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose an album\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV)\nsongList.grid(row=1, column=2, sticky='nsew', padx=(30, 0))\nsongList.config(border=2, relief='sunken')",
         "detail": "UdemyClasses.MusicBrowser.jukebox",
         "documentation": {}
     },

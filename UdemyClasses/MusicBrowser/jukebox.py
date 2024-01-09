@@ -18,6 +18,9 @@ class Scrollbox(tkinter.Listbox):
         self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL,
                                            command=self.yview)
 
+        """ This function creates a grid with the parameters
+        of row, column, and sticky.
+        """
     def grid(self, row, column, sticky='nsw',
              rowspan=1, columnspan=1, **kwargs):
         # tkinter.Listbox.grid(self, row=row, column=column, sticky=sticky,
@@ -40,11 +43,32 @@ with a argument called event.
     artist_name = lb.get(index),
 
     # get the artist ID from the database row
-    artist_id = conn.execute("SELECT artists._id FROM artists WHERE artists.name=?", artist_name).fetchone()
+    artist_id = conn.execute('SELECT artists._id FROM artists WHERE artists.name=?', artist_name).fetchone()  # noqa
     alist = []
-    for row in conn.execute("SELECT albums.name FROM albums WHERE albums.artist = ? ORDER BY albums.name", artist_id):
+    for row in conn.execute('SELECT albums.name FROM albums WHERE albums.artist = ? ORDER BY albums.name', artist_id):  # noqa
         alist.append(row[0])
     albumLV.set(tuple(alist))
+    songLV.set(('Choose and album',))
+
+
+def get_songs(event):
+    """get_songs is the function name.
+
+    Parameters
+    ----------
+    event
+        This function called get_songs creates a parameter called event.
+    """
+    lb = event.widget
+    index = int(lb.curselection()[0])
+    album_name = lb.get(index),
+
+    # get the artist ID from the database row
+    album_id = conn.execute('SELECT _albums._id FROM albums WHERE albums.name=?', album_name).fetchone()  # noqa
+    alist = []
+    for x in conn.execute('SELECT songs.title FROM songs WHERE songs.album=? ORDER BY songs.track', album_id):  # noqa
+        alist.append(x[0])
+    songLV.set(tuple(alist))
 
 
 mainWindow = tkinter.Tk()
@@ -82,6 +106,8 @@ albumLV.set(("Choose an artist",))
 albumList = Scrollbox(mainWindow, listvariable=albumLV)
 albumList.grid(row=1, column=1, sticky='nsew', padx=(30, 0))
 albumList.config(border=2, relief='sunken')
+
+albumList.bind('<<ListboxSelect>>', get_songs)
 
 # ===== Songs Listbox =====
 songLV = tkinter.Variable(mainWindow)

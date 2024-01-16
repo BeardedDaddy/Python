@@ -2090,6 +2090,42 @@
         "documentation": {}
     },
     {
+        "label": "fibonacci",
+        "kind": 2,
+        "importPath": "UdemyClasses.fibgen",
+        "description": "UdemyClasses.fibgen",
+        "peekOfCode": "def fibonacci():\n    \"\"\"fibonacci generator\n    Returns\n    -------\n        current get the value zero plus 1, and previous get the old value of\n        current, which the first time it runs is zero. Next time around\n        current becomes 1 plus zero, so one again, in other words,\n        and previous this time, becomes one. And the third time around,\n        current becomes two and previous becomes one. Then we get three and\n        two, followed by five and three and so on.",
+        "detail": "UdemyClasses.fibgen",
+        "documentation": {}
+    },
+    {
+        "label": "fib",
+        "kind": 5,
+        "importPath": "UdemyClasses.fibgen",
+        "description": "UdemyClasses.fibgen",
+        "peekOfCode": "fib = fibonacci()\nfor i in range(21):\n    print(i, next(fib))",
+        "detail": "UdemyClasses.fibgen",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "UdemyClasses.scratchpad",
+        "description": "UdemyClasses.scratchpad",
+        "peekOfCode": "a = 2 \nb = 3\nprint(f\"a is {a}, b is {b}\")\na, b = 3, 2 # b, a\n# TEMP = a\n# A = b\n# B = TEMP\nprint(f\"a is {a}, b is {b}\")",
+        "detail": "UdemyClasses.scratchpad",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "UdemyClasses.scratchpad",
+        "description": "UdemyClasses.scratchpad",
+        "peekOfCode": "b = 3\nprint(f\"a is {a}, b is {b}\")\na, b = 3, 2 # b, a\n# TEMP = a\n# A = b\n# B = TEMP\nprint(f\"a is {a}, b is {b}\")",
+        "detail": "UdemyClasses.scratchpad",
+        "documentation": {}
+    },
+    {
         "label": "my_range",
         "kind": 2,
         "importPath": "UdemyClasses.size",
@@ -2103,16 +2139,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.size",
         "description": "UdemyClasses.size",
-        "peekOfCode": "big_range = my_range(5)\n_ = input(\"Line 20, hit enter to continue.\")\nprint(next(big_range))\nprint(f\"big_range is {sys.getsizeof(big_range)} bytes\")\n# Create a list containing all the values in big_range\nbig_list = []\n_ = input(\"Line 27, hit enter to continue.\")\nfor val in big_range:\n    _ = input(\"Line 30, hit enter to continue.\")\n    big_list.append(val)",
-        "detail": "UdemyClasses.size",
-        "documentation": {}
-    },
-    {
-        "label": "_",
-        "kind": 5,
-        "importPath": "UdemyClasses.size",
-        "description": "UdemyClasses.size",
-        "peekOfCode": "_ = input(\"Line 20, hit enter to continue.\")\nprint(next(big_range))\nprint(f\"big_range is {sys.getsizeof(big_range)} bytes\")\n# Create a list containing all the values in big_range\nbig_list = []\n_ = input(\"Line 27, hit enter to continue.\")\nfor val in big_range:\n    _ = input(\"Line 30, hit enter to continue.\")\n    big_list.append(val)\nprint(f\"big_list is {sys.getsizeof(big_list)} bytes\")",
+        "peekOfCode": "big_range = range(5)\n# big_range = my_range(5)\n# _ = input(\"Line 23, hit enter to continue.\")\nprint(f\"big_range is {sys.getsizeof(big_range)} bytes\")\n# Create a list containing all the values in big_range\nbig_list = []\n# _ = input(\"Line 31, hit enter to continue.\")\nfor val in big_range:\n    # _ = input(\"Line 34, hit enter to continue.\")\n    big_list.append(val)",
         "detail": "UdemyClasses.size",
         "documentation": {}
     },
@@ -2121,16 +2148,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.size",
         "description": "UdemyClasses.size",
-        "peekOfCode": "big_list = []\n_ = input(\"Line 27, hit enter to continue.\")\nfor val in big_range:\n    _ = input(\"Line 30, hit enter to continue.\")\n    big_list.append(val)\nprint(f\"big_list is {sys.getsizeof(big_list)} bytes\")\nprint(big_range)\nprint(big_list)",
-        "detail": "UdemyClasses.size",
-        "documentation": {}
-    },
-    {
-        "label": "_",
-        "kind": 5,
-        "importPath": "UdemyClasses.size",
-        "description": "UdemyClasses.size",
-        "peekOfCode": "_ = input(\"Line 27, hit enter to continue.\")\nfor val in big_range:\n    _ = input(\"Line 30, hit enter to continue.\")\n    big_list.append(val)\nprint(f\"big_list is {sys.getsizeof(big_list)} bytes\")\nprint(big_range)\nprint(big_list)",
+        "peekOfCode": "big_list = []\n# _ = input(\"Line 31, hit enter to continue.\")\nfor val in big_range:\n    # _ = input(\"Line 34, hit enter to continue.\")\n    big_list.append(val)\nprint(f\"big_list is {sys.getsizeof(big_list)} bytes\")\nprint(big_range)\nprint(big_list)\nprint(\"looping again ...or not\")\nfor i in big_range:",
         "detail": "UdemyClasses.size",
         "documentation": {}
     },

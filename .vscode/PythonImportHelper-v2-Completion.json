@@ -2108,6 +2108,33 @@
         "documentation": {}
     },
     {
+        "label": "oddnumbers",
+        "kind": 2,
+        "importPath": "UdemyClasses.pigen",
+        "description": "UdemyClasses.pigen",
+        "peekOfCode": "def oddnumbers():\n    n = 1\n    while True:\n        yield n\n        n += 2\ndef pi_series():\n    odds = oddnumbers()\n    approximation = 0\n    while True:\n        approximation += (4 / next(odds))",
+        "detail": "UdemyClasses.pigen",
+        "documentation": {}
+    },
+    {
+        "label": "pi_series",
+        "kind": 2,
+        "importPath": "UdemyClasses.pigen",
+        "description": "UdemyClasses.pigen",
+        "peekOfCode": "def pi_series():\n    odds = oddnumbers()\n    approximation = 0\n    while True:\n        approximation += (4 / next(odds))\n        yield approximation\n        approximation -= (4 / next(odds))\n        yield approximation\napprox_pi = pi_series()\nfor x in range(100000):",
+        "detail": "UdemyClasses.pigen",
+        "documentation": {}
+    },
+    {
+        "label": "approx_pi",
+        "kind": 5,
+        "importPath": "UdemyClasses.pigen",
+        "description": "UdemyClasses.pigen",
+        "peekOfCode": "approx_pi = pi_series()\nfor x in range(100000):\n    print(next(approx_pi))",
+        "detail": "UdemyClasses.pigen",
+        "documentation": {}
+    },
+    {
         "label": "a",
         "kind": 5,
         "importPath": "UdemyClasses.scratchpad",

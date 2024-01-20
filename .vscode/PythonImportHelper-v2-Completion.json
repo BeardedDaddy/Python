@@ -2108,6 +2108,15 @@
         "documentation": {}
     },
     {
+        "label": "ROOT",
+        "kind": 5,
+        "importPath": "UdemyClasses.filegen",
+        "description": "UdemyClasses.filegen",
+        "peekOfCode": "ROOT = \"music\"\nfor path, directories, files in os.walk(ROOT, topdown=True):\n    if files:\n        print(path)\n        first_split = os.path.split(path)\n        print(first_split)\n        second_split = os.path.split(first_split[0])\n        print(second_split)\n        for f in files:\n            song_details = f[:-5].split(' - ')",
+        "detail": "UdemyClasses.filegen",
+        "documentation": {}
+    },
+    {
         "label": "oddnumbers",
         "kind": 2,
         "importPath": "UdemyClasses.pigen",

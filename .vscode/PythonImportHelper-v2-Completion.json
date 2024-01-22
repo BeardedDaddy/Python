@@ -245,6 +245,15 @@
         "documentation": {}
     },
     {
+        "label": "fnmatch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "fnmatch",
+        "description": "fnmatch",
+        "detail": "fnmatch",
+        "documentation": {}
+    },
+    {
         "label": "conn",
         "kind": 5,
         "importPath": "codemySqlitecourse.database-Bearded-Daddy",
@@ -2114,6 +2123,42 @@
         "description": "UdemyClasses.filegen",
         "peekOfCode": "ROOT = \"music\"\nfor path, directories, files in os.walk(ROOT, topdown=True):\n    if files:\n        print(path)\n        first_split = os.path.split(path)\n        print(first_split)\n        second_split = os.path.split(first_split[0])\n        print(second_split)\n        for f in files:\n            song_details = f[:-5].split(' - ')",
         "detail": "UdemyClasses.filegen",
+        "documentation": {}
+    },
+    {
+        "label": "find_albums",
+        "kind": 2,
+        "importPath": "UdemyClasses.filesearch",
+        "description": "UdemyClasses.filesearch",
+        "peekOfCode": "def find_albums(root, artist_name):\n    caps_name = artist_name.upper()\n    for path, directories, files in os.walk(root):\n        # for artist in fnmatch.filter(directories, artist_name):\n        # for artist in fnmatch.filter((d.upper() for d in directories), caps_name):  # noqa # This line of code is for MACs.\n            subdir = os.path.join(path, artist)\n            for album_path, albums, _ in os.walk(subdir):\n                for album in albums:\n                    yield os.path.join(album_path, album), album\ndef find_songs(albums):",
+        "detail": "UdemyClasses.filesearch",
+        "documentation": {}
+    },
+    {
+        "label": "find_songs",
+        "kind": 2,
+        "importPath": "UdemyClasses.filesearch",
+        "description": "UdemyClasses.filesearch",
+        "peekOfCode": "def find_songs(albums):\n    for album in albums:\n         for song in os.listdir(album[0]): # We want the path, not the name of the album.  # noqa\n             yield song\nalbum_list = find_albums(\"music\", \"black*\")\nsong_list = find_songs(album_list)\nfor s in song_list:\n    print(s)",
+        "detail": "UdemyClasses.filesearch",
+        "documentation": {}
+    },
+    {
+        "label": "album_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.filesearch",
+        "description": "UdemyClasses.filesearch",
+        "peekOfCode": "album_list = find_albums(\"music\", \"black*\")\nsong_list = find_songs(album_list)\nfor s in song_list:\n    print(s)",
+        "detail": "UdemyClasses.filesearch",
+        "documentation": {}
+    },
+    {
+        "label": "song_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.filesearch",
+        "description": "UdemyClasses.filesearch",
+        "peekOfCode": "song_list = find_songs(album_list)\nfor s in song_list:\n    print(s)",
+        "detail": "UdemyClasses.filesearch",
         "documentation": {}
     },
     {

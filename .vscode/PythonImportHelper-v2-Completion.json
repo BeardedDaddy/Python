@@ -254,6 +254,33 @@
         "documentation": {}
     },
     {
+        "label": "struct",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "struct",
+        "description": "struct",
+        "detail": "struct",
+        "documentation": {}
+    },
+    {
+        "label": "zlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "zlib",
+        "description": "zlib",
+        "detail": "zlib",
+        "documentation": {}
+    },
+    {
+        "label": "id3reader_p3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "id3reader_p3",
+        "description": "id3reader_p3",
+        "detail": "id3reader_p3",
+        "documentation": {}
+    },
+    {
         "label": "conn",
         "kind": 5,
         "importPath": "codemySqlitecourse.database-Bearded-Daddy",
@@ -2130,7 +2157,7 @@
         "kind": 2,
         "importPath": "UdemyClasses.filesearch",
         "description": "UdemyClasses.filesearch",
-        "peekOfCode": "def find_albums(root, artist_name):\n    caps_name = artist_name.upper()\n    for path, directories, files in os.walk(root):\n        # for artist in fnmatch.filter(directories, artist_name):\n        # for artist in fnmatch.filter((d.upper() for d in directories), caps_name):  # noqa # This line of code is for MACs.\n            subdir = os.path.join(path, artist)\n            for album_path, albums, _ in os.walk(subdir):\n                for album in albums:\n                    yield os.path.join(album_path, album), album\ndef find_songs(albums):",
+        "peekOfCode": "def find_albums(root, artist_name):\n    \"\"\" This function creates a function called find_albums to locate\n    the albums and artist in the file directory.\n    \"\"\"\n    caps_name = artist_name.upper()\n    for path, directories, files in os.walk(root):\n        # for artist in fnmatch.filter(directories, artist_name):\n        # for artist in fnmatch.filter((d.upper() for d in directories), caps_name):  # noqa\n        for artist in (d for d in directories if fnmatch.fnmatch(d.upper(), caps_name)):  # noqa\n            subdir = os.path.join(path, artist)",
         "detail": "UdemyClasses.filesearch",
         "documentation": {}
     },
@@ -2139,7 +2166,7 @@
         "kind": 2,
         "importPath": "UdemyClasses.filesearch",
         "description": "UdemyClasses.filesearch",
-        "peekOfCode": "def find_songs(albums):\n    for album in albums:\n         for song in os.listdir(album[0]): # We want the path, not the name of the album.  # noqa\n             yield song\nalbum_list = find_albums(\"music\", \"black*\")\nsong_list = find_songs(album_list)\nfor s in song_list:\n    print(s)",
+        "peekOfCode": "def find_songs(albums):\n    \"\"\"find_songs is a function to search for albums\n    in the file directory.\n    Parameters\n    ----------\n    albums\n        Albums is the column name in this table.\n    Yields\n    ------\n        The yield keyword is used here to iterate thru",
         "detail": "UdemyClasses.filesearch",
         "documentation": {}
     },
@@ -2159,6 +2186,213 @@
         "description": "UdemyClasses.filesearch",
         "peekOfCode": "song_list = find_songs(album_list)\nfor s in song_list:\n    print(s)",
         "detail": "UdemyClasses.filesearch",
+        "documentation": {}
+    },
+    {
+        "label": "Id3Error",
+        "kind": 6,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "class Id3Error(Exception):\n    \"\"\" An exception caused by id3reader properly handling a bad ID3 tag.\n    \"\"\"\n    pass\nclass _Header:\n    \"\"\" Represent the ID3 header in a tag.\n    \"\"\"\n    def __init__(self):\n        self.majorVersion = 0\n        self.revision = 0",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_Header",
+        "kind": 6,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "class _Header:\n    \"\"\" Represent the ID3 header in a tag.\n    \"\"\"\n    def __init__(self):\n        self.majorVersion = 0\n        self.revision = 0\n        self.flags = 0\n        self.size = 0\n        self.bUnsynchronized = False\n        self.bExperimental = False",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_Frame",
+        "kind": 6,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "class _Frame:\n    \"\"\" Represent an ID3 frame in a tag.\n    \"\"\"\n    def __init__(self):\n        self.id = ''\n        self.size = 0\n        self.flags = 0\n        self.rawData = ''\n        self.bTagAlterPreserve = False\n        self.bFileAlterPreserve = False",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "Reader",
+        "kind": 6,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "class Reader:\n    \"\"\" An ID3 reader.\n        Create one on a file object, and then use getValue('TIT2') (for example)\n        to pull values.\n    \"\"\"\n    def __init__(self, music_file):\n        \"\"\" Create a reader from a file or filename. \"\"\"\n        self.file = music_file\n        self.header = None\n        self.frames = {}",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "__version__ = '2.00.20170522'  # History at the end of the file.\n# ID3 specs: http://www.id3.org/develop.html\n# These are the text encodings, indexed by the first byte of a text value.\n_encodings = ['iso8859-1', 'utf-16', 'utf-16be', 'utf-8']\n# Simple pseudo-id's, mapped to their various representations.\n# Use these ids with getValue, and you don't need to know what\n# version of ID3 the file contains.\n_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_encodings",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_encodings = ['iso8859-1', 'utf-16', 'utf-16be', 'utf-8']\n# Simple pseudo-id's, mapped to their various representations.\n# Use these ids with getValue, and you don't need to know what\n# version of ID3 the file contains.\n_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),\n    'title': ('TIT2', 'TT2', 'v1title'),\n    'track': ('TRCK', 'TRK', 'v1track'),\n    'year': ('TYER', 'TYE', 'v1year'),",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_simpleDataMapping",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),\n    'title': ('TIT2', 'TT2', 'v1title'),\n    'track': ('TRCK', 'TRK', 'v1track'),\n    'year': ('TYER', 'TYE', 'v1year'),\n    'genre': ('TCON', 'TCO', 'v1genre'),\n    'comment': ('COMM', 'COM', 'v1comment'),\n}\n# Tracing",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_t",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_t = False\ndef _trace(msg):\n    print(msg)\n# Coverage\n_c = False\n_features = {}\ndef _coverage(feat):\n    # if _t: _trace('feature '+feat)\n    _features[feat] = _features.setdefault(feat, 0) + 1\ndef _safestr(s):",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_c",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_c = False\n_features = {}\ndef _coverage(feat):\n    # if _t: _trace('feature '+feat)\n    _features[feat] = _features.setdefault(feat, 0) + 1\ndef _safestr(s):\n    \"\"\" Get a good string for printing, that won't throw exceptions,\n        no matter what's in it.\n    \"\"\"\n    try:",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_features",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_features = {}\ndef _coverage(feat):\n    # if _t: _trace('feature '+feat)\n    _features[feat] = _features.setdefault(feat, 0) + 1\ndef _safestr(s):\n    \"\"\" Get a good string for printing, that won't throw exceptions,\n        no matter what's in it.\n    \"\"\"\n    try:\n        return s.encode(sys.getdefaultencoding())",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_genres",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_genres = [\n    # 0-19\n    'Blues', 'Classic Rock', 'Country', 'Dance', 'Disco', 'Funk', 'Grunge', 'Hip - Hop', 'Jazz', 'Metal',\n    'New Age', 'Oldies', 'Other', 'Pop', 'R&B', 'Rap', 'Reggae', 'Rock', 'Techno', 'Industrial',\n    # 20-39\n    'Alternative', 'Ska', 'Death Metal', 'Pranks', 'Soundtrack', 'Euro - Techno', 'Ambient', 'Trip - Hop',\n    'Vocal', 'Jazz + Funk', 'Fusion', 'Trance', 'Classical', 'Instrumental', 'Acid', 'House', 'Game',\n    'Sound Clip', 'Gospel', 'Noise',\n    # 40-59\n    'Alt Rock', 'Bass', 'Soul', 'Punk', 'Space', 'Meditative', 'Instrumental Pop', 'Instrumental Rock', 'Ethnic',",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "Id3Error",
+        "kind": 6,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "class Id3Error(Exception):\n    \"\"\" An exception caused by id3reader properly handling a bad ID3 tag.\n    \"\"\"\n    pass\nclass _Header:\n    \"\"\" Represent the ID3 header in a tag.\n    \"\"\"\n    def __init__(self):\n        self._major_version = 0\n        self.revision = 0",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_Header",
+        "kind": 6,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "class _Header:\n    \"\"\" Represent the ID3 header in a tag.\n    \"\"\"\n    def __init__(self):\n        self._major_version = 0\n        self.revision = 0\n        self.flags = 0\n        self.size = 0\n        self.bunsynchronized = False\n        self.bexperimental = False",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_Frame",
+        "kind": 6,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "class _Frame:\n    \"\"\" Represent an ID3 frame in a tag.\n    \"\"\"\n    def __init__(self):\n        self.id = ''\n        self.size = 0\n        self.flags = 0\n        self.raw_data = None\n        self.b_tag_alter_preserve = False\n        self.b_file_alter_preserve = False",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "Reader",
+        "kind": 6,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "class Reader:\n    \"\"\" An ID3 reader.\n        Create one on a file object, and then use getValue('TIT2') (for example)  # noqa\n        to pull values.\n    \"\"\"\n    def __init__(self, music_file):\n        \"\"\" Create a reader from a file or filename. \"\"\"\n        self.file = music_file\n        self.header = None\n        self.frames = {}",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "__version__ = '2.00.20170522'  # History at the end of the file.\n# ID3 specs: http://www.id3.org/develop.html\n# These are the text encodings, indexed by the first byte of a text value.\n_encodings = ['iso8859-1', 'utf-16', 'utf-16be', 'utf-8']\n# Simple pseudo-id's, mapped to their various representations.\n# Use these ids with getValue, and you don't need to know what\n# version of ID3 the file contains.\n_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_encodings",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "_encodings = ['iso8859-1', 'utf-16', 'utf-16be', 'utf-8']\n# Simple pseudo-id's, mapped to their various representations.\n# Use these ids with getValue, and you don't need to know what\n# version of ID3 the file contains.\n_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),\n    'title': ('TIT2', 'TT2', 'v1title'),\n    'track': ('TRCK', 'TRK', 'v1track'),\n    'year': ('TYER', 'TYE', 'v1year'),",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_simpleDataMapping",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),\n    'title': ('TIT2', 'TT2', 'v1title'),\n    'track': ('TRCK', 'TRK', 'v1track'),\n    'year': ('TYER', 'TYE', 'v1year'),\n    'genre': ('TCON', 'TCO', 'v1genre'),\n    'comment': ('COMM', 'COM', 'v1comment'),\n}\n# Tracing",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_T",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "_T = False\ndef _trace(msg):\n    print(msg)\n# Coverage\n_C = False\n_features: dict = {}\ndef _coverage(feat):\n    # if _t: _trace('feature '+feat)\n    _features[feat] = _features.setdefault(feat, 0) + 1\ndef _safestr(s):",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_C",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "_C = False\n_features: dict = {}\ndef _coverage(feat):\n    # if _t: _trace('feature '+feat)\n    _features[feat] = _features.setdefault(feat, 0) + 1\ndef _safestr(s):\n    \"\"\" Get a good string for printing, that won't throw exceptions,\n        no matter what's in it.\n    \"\"\"\n    try:",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_genres",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "_genres = [\n    # 0-19\n    'Blues', 'Classic Rock', 'Country', 'Dance', 'Disco', 'Funk', 'Grunge', 'Hip - Hop', 'Jazz', 'Metal',  # noqa\n    'New Age', 'Oldies', 'Other', 'Pop', 'R&B', 'Rap', 'Reggae', 'Rock', 'Techno', 'Industrial',  # noqa\n    # 20-39\n    'Alternative', 'Ska', 'Death Metal', 'Pranks', 'Soundtrack', 'Euro - Techno', 'Ambient', 'Trip - Hop',  # noqa\n    'Vocal', 'Jazz + Funk', 'Fusion', 'Trance', 'Classical', 'Instrumental', 'Acid', 'House', 'Game',  # noqa\n    'Sound Clip', 'Gospel', 'Noise',\n    # 40-59\n    'Alt Rock', 'Bass', 'Soul', 'Punk', 'Space', 'Meditative', 'Instrumental Pop', 'Instrumental Rock', 'Ethnic',  # noqa",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "find_music",
+        "kind": 2,
+        "importPath": "UdemyClasses.mp3scan",
+        "description": "UdemyClasses.mp3scan",
+        "peekOfCode": "def find_music(start, extension):\n    \"\"\"find_music is a function with two parameters,\n    one that has a start parameter and the second to for the extention.\n    Parameters\n    ----------\n    start\n       This parameter indicates where we start the search.\n    extension\n        This parameter indicates the files with a certain\n        file extention.",
+        "detail": "UdemyClasses.mp3scan",
+        "documentation": {}
+    },
+    {
+        "label": "my_music_files",
+        "kind": 5,
+        "importPath": "UdemyClasses.mp3scan",
+        "description": "UdemyClasses.mp3scan",
+        "peekOfCode": "my_music_files = find_music(\"music\", \"emp3\")\nfor f in my_music_files:  # The music parameter indicates\n    # where to start. The emp3 indicates the file extention to search for.\n    id3r = id3reader.Reader(f)\n    print(f\"Artist: id3r.get_value{'performer'}, Album: id3r.get_value{'album'}, \"  # noqa\n          f\"Track: id3r.get_value{'track'}, Song: id3r.get_value{'title'}\")",
+        "detail": "UdemyClasses.mp3scan",
         "documentation": {}
     },
     {

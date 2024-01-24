@@ -29,5 +29,6 @@
             "password": "mayhew"
         }
     ],
-    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "cloudcode.duetAI.inlineSuggestions.enableAuto": false
 }

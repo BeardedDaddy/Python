@@ -5,6 +5,7 @@ Yields - We are using the yield keyword to make this generator.
 """
 import os
 import fnmatch
+import id3reader_p3 as id3reader
 
 
 def find_music(start, extension):
@@ -25,10 +26,16 @@ def find_music(start, extension):
         returned by the find_music function.
     """
     for path, directories, files in os.walk(start):
-        for file in fnmatch.filter(files, f'*.{(extension)}'):
-            yield os.path.join(path, file)
+        for file in fnmatch.filter(files, f'*.{extension}'):
+            absolute_path = os.path.abspath(path)       # Creating absolute path  # noqa
+            yield os.path.join(absolute_path, file)      # use it in yield values  # noqa
 
 
-for f in find_music('music', 'emp3'):  # The music parameter indicates
+my_music_files = find_music("music", "emp3")
+
+
+for f in my_music_files:  # The music parameter indicates
     # where to start. The emp3 indicates the file extention to search for.
-    print(f)
+    id3r = id3reader.Reader(f)
+    print(f"Artist: id3r.get_value{'performer'}, Album: id3r.get_value{'album'}, "  # noqa
+          f"Track: id3r.get_value{'track'}, Song: id3r.get_value{'title'}")

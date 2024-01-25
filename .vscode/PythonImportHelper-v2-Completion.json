@@ -2391,7 +2391,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.mp3scan",
         "description": "UdemyClasses.mp3scan",
-        "peekOfCode": "my_music_files = find_music(\"music\", \"emp3\")\nfor f in my_music_files:  # The music parameter indicates\n    # where to start. The emp3 indicates the file extention to search for.\n    id3r = id3reader.Reader(f)\n    print(f\"Artist: id3r.get_value{'performer'}, Album: id3r.get_value{'album'}, \"  # noqa\n          f\"Track: id3r.get_value{'track'}, Song: id3r.get_value{'title'}\")",
+        "peekOfCode": "my_music_files = find_music(\"/Users/grevy/OneDrive/Music/\", \"mp3\")\n(type alias) Error_List = list[str]  # This variable is calling an empty list.\nfor f in my_music_files:  # The music parameter indicates\n    # where to start. The emp3 indicates the file extention to search for.\n    try:\n        id3r = id3reader.Reader(f)\n        print(f\"Artist: {id3r.get_value('performer')}, \"\n              f\"Album: {id3r.get_value('album')}, \"\n              f\"Track: {id3r.get_value('track')}, \"\n              f\"Song: {id3r.get_value('title')}\")",
         "detail": "UdemyClasses.mp3scan",
         "documentation": {}
     },

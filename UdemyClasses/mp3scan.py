@@ -25,17 +25,27 @@ def find_music(start, extension):
         The yield keyword iterates over the generator
         returned by the find_music function.
     """
-    for path, directories, files in os.walk(start):
+    for path, _, files in os.walk(start):
         for file in fnmatch.filter(files, f'*.{extension}'):
             absolute_path = os.path.abspath(path)       # Creating absolute path  # noqa
             yield os.path.join(absolute_path, file)      # use it in yield values  # noqa
 
 
-my_music_files = find_music("music", "emp3")
+my_music_files = find_music("/Users/grevy/OneDrive/Music/", "mp3")
 
-
+(type alias) Error_List = list[str]  # This variable is calling an empty list.
 for f in my_music_files:  # The music parameter indicates
     # where to start. The emp3 indicates the file extention to search for.
-    id3r = id3reader.Reader(f)
-    print(f"Artist: id3r.get_value{'performer'}, Album: id3r.get_value{'album'}, "  # noqa
-          f"Track: id3r.get_value{'track'}, Song: id3r.get_value{'title'}")
+    try:
+        id3r = id3reader.Reader(f)
+        print(f"Artist: {id3r.get_value('performer')}, "
+              f"Album: {id3r.get_value('album')}, "
+              f"Track: {id3r.get_value('track')}, "
+              f"Song: {id3r.get_value('title')}")
+
+    except Error_List as f:
+        Error_List.append(f)
+
+
+for error_file in Error_List:
+    print(error_file)

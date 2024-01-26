@@ -33,7 +33,7 @@ def find_music(start, extension):
 
 my_music_files = find_music("/Users/grevy/OneDrive/Music/", "mp3")
 
-(type alias) Error_List = list[str]  # This variable is calling an empty list.
+error_list = []
 for f in my_music_files:  # The music parameter indicates
     # where to start. The emp3 indicates the file extention to search for.
     try:
@@ -43,9 +43,9 @@ for f in my_music_files:  # The music parameter indicates
               f"Track: {id3r.get_value('track')}, "
               f"Song: {id3r.get_value('title')}")
 
-    except Error_List as f:
-        Error_List.append(f)
+    except:
+        error_list.append(f)
 
 
-for error_file in Error_List:
+for error_file in error_list:
     print(error_file)

@@ -22,10 +22,10 @@ print(answer)
 
 output = []
 for x in text.split():
-    output.append((x, len(x)))
+    output.append(int(x, len(x)))
 print(output)
 
 # type the corresponding comprehension here:
 
-answer = {(x, len(x)) for x in text.split()}
+answer = [(x, len(x)) for x in text.split()]
 print(answer)

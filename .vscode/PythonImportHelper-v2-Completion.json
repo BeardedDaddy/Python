@@ -2072,6 +2072,15 @@
         "documentation": {}
     },
     {
+        "label": "centre_text",
+        "kind": 2,
+        "importPath": "UdemyClasses.center_text",
+        "description": "UdemyClasses.center_text",
+        "peekOfCode": "def centre_text(*args):\n    \"\"\"This line creates a function called\n    centre_text with an *args argument.\"\"\"\n    # text = \"\"\n    # for arg in args:\n    #     text += str(arg) + \" \"\n    text = \"-\".join([str(arg) for arg in args])  # This is a list comprehension.  # noqa\n    # text = \"-\".join(str(arg) for arg in args) # This is a generator expression.  # noqa\n    left_margin = (80 - len(text)) // 2\n    print(\" \" * left_margin, text)",
+        "detail": "UdemyClasses.center_text",
+        "documentation": {}
+    },
+    {
         "label": "db",
         "kind": 5,
         "importPath": "UdemyClasses.checkdb",
@@ -2123,6 +2132,42 @@
         "description": "UdemyClasses.DivideTwoNumber",
         "peekOfCode": "second_number = divide_two_numbers('Second Number ')\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))  # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
         "detail": "UdemyClasses.DivideTwoNumber",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT",
+        "kind": 5,
+        "importPath": "UdemyClasses.examples",
+        "description": "UdemyClasses.examples",
+        "peekOfCode": "TEXT = \"what have the romans ever done for us\"\ncapitals = [char.upper() for char in TEXT]\nprint(capitals)\nwords = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.examples",
+        "documentation": {}
+    },
+    {
+        "label": "capitals",
+        "kind": 5,
+        "importPath": "UdemyClasses.examples",
+        "description": "UdemyClasses.examples",
+        "peekOfCode": "capitals = [char.upper() for char in TEXT]\nprint(capitals)\nwords = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.examples",
+        "documentation": {}
+    },
+    {
+        "label": "words",
+        "kind": 5,
+        "importPath": "UdemyClasses.examples",
+        "description": "UdemyClasses.examples",
+        "peekOfCode": "words = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.examples",
+        "documentation": {}
+    },
+    {
+        "label": "lc_words",
+        "kind": 5,
+        "importPath": "UdemyClasses.examples",
+        "description": "UdemyClasses.examples",
+        "peekOfCode": "lc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.examples",
         "documentation": {}
     },
     {
@@ -2378,6 +2423,42 @@
         "documentation": {}
     },
     {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "UdemyClasses.list comp",
+        "description": "UdemyClasses.list comp",
+        "peekOfCode": "numbers = [1, 2, 3, 4, 5, 6]\n# squares = [number ** 2 for number in numbers]\nsquares = [number ** 2 for number in range(1, 7)]\nprint(squares)",
+        "detail": "UdemyClasses.list comp",
+        "documentation": {}
+    },
+    {
+        "label": "squares",
+        "kind": 5,
+        "importPath": "UdemyClasses.list comp",
+        "description": "UdemyClasses.list comp",
+        "peekOfCode": "squares = [number ** 2 for number in range(1, 7)]\nprint(squares)",
+        "detail": "UdemyClasses.list comp",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "UdemyClasses.listfor",
+        "description": "UdemyClasses.listfor",
+        "peekOfCode": "numbers = [1, 2, 3, 4, 5, 6]\nsquares = []\nfor number in numbers:\n    squares.append(number ** 2)\nprint(squares)",
+        "detail": "UdemyClasses.listfor",
+        "documentation": {}
+    },
+    {
+        "label": "squares",
+        "kind": 5,
+        "importPath": "UdemyClasses.listfor",
+        "description": "UdemyClasses.listfor",
+        "peekOfCode": "squares = []\nfor number in numbers:\n    squares.append(number ** 2)\nprint(squares)",
+        "detail": "UdemyClasses.listfor",
+        "documentation": {}
+    },
+    {
         "label": "find_music",
         "kind": 2,
         "importPath": "UdemyClasses.mp3scan",
@@ -2391,7 +2472,16 @@
         "kind": 5,
         "importPath": "UdemyClasses.mp3scan",
         "description": "UdemyClasses.mp3scan",
-        "peekOfCode": "my_music_files = find_music(\"/Users/grevy/OneDrive/Music/\", \"mp3\")\n(type alias) Error_List = list[str]  # This variable is calling an empty list.\nfor f in my_music_files:  # The music parameter indicates\n    # where to start. The emp3 indicates the file extention to search for.\n    try:\n        id3r = id3reader.Reader(f)\n        print(f\"Artist: {id3r.get_value('performer')}, \"\n              f\"Album: {id3r.get_value('album')}, \"\n              f\"Track: {id3r.get_value('track')}, \"\n              f\"Song: {id3r.get_value('title')}\")",
+        "peekOfCode": "my_music_files = find_music(\"/Users/grevy/OneDrive/Music/\", \"mp3\")\nerror_list = []\nfor f in my_music_files:  # The music parameter indicates\n    # where to start. The emp3 indicates the file extention to search for.\n    try:\n        id3r = id3reader.Reader(f)\n        print(f\"Artist: {id3r.get_value('performer')}, \"\n              f\"Album: {id3r.get_value('album')}, \"\n              f\"Track: {id3r.get_value('track')}, \"\n              f\"Song: {id3r.get_value('title')}\")",
+        "detail": "UdemyClasses.mp3scan",
+        "documentation": {}
+    },
+    {
+        "label": "error_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.mp3scan",
+        "description": "UdemyClasses.mp3scan",
+        "peekOfCode": "error_list = []\nfor f in my_music_files:  # The music parameter indicates\n    # where to start. The emp3 indicates the file extention to search for.\n    try:\n        id3r = id3reader.Reader(f)\n        print(f\"Artist: {id3r.get_value('performer')}, \"\n              f\"Album: {id3r.get_value('album')}, \"\n              f\"Track: {id3r.get_value('track')}, \"\n              f\"Song: {id3r.get_value('title')}\")\n    except:",
         "detail": "UdemyClasses.mp3scan",
         "documentation": {}
     },

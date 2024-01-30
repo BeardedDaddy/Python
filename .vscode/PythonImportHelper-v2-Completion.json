@@ -1793,6 +1793,285 @@
         "documentation": {}
     },
     {
+        "label": "centre_text",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.center_text",
+        "description": "UdemyClasses.Comprehension.center_text",
+        "peekOfCode": "def centre_text(*args):\n    \"\"\"This line creates a function called\n    centre_text with an *args argument.\"\"\"\n    # text = \"\"\n    # for arg in args:\n    #     text += str(arg) + \" \"\n    text = \"-\".join([str(arg) for arg in args])  # This is a list comprehension.  # noqa\n    # text = \"-\".join(str(arg) for arg in args) # This is a generator expression.  # noqa\n    left_margin = (80 - len(text)) // 2\n    print(\" \" * left_margin, text)",
+        "detail": "UdemyClasses.Comprehension.center_text",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge1",
+        "description": "UdemyClasses.Comprehension.Challenge1",
+        "peekOfCode": "text = input(\"Please enter your text: \")\noutput = []\nfor x in text.split():\n    output.append(len(x))\nprint(output)\n# type your solution here:\nanswer = [len(x) for x in text.split()]\nprint(answer)\n# It could be useful to store the original words in the list, as well.\n# The for loop would look like this (note the extra parentheses, so",
+        "detail": "UdemyClasses.Comprehension.Challenge1",
+        "documentation": {}
+    },
+    {
+        "label": "output",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge1",
+        "description": "UdemyClasses.Comprehension.Challenge1",
+        "peekOfCode": "output = []\nfor x in text.split():\n    output.append(len(x))\nprint(output)\n# type your solution here:\nanswer = [len(x) for x in text.split()]\nprint(answer)\n# It could be useful to store the original words in the list, as well.\n# The for loop would look like this (note the extra parentheses, so\n# that we get tuples in the list):",
+        "detail": "UdemyClasses.Comprehension.Challenge1",
+        "documentation": {}
+    },
+    {
+        "label": "answer",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge1",
+        "description": "UdemyClasses.Comprehension.Challenge1",
+        "peekOfCode": "answer = [len(x) for x in text.split()]\nprint(answer)\n# It could be useful to store the original words in the list, as well.\n# The for loop would look like this (note the extra parentheses, so\n# that we get tuples in the list):\noutput = []\nfor x in text.split():\n    output.append(int(x, len(x)))\nprint(output)\n# type the corresponding comprehension here:",
+        "detail": "UdemyClasses.Comprehension.Challenge1",
+        "documentation": {}
+    },
+    {
+        "label": "output",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge1",
+        "description": "UdemyClasses.Comprehension.Challenge1",
+        "peekOfCode": "output = []\nfor x in text.split():\n    output.append(int(x, len(x)))\nprint(output)\n# type the corresponding comprehension here:\nanswer = [(x, len(x)) for x in text.split()]\nprint(answer)",
+        "detail": "UdemyClasses.Comprehension.Challenge1",
+        "documentation": {}
+    },
+    {
+        "label": "answer",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge1",
+        "description": "UdemyClasses.Comprehension.Challenge1",
+        "peekOfCode": "answer = [(x, len(x)) for x in text.split()]\nprint(answer)",
+        "detail": "UdemyClasses.Comprehension.Challenge1",
+        "documentation": {}
+    },
+    {
+        "label": "inch_measurement",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge2",
+        "description": "UdemyClasses.Comprehension.Challenge2",
+        "peekOfCode": "inch_measurement = (3, 8, 20)\ncm_measurement = [inch * 2.54 for inch in inch_measurement]\nprint(cm_measurement)\n# Once you've got the correct values, change the code to produce a tuple, rather than a list.  # noqa\ncm_measurement = tuple([inch * 2.54 for inch in inch_measurement])\nprint(cm_measurement)",
+        "detail": "UdemyClasses.Comprehension.Challenge2",
+        "documentation": {}
+    },
+    {
+        "label": "cm_measurement",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge2",
+        "description": "UdemyClasses.Comprehension.Challenge2",
+        "peekOfCode": "cm_measurement = [inch * 2.54 for inch in inch_measurement]\nprint(cm_measurement)\n# Once you've got the correct values, change the code to produce a tuple, rather than a list.  # noqa\ncm_measurement = tuple([inch * 2.54 for inch in inch_measurement])\nprint(cm_measurement)",
+        "detail": "UdemyClasses.Comprehension.Challenge2",
+        "documentation": {}
+    },
+    {
+        "label": "cm_measurement",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge2",
+        "description": "UdemyClasses.Comprehension.Challenge2",
+        "peekOfCode": "cm_measurement = tuple([inch * 2.54 for inch in inch_measurement])\nprint(cm_measurement)",
+        "detail": "UdemyClasses.Comprehension.Challenge2",
+        "documentation": {}
+    },
+    {
+        "label": "fizzbuzz",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge1",
+        "description": "UdemyClasses.Comprehension.compchallenge1",
+        "peekOfCode": "fizzbuzz = [\"fizz buzz\" if x % 15 == 0 else \"fizz\" if x % 3 == 0 else \"buzz\" if x % 5 == 0 else str(x)\n            for x in range(1, 31)]\nprint(fizzbuzz)\nfor buzz in fizzbuzz:\n    print(buzz.center(12, '*'))  # This will print the output using 12 characters in the centered by asterisks.  # noqa",
+        "detail": "UdemyClasses.Comprehension.compchallenge1",
+        "documentation": {}
+    },
+    {
+        "label": "locations",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2",
+        "description": "UdemyClasses.Comprehension.compchallenge2",
+        "peekOfCode": "locations = {0: \"You are sitting in front of a computer learning Python\",\n             1: \"You are standing at the end of a road before a small brick building\",\n             2: \"You are at the top of a hill\",\n             3: \"You are inside a building, a well house for a small stream\",\n             4: \"You are in a valley beside a stream\",\n             5: \"You are in the forest\"}\nexits = {0: {\"Q\": 0},\n         1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n         2: {\"N\": 5, \"Q\": 0},\n         3: {\"W\": 1, \"Q\": 0},",
+        "detail": "UdemyClasses.Comprehension.compchallenge2",
+        "documentation": {}
+    },
+    {
+        "label": "exits",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2",
+        "description": "UdemyClasses.Comprehension.compchallenge2",
+        "peekOfCode": "exits = {0: {\"Q\": 0},\n         1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n         2: {\"N\": 5, \"Q\": 0},\n         3: {\"W\": 1, \"Q\": 0},\n         4: {\"N\": 1, \"W\": 2, \"Q\": 0},\n         5: {\"W\": 2, \"S\": 1, \"Q\": 0}}",
+        "detail": "UdemyClasses.Comprehension.compchallenge2",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp",
+        "description": "UdemyClasses.Comprehension.condcomp",
+        "peekOfCode": "menu = [\n    [\"egg\", \"spam\", \"bacon\"],\n    [\"egg\", \"sausage\", \"bacon\"],\n    [\"egg\", \"spam\"],\n    [\"egg\", \"bacon\", \"spam\"],\n    [\"egg\", \"bacon\", \"sausage\", \"spam\"],\n    [\"spam\", \"bacon\", \"sausage\", \"spam\"],\n    [\"spam\", \"egg\", \"spam\", \"spam\", \"bacon\", \"spam\"],\n    [\"spam\", \"egg\", \"sausage\", \"spam\"],\n    [\"chicken\", \"chips\"]",
+        "detail": "UdemyClasses.Comprehension.condcomp",
+        "documentation": {}
+    },
+    {
+        "label": "meals",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp",
+        "description": "UdemyClasses.Comprehension.condcomp",
+        "peekOfCode": "meals = []\nfor meal in menu:\n    if \"spam\" not in meal:\n        meals.append(meal)\n    else:\n        meals.append([\"a meal was skipped\"])\nprint(meal)\n# meals = [meal for meal in menu if \"spam\" not in meal if \"chicken\" not in meal]  # noqa\nmeals = [meal for meal in menu if \"spam\" not in meal and \"chicken\" not in meal]\nprint(meals)",
+        "detail": "UdemyClasses.Comprehension.condcomp",
+        "documentation": {}
+    },
+    {
+        "label": "meals",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp",
+        "description": "UdemyClasses.Comprehension.condcomp",
+        "peekOfCode": "meals = [meal for meal in menu if \"spam\" not in meal and \"chicken\" not in meal]\nprint(meals)\nfussy_meals = [meal for meal in menu if \"spam\" in meal or \"eggs\" in meal if not\n               (\"bacon\" in meal and \"sausage\" in meal)]\nprint(fussy_meals)\nfussy_meals = [meal for meal in menu if\n               (\"spam\" in meal or \"eggs\" in meal) and not\n               (\"bacon\" in meal and \"sausage\" in meal)]\nprint(fussy_meals)",
+        "detail": "UdemyClasses.Comprehension.condcomp",
+        "documentation": {}
+    },
+    {
+        "label": "fussy_meals",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp",
+        "description": "UdemyClasses.Comprehension.condcomp",
+        "peekOfCode": "fussy_meals = [meal for meal in menu if \"spam\" in meal or \"eggs\" in meal if not\n               (\"bacon\" in meal and \"sausage\" in meal)]\nprint(fussy_meals)\nfussy_meals = [meal for meal in menu if\n               (\"spam\" in meal or \"eggs\" in meal) and not\n               (\"bacon\" in meal and \"sausage\" in meal)]\nprint(fussy_meals)",
+        "detail": "UdemyClasses.Comprehension.condcomp",
+        "documentation": {}
+    },
+    {
+        "label": "fussy_meals",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp",
+        "description": "UdemyClasses.Comprehension.condcomp",
+        "peekOfCode": "fussy_meals = [meal for meal in menu if\n               (\"spam\" in meal or \"eggs\" in meal) and not\n               (\"bacon\" in meal and \"sausage\" in meal)]\nprint(fussy_meals)",
+        "detail": "UdemyClasses.Comprehension.condcomp",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp1",
+        "description": "UdemyClasses.Comprehension.condcomp1",
+        "peekOfCode": "menu = [\n    [\"egg\", \"spam\", \"bacon\"],\n    [\"egg\", \"sausage\", \"bacon\"],\n    [\"egg\", \"spam\"],\n    [\"egg\", \"bacon\", \"spam\"],\n    [\"egg\", \"bacon\", \"sausage\", \"spam\"],\n    [\"spam\", \"bacon\", \"sausage\", \"spam\"],\n    [\"spam\", \"egg\", \"spam\", \"spam\", \"bacon\", \"spam\"],\n    [\"spam\", \"egg\", \"sausage\", \"spam\"],\n    [\"chicken\", \"chips\"]",
+        "detail": "UdemyClasses.Comprehension.condcomp1",
+        "documentation": {}
+    },
+    {
+        "label": "items",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp1",
+        "description": "UdemyClasses.Comprehension.condcomp1",
+        "peekOfCode": "items = set()\nfor meal in menu:\n    for item in meal:\n        items.add(item)\nprint(items)\nprint()\nfor meal in menu:\n    for item in items:\n        if item in meal:\n            print(f\"{(meal)} contains {item}\")",
+        "detail": "UdemyClasses.Comprehension.condcomp1",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.examples",
+        "description": "UdemyClasses.Comprehension.examples",
+        "peekOfCode": "TEXT = \"what have the romans ever done for us\"\ncapitals = [char.upper() for char in TEXT]\nprint(capitals)\nwords = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.Comprehension.examples",
+        "documentation": {}
+    },
+    {
+        "label": "capitals",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.examples",
+        "description": "UdemyClasses.Comprehension.examples",
+        "peekOfCode": "capitals = [char.upper() for char in TEXT]\nprint(capitals)\nwords = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.Comprehension.examples",
+        "documentation": {}
+    },
+    {
+        "label": "words",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.examples",
+        "description": "UdemyClasses.Comprehension.examples",
+        "peekOfCode": "words = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.Comprehension.examples",
+        "documentation": {}
+    },
+    {
+        "label": "lc_words",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.examples",
+        "description": "UdemyClasses.Comprehension.examples",
+        "peekOfCode": "lc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.Comprehension.examples",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.list comp",
+        "description": "UdemyClasses.Comprehension.list comp",
+        "peekOfCode": "numbers = [1, 2, 3, 4, 5, 6]\nnumber = int(input(\"Please enter a number, and I'll tell you which one is squared. \"))  # noqa\nsquares = [number ** 2 for number in numbers]\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.list comp",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.list comp",
+        "description": "UdemyClasses.Comprehension.list comp",
+        "peekOfCode": "number = int(input(\"Please enter a number, and I'll tell you which one is squared. \"))  # noqa\nsquares = [number ** 2 for number in numbers]\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.list comp",
+        "documentation": {}
+    },
+    {
+        "label": "squares",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.list comp",
+        "description": "UdemyClasses.Comprehension.list comp",
+        "peekOfCode": "squares = [number ** 2 for number in numbers]\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.list comp",
+        "documentation": {}
+    },
+    {
+        "label": "index_pos",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.list comp",
+        "description": "UdemyClasses.Comprehension.list comp",
+        "peekOfCode": "index_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.list comp",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.listfor",
+        "description": "UdemyClasses.Comprehension.listfor",
+        "peekOfCode": "numbers = [1, 2, 3, 4, 5, 6]\nnumber = int(input(\"Please enter a number, and I'll tell you which one is squared. \"))  # noqa\nsquares = []\nfor number in numbers:\n    squares.append(number ** 2)\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.listfor",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.listfor",
+        "description": "UdemyClasses.Comprehension.listfor",
+        "peekOfCode": "number = int(input(\"Please enter a number, and I'll tell you which one is squared. \"))  # noqa\nsquares = []\nfor number in numbers:\n    squares.append(number ** 2)\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.listfor",
+        "documentation": {}
+    },
+    {
+        "label": "squares",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.listfor",
+        "description": "UdemyClasses.Comprehension.listfor",
+        "peekOfCode": "squares = []\nfor number in numbers:\n    squares.append(number ** 2)\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.listfor",
+        "documentation": {}
+    },
+    {
+        "label": "index_pos",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.listfor",
+        "description": "UdemyClasses.Comprehension.listfor",
+        "peekOfCode": "index_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.listfor",
+        "documentation": {}
+    },
+    {
         "label": "db",
         "kind": 5,
         "importPath": "UdemyClasses.createDB.contacts2",
@@ -2072,15 +2351,6 @@
         "documentation": {}
     },
     {
-        "label": "centre_text",
-        "kind": 2,
-        "importPath": "UdemyClasses.center_text",
-        "description": "UdemyClasses.center_text",
-        "peekOfCode": "def centre_text(*args):\n    \"\"\"This line creates a function called\n    centre_text with an *args argument.\"\"\"\n    # text = \"\"\n    # for arg in args:\n    #     text += str(arg) + \" \"\n    text = \"-\".join([str(arg) for arg in args])  # This is a list comprehension.  # noqa\n    # text = \"-\".join(str(arg) for arg in args) # This is a generator expression.  # noqa\n    left_margin = (80 - len(text)) // 2\n    print(\" \" * left_margin, text)",
-        "detail": "UdemyClasses.center_text",
-        "documentation": {}
-    },
-    {
         "label": "db",
         "kind": 5,
         "importPath": "UdemyClasses.checkdb",
@@ -2132,42 +2402,6 @@
         "description": "UdemyClasses.DivideTwoNumber",
         "peekOfCode": "second_number = divide_two_numbers('Second Number ')\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))  # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
         "detail": "UdemyClasses.DivideTwoNumber",
-        "documentation": {}
-    },
-    {
-        "label": "TEXT",
-        "kind": 5,
-        "importPath": "UdemyClasses.examples",
-        "description": "UdemyClasses.examples",
-        "peekOfCode": "TEXT = \"what have the romans ever done for us\"\ncapitals = [char.upper() for char in TEXT]\nprint(capitals)\nwords = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
-        "detail": "UdemyClasses.examples",
-        "documentation": {}
-    },
-    {
-        "label": "capitals",
-        "kind": 5,
-        "importPath": "UdemyClasses.examples",
-        "description": "UdemyClasses.examples",
-        "peekOfCode": "capitals = [char.upper() for char in TEXT]\nprint(capitals)\nwords = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
-        "detail": "UdemyClasses.examples",
-        "documentation": {}
-    },
-    {
-        "label": "words",
-        "kind": 5,
-        "importPath": "UdemyClasses.examples",
-        "description": "UdemyClasses.examples",
-        "peekOfCode": "words = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
-        "detail": "UdemyClasses.examples",
-        "documentation": {}
-    },
-    {
-        "label": "lc_words",
-        "kind": 5,
-        "importPath": "UdemyClasses.examples",
-        "description": "UdemyClasses.examples",
-        "peekOfCode": "lc_words = TEXT.split(' ')\nprint(lc_words)",
-        "detail": "UdemyClasses.examples",
         "documentation": {}
     },
     {
@@ -2420,42 +2654,6 @@
         "description": "UdemyClasses.ID_3reader_p3",
         "peekOfCode": "_genres = [\n    # 0-19\n    'Blues', 'Classic Rock', 'Country', 'Dance', 'Disco', 'Funk', 'Grunge', 'Hip - Hop', 'Jazz', 'Metal',  # noqa\n    'New Age', 'Oldies', 'Other', 'Pop', 'R&B', 'Rap', 'Reggae', 'Rock', 'Techno', 'Industrial',  # noqa\n    # 20-39\n    'Alternative', 'Ska', 'Death Metal', 'Pranks', 'Soundtrack', 'Euro - Techno', 'Ambient', 'Trip - Hop',  # noqa\n    'Vocal', 'Jazz + Funk', 'Fusion', 'Trance', 'Classical', 'Instrumental', 'Acid', 'House', 'Game',  # noqa\n    'Sound Clip', 'Gospel', 'Noise',\n    # 40-59\n    'Alt Rock', 'Bass', 'Soul', 'Punk', 'Space', 'Meditative', 'Instrumental Pop', 'Instrumental Rock', 'Ethnic',  # noqa",
         "detail": "UdemyClasses.ID_3reader_p3",
-        "documentation": {}
-    },
-    {
-        "label": "numbers",
-        "kind": 5,
-        "importPath": "UdemyClasses.list comp",
-        "description": "UdemyClasses.list comp",
-        "peekOfCode": "numbers = [1, 2, 3, 4, 5, 6]\n# squares = [number ** 2 for number in numbers]\nsquares = [number ** 2 for number in range(1, 7)]\nprint(squares)",
-        "detail": "UdemyClasses.list comp",
-        "documentation": {}
-    },
-    {
-        "label": "squares",
-        "kind": 5,
-        "importPath": "UdemyClasses.list comp",
-        "description": "UdemyClasses.list comp",
-        "peekOfCode": "squares = [number ** 2 for number in range(1, 7)]\nprint(squares)",
-        "detail": "UdemyClasses.list comp",
-        "documentation": {}
-    },
-    {
-        "label": "numbers",
-        "kind": 5,
-        "importPath": "UdemyClasses.listfor",
-        "description": "UdemyClasses.listfor",
-        "peekOfCode": "numbers = [1, 2, 3, 4, 5, 6]\nsquares = []\nfor number in numbers:\n    squares.append(number ** 2)\nprint(squares)",
-        "detail": "UdemyClasses.listfor",
-        "documentation": {}
-    },
-    {
-        "label": "squares",
-        "kind": 5,
-        "importPath": "UdemyClasses.listfor",
-        "description": "UdemyClasses.listfor",
-        "peekOfCode": "squares = []\nfor number in numbers:\n    squares.append(number ** 2)\nprint(squares)",
-        "detail": "UdemyClasses.listfor",
         "documentation": {}
     },
     {

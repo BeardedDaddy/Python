@@ -1896,7 +1896,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2",
         "description": "UdemyClasses.Comprehension.compchallenge2",
-        "peekOfCode": "exits = {0: {\"Q\": 0},\n         1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n         2: {\"N\": 5, \"Q\": 0},\n         3: {\"W\": 1, \"Q\": 0},\n         4: {\"N\": 1, \"W\": 2, \"Q\": 0},\n         5: {\"W\": 2, \"S\": 1, \"Q\": 0}}\nLOC = 1\nforest = [locations[exit] for exit in exits if LOC in exits[exit].values()]\nprint(forest)\nforest = [f\"{exit}, {locations[exit]}\" for exit in exits if LOC in exits[exit].values()]  # noqa",
+        "peekOfCode": "exits = {0: {\"Q\": 0},\n         1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n         2: {\"N\": 5, \"Q\": 0},\n         3: {\"W\": 1, \"Q\": 0},\n         4: {\"N\": 1, \"W\": 2, \"Q\": 0},\n         5: {\"W\": 2, \"S\": 1, \"Q\": 0}}\nLOC = 1\nforest = [locations[exit] for exit in exits if LOC in exits[exit].values()]\nprint(forest)\nfor loc in sorted(locations):",
         "detail": "UdemyClasses.Comprehension.compchallenge2",
         "documentation": {}
     },
@@ -1905,7 +1905,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2",
         "description": "UdemyClasses.Comprehension.compchallenge2",
-        "peekOfCode": "LOC = 1\nforest = [locations[exit] for exit in exits if LOC in exits[exit].values()]\nprint(forest)\nforest = [f\"{exit}, {locations[exit]}\" for exit in exits if LOC in exits[exit].values()]  # noqa\nprint(forest)",
+        "peekOfCode": "LOC = 1\nforest = [locations[exit] for exit in exits if LOC in exits[exit].values()]\nprint(forest)\nfor loc in sorted(locations):\n    forest = [f\"{exit}, {locations[exit]}\" for exit in exits if LOC in exits[exit].values()]  # noqa\n    print(f\"Locations leading to {loc}\", end='\\t')\n    print(forest)",
         "detail": "UdemyClasses.Comprehension.compchallenge2",
         "documentation": {}
     },
@@ -1914,16 +1914,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2",
         "description": "UdemyClasses.Comprehension.compchallenge2",
-        "peekOfCode": "forest = [locations[exit] for exit in exits if LOC in exits[exit].values()]\nprint(forest)\nforest = [f\"{exit}, {locations[exit]}\" for exit in exits if LOC in exits[exit].values()]  # noqa\nprint(forest)",
-        "detail": "UdemyClasses.Comprehension.compchallenge2",
-        "documentation": {}
-    },
-    {
-        "label": "forest",
-        "kind": 5,
-        "importPath": "UdemyClasses.Comprehension.compchallenge2",
-        "description": "UdemyClasses.Comprehension.compchallenge2",
-        "peekOfCode": "forest = [f\"{exit}, {locations[exit]}\" for exit in exits if LOC in exits[exit].values()]  # noqa\nprint(forest)",
+        "peekOfCode": "forest = [locations[exit] for exit in exits if LOC in exits[exit].values()]\nprint(forest)\nfor loc in sorted(locations):\n    forest = [f\"{exit}, {locations[exit]}\" for exit in exits if LOC in exits[exit].values()]  # noqa\n    print(f\"Locations leading to {loc}\", end='\\t')\n    print(forest)",
         "detail": "UdemyClasses.Comprehension.compchallenge2",
         "documentation": {}
     },

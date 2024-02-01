@@ -36,5 +36,7 @@ LOC = 1
 forest = [locations[exit] for exit in exits if LOC in exits[exit].values()]
 print(forest)
 
-forest = [f"{exit}, {locations[exit]}" for exit in exits if LOC in exits[exit].values()]  # noqa
-print(forest)
+for loc in sorted(locations):
+    forest = [f"{exit}, {locations[exit]}" for exit in exits if LOC in exits[exit].values()]  # noqa
+    print(f"Locations leading to {loc}", end='\t')
+    print(forest)

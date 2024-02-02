@@ -1,8 +1,8 @@
-# Create a comprehension that returns a list of all the LOCations that have an exit to the forest.  # noqa
+# Create a comprehension that returns a list of all the LOCations that have an leave to the forest.  # noqa
 # The list should contain the description of each LOCation, if it's possible to get to the forest from there.  # noqa
 #
 # The forest is LOCation 5 in the LOCations dictionary
-# The exits for each LOCation are represented by the exits dictionary.
+# The leaves for each LOCation are represented by the leaves dictionary.
 #
 # Remember that a dictionary has a .values() method, to return a list of the values.  # noqa
 #
@@ -25,7 +25,7 @@ locations = {0: "You are sitting in front of a computer learning Python",
              4: "You are in a valley beside a stream",
              5: "You are in the forest"}
 
-exits = {0: {"Q": 0},
+leaves = {0: {"Q": 0},
          1: {"W": 2, "E": 3, "N": 5, "S": 4, "Q": 0},
          2: {"N": 5, "Q": 0},
          3: {"W": 1, "Q": 0},
@@ -33,10 +33,16 @@ exits = {0: {"Q": 0},
          5: {"W": 2, "S": 1, "Q": 0}}
 
 LOC = 1
-forest = [locations[exit] for exit in exits if LOC in exits[exit].values()]
+forest = [locations[leave] for leave in leaves if LOC in leaves[leave].values()]
+print(forest)
+
+forest = []
+for leave in leaves:
+    if LOC in leaves[leave].values():
+        forest.append(locations[leave])
 print(forest)
 
 for loc in sorted(locations):
-    forest = [f"{exit}, {locations[exit]}" for exit in exits if LOC in exits[exit].values()]  # noqa
+    forest = [f"{leave}, {locations[leave]}" for leave in leaves if LOC in leaves[leave].values()]  # noqa
     print(f"Locations leading to {loc}", end='\t')
     print(forest)

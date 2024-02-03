@@ -42,7 +42,16 @@ for leave in leaves:
         forest.append(locations[leave])
 print(forest)
 
+print()
+
+# for loc in sorted(locations):
+#     forest = [f"{leave}, {locations[leave]}" for leave in leaves if LOC in leaves[leave].values()]  # noqa
+#     print(f"Locations leading to {loc}", end='\t')
+#     print(forest)
 for loc in sorted(locations):
-    forest = [f"{leave}, {locations[leave]}" for leave in leaves if LOC in leaves[leave].values()]  # noqa
+    forest = []
+    for leave in leaves:
+        if LOC in leaves[leave].values():
+            forest.append((leave, locations[leave]))
     print(f"Locations leading to {loc}", end='\t')
     print(forest)

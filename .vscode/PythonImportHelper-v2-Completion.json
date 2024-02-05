@@ -1905,7 +1905,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2",
         "description": "UdemyClasses.Comprehension.compchallenge2",
-        "peekOfCode": "LOC = 1\nforest = [locations[leave] for leave in leaves if LOC in leaves[leave].values()]\nprint(forest)\nforest = []\nfor leave in leaves:\n    if LOC in leaves[leave].values():\n        forest.append(locations[leave])\nprint(forest)\nfor loc in sorted(locations):\n    forest = [f\"{leave}, {locations[leave]}\" for leave in leaves if LOC in leaves[leave].values()]  # noqa",
+        "peekOfCode": "LOC = 1\nforest = [locations[leave] for leave in leaves if LOC in leaves[leave].values()]\nprint(forest)\nforest = []\nfor leave in leaves:\n    if LOC in leaves[leave].values():\n        forest.append(locations[leave])\nprint(forest)\nprint()\n# for loc in sorted(locations):",
         "detail": "UdemyClasses.Comprehension.compchallenge2",
         "documentation": {}
     },
@@ -1914,7 +1914,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2",
         "description": "UdemyClasses.Comprehension.compchallenge2",
-        "peekOfCode": "forest = [locations[leave] for leave in leaves if LOC in leaves[leave].values()]\nprint(forest)\nforest = []\nfor leave in leaves:\n    if LOC in leaves[leave].values():\n        forest.append(locations[leave])\nprint(forest)\nfor loc in sorted(locations):\n    forest = [f\"{leave}, {locations[leave]}\" for leave in leaves if LOC in leaves[leave].values()]  # noqa\n    print(f\"Locations leading to {loc}\", end='\\t')",
+        "peekOfCode": "forest = [locations[leave] for leave in leaves if LOC in leaves[leave].values()]\nprint(forest)\nforest = []\nfor leave in leaves:\n    if LOC in leaves[leave].values():\n        forest.append(locations[leave])\nprint(forest)\nprint()\n# for loc in sorted(locations):\n#     forest = [f\"{leave}, {locations[leave]}\" for leave in leaves if LOC in leaves[leave].values()]  # noqa",
         "detail": "UdemyClasses.Comprehension.compchallenge2",
         "documentation": {}
     },
@@ -1923,8 +1923,35 @@
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2",
         "description": "UdemyClasses.Comprehension.compchallenge2",
-        "peekOfCode": "forest = []\nfor leave in leaves:\n    if LOC in leaves[leave].values():\n        forest.append(locations[leave])\nprint(forest)\nfor loc in sorted(locations):\n    forest = [f\"{leave}, {locations[leave]}\" for leave in leaves if LOC in leaves[leave].values()]  # noqa\n    print(f\"Locations leading to {loc}\", end='\\t')\n    print(forest)",
+        "peekOfCode": "forest = []\nfor leave in leaves:\n    if LOC in leaves[leave].values():\n        forest.append(locations[leave])\nprint(forest)\nprint()\n# for loc in sorted(locations):\n#     forest = [f\"{leave}, {locations[leave]}\" for leave in leaves if LOC in leaves[leave].values()]  # noqa\n#     print(f\"Locations leading to {loc}\", end='\\t')\n#     print(forest)",
         "detail": "UdemyClasses.Comprehension.compchallenge2",
+        "documentation": {}
+    },
+    {
+        "label": "locations",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "locations = {0: \"You are sitting in front of a computer learning Python\",\n             1: \"You are standing at the end of a road before a small brick building\",  # noqa\n             2: \"You are at the top of a hill\",\n             3: \"You are inside a building, a well house for a small stream\",\n             4: \"You are in a valley beside a stream\",\n             5: \"You are in the forest\"}\nleaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "leaves",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "leaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},\n          4: {\"N\": 1, \"W\": 2, \"Q\": 0},\n          5: {\"W\": 2, \"S\": 1, \"Q\": 0}}\nprint(\"Nested for loops\")\nprint(\"----------------\")\nfor loc in sorted(locations):\n    leaves_to_destination_1 = []",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "leaves_to_destination_3",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "leaves_to_destination_3 = [[(leave, locations[leave]) for leave in leaves\n                            if loc in leaves[leave].values()]\n                           for loc in sorted(locations)]\nprint(leaves_to_destination_3)\nprint()\nfor index, loc in enumerate(leaves_to_destination_3):\n    print(\"Locations leading to {index}\", end='\\t')\n    print(loc)",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
         "documentation": {}
     },
     {
@@ -2096,6 +2123,42 @@
         "description": "UdemyClasses.Comprehension.listfor",
         "peekOfCode": "index_pos = numbers.index(number)\nprint(squares[index_pos])",
         "detail": "UdemyClasses.Comprehension.listfor",
+        "documentation": {}
+    },
+    {
+        "label": "burgers",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.nested1",
+        "description": "UdemyClasses.Comprehension.nested1",
+        "peekOfCode": "burgers = [\"beef\", \"chicken\", \"spicy bean\"]\ntoppings = [\"cheese\", \"egg\", \"beans\", \"spam\"]\nfor meals in [(burger, toppings) for burger in burgers for topping in toppings]:\n    print(meals)\n# The above code is a nested list comprehension.\nprint()\n# for burger in burgers:\n#     for topping in toppings:\n#         print((burger, topping))\n# The above code is a nested for loop.",
+        "detail": "UdemyClasses.Comprehension.nested1",
+        "documentation": {}
+    },
+    {
+        "label": "toppings",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.nested1",
+        "description": "UdemyClasses.Comprehension.nested1",
+        "peekOfCode": "toppings = [\"cheese\", \"egg\", \"beans\", \"spam\"]\nfor meals in [(burger, toppings) for burger in burgers for topping in toppings]:\n    print(meals)\n# The above code is a nested list comprehension.\nprint()\n# for burger in burgers:\n#     for topping in toppings:\n#         print((burger, topping))\n# The above code is a nested for loop.\nfor nested_meals in [[(burger, toppings) for burger in burgers] for topping in toppings]:  # noqa",
+        "detail": "UdemyClasses.Comprehension.nested1",
+        "documentation": {}
+    },
+    {
+        "label": "times",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.nested_challenge",
+        "description": "UdemyClasses.Comprehension.nested_challenge",
+        "peekOfCode": "times = [(i, i * j) for i in range(1, 11) for j in range(1, 1)]\nprint(times)\nfor x, y in [(i, i * j) for i in range(1, 11) for j in range(1, 1)]:\n    print(x, y)\ntimes2 = [[(i, i * j) for i in range(1, 11)] for j in range(1, 1)]\nprint(times2)\nfor x, y in ((i, i * j) for i in range(1, 11) for j in range(1, 1)):\n    print(x, y)",
+        "detail": "UdemyClasses.Comprehension.nested_challenge",
+        "documentation": {}
+    },
+    {
+        "label": "times2",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.nested_challenge",
+        "description": "UdemyClasses.Comprehension.nested_challenge",
+        "peekOfCode": "times2 = [[(i, i * j) for i in range(1, 11)] for j in range(1, 1)]\nprint(times2)\nfor x, y in ((i, i * j) for i in range(1, 11) for j in range(1, 1)):\n    print(x, y)",
+        "detail": "UdemyClasses.Comprehension.nested_challenge",
         "documentation": {}
     },
     {

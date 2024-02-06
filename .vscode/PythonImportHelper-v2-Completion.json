@@ -236,6 +236,15 @@
         "documentation": {}
     },
     {
+        "label": "timeit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "timeit",
+        "description": "timeit",
+        "detail": "timeit",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -1941,7 +1950,34 @@
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2b",
         "description": "UdemyClasses.Comprehension.compchallenge2b",
-        "peekOfCode": "leaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},\n          4: {\"N\": 1, \"W\": 2, \"Q\": 0},\n          5: {\"W\": 2, \"S\": 1, \"Q\": 0}}\nprint(\"Nested for loops\")\nprint(\"----------------\")\nfor loc in sorted(locations):\n    leaves_to_destination_1 = []",
+        "peekOfCode": "leaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},\n          4: {\"N\": 1, \"W\": 2, \"Q\": 0},\n          5: {\"W\": 2, \"S\": 1, \"Q\": 0}}\nprint(\"Nested for loops\")\nprint(\"----------------\")\nNESTED_LOOP = \"\"\"\\\nfor loc in sorted(locations):",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "NESTED_LOOP",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "NESTED_LOOP = \"\"\"\\\nfor loc in sorted(locations):\n    leaves_to_destination_1 = []\n    for leave in leaves:\n        if loc in leaves[leave].values():\n            leaves_to_destination_1.append((leave, locations[leave]))\n        print(f\"Locations leading to {loc}\", end='\\t')\n        print(leaves_to_destination_1)\n\"\"\"\n# The backslash at the end of line 19 is because we don't want to start our",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "LOOP_COMP",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "LOOP_COMP = \"\"\"\\\nfor loc in sorted(locations):\n    leaves_to_destination_2 = [(leave, locations[leave]) for leave in leaves if loc in leaves[leave].values()]  # noqa\n    print(\"Locations leading to {loc}\", end='\\t')\n    print(leaves_to_destination_2)\n\"\"\"\nprint()\nprint(\"Nested Comprehension\")\nprint(\"--------------------\")\nNESTED_COMP = \"\"\"\\",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "NESTED_COMP",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "NESTED_COMP = \"\"\"\\\nleaves_to_destination_3 = [[(leave, locations[leave]) for leave in leaves\n                            if loc in leaves[leave].values()]\n                           for loc in sorted(locations)]\nfor index, loc in enumerate(leaves_to_destination_3):\n    print(\"Locations leading to {index}\", end='\\t')\n    print(loc)\n\"\"\"\n# In this module we are using the timeit module. We are converting the list\n# comprehensions into strings by put them in triple quotes.",
         "detail": "UdemyClasses.Comprehension.compchallenge2b",
         "documentation": {}
     },
@@ -1950,7 +1986,16 @@
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2b",
         "description": "UdemyClasses.Comprehension.compchallenge2b",
-        "peekOfCode": "leaves_to_destination_3 = [[(leave, locations[leave]) for leave in leaves\n                            if loc in leaves[leave].values()]\n                           for loc in sorted(locations)]\nprint(leaves_to_destination_3)\nprint()\nfor index, loc in enumerate(leaves_to_destination_3):\n    print(\"Locations leading to {index}\", end='\\t')\n    print(loc)",
+        "peekOfCode": "leaves_to_destination_3 = [[(leave, locations[leave]) for leave in leaves\n                            if loc in leaves[leave].values()]\n                           for loc in sorted(locations)]\nfor index, loc in enumerate(leaves_to_destination_3):\n    print(\"Locations leading to {index}\", end='\\t')\n    print(loc)\n\"\"\"\n# In this module we are using the timeit module. We are converting the list\n# comprehensions into strings by put them in triple quotes.\nresult_1 = timeit.timeit(NESTED_LOOP)",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "result_1",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "result_1 = timeit.timeit(NESTED_LOOP)\nprint(f\"Nested loop:\\t{result_1}\")",
         "detail": "UdemyClasses.Comprehension.compchallenge2b",
         "documentation": {}
     },

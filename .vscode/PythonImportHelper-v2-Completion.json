@@ -245,6 +245,22 @@
         "documentation": {}
     },
     {
+        "label": "mean",
+        "importPath": "statistics",
+        "description": "statistics",
+        "isExtraImport": true,
+        "detail": "statistics",
+        "documentation": {}
+    },
+    {
+        "label": "stdev",
+        "importPath": "statistics",
+        "description": "statistics",
+        "isExtraImport": true,
+        "detail": "statistics",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -2265,7 +2281,7 @@
         "kind": 2,
         "importPath": "UdemyClasses.Comprehension.timeitchallenge",
         "description": "UdemyClasses.Comprehension.timeitchallenge",
-        "peekOfCode": "def fact(n):\n    result = 1\n    if n > 1:\n        for f in range(2, n + 1):\n            result *= f\n    return result\ndef factorial(n):\n    # n! can also be defined as n * (n-1)!\n    if n <= 1:\n        return 1",
+        "peekOfCode": "def fact(n):\n    \"\"\" This function returns the factorial.\"\"\"\n    result = 1\n    if n > 1:\n        for f in range(2, n + 1):\n            result *= f\n    return result\ndef factorial(n):\n    \"\"\" This function returns the factorial\"\"\"\n    # n! can also be defined as n * (n-1)!",
         "detail": "UdemyClasses.Comprehension.timeitchallenge",
         "documentation": {}
     },
@@ -2274,7 +2290,7 @@
         "kind": 2,
         "importPath": "UdemyClasses.Comprehension.timeitchallenge",
         "description": "UdemyClasses.Comprehension.timeitchallenge",
-        "peekOfCode": "def factorial(n):\n    # n! can also be defined as n * (n-1)!\n    if n <= 1:\n        return 1\n    else:\n        return n * factorial(n-1)",
+        "peekOfCode": "def factorial(n):\n    \"\"\" This function returns the factorial\"\"\"\n    # n! can also be defined as n * (n-1)!\n    if n <= 1:\n        return 1\n    else:\n        return n * factorial(n-1)\nif __name__ == \"__main__\":\n    list1 = timeit.repeat(\"x = fact(130)\", setup=\"from __main__ import fact\", number = 10000, repeat = 6)  # noqa\n    list2 = timeit.repeat(\"x = factorial(130)\", setup=\"from __main__ import factorial\", number = 10000, repeat = 6)  # noqa",
         "detail": "UdemyClasses.Comprehension.timeitchallenge",
         "documentation": {}
     },
@@ -2429,6 +2445,33 @@
         "description": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
         "peekOfCode": "update_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\n# this is the same as db.commit() # calling dot commit on the wrong connection could cause bugs. # noqa\nupdate_cursor.close()\nfor name, phone, email in db.execute(\"SELECT * FROM contacts\"):",
         "detail": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.map_intro",
+        "description": "UdemyClasses.map.map_intro",
+        "peekOfCode": "text = \"what have the romans ever done for us\"\ncapitals = [char.upper() for char in text]\nprint(capitals)\nwords = [word.upper() for word in text.split(' ')]\nprint(words)",
+        "detail": "UdemyClasses.map.map_intro",
+        "documentation": {}
+    },
+    {
+        "label": "capitals",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.map_intro",
+        "description": "UdemyClasses.map.map_intro",
+        "peekOfCode": "capitals = [char.upper() for char in text]\nprint(capitals)\nwords = [word.upper() for word in text.split(' ')]\nprint(words)",
+        "detail": "UdemyClasses.map.map_intro",
+        "documentation": {}
+    },
+    {
+        "label": "words",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.map_intro",
+        "description": "UdemyClasses.map.map_intro",
+        "peekOfCode": "words = [word.upper() for word in text.split(' ')]\nprint(words)",
+        "detail": "UdemyClasses.map.map_intro",
         "documentation": {}
     },
     {

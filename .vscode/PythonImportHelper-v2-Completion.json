@@ -1937,6 +1937,51 @@
         "documentation": {}
     },
     {
+        "label": "NESTED_LOOP",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "def NESTED_LOOP():\n    result = []\n    for loc in sorted(locations):\n        leaves_to_destination_1 = []\n        for leave in leaves:\n            if loc in leaves[leave].values():\n                leaves_to_destination_1.append((leave, locations[leave]))\n        result.append(leaves_to_destination_1)\n    # print the result before returning\n    for x in result:",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "LOOP_COMP",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "def LOOP_COMP():\n    result = []\n    for loc in sorted(locations):\n        leaves_to_destination_2 = [(leave, locations[leave]) for leave in leaves if loc in leaves[leave].values()]  # noqa\n        result.append(leaves_to_destination_2)\n    # print the result before returning\n    for x in result:\n        pass\n    return result\ndef NESTED_COMP():",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "NESTED_COMP",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "def NESTED_COMP():\n    leaves_to_destination_3 = [[(leave, locations[leave]) for leave in leaves\n                                if loc in leaves[leave].values()]\n                               for loc in sorted(locations)]\n    # print the result before returning\n    for x in leaves_to_destination_3:\n        pass\n    return leaves_to_destination_3\ndef NESTED_GEN():\n    leaves_to_destination_3 = ([(leave, locations[leave]) for leave in leaves",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "NESTED_GEN",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "def NESTED_GEN():\n    leaves_to_destination_3 = ([(leave, locations[leave]) for leave in leaves\n                                if loc in leaves[leave].values()]\n                               for loc in sorted(locations))\n    # print the result before returning\n    for x in leaves_to_destination_3:\n        pass\n    return leaves_to_destination_3\n# In this module we are using the timeit module. We are converting the list\n# comprehensions into strings by put them in triple quotes.",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "setup = \"\"\"\\\ngc.enable()\nlocations = {0: \"You are sitting in front of a computer learning Python\",\n             1: \"You are standing at the end of a road before a small brick building\",  # noqa\n             2: \"You are at the top of a hill\",\n             3: \"You are inside a building, a well house for a small stream\",\n             4: \"You are in a valley beside a stream\",\n             5: \"You are in the forest\"}\nleaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
         "label": "locations",
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2b",
@@ -1950,43 +1995,25 @@
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2b",
         "description": "UdemyClasses.Comprehension.compchallenge2b",
-        "peekOfCode": "leaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},\n          4: {\"N\": 1, \"W\": 2, \"Q\": 0},\n          5: {\"W\": 2, \"S\": 1, \"Q\": 0}}\nprint(\"Nested for loops\")\nprint(\"----------------\")\nNESTED_LOOP = \"\"\"\\\nfor loc in sorted(locations):",
+        "peekOfCode": "leaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},\n          4: {\"N\": 1, \"W\": 2, \"Q\": 0},\n          5: {\"W\": 2, \"S\": 1, \"Q\": 0}}\n\"\"\"\nlocations = {0: \"You are sitting in front of a computer learning Python\",\n             1: \"You are standing at the end of a road before a small brick building\",  # noqa\n             2: \"You are at the top of a hill\",",
         "detail": "UdemyClasses.Comprehension.compchallenge2b",
         "documentation": {}
     },
     {
-        "label": "NESTED_LOOP",
+        "label": "locations",
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2b",
         "description": "UdemyClasses.Comprehension.compchallenge2b",
-        "peekOfCode": "NESTED_LOOP = \"\"\"\\\nfor loc in sorted(locations):\n    leaves_to_destination_1 = []\n    for leave in leaves:\n        if loc in leaves[leave].values():\n            leaves_to_destination_1.append((leave, locations[leave]))\n        print(f\"Locations leading to {loc}\", end='\\t')\n        print(leaves_to_destination_1)\n\"\"\"\n# The backslash at the end of line 19 is because we don't want to start our",
+        "peekOfCode": "locations = {0: \"You are sitting in front of a computer learning Python\",\n             1: \"You are standing at the end of a road before a small brick building\",  # noqa\n             2: \"You are at the top of a hill\",\n             3: \"You are inside a building, a well house for a small stream\",\n             4: \"You are in a valley beside a stream\",\n             5: \"You are in the forest\"}\nleaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},",
         "detail": "UdemyClasses.Comprehension.compchallenge2b",
         "documentation": {}
     },
     {
-        "label": "LOOP_COMP",
+        "label": "leaves",
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2b",
         "description": "UdemyClasses.Comprehension.compchallenge2b",
-        "peekOfCode": "LOOP_COMP = \"\"\"\\\nfor loc in sorted(locations):\n    leaves_to_destination_2 = [(leave, locations[leave]) for leave in leaves if loc in leaves[leave].values()]  # noqa\n    print(\"Locations leading to {loc}\", end='\\t')\n    print(leaves_to_destination_2)\n\"\"\"\nprint()\nprint(\"Nested Comprehension\")\nprint(\"--------------------\")\nNESTED_COMP = \"\"\"\\",
-        "detail": "UdemyClasses.Comprehension.compchallenge2b",
-        "documentation": {}
-    },
-    {
-        "label": "NESTED_COMP",
-        "kind": 5,
-        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
-        "description": "UdemyClasses.Comprehension.compchallenge2b",
-        "peekOfCode": "NESTED_COMP = \"\"\"\\\nleaves_to_destination_3 = [[(leave, locations[leave]) for leave in leaves\n                            if loc in leaves[leave].values()]\n                           for loc in sorted(locations)]\nfor index, loc in enumerate(leaves_to_destination_3):\n    print(\"Locations leading to {index}\", end='\\t')\n    print(loc)\n\"\"\"\n# In this module we are using the timeit module. We are converting the list\n# comprehensions into strings by put them in triple quotes.",
-        "detail": "UdemyClasses.Comprehension.compchallenge2b",
-        "documentation": {}
-    },
-    {
-        "label": "leaves_to_destination_3",
-        "kind": 5,
-        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
-        "description": "UdemyClasses.Comprehension.compchallenge2b",
-        "peekOfCode": "leaves_to_destination_3 = [[(leave, locations[leave]) for leave in leaves\n                            if loc in leaves[leave].values()]\n                           for loc in sorted(locations)]\nfor index, loc in enumerate(leaves_to_destination_3):\n    print(\"Locations leading to {index}\", end='\\t')\n    print(loc)\n\"\"\"\n# In this module we are using the timeit module. We are converting the list\n# comprehensions into strings by put them in triple quotes.\nresult_1 = timeit.timeit(NESTED_LOOP)",
+        "peekOfCode": "leaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},\n          4: {\"N\": 1, \"W\": 2, \"Q\": 0}}\ndef NESTED_LOOP():\n    result = []\n    for loc in sorted(locations):\n        leaves_to_destination_1 = []\n        for leave in leaves:",
         "detail": "UdemyClasses.Comprehension.compchallenge2b",
         "documentation": {}
     },
@@ -1995,7 +2022,34 @@
         "kind": 5,
         "importPath": "UdemyClasses.Comprehension.compchallenge2b",
         "description": "UdemyClasses.Comprehension.compchallenge2b",
-        "peekOfCode": "result_1 = timeit.timeit(NESTED_LOOP)\nprint(f\"Nested loop:\\t{result_1}\")",
+        "peekOfCode": "result_1 = timeit.timeit(NESTED_LOOP, setup, number=1000)\nresult_2 = timeit.timeit(LOOP_COMP, setup, number=1000)\nresult_3 = timeit.timeit(NESTED_COMP, setup, number=1000)\nresult_4 = timeit.timeit(NESTED_GEN, setup, number=1000)\nprint(f\"Nested loop:\\t{result_1}\")\nprint(f\"LOOP_COMP:\\t{result_2}\")\nprint(f\"Nested_COMP:\\t{result_3}\")\nprint(f\"Nested_GEN:\\t{result_4}\")",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "result_2",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "result_2 = timeit.timeit(LOOP_COMP, setup, number=1000)\nresult_3 = timeit.timeit(NESTED_COMP, setup, number=1000)\nresult_4 = timeit.timeit(NESTED_GEN, setup, number=1000)\nprint(f\"Nested loop:\\t{result_1}\")\nprint(f\"LOOP_COMP:\\t{result_2}\")\nprint(f\"Nested_COMP:\\t{result_3}\")\nprint(f\"Nested_GEN:\\t{result_4}\")",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "result_3",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "result_3 = timeit.timeit(NESTED_COMP, setup, number=1000)\nresult_4 = timeit.timeit(NESTED_GEN, setup, number=1000)\nprint(f\"Nested loop:\\t{result_1}\")\nprint(f\"LOOP_COMP:\\t{result_2}\")\nprint(f\"Nested_COMP:\\t{result_3}\")\nprint(f\"Nested_GEN:\\t{result_4}\")",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "result_4",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "result_4 = timeit.timeit(NESTED_GEN, setup, number=1000)\nprint(f\"Nested loop:\\t{result_1}\")\nprint(f\"LOOP_COMP:\\t{result_2}\")\nprint(f\"Nested_COMP:\\t{result_3}\")\nprint(f\"Nested_GEN:\\t{result_4}\")",
         "detail": "UdemyClasses.Comprehension.compchallenge2b",
         "documentation": {}
     },
@@ -2204,6 +2258,24 @@
         "description": "UdemyClasses.Comprehension.nested_challenge",
         "peekOfCode": "times2 = [[(i, i * j) for i in range(1, 11)] for j in range(1, 1)]\nprint(times2)\nfor x, y in ((i, i * j) for i in range(1, 11) for j in range(1, 1)):\n    print(x, y)",
         "detail": "UdemyClasses.Comprehension.nested_challenge",
+        "documentation": {}
+    },
+    {
+        "label": "fact",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.timeitchallenge",
+        "description": "UdemyClasses.Comprehension.timeitchallenge",
+        "peekOfCode": "def fact(n):\n    result = 1\n    if n > 1:\n        for f in range(2, n + 1):\n            result *= f\n    return result\ndef factorial(n):\n    # n! can also be defined as n * (n-1)!\n    if n <= 1:\n        return 1",
+        "detail": "UdemyClasses.Comprehension.timeitchallenge",
+        "documentation": {}
+    },
+    {
+        "label": "factorial",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.timeitchallenge",
+        "description": "UdemyClasses.Comprehension.timeitchallenge",
+        "peekOfCode": "def factorial(n):\n    # n! can also be defined as n * (n-1)!\n    if n <= 1:\n        return 1\n    else:\n        return n * factorial(n-1)",
+        "detail": "UdemyClasses.Comprehension.timeitchallenge",
         "documentation": {}
     },
     {

@@ -2448,29 +2448,47 @@
         "documentation": {}
     },
     {
-        "label": "text",
-        "kind": 5,
+        "label": "comp_caps",
+        "kind": 2,
         "importPath": "UdemyClasses.map.map_intro",
         "description": "UdemyClasses.map.map_intro",
-        "peekOfCode": "text = \"what have the romans ever done for us\"\ncapitals = [char.upper() for char in text]\nprint(capitals)\nwords = [word.upper() for word in text.split(' ')]\nprint(words)",
+        "peekOfCode": "def comp_caps():\n    \"\"\"\n    The code snippet below is a function\n    that changes the text character to uppercase.\n    \"\"\"\n    capitals = [char.upper() for char in TEXT]\n    return capitals\n# use map\ndef map_caps():\n    \"\"\"",
         "detail": "UdemyClasses.map.map_intro",
         "documentation": {}
     },
     {
-        "label": "capitals",
-        "kind": 5,
+        "label": "map_caps",
+        "kind": 2,
         "importPath": "UdemyClasses.map.map_intro",
         "description": "UdemyClasses.map.map_intro",
-        "peekOfCode": "capitals = [char.upper() for char in text]\nprint(capitals)\nwords = [word.upper() for word in text.split(' ')]\nprint(words)",
+        "peekOfCode": "def map_caps():\n    \"\"\"\n    The code snippet below is a function\n    that changes the text string to uppercase.\n    \"\"\"\n    map_capitals = list(map(str.upper, TEXT))\n    return map_capitals\ndef comp_words():\n    \"\"\"\n    The code snippet below is a function",
         "detail": "UdemyClasses.map.map_intro",
         "documentation": {}
     },
     {
-        "label": "words",
+        "label": "comp_words",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.map_intro",
+        "description": "UdemyClasses.map.map_intro",
+        "peekOfCode": "def comp_words():\n    \"\"\"\n    The code snippet below is a function\n    that changes the text words to uppercase.\n    \"\"\"\n    words = [word.upper() for word in TEXT.split(' ')]\n    return words\n# use map\ndef map_words():\n    \"\"\"",
+        "detail": "UdemyClasses.map.map_intro",
+        "documentation": {}
+    },
+    {
+        "label": "map_words",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.map_intro",
+        "description": "UdemyClasses.map.map_intro",
+        "peekOfCode": "def map_words():\n    \"\"\"\n    The code snippet below is a function\n    that changes the list of text words to uppercase.\n    \"\"\"\n    map_w = list(map(str.upper, TEXT.split(' ')))\n    return map_w\n# The code below is how you call the print the functions above.\nif __name__ == '__main__':\n    print(comp_caps())",
+        "detail": "UdemyClasses.map.map_intro",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT",
         "kind": 5,
         "importPath": "UdemyClasses.map.map_intro",
         "description": "UdemyClasses.map.map_intro",
-        "peekOfCode": "words = [word.upper() for word in text.split(' ')]\nprint(words)",
+        "peekOfCode": "TEXT = \"what have the romans ever done for us\"\ndef comp_caps():\n    \"\"\"\n    The code snippet below is a function\n    that changes the text character to uppercase.\n    \"\"\"\n    capitals = [char.upper() for char in TEXT]\n    return capitals\n# use map\ndef map_caps():",
         "detail": "UdemyClasses.map.map_intro",
         "documentation": {}
     },

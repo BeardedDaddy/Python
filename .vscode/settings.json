@@ -30,5 +30,8 @@
         }
     ],
     "CodeGPT.apiKey": "CodeGPT Plus Beta",
-    "cloudcode.duetAI.inlineSuggestions.enableAuto": false
+    "cloudcode.duetAI.inlineSuggestions.enableAuto": false,
+    "inlineChat.acceptedOrDiscardBeforeSave": false,
+    "inlineChat.holdToSpeech": false,
+    "accessibility.verbosity.inlineChat": false
 }

@@ -309,6 +309,22 @@
         "documentation": {}
     },
     {
+        "label": "medals_table",
+        "importPath": "medals_data",
+        "description": "medals_data",
+        "isExtraImport": true,
+        "detail": "medals_data",
+        "documentation": {}
+    },
+    {
+        "label": "medals_table",
+        "importPath": "medals_data",
+        "description": "medals_data",
+        "isExtraImport": true,
+        "detail": "medals_data",
+        "documentation": {}
+    },
+    {
         "label": "functools",
         "kind": 6,
         "isExtraImport": true,
@@ -2640,6 +2656,15 @@
         "documentation": {}
     },
     {
+        "label": "sort_key",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.lambda_example",
+        "description": "UdemyClasses.map.lambda_example",
+        "peekOfCode": "def sort_key(d: dict, field: str) -> str:\n    return d['field']\nmedals_table.sort(key=sort_key)\nprint(medals_table)",
+        "detail": "UdemyClasses.map.lambda_example",
+        "documentation": {}
+    },
+    {
         "label": "comp_caps",
         "kind": 2,
         "importPath": "UdemyClasses.map.map_intro",
@@ -2682,6 +2707,15 @@
         "description": "UdemyClasses.map.map_intro",
         "peekOfCode": "TEXT = \"what have the romans ever done for us\"\ndef comp_caps():\n    \"\"\"\n    The code snippet below is a function\n    that changes the text character to uppercase.\n    \"\"\"\n    capitals = [char.upper() for char in TEXT]\n    return capitals\n# use map\ndef map_caps():",
         "detail": "UdemyClasses.map.map_intro",
+        "documentation": {}
+    },
+    {
+        "label": "medals_table",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.medals_data",
+        "description": "UdemyClasses.map.medals_data",
+        "peekOfCode": "medals_table = [\n    {'country': 'United States', 'gold': 39, 'silver': 41, 'bronze': 33, 'rank': 1},\n    {'country': 'China', 'gold': 38, 'silver': 32, 'bronze': 18, 'rank': 2},\n    {'country': 'Japan', 'gold': 27, 'silver': 14, 'bronze': 17, 'rank': 3},\n    {'country': 'Great Britain', 'gold': 22, 'silver': 21, 'bronze': 22, 'rank': 4},\n    {'country': 'ROC', 'gold': 20, 'silver': 28, 'bronze': 23, 'rank': 5},\n    {'country': 'Australia', 'gold': 17, 'silver': 7, 'bronze': 22, 'rank': 6},\n    {'country': 'Netherlands', 'gold': 10, 'silver': 12, 'bronze': 14, 'rank': 7},\n    {'country': 'France', 'gold': 10, 'silver': 12, 'bronze': 11, 'rank': 8},\n    {'country': 'Germany', 'gold': 10, 'silver': 11, 'bronze': 16, 'rank': 9},",
+        "detail": "UdemyClasses.map.medals_data",
         "documentation": {}
     },
     {
@@ -2772,6 +2806,60 @@
         "description": "UdemyClasses.map.reduceintro",
         "peekOfCode": "RESULT = calc_values(RESULT, 13)\nprint(RESULT)",
         "detail": "UdemyClasses.map.reduceintro",
+        "documentation": {}
+    },
+    {
+        "label": "sort_country",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "def sort_country(d: dict) -> str:\n    return d['country']\ndef sort_gold(d: dict) -> str:\n    return d['gold']\ndef sort_silver(d: dict) -> str:\n    return d['silver']\ndef sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "sort_gold",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "def sort_gold(d: dict) -> str:\n    return d['gold']\ndef sort_silver(d: dict) -> str:\n    return d['silver']\ndef sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "sort_silver",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "def sort_silver(d: dict) -> str:\n    return d['silver']\ndef sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "sort_bronze",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "def sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),\n    'B': ('bronze medals',),\n    'R': ('rank',),",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "sort_rank",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "def sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),\n    'B': ('bronze medals',),\n    'R': ('rank',),\n}\nwhile True:",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "options",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "options = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),\n    'B': ('bronze medals',),\n    'R': ('rank',),\n}\nwhile True:\n    for option, (description, *_) in options.items():\n        print(f'{option}: Sort by {description}')",
+        "detail": "UdemyClasses.map.sort_data_functions",
         "documentation": {}
     },
     {

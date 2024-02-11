@@ -2459,6 +2459,24 @@
     {
         "label": "entries",
         "kind": 5,
+        "importPath": "UdemyClasses.map.allgotcha",
+        "description": "UdemyClasses.map.allgotcha",
+        "peekOfCode": "entries = []\nif entries:\n    print(\"all: {}\".format(all(entries)))\nelse:\n    print(False)\nprint(\"any: {}\".format(any(entries)))\nresult = bool(entries) and all(entries)\nprint(result)",
+        "detail": "UdemyClasses.map.allgotcha",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.allgotcha",
+        "description": "UdemyClasses.map.allgotcha",
+        "peekOfCode": "result = bool(entries) and all(entries)\nprint(result)",
+        "detail": "UdemyClasses.map.allgotcha",
+        "documentation": {}
+    },
+    {
+        "label": "entries",
+        "kind": 5,
         "importPath": "UdemyClasses.map.anyall",
         "description": "UdemyClasses.map.anyall",
         "peekOfCode": "entries = [1, 2, 3, 4, 5]\nprint(\"all: {}\".format(all(entries)))\nprint(\"any: {}\".format(any(entries)))\nprint(\"Iterable with a 'False' value\")\nentries_with_zero = [1, 2, 0, 4, 5]\nprint(\"all: {}\".format(all(entries_with_zero)))\nprint(\"any: {}\".format(any(entries_with_zero)))\nprint()\nprint(\"Values interpreted as False in Python\")\nprint(\"\"\"False; {0}",

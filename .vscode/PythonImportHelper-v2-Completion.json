@@ -1,0 +1,1134 @@
+[
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "pytz",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytz",
+        "description": "pytz",
+        "detail": "pytz",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "importPath": "player",
+        "description": "player",
+        "isExtraImport": true,
+        "detail": "player",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "importPath": "player",
+        "description": "player",
+        "isExtraImport": true,
+        "detail": "player",
+        "documentation": {}
+    },
+    {
+        "label": "blackjack",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "blackjack",
+        "description": "blackjack",
+        "detail": "blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Account",
+        "kind": 6,
+        "importPath": "oop.accounts",
+        "description": "oop.accounts",
+        "peekOfCode": "class Account:\n    \"\"\" Simple account class with balance \"\"\"\n    @staticmethod\n    def _current_time():\n        utc_time = datetime.datetime.utcnow()\n        return pytz.utc.localize(utc_time)\n    \"\"\" This class creates a function for the account holders name and balance \"\"\"\n    def __init__(self, name, balance):\n        self._name = name\n        self.__balance = balance",
+        "detail": "oop.accounts",
+        "documentation": {}
+    },
+    {
+        "label": "Kettle",
+        "kind": 6,
+        "importPath": "oop.builtins",
+        "description": "oop.builtins",
+        "peekOfCode": "class Kettle(object):\n    power_source = \"electricity\"\n    def __init__(self, make, price):\n        self.make = make\n        self.price = price\n        self.on = False\n    def switch_on(self):\n        self.on = True\nkenwood = Kettle(\"Kenwood\", 8.99)\nprint(kenwood.make)",
+        "detail": "oop.builtins",
+        "documentation": {}
+    },
+    {
+        "label": "kenwood",
+        "kind": 5,
+        "importPath": "oop.builtins",
+        "description": "oop.builtins",
+        "peekOfCode": "kenwood = Kettle(\"Kenwood\", 8.99)\nprint(kenwood.make)\nprint(kenwood.price)\nkenwood.price = 12.75\nprint(kenwood.price)\nhamilton = Kettle(\"Hamilton\", 14.55)\nprint(\"Models: {} = {}, {} = {}\". format(kenwood.make, kenwood.price, hamilton.make, hamilton.price))\nprint(\"Models: {0.make} = {0.price}, {1.make} = {1.price}\".format(kenwood, hamilton))\nprint(hamilton.on)\nhamilton.switch_on()",
+        "detail": "oop.builtins",
+        "documentation": {}
+    },
+    {
+        "label": "kenwood.price",
+        "kind": 5,
+        "importPath": "oop.builtins",
+        "description": "oop.builtins",
+        "peekOfCode": "kenwood.price = 12.75\nprint(kenwood.price)\nhamilton = Kettle(\"Hamilton\", 14.55)\nprint(\"Models: {} = {}, {} = {}\". format(kenwood.make, kenwood.price, hamilton.make, hamilton.price))\nprint(\"Models: {0.make} = {0.price}, {1.make} = {1.price}\".format(kenwood, hamilton))\nprint(hamilton.on)\nhamilton.switch_on()\nprint(hamilton.on)\nKettle.switch_on(kenwood)\nprint(kenwood.on)",
+        "detail": "oop.builtins",
+        "documentation": {}
+    },
+    {
+        "label": "hamilton",
+        "kind": 5,
+        "importPath": "oop.builtins",
+        "description": "oop.builtins",
+        "peekOfCode": "hamilton = Kettle(\"Hamilton\", 14.55)\nprint(\"Models: {} = {}, {} = {}\". format(kenwood.make, kenwood.price, hamilton.make, hamilton.price))\nprint(\"Models: {0.make} = {0.price}, {1.make} = {1.price}\".format(kenwood, hamilton))\nprint(hamilton.on)\nhamilton.switch_on()\nprint(hamilton.on)\nKettle.switch_on(kenwood)\nprint(kenwood.on)\nkenwood.switch_on()\nprint(\"*\" * 80)",
+        "detail": "oop.builtins",
+        "documentation": {}
+    },
+    {
+        "label": "kenwood.power",
+        "kind": 5,
+        "importPath": "oop.builtins",
+        "description": "oop.builtins",
+        "peekOfCode": "kenwood.power = 1.5\nprint(kenwood.power)\nhamilton.power = 2.4\nprint(hamilton.power)\nprint(\"Switch to atomic power\")\nKettle.power_source = \"atomic\"\nprint(Kettle.power_source)\nprint(\"Switch kenwood to gas\")\nkenwood.power_source = \"gas\"\nprint(kenwood.power_source)",
+        "detail": "oop.builtins",
+        "documentation": {}
+    },
+    {
+        "label": "hamilton.power",
+        "kind": 5,
+        "importPath": "oop.builtins",
+        "description": "oop.builtins",
+        "peekOfCode": "hamilton.power = 2.4\nprint(hamilton.power)\nprint(\"Switch to atomic power\")\nKettle.power_source = \"atomic\"\nprint(Kettle.power_source)\nprint(\"Switch kenwood to gas\")\nkenwood.power_source = \"gas\"\nprint(kenwood.power_source)\nprint(hamilton.power_source)\nprint(Kettle.__dict__)",
+        "detail": "oop.builtins",
+        "documentation": {}
+    },
+    {
+        "label": "Kettle.power_source",
+        "kind": 5,
+        "importPath": "oop.builtins",
+        "description": "oop.builtins",
+        "peekOfCode": "Kettle.power_source = \"atomic\"\nprint(Kettle.power_source)\nprint(\"Switch kenwood to gas\")\nkenwood.power_source = \"gas\"\nprint(kenwood.power_source)\nprint(hamilton.power_source)\nprint(Kettle.__dict__)\nprint(kenwood.__dict__)\nprint(hamilton.__dir__)",
+        "detail": "oop.builtins",
+        "documentation": {}
+    },
+    {
+        "label": "kenwood.power_source",
+        "kind": 5,
+        "importPath": "oop.builtins",
+        "description": "oop.builtins",
+        "peekOfCode": "kenwood.power_source = \"gas\"\nprint(kenwood.power_source)\nprint(hamilton.power_source)\nprint(Kettle.__dict__)\nprint(kenwood.__dict__)\nprint(hamilton.__dir__)",
+        "detail": "oop.builtins",
+        "documentation": {}
+    },
+    {
+        "label": "a_string",
+        "kind": 5,
+        "importPath": "oop.demo",
+        "description": "oop.demo",
+        "peekOfCode": "a_string = \"this a\\na string split\\t\\tand tabbed\"\nprint(a_string)\nraw_string = r\"this is\\na string split\\t\\tand tabbed\"\nprint(raw_string)\nb_string = \"this is\" + chr(10) + \"a string split\" + chr(9) + chr(9) + \"and tabbed\"\nprint(b_string)\nbackslash_string = \"this is a backlash \\followed by some text\"\nprint(backslash_string)\nbackslash_string = \"this is a backslash \\\\followed by some text\"\nprint(backslash_string)",
+        "detail": "oop.demo",
+        "documentation": {}
+    },
+    {
+        "label": "raw_string",
+        "kind": 5,
+        "importPath": "oop.demo",
+        "description": "oop.demo",
+        "peekOfCode": "raw_string = r\"this is\\na string split\\t\\tand tabbed\"\nprint(raw_string)\nb_string = \"this is\" + chr(10) + \"a string split\" + chr(9) + chr(9) + \"and tabbed\"\nprint(b_string)\nbackslash_string = \"this is a backlash \\followed by some text\"\nprint(backslash_string)\nbackslash_string = \"this is a backslash \\\\followed by some text\"\nprint(backslash_string)\nerror_string = r\"this string ends with a \\\\\"",
+        "detail": "oop.demo",
+        "documentation": {}
+    },
+    {
+        "label": "b_string",
+        "kind": 5,
+        "importPath": "oop.demo",
+        "description": "oop.demo",
+        "peekOfCode": "b_string = \"this is\" + chr(10) + \"a string split\" + chr(9) + chr(9) + \"and tabbed\"\nprint(b_string)\nbackslash_string = \"this is a backlash \\followed by some text\"\nprint(backslash_string)\nbackslash_string = \"this is a backslash \\\\followed by some text\"\nprint(backslash_string)\nerror_string = r\"this string ends with a \\\\\"",
+        "detail": "oop.demo",
+        "documentation": {}
+    },
+    {
+        "label": "backslash_string",
+        "kind": 5,
+        "importPath": "oop.demo",
+        "description": "oop.demo",
+        "peekOfCode": "backslash_string = \"this is a backlash \\followed by some text\"\nprint(backslash_string)\nbackslash_string = \"this is a backslash \\\\followed by some text\"\nprint(backslash_string)\nerror_string = r\"this string ends with a \\\\\"",
+        "detail": "oop.demo",
+        "documentation": {}
+    },
+    {
+        "label": "backslash_string",
+        "kind": 5,
+        "importPath": "oop.demo",
+        "description": "oop.demo",
+        "peekOfCode": "backslash_string = \"this is a backslash \\\\followed by some text\"\nprint(backslash_string)\nerror_string = r\"this string ends with a \\\\\"",
+        "detail": "oop.demo",
+        "documentation": {}
+    },
+    {
+        "label": "error_string",
+        "kind": 5,
+        "importPath": "oop.demo",
+        "description": "oop.demo",
+        "peekOfCode": "error_string = r\"this string ends with a \\\\\"",
+        "detail": "oop.demo",
+        "documentation": {}
+    },
+    {
+        "label": "Wing",
+        "kind": 6,
+        "importPath": "oop.ducks",
+        "description": "oop.ducks",
+        "peekOfCode": "class Wing(object):\n    def __init__(self, ratio):\n        self.ratio = ratio\n    def fly(self):\n        if self.ratio > 1:\n            print(\"Wee, this is fun.\")\n        elif self.ratio == 1:\n            print(\"This is hard work, but I'm flying.\")\n        else:\n            print(\"I think I'll just walk.\")",
+        "detail": "oop.ducks",
+        "documentation": {}
+    },
+    {
+        "label": "Duck",
+        "kind": 6,
+        "importPath": "oop.ducks",
+        "description": "oop.ducks",
+        "peekOfCode": "class Duck(object):\n    def __init__(self):\n        self._wing = Wing(1.8)\n    def walk(self):\n        print(\"Waddle, waddle, waddle\")\n    def swim(self):\n        print(\"Come on in, the water's lovely\")\n    def quack(self):\n        print(\"Quack quack\")\n    def fly(self):",
+        "detail": "oop.ducks",
+        "documentation": {}
+    },
+    {
+        "label": "Penguin",
+        "kind": 6,
+        "importPath": "oop.ducks",
+        "description": "oop.ducks",
+        "peekOfCode": "class Penguin(object):\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you having a laugh? I'm a penguin!\")\ndef test_duck(duck):\n    duck.walk()\n    duck.swim()",
+        "detail": "oop.ducks",
+        "documentation": {}
+    },
+    {
+        "label": "test_duck",
+        "kind": 2,
+        "importPath": "oop.ducks",
+        "description": "oop.ducks",
+        "peekOfCode": "def test_duck(duck):\n    duck.walk()\n    duck.swim()\n    duck.quack()\nif __name__ == '__main__':\n    donald = Duck()\n    donald.fly()\n    test_duck(donald)\n    # percy = Penguin()\n    # test_duck(percy)",
+        "detail": "oop.ducks",
+        "documentation": {}
+    },
+    {
+        "label": "Enemy",
+        "kind": 6,
+        "importPath": "oop.enemy",
+        "description": "oop.enemy",
+        "peekOfCode": "class Enemy:\n    def __init__(self, name=\"Enemy\", hit_points=0, lives=1):\n        self._name = name\n        self._hit_points = hit_points\n        self._lives = lives\n        self._alive = True\n    def take_damage(self, damage):\n        remaining_points = self._hit_points - damage\n        if remaining_points >= 0:\n            self._hit_points = remaining_points",
+        "detail": "oop.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "Troll",
+        "kind": 6,
+        "importPath": "oop.enemy",
+        "description": "oop.enemy",
+        "peekOfCode": "class Troll(Enemy):\n    def __init__(self, name):\n    #  super(Troll, self).__init__(name = name, lives = 1, hit_points = 23)\n       super().__init__(name = name, lives = 1, hit_points = 23)\n    def grunt(self):\n        print(\"Me {0._name}, {0._name}, stomp you\".format(self))\nclass Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):",
+        "detail": "oop.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "Vampyre",
+        "kind": 6,
+        "importPath": "oop.enemy",
+        "description": "oop.enemy",
+        "peekOfCode": "class Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):\n        if random.randint(1, 3) == 3:\n            print(\"***** {0._name} dodges *****\".format(self))\n            return True\n        else:\n            return False\n    def take_damage(self, damage):",
+        "detail": "oop.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "VampyreKing",
+        "kind": 6,
+        "importPath": "oop.enemy",
+        "description": "oop.enemy",
+        "peekOfCode": "class VampyreKing(Vampyre):\n    def __init__(self, name):\n        super().__init__(name)\n        self._hit_points = 140\n    # A VampyreKing is going to be incredibly powerful, and any points of damage inflicted will be divided by 4.\n    #todo I need to create a damage inflicted function that when attacking will divide by 4.\n    # VampyreKing objects will also start off with 140 hit points and only takes a quarter of the damage inflicted.\n    def take_damage(self, damage):\n        super().take_damage(damage // 4)",
+        "detail": "oop.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "Tag",
+        "kind": 6,
+        "importPath": "oop.html_duck",
+        "description": "oop.html_duck",
+        "peekOfCode": "class Tag(object):\n    def __init__(self, name, contents):\n        self.start_tag = '<()>'.format(name)\n        self.end_tag = '</()>'.format(name)\n        self.contents = contents\n    def __str__(self):\n        return \"{0.start_tag}{0.contents}{0.end_tag}\".format(self)\n    def display(self, file=None):\n        print(self, file=file)\nclass DocType(Tag):",
+        "detail": "oop.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "DocType",
+        "kind": 6,
+        "importPath": "oop.html_duck",
+        "description": "oop.html_duck",
+        "peekOfCode": "class DocType(Tag):\n    def __init__(self):\n        super().__init__('!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" http://www.w3.org/TR/html4/strict.dtd', '')\n        self.end_tag = ''   # DOCTYPE doesn't have an end tag\nclass Head(Tag):\n    def __init__(self, title=None):\n        super().__init__('head', '')\n        if title:\n            self._title_tag = Tag('title', title)\n            self.contents = str(self._title_tag)",
+        "detail": "oop.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "Head",
+        "kind": 6,
+        "importPath": "oop.html_duck",
+        "description": "oop.html_duck",
+        "peekOfCode": "class Head(Tag):\n    def __init__(self, title=None):\n        super().__init__('head', '')\n        if title:\n            self._title_tag = Tag('title', title)\n            self.contents = str(self._title_tag)\nclass Body(Tag):\n    def __init__(self):\n        super().__init__('body', '')    # body contents will be built up separatly\n        self._body_contents = []",
+        "detail": "oop.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "Body",
+        "kind": 6,
+        "importPath": "oop.html_duck",
+        "description": "oop.html_duck",
+        "peekOfCode": "class Body(Tag):\n    def __init__(self):\n        super().__init__('body', '')    # body contents will be built up separatly\n        self._body_contents = []\n    def add_tag(self, name, contents):\n        new_tag = Tag(name, contents)\n        self._body_contents.append(new_tag)\n    def display(self, file=None):\n        for tag in self._body_contents:\n            self.contents += str(tag)",
+        "detail": "oop.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "HtmlDoc",
+        "kind": 6,
+        "importPath": "oop.html_duck",
+        "description": "oop.html_duck",
+        "peekOfCode": "class HtmlDoc(object):\n    def __init__(self, doc_type, head, body):\n        self._doc_type = doc_type\n        self._head = head\n        self._body = body\n    def add_tag(self, name, contents):\n        self._body.add_tag(name, contents)\n    def display(self, file=None):\n        self._doc_type.display(file=file)\n        print('<html>', file=file)",
+        "detail": "oop.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "grevy",
+        "kind": 5,
+        "importPath": "oop.main-Bearded-Daddy",
+        "description": "oop.main-Bearded-Daddy",
+        "peekOfCode": "grevy = Player(\"Grevy\")\nprint(grevy.name)\nprint(grevy.lives)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1",
+        "detail": "oop.main-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "grevy",
+        "kind": 5,
+        "importPath": "oop.main-LivingRoom-Computer",
+        "description": "oop.main-LivingRoom-Computer",
+        "peekOfCode": "grevy = Player(\"Grevy\")\nprint(grevy.name)\nprint(grevy.lives)\ngrevy.lives -= 1\nprint(grevy.lives)\n=======\ngrevy = Player(\"Grevy\")\nprint(grevy.name)\nprint(grevy.lives)\ngrevy.lives -= 1",
+        "detail": "oop.main-LivingRoom-Computer",
+        "documentation": {}
+    },
+    {
+        "label": "grevy",
+        "kind": 5,
+        "importPath": "oop.main-LivingRoom-Computer",
+        "description": "oop.main-LivingRoom-Computer",
+        "peekOfCode": "grevy = Player(\"Grevy\")\nprint(grevy.name)\nprint(grevy.lives)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1",
+        "detail": "oop.main-LivingRoom-Computer",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "oop.main",
+        "description": "oop.main",
+        "peekOfCode": "a = 3\n# This is a string.\nb = \"grevy\"\n# This is a tuple.\nc = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
+        "detail": "oop.main",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "oop.main",
+        "description": "oop.main",
+        "peekOfCode": "b = \"grevy\"\n# This is a tuple.\nc = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
+        "detail": "oop.main",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "oop.main",
+        "description": "oop.main",
+        "peekOfCode": "c = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
+        "detail": "oop.main",
+        "documentation": {}
+    },
+    {
+        "label": "Kettle",
+        "kind": 6,
+        "importPath": "oop.oop",
+        "description": "oop.oop",
+        "peekOfCode": "class Kettle(object):\n    def __init__(self, make, price):\n        self.make = make\n        self.price = price\n        self.on = False\nkenwood = Kettle(\"Kenwood\", 8.99)\nprint(kenwood.make)\nprint(kenwood.price)\nkenwood.price = 12.75\nprint(kenwood.price)",
+        "detail": "oop.oop",
+        "documentation": {}
+    },
+    {
+        "label": "kenwood",
+        "kind": 5,
+        "importPath": "oop.oop",
+        "description": "oop.oop",
+        "peekOfCode": "kenwood = Kettle(\"Kenwood\", 8.99)\nprint(kenwood.make)\nprint(kenwood.price)\nkenwood.price = 12.75\nprint(kenwood.price)\nhamilton = Kettle(\"Hamilton\", 14.55)\nprint(\"Models: {} = {}, {} = {}\".format(kenwood.make, kenwood.price, hamilton.make, hamilton.price))",
+        "detail": "oop.oop",
+        "documentation": {}
+    },
+    {
+        "label": "kenwood.price",
+        "kind": 5,
+        "importPath": "oop.oop",
+        "description": "oop.oop",
+        "peekOfCode": "kenwood.price = 12.75\nprint(kenwood.price)\nhamilton = Kettle(\"Hamilton\", 14.55)\nprint(\"Models: {} = {}, {} = {}\".format(kenwood.make, kenwood.price, hamilton.make, hamilton.price))",
+        "detail": "oop.oop",
+        "documentation": {}
+    },
+    {
+        "label": "hamilton",
+        "kind": 5,
+        "importPath": "oop.oop",
+        "description": "oop.oop",
+        "peekOfCode": "hamilton = Kettle(\"Hamilton\", 14.55)\nprint(\"Models: {} = {}, {} = {}\".format(kenwood.make, kenwood.price, hamilton.make, hamilton.price))",
+        "detail": "oop.oop",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "kind": 6,
+        "importPath": "oop.player-Bearded-Daddy",
+        "description": "oop.player-Bearded-Daddy",
+        "peekOfCode": "class Player(object):\n    def __init__(self, name):\n        self.name = name\n        self.lives = 3\n        self.level = 1\n        self.score = 0\n    def _get_lives(self):\n        return self.lives\n    def _set_lives(self, lives):\n        if lives >= 0:",
+        "detail": "oop.player-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "kind": 6,
+        "importPath": "oop.player-LivingRoom-Computer",
+        "description": "oop.player-LivingRoom-Computer",
+        "peekOfCode": "class Player(object):\n<<<<<<< HEAD\n    def __init__(self, name):\n        self.name = name\n        self._lives = 3\n=======\n    def __init__(self, name):\n        self.name = name\n        self.lives = 3\n>>>>>>> d8d76de5c5eaf5716245077a1bd736626a24dd52",
+        "detail": "oop.player-LivingRoom-Computer",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "kind": 6,
+        "importPath": "oop.player",
+        "description": "oop.player",
+        "peekOfCode": "class Player(object):\n    def __init__(self, name):\n        self.name = name\n        self._lives = 3\n        self._level = 1\n        self._score = 0\n    def _get_lives(self):\n        return self._lives\n    def _set_lives(self, lives):\n        if lives >= 0:",
+        "detail": "oop.player",
+        "documentation": {}
+    },
+    {
+        "label": "Song",
+        "kind": 6,
+        "importPath": "oop.song",
+        "description": "oop.song",
+        "peekOfCode": "class Song:\n    \"\"\" Class to represent a song.\n    Attributes:\n        title (str): The title of the song.\n        artist (str): The name of the song's creator.\n        duration (int): The duration of the song in seconds. May be zero.\n    \"\"\"\n    def __init__(self, title, artist, duration=0):\n        self.title = title\n        self.artist = artist",
+        "detail": "oop.song",
+        "documentation": {}
+    },
+    {
+        "label": "Album",
+        "kind": 6,
+        "importPath": "oop.song",
+        "description": "oop.song",
+        "peekOfCode": "class Album:\n    \"\"\" Class to represent an Album, using it's track list.\n    Attributes:\n        name (str): The name of the album.\n        year (int): The year was album was released.\n        artist: (str): The name of the artist responsible for the album.\n        If not specified, the artist will default to an artist with the name \"Various Artists\".\n        tracks (List[Song]): A list of the songs on the album.\n    Methods:\n        add_song: Used to add a new song to the album's track list.",
+        "detail": "oop.song",
+        "documentation": {}
+    },
+    {
+        "label": "Artist",
+        "kind": 6,
+        "importPath": "oop.song",
+        "description": "oop.song",
+        "peekOfCode": "class Artist: \n    \"\"\"Basic class to store artist details.\n    Attributes:\n        name (str): The name of the artist.\n        albums (List[Album]): A list of the albums by this artist.\n            The list includes only those albums in this collection, it is \n            not an exhaustive list of the artist's published albums.\n    Methods:\n        add_ablum: Use to add a new album to the artist's albums list.\n    \"\"\"",
+        "detail": "oop.song",
+        "documentation": {}
+    },
+    {
+        "label": "find_object",
+        "kind": 2,
+        "importPath": "oop.song",
+        "description": "oop.song",
+        "peekOfCode": "def find_object(field, object_list):\n    \"\"\"Check 'object_list' to see if an object with a 'name' attribute equal to 'field' exists, return it if so.\"\"\"\n    for item in object_list:\n        if item.name == field:\n            return item\n    return None\ndef load_data():\n    artist_list = []\n    with open(\"albums.txt\", \"r\") as albums:\n        for line in albums:",
+        "detail": "oop.song",
+        "documentation": {}
+    },
+    {
+        "label": "load_data",
+        "kind": 2,
+        "importPath": "oop.song",
+        "description": "oop.song",
+        "peekOfCode": "def load_data():\n    artist_list = []\n    with open(\"albums.txt\", \"r\") as albums:\n        for line in albums:\n            # data row should consist of (artist, album, year, song).\n            artist_field, album_field, year_field, song_field = tuple(line.strip('\\n').split('\\t'))\n            year_field = int(year_field)\n            print(\"{}:{}:{}:{}\".format(artist_field, album_field, year_field, song_field))\n            new_artist = find_object(artist_field, artist_list)             \n            if new_artist is None:",
+        "detail": "oop.song",
+        "documentation": {}
+    },
+    {
+        "label": "create_checkfile",
+        "kind": 2,
+        "importPath": "oop.song",
+        "description": "oop.song",
+        "peekOfCode": "def create_checkfile(artist_list):\n    \"\"\"Create a check file from the object data for comparison with the original file.\"\"\"\n    with open(\"checkfile.txt\", \"w\") as checkfile:\n        for new_artist in artist_list:\n            for new_album in new_artist.albums:\n                for new_song in new_album.tracks:\n                    print(\"{0.name}\\t{1.name}\\t{1.year}\\t{2.title}\".format(new_artist, new_album, new_song),file=checkfile)\nif __name__=='__main__':\n    artists = load_data()\n    print(\"There are {} artists\".format(len(artists)))",
+        "detail": "oop.song",
+        "documentation": {}
+    },
+    {
+        "label": "Person",
+        "kind": 6,
+        "importPath": "Python_Projects.DeletingObjectProperties",
+        "description": "Python_Projects.DeletingObjectProperties",
+        "peekOfCode": "class Person:\n  def __init__(self, name, age):\n    self.name = name\n    self.age = age\n  def myfunc(self):\n    print(\"Hello my name is \" + self.name)\np1 = Person(\"John\", 36)\ndel p1\nprint(p1)",
+        "detail": "Python_Projects.DeletingObjectProperties",
+        "documentation": {}
+    },
+    {
+        "label": "p1",
+        "kind": 5,
+        "importPath": "Python_Projects.DeletingObjectProperties",
+        "description": "Python_Projects.DeletingObjectProperties",
+        "peekOfCode": "p1 = Person(\"John\", 36)\ndel p1\nprint(p1)",
+        "detail": "Python_Projects.DeletingObjectProperties",
+        "documentation": {}
+    },
+    {
+        "label": "load_images",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "def load_images(card_images):\n    suits = ['heart', 'club', 'diamond', 'spade']\n    face_cards = ['jack', 'queen', 'king']\n    if tkinter.TkVersion >= 8.6:\n        extension = 'png'\n    else:\n        extension = 'ppm'\n    # For each suit, retrieve the image for the cards\n    for suit in suits:\n        # First the number cards 1 to 10",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "score_hand",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "def score_hand(hand):\n    # calculate the total score of all cards in list.\n    # Only one ace can have the value of 11, and this will be reduce to 1 if the hand would bust.\n    score = 0\n    ace = False\n    for next_card in hand:\n        card_value = next_card[0]\n        if card_value == 1 and not ace:\n            ace = True\n            card_value = 11",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "deal_dealer",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "def deal_dealer():\n    dealer_score = score_hand(dealer_hand)\n    while 0 < dealer_score < 17:\n        dealer_hand.append(_deal_card(dealer_card_frame))\n        dealer_score = score_hand(dealer_hand)\n        #TODO what does label.set do?\n        dealer_score_label.set(dealer_score)\n    player_score = score_hand(player_hand)\n    if player_score > 21:\n        result_text.set(\"Dealer Wins!\")",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "deal_player",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "def deal_player():\n    player_hand.append(_deal_card(player_card_frame))\n    player_score = score_hand(player_hand)      \n    player_score_label.set(score_hand(player_hand))\n    # if player_score > 21:\n    #         result_text.set(\"Dealer Wins!\")\ndef initial_deal():\n    deal_dealer()       \n    dealer_hand.append(_deal_card(dealer_card_frame))        \n    dealer_score_label.set(score_hand(dealer_hand))        ",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "initial_deal",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "def initial_deal():\n    deal_dealer()       \n    dealer_hand.append(_deal_card(dealer_card_frame))        \n    dealer_score_label.set(score_hand(dealer_hand))        \n    deal_player()\n    player_hand.append(_deal_card(player_card_frame))\n    player_score_label.set(score_hand(player_hand))\ndef new_deal():\n    global dealer_card_frame\n    global player_card_frame",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "new_deal",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "def new_deal():\n    global dealer_card_frame\n    global player_card_frame\n    global dealer_hand\n    global player_hand\n    # Embedded frame to hold the card images\n    dealer_card_frame.destroy()\n    dealer_card_frame = tkinter.Frame(card_frame, background='green')\n    dealer_card_frame.grid(row=0, column=1, sticky='ew', rowspan=2)\n    # Embedded frame to hold the card images",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "shuffle",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "def shuffle():\n    random.shuffle(deck)\ndef play():\n    initial_deal()\n    mainWindow.mainloop()\nmainWindow = tkinter.Tk()\n# Set up the screen and frames for the dealer and player\nmainWindow.title(\"Grevy's Black Jack\")\nmainWindow.geometry(\"640x480\")\nmainWindow.configure(background=\"green\")",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "play",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "def play():\n    initial_deal()\n    mainWindow.mainloop()\nmainWindow = tkinter.Tk()\n# Set up the screen and frames for the dealer and player\nmainWindow.title(\"Grevy's Black Jack\")\nmainWindow.geometry(\"640x480\")\nmainWindow.configure(background=\"green\")\nresult_text = tkinter.StringVar()\nresult = tkinter.Label(mainWindow, textvariable=result_text)",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "mainWindow",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "mainWindow = tkinter.Tk()\n# Set up the screen and frames for the dealer and player\nmainWindow.title(\"Grevy's Black Jack\")\nmainWindow.geometry(\"640x480\")\nmainWindow.configure(background=\"green\")\nresult_text = tkinter.StringVar()\nresult = tkinter.Label(mainWindow, textvariable=result_text)\nresult.grid(row=0, column=0, columnspan=3)\ncard_frame = tkinter.Frame(mainWindow, relief=\"sunken\",\n                        borderwidth=1, background=\"green\")",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "result_text",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "result_text = tkinter.StringVar()\nresult = tkinter.Label(mainWindow, textvariable=result_text)\nresult.grid(row=0, column=0, columnspan=3)\ncard_frame = tkinter.Frame(mainWindow, relief=\"sunken\",\n                        borderwidth=1, background=\"green\")\ncard_frame.grid(row=1, column=0, sticky=\"ew\", columnspan=3, rowspan=2)\ndealer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Dealer\", background=\"green\",\n            fg=\"white\").grid(row=0, column=0)\ntkinter.Label(card_frame, textvariable=dealer_score_label,",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "result = tkinter.Label(mainWindow, textvariable=result_text)\nresult.grid(row=0, column=0, columnspan=3)\ncard_frame = tkinter.Frame(mainWindow, relief=\"sunken\",\n                        borderwidth=1, background=\"green\")\ncard_frame.grid(row=1, column=0, sticky=\"ew\", columnspan=3, rowspan=2)\ndealer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Dealer\", background=\"green\",\n            fg=\"white\").grid(row=0, column=0)\ntkinter.Label(card_frame, textvariable=dealer_score_label,\n            background=\"green\", fg=\"white\").grid(row=1, column=0)",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "card_frame",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "card_frame = tkinter.Frame(mainWindow, relief=\"sunken\",\n                        borderwidth=1, background=\"green\")\ncard_frame.grid(row=1, column=0, sticky=\"ew\", columnspan=3, rowspan=2)\ndealer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Dealer\", background=\"green\",\n            fg=\"white\").grid(row=0, column=0)\ntkinter.Label(card_frame, textvariable=dealer_score_label,\n            background=\"green\", fg=\"white\").grid(row=1, column=0)\n# Embedded frame to hold the card images.\ndealer_card_frame = tkinter.Frame(card_frame, background=\"green\")",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "dealer_score_label",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "dealer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Dealer\", background=\"green\",\n            fg=\"white\").grid(row=0, column=0)\ntkinter.Label(card_frame, textvariable=dealer_score_label,\n            background=\"green\", fg=\"white\").grid(row=1, column=0)\n# Embedded frame to hold the card images.\ndealer_card_frame = tkinter.Frame(card_frame, background=\"green\")\ndealer_card_frame.grid(row=0, column=1, sticky=\"ew\", rowspan=2)\nplayer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Player\", background=\"green\",",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "dealer_card_frame",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "dealer_card_frame = tkinter.Frame(card_frame, background=\"green\")\ndealer_card_frame.grid(row=0, column=1, sticky=\"ew\", rowspan=2)\nplayer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Player\", background=\"green\",\n            fg=\"white\").grid(row=2, column=0)\ntkinter.Label(card_frame, textvariable=player_score_label,\n            background=\"green\", fg=\"white\").grid(row=3, column=0)\n# Embedded frame to hold the card images\nplayer_card_frame = tkinter.Frame(card_frame, background=\"green\")\nplayer_card_frame.grid(row=2, column=1, sticky=\"ew\", rowspan=2)",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "player_score_label",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "player_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Player\", background=\"green\",\n            fg=\"white\").grid(row=2, column=0)\ntkinter.Label(card_frame, textvariable=player_score_label,\n            background=\"green\", fg=\"white\").grid(row=3, column=0)\n# Embedded frame to hold the card images\nplayer_card_frame = tkinter.Frame(card_frame, background=\"green\")\nplayer_card_frame.grid(row=2, column=1, sticky=\"ew\", rowspan=2)\nbutton_frame = tkinter.Frame(mainWindow)\nbutton_frame.grid(row=3, column=0, columnspan=3, sticky=\"w\")",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "player_card_frame",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "player_card_frame = tkinter.Frame(card_frame, background=\"green\")\nplayer_card_frame.grid(row=2, column=1, sticky=\"ew\", rowspan=2)\nbutton_frame = tkinter.Frame(mainWindow)\nbutton_frame.grid(row=3, column=0, columnspan=3, sticky=\"w\")\ndealer_button = tkinter.Button(\n    button_frame, text=\"Dealer\", command=deal_dealer)\ndealer_button.grid(row=0, column=0)\nplayer_button = tkinter.Button(\n    button_frame, text=\"Player\", command=deal_player)\nplayer_button.grid(row=0, column=1)",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "button_frame",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "button_frame = tkinter.Frame(mainWindow)\nbutton_frame.grid(row=3, column=0, columnspan=3, sticky=\"w\")\ndealer_button = tkinter.Button(\n    button_frame, text=\"Dealer\", command=deal_dealer)\ndealer_button.grid(row=0, column=0)\nplayer_button = tkinter.Button(\n    button_frame, text=\"Player\", command=deal_player)\nplayer_button.grid(row=0, column=1)\nnew_deal_button = tkinter.Button(\n    button_frame, text=\"New Deal\", command=new_deal)",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "dealer_button",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "dealer_button = tkinter.Button(\n    button_frame, text=\"Dealer\", command=deal_dealer)\ndealer_button.grid(row=0, column=0)\nplayer_button = tkinter.Button(\n    button_frame, text=\"Player\", command=deal_player)\nplayer_button.grid(row=0, column=1)\nnew_deal_button = tkinter.Button(\n    button_frame, text=\"New Deal\", command=new_deal)\nnew_deal_button.grid(row=0, column=2)\nshuffle_button = tkinter.Button(button_frame, text=\"Shuffle\", command=shuffle)",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "player_button",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "player_button = tkinter.Button(\n    button_frame, text=\"Player\", command=deal_player)\nplayer_button.grid(row=0, column=1)\nnew_deal_button = tkinter.Button(\n    button_frame, text=\"New Deal\", command=new_deal)\nnew_deal_button.grid(row=0, column=2)\nshuffle_button = tkinter.Button(button_frame, text=\"Shuffle\", command=shuffle)\nshuffle_button.grid(row=0, column=3)\n# Load cards\ncards = []",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "new_deal_button",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "new_deal_button = tkinter.Button(\n    button_frame, text=\"New Deal\", command=new_deal)\nnew_deal_button.grid(row=0, column=2)\nshuffle_button = tkinter.Button(button_frame, text=\"Shuffle\", command=shuffle)\nshuffle_button.grid(row=0, column=3)\n# Load cards\ncards = []\nload_images(cards)\nprint(cards)\n# Create a new deck of cards and shuffle them.",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "shuffle_button",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "shuffle_button = tkinter.Button(button_frame, text=\"Shuffle\", command=shuffle)\nshuffle_button.grid(row=0, column=3)\n# Load cards\ncards = []\nload_images(cards)\nprint(cards)\n# Create a new deck of cards and shuffle them.\ndeck = list(cards) + list(cards) + list(cards)\nshuffle()\n# Create the list to store the dealer's and player's hands",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "cards",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "cards = []\nload_images(cards)\nprint(cards)\n# Create a new deck of cards and shuffle them.\ndeck = list(cards) + list(cards) + list(cards)\nshuffle()\n# Create the list to store the dealer's and player's hands\ndealer_hand = []\nplayer_hand = []\n# deal_player()",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "deck",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "deck = list(cards) + list(cards) + list(cards)\nshuffle()\n# Create the list to store the dealer's and player's hands\ndealer_hand = []\nplayer_hand = []\n# deal_player()\n# dealer_hand.append(_deal_card(dealer_card_frame))\n# dealer_score_label.set(score_hand(dealer_hand))\n# deal_player()\nif __name__ == \"__main__\":",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "dealer_hand",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "dealer_hand = []\nplayer_hand = []\n# deal_player()\n# dealer_hand.append(_deal_card(dealer_card_frame))\n# dealer_score_label.set(score_hand(dealer_hand))\n# deal_player()\nif __name__ == \"__main__\":\n    play()",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "player_hand",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "description": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "peekOfCode": "player_hand = []\n# deal_player()\n# dealer_hand.append(_deal_card(dealer_card_frame))\n# dealer_score_label.set(score_hand(dealer_hand))\n# deal_player()\nif __name__ == \"__main__\":\n    play()",
+        "detail": "UdemyClasses.Blackjack.blackjack-Bearded-Daddy",
+        "documentation": {}
+    },
+    {
+        "label": "load_images",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "def load_images(card_images):\n    suits = ['heart', 'club', 'diamond', 'spade']\n    face_cards = ['jack', 'queen', 'king']\n    if tkinter.TkVersion >= 8.6:\n        extension = 'png'\n    else:\n        extension = 'ppm'\n    # For each suit, retrieve the image for the cards\n    for suit in suits:\n        # First the number cards 1 to 10",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "score_hand",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "def score_hand(hand):\n    # calculate the total score of all cards in list.\n    # Only one ace can have the value of 11, and this will be reduce to 1 if the hand would bust.\n    score = 0\n    ace = False\n    for next_card in hand:\n        card_value = next_card[0]\n        if card_value == 1 and not ace:\n            ace = True\n            card_value = 11",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "deal_dealer",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "def deal_dealer():\n    dealer_score = score_hand(dealer_hand)\n    while 0 < dealer_score < 17:\n        dealer_hand.append(_deal_card(dealer_card_frame))\n        dealer_score = score_hand(dealer_hand)\n        #TODO what does label.set do?\n        dealer_score_label.set(dealer_score)\n    player_score = score_hand(player_hand)\n    if player_score > 21:\n        result_text.set(\"Dealer Wins!\")",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "deal_player",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "def deal_player():\n    player_hand.append(_deal_card(player_card_frame))\n    player_score = score_hand(player_hand)      \n    player_score_label.set(score_hand(player_hand))\n    # if player_score > 21:\n    #         result_text.set(\"Dealer Wins!\")\ndef initial_deal():\n    deal_dealer()       \n    dealer_hand.append(_deal_card(dealer_card_frame))        \n    dealer_score_label.set(score_hand(dealer_hand))        ",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "initial_deal",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "def initial_deal():\n    deal_dealer()       \n    dealer_hand.append(_deal_card(dealer_card_frame))        \n    dealer_score_label.set(score_hand(dealer_hand))        \n    deal_player()\n    player_hand.append(_deal_card(player_card_frame))\n    player_score_label.set(score_hand(player_hand))\ndef new_deal():\n    global dealer_card_frame\n    global player_card_frame",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "new_deal",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "def new_deal():\n    global dealer_card_frame\n    global player_card_frame\n    global dealer_hand\n    global player_hand\n    # Embedded frame to hold the card images\n    dealer_card_frame.destroy()\n    dealer_card_frame = tkinter.Frame(card_frame, background='green')\n    dealer_card_frame.grid(row=0, column=1, sticky='ew', rowspan=2)\n    # Embedded frame to hold the card images",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "shuffle",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "def shuffle():\n    random.shuffle(deck)\ndef play():\n    initial_deal()\n    mainWindow.mainloop()\nmainWindow = tkinter.Tk()\n# Set up the screen and frames for the dealer and player\nmainWindow.title(\"Grevy's Black Jack\")\nmainWindow.geometry(\"640x480\")\nmainWindow.configure(background=\"green\")",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "play",
+        "kind": 2,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "def play():\n    initial_deal()\n    mainWindow.mainloop()\nmainWindow = tkinter.Tk()\n# Set up the screen and frames for the dealer and player\nmainWindow.title(\"Grevy's Black Jack\")\nmainWindow.geometry(\"640x480\")\nmainWindow.configure(background=\"green\")\nresult_text = tkinter.StringVar()\nresult = tkinter.Label(mainWindow, textvariable=result_text)",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "mainWindow",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "mainWindow = tkinter.Tk()\n# Set up the screen and frames for the dealer and player\nmainWindow.title(\"Grevy's Black Jack\")\nmainWindow.geometry(\"640x480\")\nmainWindow.configure(background=\"green\")\nresult_text = tkinter.StringVar()\nresult = tkinter.Label(mainWindow, textvariable=result_text)\nresult.grid(row=0, column=0, columnspan=3)\ncard_frame = tkinter.Frame(mainWindow, relief=\"sunken\",\n                        borderwidth=1, background=\"green\")",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "result_text",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "result_text = tkinter.StringVar()\nresult = tkinter.Label(mainWindow, textvariable=result_text)\nresult.grid(row=0, column=0, columnspan=3)\ncard_frame = tkinter.Frame(mainWindow, relief=\"sunken\",\n                        borderwidth=1, background=\"green\")\ncard_frame.grid(row=1, column=0, sticky=\"ew\", columnspan=3, rowspan=2)\ndealer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Dealer\", background=\"green\",\n            fg=\"white\").grid(row=0, column=0)\ntkinter.Label(card_frame, textvariable=dealer_score_label,",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "result = tkinter.Label(mainWindow, textvariable=result_text)\nresult.grid(row=0, column=0, columnspan=3)\ncard_frame = tkinter.Frame(mainWindow, relief=\"sunken\",\n                        borderwidth=1, background=\"green\")\ncard_frame.grid(row=1, column=0, sticky=\"ew\", columnspan=3, rowspan=2)\ndealer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Dealer\", background=\"green\",\n            fg=\"white\").grid(row=0, column=0)\ntkinter.Label(card_frame, textvariable=dealer_score_label,\n            background=\"green\", fg=\"white\").grid(row=1, column=0)",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "card_frame",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "card_frame = tkinter.Frame(mainWindow, relief=\"sunken\",\n                        borderwidth=1, background=\"green\")\ncard_frame.grid(row=1, column=0, sticky=\"ew\", columnspan=3, rowspan=2)\ndealer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Dealer\", background=\"green\",\n            fg=\"white\").grid(row=0, column=0)\ntkinter.Label(card_frame, textvariable=dealer_score_label,\n            background=\"green\", fg=\"white\").grid(row=1, column=0)\n# Embedded frame to hold the card images.\ndealer_card_frame = tkinter.Frame(card_frame, background=\"green\")",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "dealer_score_label",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "dealer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Dealer\", background=\"green\",\n            fg=\"white\").grid(row=0, column=0)\ntkinter.Label(card_frame, textvariable=dealer_score_label,\n            background=\"green\", fg=\"white\").grid(row=1, column=0)\n# Embedded frame to hold the card images.\ndealer_card_frame = tkinter.Frame(card_frame, background=\"green\")\ndealer_card_frame.grid(row=0, column=1, sticky=\"ew\", rowspan=2)\nplayer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Player\", background=\"green\",",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "dealer_card_frame",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "dealer_card_frame = tkinter.Frame(card_frame, background=\"green\")\ndealer_card_frame.grid(row=0, column=1, sticky=\"ew\", rowspan=2)\nplayer_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Player\", background=\"green\",\n            fg=\"white\").grid(row=2, column=0)\ntkinter.Label(card_frame, textvariable=player_score_label,\n            background=\"green\", fg=\"white\").grid(row=3, column=0)\n# Embedded frame to hold the card images\nplayer_card_frame = tkinter.Frame(card_frame, background=\"green\")\nplayer_card_frame.grid(row=2, column=1, sticky=\"ew\", rowspan=2)",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "player_score_label",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "player_score_label = tkinter.IntVar()\ntkinter.Label(card_frame, text=\"Player\", background=\"green\",\n            fg=\"white\").grid(row=2, column=0)\ntkinter.Label(card_frame, textvariable=player_score_label,\n            background=\"green\", fg=\"white\").grid(row=3, column=0)\n# Embedded frame to hold the card images\nplayer_card_frame = tkinter.Frame(card_frame, background=\"green\")\nplayer_card_frame.grid(row=2, column=1, sticky=\"ew\", rowspan=2)\nbutton_frame = tkinter.Frame(mainWindow)\nbutton_frame.grid(row=3, column=0, columnspan=3, sticky=\"w\")",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "player_card_frame",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "player_card_frame = tkinter.Frame(card_frame, background=\"green\")\nplayer_card_frame.grid(row=2, column=1, sticky=\"ew\", rowspan=2)\nbutton_frame = tkinter.Frame(mainWindow)\nbutton_frame.grid(row=3, column=0, columnspan=3, sticky=\"w\")\ndealer_button = tkinter.Button(\n    button_frame, text=\"Dealer\", command=deal_dealer)\ndealer_button.grid(row=0, column=0)\nplayer_button = tkinter.Button(\n    button_frame, text=\"Player\", command=deal_player)\nplayer_button.grid(row=0, column=1)",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "button_frame",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "button_frame = tkinter.Frame(mainWindow)\nbutton_frame.grid(row=3, column=0, columnspan=3, sticky=\"w\")\ndealer_button = tkinter.Button(\n    button_frame, text=\"Dealer\", command=deal_dealer)\ndealer_button.grid(row=0, column=0)\nplayer_button = tkinter.Button(\n    button_frame, text=\"Player\", command=deal_player)\nplayer_button.grid(row=0, column=1)\nnew_deal_button = tkinter.Button(\n    button_frame, text=\"New Deal\", command=new_deal)",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "dealer_button",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "dealer_button = tkinter.Button(\n    button_frame, text=\"Dealer\", command=deal_dealer)\ndealer_button.grid(row=0, column=0)\nplayer_button = tkinter.Button(\n    button_frame, text=\"Player\", command=deal_player)\nplayer_button.grid(row=0, column=1)\nnew_deal_button = tkinter.Button(\n    button_frame, text=\"New Deal\", command=new_deal)\nnew_deal_button.grid(row=0, column=2)\nshuffle_button = tkinter.Button(button_frame, text=\"Shuffle\", command=shuffle)",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "player_button",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "player_button = tkinter.Button(\n    button_frame, text=\"Player\", command=deal_player)\nplayer_button.grid(row=0, column=1)\nnew_deal_button = tkinter.Button(\n    button_frame, text=\"New Deal\", command=new_deal)\nnew_deal_button.grid(row=0, column=2)\nshuffle_button = tkinter.Button(button_frame, text=\"Shuffle\", command=shuffle)\nshuffle_button.grid(row=0, column=3)\n# Load cards\ncards = []",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "new_deal_button",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "new_deal_button = tkinter.Button(\n    button_frame, text=\"New Deal\", command=new_deal)\nnew_deal_button.grid(row=0, column=2)\nshuffle_button = tkinter.Button(button_frame, text=\"Shuffle\", command=shuffle)\nshuffle_button.grid(row=0, column=3)\n# Load cards\ncards = []\nload_images(cards)\nprint(cards)\n# Create a new deck of cards and shuffle them.",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "shuffle_button",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "shuffle_button = tkinter.Button(button_frame, text=\"Shuffle\", command=shuffle)\nshuffle_button.grid(row=0, column=3)\n# Load cards\ncards = []\nload_images(cards)\nprint(cards)\n# Create a new deck of cards and shuffle them.\ndeck = list(cards) + list(cards) + list(cards)\nshuffle()\n# Create the list to store the dealer's and player's hands",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "cards",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "cards = []\nload_images(cards)\nprint(cards)\n# Create a new deck of cards and shuffle them.\ndeck = list(cards) + list(cards) + list(cards)\nshuffle()\n# Create the list to store the dealer's and player's hands\ndealer_hand = []\nplayer_hand = []\n# deal_player()",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "deck",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "deck = list(cards) + list(cards) + list(cards)\nshuffle()\n# Create the list to store the dealer's and player's hands\ndealer_hand = []\nplayer_hand = []\n# deal_player()\n# dealer_hand.append(_deal_card(dealer_card_frame))\n# dealer_score_label.set(score_hand(dealer_hand))\n# deal_player()\nif __name__ == \"__main__\":",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "dealer_hand",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "dealer_hand = []\nplayer_hand = []\n# deal_player()\n# dealer_hand.append(_deal_card(dealer_card_frame))\n# dealer_score_label.set(score_hand(dealer_hand))\n# deal_player()\nif __name__ == \"__main__\":\n    play()",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "player_hand",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.blackjack",
+        "description": "UdemyClasses.Blackjack.blackjack",
+        "peekOfCode": "player_hand = []\n# deal_player()\n# dealer_hand.append(_deal_card(dealer_card_frame))\n# dealer_score_label.set(score_hand(dealer_hand))\n# deal_player()\nif __name__ == \"__main__\":\n    play()",
+        "detail": "UdemyClasses.Blackjack.blackjack",
+        "documentation": {}
+    },
+    {
+        "label": "personal_details",
+        "kind": 5,
+        "importPath": "UdemyClasses.Blackjack.import_test",
+        "description": "UdemyClasses.Blackjack.import_test",
+        "peekOfCode": "personal_details = (\"Grevy\", 49, \"Florida\")\nname, _, country = personal_details\nprint(name, country)\nprint(_)",
+        "detail": "UdemyClasses.Blackjack.import_test",
+        "documentation": {}
+    },
+    {
+        "label": "list_directories",
+        "kind": 2,
+        "importPath": "UdemyClasses.ScopeAndNamespace.filesanddirectories",
+        "description": "UdemyClasses.ScopeAndNamespace.filesanddirectories",
+        "peekOfCode": "def list_directories(s):\n    def dir_list(d):\n        nonlocal tab_stop\n        files = os.listdir(d)\n        for f in files:\n            current_dir = os.path.join(d, f)\n            if os.path.isdir(current_dir):\n                print(\"\\t\" * tab_stop + \"Directory \" + f)\n                tab_stop += 1\n                dir_list(current_dir)",
+        "detail": "UdemyClasses.ScopeAndNamespace.filesanddirectories",
+        "documentation": {}
+    },
+    {
+        "label": "fact",
+        "kind": 2,
+        "importPath": "UdemyClasses.ScopeAndNamespace.scope",
+        "description": "UdemyClasses.ScopeAndNamespace.scope",
+        "peekOfCode": "def fact(n):\n    \"\"\" calucate n! iteratively \"\"\"\n    result = 1\n    if n > 1:\n        for f in range(2, n + 1):\n            result *= f\n    return result\ndef factorial(n):\n    # n! can also be defined as n * (n+1)!\n    \"\"\" calculates n! recursively \"\"\"",
+        "detail": "UdemyClasses.ScopeAndNamespace.scope",
+        "documentation": {}
+    },
+    {
+        "label": "factorial",
+        "kind": 2,
+        "importPath": "UdemyClasses.ScopeAndNamespace.scope",
+        "description": "UdemyClasses.ScopeAndNamespace.scope",
+        "peekOfCode": "def factorial(n):\n    # n! can also be defined as n * (n+1)!\n    \"\"\" calculates n! recursively \"\"\"\n    if n <= 1:\n        return 1\n    else:\n        return n * factorial(n-1)\ndef fib(n):\n    \"\"\" F(n) = F(n -1) + F(n -2) \"\"\"\n    if n < 2:",
+        "detail": "UdemyClasses.ScopeAndNamespace.scope",
+        "documentation": {}
+    },
+    {
+        "label": "fib",
+        "kind": 2,
+        "importPath": "UdemyClasses.ScopeAndNamespace.scope",
+        "description": "UdemyClasses.ScopeAndNamespace.scope",
+        "peekOfCode": "def fib(n):\n    \"\"\" F(n) = F(n -1) + F(n -2) \"\"\"\n    if n < 2:\n        return n\n    else:\n        return fib(n-1) + fib(n-2)\ndef fibonacci(n):\n    if n == 0:\n        result = 0\n    elif  n == 1:",
+        "detail": "UdemyClasses.ScopeAndNamespace.scope",
+        "documentation": {}
+    },
+    {
+        "label": "fibonacci",
+        "kind": 2,
+        "importPath": "UdemyClasses.ScopeAndNamespace.scope",
+        "description": "UdemyClasses.ScopeAndNamespace.scope",
+        "peekOfCode": "def fibonacci(n):\n    if n == 0:\n        result = 0\n    elif  n == 1:\n        result = 1\n    else:\n        n_minus1 = 1\n        n_minus2 = 0\n        for f in range(1, n):\n            result = n_minus2 + n_minus1",
+        "detail": "UdemyClasses.ScopeAndNamespace.scope",
+        "documentation": {}
+    },
+    {
+        "label": "spam1",
+        "kind": 2,
+        "importPath": "UdemyClasses.ScopeAndNamespace.spam",
+        "description": "UdemyClasses.ScopeAndNamespace.spam",
+        "peekOfCode": "def spam1():\n    def spam2():\n        def spam3():\n            z = \" even\"\n            z += y\n            print(\"In spam3, locals are {}\".format(locals()))\n            return z\n        y = \" more \" + x # y must exist before spam3 is called.\n        y += spam3() # do not combine these assignments.\n        print(\"In spam2, locals are {}\".format(locals()))",
+        "detail": "UdemyClasses.ScopeAndNamespace.spam",
+        "documentation": {}
+    },
+    {
+        "label": "splitString",
+        "kind": 5,
+        "importPath": "EscapeChar",
+        "description": "EscapeChar",
+        "peekOfCode": "splitString = \"This string has been\\nsplit over\\nseveral\\nlines\"\nprint(splitString)\ntabbedString = \"1\\t2\\t3\\t4\\t5\"\nprint(tabbedString)\nprint('The pet shop owner said \"No, no, \\'e\\'s uh,...he\\'s resting\".')\nprint(\"The pet shop owner said \\\"No, no, 'e's uh...he's resting\\\".\")\nprint(\"\"\"The pet shop owner said \"No, no, 'e's uh...he's resting\". \"\"\")\nanotherString = \"\"\"This string has been \\\nsplit over \\\nseveral \\",
+        "detail": "EscapeChar",
+        "documentation": {}
+    },
+    {
+        "label": "tabbedString",
+        "kind": 5,
+        "importPath": "EscapeChar",
+        "description": "EscapeChar",
+        "peekOfCode": "tabbedString = \"1\\t2\\t3\\t4\\t5\"\nprint(tabbedString)\nprint('The pet shop owner said \"No, no, \\'e\\'s uh,...he\\'s resting\".')\nprint(\"The pet shop owner said \\\"No, no, 'e's uh...he's resting\\\".\")\nprint(\"\"\"The pet shop owner said \"No, no, 'e's uh...he's resting\". \"\"\")\nanotherString = \"\"\"This string has been \\\nsplit over \\\nseveral \\\nlines\"\"\"\nprint(anotherString)",
+        "detail": "EscapeChar",
+        "documentation": {}
+    },
+    {
+        "label": "anotherString",
+        "kind": 5,
+        "importPath": "EscapeChar",
+        "description": "EscapeChar",
+        "peekOfCode": "anotherString = \"\"\"This string has been \\\nsplit over \\\nseveral \\\nlines\"\"\"\nprint(anotherString)\nprint(\"C:\\\\Users\\\\grevymarcelin\\\\notes.txt\")\nprint(r\"C:\\Users\\grevymarcelin\\notes.txt\")",
+        "detail": "EscapeChar",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Operators",
+        "description": "Operators",
+        "peekOfCode": "a = 12\nb = 3\nprint(a+b)\nprint(a -b)\nprint(a * b)\nprint(a / b)\nprint(a // b)\nprint(a % b)\n#print()\nfor i in range(1, a // b): ",
+        "detail": "Operators",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "Operators",
+        "description": "Operators",
+        "peekOfCode": "b = 3\nprint(a+b)\nprint(a -b)\nprint(a * b)\nprint(a / b)\nprint(a // b)\nprint(a % b)\n#print()\nfor i in range(1, a // b): \n    print(i)",
+        "detail": "Operators",
+        "documentation": {}
+    },
+    {
+        "label": "Account",
+        "kind": 6,
+        "importPath": "python_property_decorates",
+        "description": "python_property_decorates",
+        "peekOfCode": "class Account:\n    def __init__(self, balance, name):\n        self.balance = balance\n        self.name = name\n    def credit(self, deposit):\n        self.balance = self.balance + deposit\n    def debit(self, withdrawal):\n        self.balance = self.balance - withdrawal\n    def get_balance(self):",
+        "detail": "python_property_decorates",
+        "documentation": {}
+    },
+    {
+        "label": "age",
+        "kind": 5,
+        "importPath": "Repfields",
+        "description": "Repfields",
+        "peekOfCode": "age = 48\n#print(\"My age is {0} years\".format(age))\n#\n#print(\"There are {0} days in {1}, {2}, {3}, {4}, #{5}, {6} and {7}\".format(31, \"Jan\", \"Mar\", \"May\", #\"Jul\", \"Aug\", \"Oct\", \"Dec\"))\n#print(\"There are {0} days in Jan, Mar, May, Jul, #Aug, Oct, and Dec\".format(31))\n#print(\"Jan: {2}, Feb: {0}, Mar: {2}, Apr: {1}, #May: {2}, Jun: {1}, Jul: {2}, Sep: {1}, Oct: {2}, #Nov: {1}, Dec: {2}\".format(28, 30, 31))\n#print()\nprint(\"\"\"Jan: {2}\nFeb: {0}\nMar: {2}",
+        "detail": "Repfields",
+        "documentation": {}
+    },
+    {
+        "label": "string1",
+        "kind": 5,
+        "importPath": "sequence_operators",
+        "description": "sequence_operators",
+        "peekOfCode": "string1 = \"he's \"\nstring2 = \"probably \"\nstring3 = \"pining \"\nstring4 = \"for the \"\nstring5 = \"fjords\"\nprint(string1 + string2 + string3 + string4 + string5)\nprint(\"he's \" \"probably \" \"pining \" \"for the \" \"fjords\")\nprint(\"Hello \" * 5)\nprint(\"Hello \" * (5 + 4))\nprint(\"Hello \" * 5 + \"4\")",
+        "detail": "sequence_operators",
+        "documentation": {}
+    },
+    {
+        "label": "string2",
+        "kind": 5,
+        "importPath": "sequence_operators",
+        "description": "sequence_operators",
+        "peekOfCode": "string2 = \"probably \"\nstring3 = \"pining \"\nstring4 = \"for the \"\nstring5 = \"fjords\"\nprint(string1 + string2 + string3 + string4 + string5)\nprint(\"he's \" \"probably \" \"pining \" \"for the \" \"fjords\")\nprint(\"Hello \" * 5)\nprint(\"Hello \" * (5 + 4))\nprint(\"Hello \" * 5 + \"4\")\ntoday = \"friday\"",
+        "detail": "sequence_operators",
+        "documentation": {}
+    },
+    {
+        "label": "string3",
+        "kind": 5,
+        "importPath": "sequence_operators",
+        "description": "sequence_operators",
+        "peekOfCode": "string3 = \"pining \"\nstring4 = \"for the \"\nstring5 = \"fjords\"\nprint(string1 + string2 + string3 + string4 + string5)\nprint(\"he's \" \"probably \" \"pining \" \"for the \" \"fjords\")\nprint(\"Hello \" * 5)\nprint(\"Hello \" * (5 + 4))\nprint(\"Hello \" * 5 + \"4\")\ntoday = \"friday\"\nprint(\"day\" in today)       # True",
+        "detail": "sequence_operators",
+        "documentation": {}
+    },
+    {
+        "label": "string4",
+        "kind": 5,
+        "importPath": "sequence_operators",
+        "description": "sequence_operators",
+        "peekOfCode": "string4 = \"for the \"\nstring5 = \"fjords\"\nprint(string1 + string2 + string3 + string4 + string5)\nprint(\"he's \" \"probably \" \"pining \" \"for the \" \"fjords\")\nprint(\"Hello \" * 5)\nprint(\"Hello \" * (5 + 4))\nprint(\"Hello \" * 5 + \"4\")\ntoday = \"friday\"\nprint(\"day\" in today)       # True\nprint(\"fri\" in today)       # True",
+        "detail": "sequence_operators",
+        "documentation": {}
+    },
+    {
+        "label": "string5",
+        "kind": 5,
+        "importPath": "sequence_operators",
+        "description": "sequence_operators",
+        "peekOfCode": "string5 = \"fjords\"\nprint(string1 + string2 + string3 + string4 + string5)\nprint(\"he's \" \"probably \" \"pining \" \"for the \" \"fjords\")\nprint(\"Hello \" * 5)\nprint(\"Hello \" * (5 + 4))\nprint(\"Hello \" * 5 + \"4\")\ntoday = \"friday\"\nprint(\"day\" in today)       # True\nprint(\"fri\" in today)       # True\nprint(\"thur\" in today)      # False",
+        "detail": "sequence_operators",
+        "documentation": {}
+    },
+    {
+        "label": "today",
+        "kind": 5,
+        "importPath": "sequence_operators",
+        "description": "sequence_operators",
+        "peekOfCode": "today = \"friday\"\nprint(\"day\" in today)       # True\nprint(\"fri\" in today)       # True\nprint(\"thur\" in today)      # False\nprint(\"parrot\" in \"fjord\")  # False",
+        "detail": "sequence_operators",
+        "documentation": {}
+    }
+]

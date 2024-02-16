@@ -26,6 +26,15 @@
         "documentation": {}
     },
     {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
         "label": "ducks",
         "kind": 6,
         "isExtraImport": true,
@@ -50,6 +59,65 @@
         "importPath": "json",
         "description": "json",
         "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "isExtraImport": true,
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "Employee",
+        "importPath": "employee",
+        "description": "employee",
+        "isExtraImport": true,
+        "detail": "employee",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "pytz",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytz",
+        "description": "pytz",
+        "detail": "pytz",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "importPath": "Games.player",
+        "description": "Games.player",
+        "isExtraImport": true,
+        "detail": "Games.player",
+        "documentation": {}
+    },
+    {
+        "label": "Player",
+        "importPath": "Games.player",
+        "description": "Games.player",
+        "isExtraImport": true,
+        "detail": "Games.player",
         "documentation": {}
     },
     {
@@ -150,79 +218,12 @@
         "documentation": {}
     },
     {
-        "label": "mysql.connector",
+        "label": "dataclasses",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "mysql.connector",
-        "description": "mysql.connector",
-        "detail": "mysql.connector",
-        "documentation": {}
-    },
-    {
-        "label": "Error",
-        "importPath": "mysql.connector",
-        "description": "mysql.connector",
-        "isExtraImport": true,
-        "detail": "mysql.connector",
-        "documentation": {}
-    },
-    {
-        "label": "Employee",
-        "importPath": "employee",
-        "description": "employee",
-        "isExtraImport": true,
-        "detail": "employee",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "datetime",
-        "description": "datetime",
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "pytz",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pytz",
-        "description": "pytz",
-        "detail": "pytz",
-        "documentation": {}
-    },
-    {
-        "label": "random",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "random",
-        "description": "random",
-        "detail": "random",
-        "documentation": {}
-    },
-    {
-        "label": "Player",
-        "importPath": "player",
-        "description": "player",
-        "isExtraImport": true,
-        "detail": "player",
-        "documentation": {}
-    },
-    {
-        "label": "Player",
-        "importPath": "player",
-        "description": "player",
-        "isExtraImport": true,
-        "detail": "player",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "decimal",
-        "description": "decimal",
-        "isExtraImport": true,
-        "detail": "decimal",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "detail": "dataclasses",
         "documentation": {}
     },
     {
@@ -235,12 +236,146 @@
         "documentation": {}
     },
     {
+        "label": "timeit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "timeit",
+        "description": "timeit",
+        "detail": "timeit",
+        "documentation": {}
+    },
+    {
+        "label": "mean",
+        "importPath": "statistics",
+        "description": "statistics",
+        "isExtraImport": true,
+        "detail": "statistics",
+        "documentation": {}
+    },
+    {
+        "label": "stdev",
+        "importPath": "statistics",
+        "description": "statistics",
+        "isExtraImport": true,
+        "detail": "statistics",
+        "documentation": {}
+    },
+    {
+        "label": "people",
+        "importPath": "data",
+        "description": "data",
+        "isExtraImport": true,
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "plants_list",
+        "importPath": "data",
+        "description": "data",
+        "isExtraImport": true,
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "plants_dict",
+        "importPath": "data",
+        "description": "data",
+        "isExtraImport": true,
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "basic_plants_list",
+        "importPath": "data",
+        "description": "data",
+        "isExtraImport": true,
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "plants_list",
+        "importPath": "data",
+        "description": "data",
+        "isExtraImport": true,
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "medals_table",
+        "importPath": "medals_data",
+        "description": "medals_data",
+        "isExtraImport": true,
+        "detail": "medals_data",
+        "documentation": {}
+    },
+    {
+        "label": "medals_table",
+        "importPath": "medals_data",
+        "description": "medals_data",
+        "isExtraImport": true,
+        "detail": "medals_data",
+        "documentation": {}
+    },
+    {
+        "label": "functools",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "functools",
+        "description": "functools",
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "os",
         "description": "os",
         "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "fnmatch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "fnmatch",
+        "description": "fnmatch",
+        "detail": "fnmatch",
+        "documentation": {}
+    },
+    {
+        "label": "struct",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "struct",
+        "description": "struct",
+        "detail": "struct",
+        "documentation": {}
+    },
+    {
+        "label": "zlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "zlib",
+        "description": "zlib",
+        "detail": "zlib",
+        "documentation": {}
+    },
+    {
+        "label": "id3reader_p3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "id3reader_p3",
+        "description": "id3reader_p3",
+        "detail": "id3reader_p3",
         "documentation": {}
     },
     {
@@ -311,7 +446,7 @@
         "kind": 2,
         "importPath": "ExceptionHanding.examples",
         "description": "ExceptionHanding.examples",
-        "peekOfCode": "def factorial(n):\n    # n! can also be defined as n * (n-1)!\n    \"\"\" calculates n! recursively\"\"\"\n    if n <= 1:\n        return 1\n    else:\n        return n * factorial(n-1)\ntry:   \n    print(factorial(900))\nexcept (RecursionError, ZeroDivisionError, OverflowError):",
+        "peekOfCode": "def factorial(n):\n    # n! can also be defined as n * (n-1)!\n    \"\"\" calculates n! recursively\"\"\"\n    if n <= 1:\n        return 1\n    else:\n        return n * factorial(n-1)\ntry:\n    print(factorial(900))\nexcept (RecursionError, ZeroDivisionError, OverflowError):",
         "detail": "ExceptionHanding.examples",
         "documentation": {}
     },
@@ -338,7 +473,7 @@
         "kind": 2,
         "importPath": "ExceptionHanding.get_ints",
         "description": "ExceptionHanding.get_ints",
-        "peekOfCode": "def getint(prompt):\n    while True:\n        try:\n            number = int(input(prompt))\n            return number\n        except EOFError:\n            sys.exit(1)\n        except: # You should really use except ValueError.\n            print(\"Invalid number entered, please try again\")\n        # except KeyboardInterrupt:",
+        "peekOfCode": "def getint(prompt):\n    while True:\n        try:\n            number = int(input(prompt))\n# if a valid number is entered in line 7 the code is just going to continue\n# and the number will just be returned. #noqa\n            return number\n        except EOFError:  # You should really use except ValueError.\n            # If an invalid input is entered a ValueError except will be\n            # raised. #noqa",
         "detail": "ExceptionHanding.get_ints",
         "documentation": {}
     },
@@ -347,7 +482,7 @@
         "kind": 5,
         "importPath": "ExceptionHanding.get_ints",
         "description": "ExceptionHanding.get_ints",
-        "peekOfCode": "first_number = getint(\"Please enter first number \")\nsecond_number = getint(\"Please enter second number \")\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number,\n                                          first_number / second_number))\nexcept ZeroDivisionError:\n    print()\n    print(\"You can't divide by zero\")\n    sys.exit(2)\nelse:",
+        "peekOfCode": "first_number = getint(\"Please enter first number \")\nsecond_number = getint(\"Please enter second number \")\n# the code below is a try block that will catch a ZeroDivisionError if you try to divide by zero.  # noqa\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number,  # On\n                                          # this line we are using replacement fields.  # noqa\n                                          # This .format has three parameters inside the parentheis.  # noqa\n                                          first_number / second_number))\nexcept ZeroDivisionError:\n    print()",
         "detail": "ExceptionHanding.get_ints",
         "documentation": {}
     },
@@ -356,7 +491,7 @@
         "kind": 5,
         "importPath": "ExceptionHanding.get_ints",
         "description": "ExceptionHanding.get_ints",
-        "peekOfCode": "second_number = getint(\"Please enter second number \")\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number,\n                                          first_number / second_number))\nexcept ZeroDivisionError:\n    print()\n    print(\"You can't divide by zero\")\n    sys.exit(2)\nelse:\n    print(\"Division performed succussfully\")",
+        "peekOfCode": "second_number = getint(\"Please enter second number \")\n# the code below is a try block that will catch a ZeroDivisionError if you try to divide by zero.  # noqa\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number,  # On\n                                          # this line we are using replacement fields.  # noqa\n                                          # This .format has three parameters inside the parentheis.  # noqa\n                                          first_number / second_number))\nexcept ZeroDivisionError:\n    print()\n    print(\"You can't divide by zero\")",
         "detail": "ExceptionHanding.get_ints",
         "documentation": {}
     },
@@ -365,7 +500,7 @@
         "kind": 6,
         "importPath": "Games.ducks",
         "description": "Games.ducks",
-        "peekOfCode": "class Wing(object):\n    def __init__(self, ratio):\n        self.ratio = ratio\n    def fly(self):\n        if self.ratio > 1:\n            print(\"Weee, this is fun\")\n        elif self.ratio == 1:\n            print(\"This is hard work, but I'm flying\")\n        else:\n            print(\"I think I'll just walk\")",
+        "peekOfCode": "class Wing(object):\n    def __init__(self, ratio):\n        self.ratio = ratio\n    def fly(self):\n        if self.ratio > 1:\n            print(\"Wee, this is fun.\")\n        elif self.ratio == 1:\n            print(\"This is hard work, but I'm flying.\")\n        else:\n            print(\"I think I'll just walk.\")",
         "detail": "Games.ducks",
         "documentation": {}
     },
@@ -383,7 +518,7 @@
         "kind": 6,
         "importPath": "Games.ducks",
         "description": "Games.ducks",
-        "peekOfCode": "class Penguin(object):\n    def __init__(self):\n        self.fly = self.aviate\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you 'avin' a larf? I'm a penguin\")\n    def aviate(self):",
+        "peekOfCode": "class Penguin(object):\n    def __init__(self):\n        self.fly = self.aviate\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you having a laugh? I'm a penguin!\")\n    def aviate(self):",
         "detail": "Games.ducks",
         "documentation": {}
     },
@@ -392,7 +527,7 @@
         "kind": 6,
         "importPath": "Games.ducks",
         "description": "Games.ducks",
-        "peekOfCode": "class Mallard(Duck):\n    pass\nclass Flock(object):\n    def __init__(self):\n        self.flock = []\n    def add_duck(self, duck: Duck) -> None:\n        fly_method = getattr(duck, 'fly', None)\n        #if isinstance(duck, Duck):\n        if callable(fly_method):\n            self.flock.append(duck)",
+        "peekOfCode": "class Mallard(Duck):\n    pass\nclass Flock(object):\n    def __init__(self):\n        self.flock = []\n# In the following we added hints to the add_duck method. The hints lets\n# anyone using the add_duck module understands what they should be providing\n# to the method.  We added annonation Inside the paratheses of the method we\n# added a parameter, duck.\n    def add_duck(self, duck: Duck) -> None:",
         "detail": "Games.ducks",
         "documentation": {}
     },
@@ -401,8 +536,116 @@
         "kind": 6,
         "importPath": "Games.ducks",
         "description": "Games.ducks",
-        "peekOfCode": "class Flock(object):\n    def __init__(self):\n        self.flock = []\n    def add_duck(self, duck: Duck) -> None:\n        fly_method = getattr(duck, 'fly', None)\n        #if isinstance(duck, Duck):\n        if callable(fly_method):\n            self.flock.append(duck)\n        else:\n            raise TypeError(\"Cannot add duck, are you sure it's a \" + str(duck).__name__)",
+        "peekOfCode": "class Flock(object):\n    def __init__(self):\n        self.flock = []\n# In the following we added hints to the add_duck method. The hints lets\n# anyone using the add_duck module understands what they should be providing\n# to the method.  We added annonation Inside the paratheses of the method we\n# added a parameter, duck.\n    def add_duck(self, duck: Duck) -> None:\n        fly_method = getattr(duck, 'fly', None)\n        if callable(fly_method):",
         "detail": "Games.ducks",
+        "documentation": {}
+    },
+    {
+        "label": "Enemy",
+        "kind": 6,
+        "importPath": "Games.enemy",
+        "description": "Games.enemy",
+        "peekOfCode": "class Enemy:\n    def __init__(self, name=\"Enemy\", hit_points=0, lives=1):\n        self._name = name\n        self._hit_points = hit_points\n        self._lives = lives\n        self._alive = True\n    def take_damage(self, damage):\n        remaining_points = self._hit_points - damage\n        if remaining_points >= 0:\n            self._hit_points = remaining_points",
+        "detail": "Games.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "Troll",
+        "kind": 6,
+        "importPath": "Games.enemy",
+        "description": "Games.enemy",
+        "peekOfCode": "class Troll(Enemy):\n    def __init__(self, name):\n        #  super(Troll, self).__init__(name = name, lives = 1, hit_points = 23)\n        super().__init__(name=name, lives=1, hit_points=23)\n    def grunt(self):\n        print(\"Me {0._name}, {0._name}, stomp you\".format(self))\nclass Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):",
+        "detail": "Games.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "Vampyre",
+        "kind": 6,
+        "importPath": "Games.enemy",
+        "description": "Games.enemy",
+        "peekOfCode": "class Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):\n        if random.randint(1, 3) == 3:\n            print(\"***** {0._name} dodges *****\".format(self))\n            return True\n        else:\n            return False\n    def take_damage(self, damage):",
+        "detail": "Games.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "VampyreKing",
+        "kind": 6,
+        "importPath": "Games.enemy",
+        "description": "Games.enemy",
+        "peekOfCode": "class VampyreKing(Vampyre):\n    def __init__(self, name):\n        super().__init__(name)\n        self._hit_points = 140\n    # A VampyreKing is going to be incredibly powerful, and any points of\n    # damage inflicted will be divided by 4.\n    # todo I need to create a damage inflicted function that when attacking\n    # will divide by 4.\n    # VampyreKing objects will also start off with 140 hit points and only\n    # takes a quarter of the damage inflicted.",
+        "detail": "Games.enemy",
+        "documentation": {}
+    },
+    {
+        "label": "Tag",
+        "kind": 6,
+        "importPath": "Games.html_duck",
+        "description": "Games.html_duck",
+        "peekOfCode": "class Tag(object):\n    def __init__(self, name, contents):\n        self.start_tag = '<()>'.format(name)\n        self.end_tag = '</()>'.format(name)\n        self.contents = contents\n    def __str__(self):\n        return \"{0.start_tag}{0.contents}{0.end_tag}\".format(self)\n    def display(self, file=None):\n        print(self, file=file)\nclass DocType(Tag):",
+        "detail": "Games.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "DocType",
+        "kind": 6,
+        "importPath": "Games.html_duck",
+        "description": "Games.html_duck",
+        "peekOfCode": "class DocType(Tag):\n    def __init__(self):\n        super().__init__('!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" http://www.w3.org/TR/html4/strict.dtd', '')\n        self.end_tag = ''   # DOCTYPE doesn't have an end tag\nclass Head(Tag):\n    def __init__(self, title=None):\n        super().__init__('head', '')\n        if title:\n            self._title_tag = Tag('title', title)\n            self.contents = str(self._title_tag)",
+        "detail": "Games.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "Head",
+        "kind": 6,
+        "importPath": "Games.html_duck",
+        "description": "Games.html_duck",
+        "peekOfCode": "class Head(Tag):\n    def __init__(self, title=None):\n        super().__init__('head', '')\n        if title:\n            self._title_tag = Tag('title', title)\n            self.contents = str(self._title_tag)\nclass Body(Tag):\n    def __init__(self):\n        super().__init__('body', '')    # body contents will be built up separatly\n        self._body_contents = []",
+        "detail": "Games.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "Body",
+        "kind": 6,
+        "importPath": "Games.html_duck",
+        "description": "Games.html_duck",
+        "peekOfCode": "class Body(Tag):\n    def __init__(self):\n        super().__init__('body', '')    # body contents will be built up separatly\n        self._body_contents = []\n    def add_tag(self, name, contents):\n        new_tag = Tag(name, contents)\n        self._body_contents.append(new_tag)\n    def display(self, file=None):\n        for tag in self._body_contents:\n            self.contents += str(tag)",
+        "detail": "Games.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "HtmlDoc",
+        "kind": 6,
+        "importPath": "Games.html_duck",
+        "description": "Games.html_duck",
+        "peekOfCode": "class HtmlDoc(object):\n    def __init__(self, doc_type, head, body):\n        self._doc_type = doc_type\n        self._head = head\n        self._body = body\n    def add_tag(self, name, contents):\n        self._body.add_tag(name, contents)\n    def display(self, file=None):\n        self._doc_type.display(file=file)\n        print('<html>', file=file)",
+        "detail": "Games.html_duck",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "Games.main",
+        "description": "Games.main",
+        "peekOfCode": "a = 3\n# This is a string.\nb = \"grevy\"\n# This is a tuple.\nc = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
+        "detail": "Games.main",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "Games.main",
+        "description": "Games.main",
+        "peekOfCode": "b = \"grevy\"\n# This is a tuple.\nc = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
+        "detail": "Games.main",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "Games.main",
+        "description": "Games.main",
+        "peekOfCode": "c = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
+        "detail": "Games.main",
         "documentation": {}
     },
     {
@@ -487,6 +730,15 @@
         "documentation": {}
     },
     {
+        "label": "Player",
+        "kind": 6,
+        "importPath": "Games.player",
+        "description": "Games.player",
+        "peekOfCode": "class Player(object):\n    def __init__(self, name):\n        self.name = name\n        self._lives = 3\n        self._level = 1\n        self._score = 0\n    def _get_lives(self):\n        return self._lives\n    def _set_lives(self, lives):\n        if lives >= 0:",
+        "detail": "Games.player",
+        "documentation": {}
+    },
+    {
         "label": "Fruit",
         "kind": 6,
         "importPath": "Json Tutorial.py.__pycache__.preview.main",
@@ -496,129 +748,21 @@
         "documentation": {}
     },
     {
-        "label": "Scrollbox",
-        "kind": 6,
-        "importPath": "MusicBrowser.jukebox",
-        "description": "MusicBrowser.jukebox",
-        "peekOfCode": "class Scrollbox(tkinter.Listbox):\n    def __init__(self, window, **kwargs):\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(\n            window, orient=tkinter.VERTICAL, command=self.yview\n        )\n    def grid(self, row, column, sticky=\"nsw\", rowspan=1, columnspan=1, **kwargs):\n        super().grid(\n            row=row,\n            column=column,",
-        "detail": "MusicBrowser.jukebox",
-        "documentation": {}
-    },
-    {
         "label": "conn",
         "kind": 5,
-        "importPath": "MusicBrowser.jukebox",
-        "description": "MusicBrowser.jukebox",
-        "peekOfCode": "conn = sqlite3.connect(\"music.sqlite\")\nclass Scrollbox(tkinter.Listbox):\n    def __init__(self, window, **kwargs):\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(\n            window, orient=tkinter.VERTICAL, command=self.yview\n        )\n    def grid(self, row, column, sticky=\"nsw\", rowspan=1, columnspan=1, **kwargs):\n        super().grid(\n            row=row,",
-        "detail": "MusicBrowser.jukebox",
+        "importPath": "MySQL.checkdb",
+        "description": "MySQL.checkdb",
+        "peekOfCode": "conn = sqlite3.connect(\"contacts.sqlite\")\nname = input(\"Please enter a name to search for? \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name = ?\", (name,)):\n    print(row)\n# the name at the end in parathesis has comma with it to make it a tuple.\n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied.  # noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative.  # noqa\nconn.close()",
+        "detail": "MySQL.checkdb",
         "documentation": {}
     },
     {
-        "label": "mainWindow",
+        "label": "name",
         "kind": 5,
-        "importPath": "MusicBrowser.jukebox",
-        "description": "MusicBrowser.jukebox",
-        "peekOfCode": "mainWindow = tkinter.Tk()\nmainWindow.title(\"Music DB Browser\")\nmainWindow.geometry(\"1024x768\")\nmainWindow.columnconfigure(0, weight=2)\nmainWindow.columnconfigure(1, weight=2)\nmainWindow.columnconfigure(2, weight=2)\nmainWindow.columnconfigure(3, weight=1)  # spacer column on right\nmainWindow.rowconfigure(0, weight=1)\nmainWindow.rowconfigure(1, weight=5)\nmainWindow.rowconfigure(2, weight=5)",
-        "detail": "MusicBrowser.jukebox",
-        "documentation": {}
-    },
-    {
-        "label": "artistList",
-        "kind": 5,
-        "importPath": "MusicBrowser.jukebox",
-        "description": "MusicBrowser.jukebox",
-        "peekOfCode": "artistList = Scrollbox(mainWindow, background=\"red\")\nartistList.grid(row=1, column=0, sticky=\"nsew\", rowspan=2, padx=(30, 0))\nartistList.config(border=2, relief=\"sunken\")\nfor artist in conn.execute(\"SELECT artists.name From artists ORDER BY artists.name\"):\n    artistList.insert(tkinter.END, artist[0])\n# ======= Albums Listbox =======\nalbumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose An Album\",))\nalbumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky=\"nsew\", padx=(30, 0))",
-        "detail": "MusicBrowser.jukebox",
-        "documentation": {}
-    },
-    {
-        "label": "albumLV",
-        "kind": 5,
-        "importPath": "MusicBrowser.jukebox",
-        "description": "MusicBrowser.jukebox",
-        "peekOfCode": "albumLV = tkinter.Variable(mainWindow)\nalbumLV.set((\"Choose An Album\",))\nalbumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky=\"nsew\", padx=(30, 0))\nalbumList.config(border=2, relief=\"sunken\")\n# ======= Songs Listbox =======\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose A Song\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV, background=\"light blue\")\nsongList.grid(row=1, column=2, sticky=\"nsew\", padx=(30, 0))",
-        "detail": "MusicBrowser.jukebox",
-        "documentation": {}
-    },
-    {
-        "label": "albumList",
-        "kind": 5,
-        "importPath": "MusicBrowser.jukebox",
-        "description": "MusicBrowser.jukebox",
-        "peekOfCode": "albumList = Scrollbox(mainWindow, listvariable=albumLV)\nalbumList.grid(row=1, column=1, sticky=\"nsew\", padx=(30, 0))\nalbumList.config(border=2, relief=\"sunken\")\n# ======= Songs Listbox =======\nsongLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose A Song\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV, background=\"light blue\")\nsongList.grid(row=1, column=2, sticky=\"nsew\", padx=(30, 0))\nsongList.config(border=2, relief=\"sunken\")\n# ======= Main Loop =======",
-        "detail": "MusicBrowser.jukebox",
-        "documentation": {}
-    },
-    {
-        "label": "songLV",
-        "kind": 5,
-        "importPath": "MusicBrowser.jukebox",
-        "description": "MusicBrowser.jukebox",
-        "peekOfCode": "songLV = tkinter.Variable(mainWindow)\nsongLV.set((\"Choose A Song\",))\nsongList = Scrollbox(mainWindow, listvariable=songLV, background=\"light blue\")\nsongList.grid(row=1, column=2, sticky=\"nsew\", padx=(30, 0))\nsongList.config(border=2, relief=\"sunken\")\n# ======= Main Loop =======\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"Closing database connection\")",
-        "detail": "MusicBrowser.jukebox",
-        "documentation": {}
-    },
-    {
-        "label": "songList",
-        "kind": 5,
-        "importPath": "MusicBrowser.jukebox",
-        "description": "MusicBrowser.jukebox",
-        "peekOfCode": "songList = Scrollbox(mainWindow, listvariable=songLV, background=\"light blue\")\nsongList.grid(row=1, column=2, sticky=\"nsew\", padx=(30, 0))\nsongList.config(border=2, relief=\"sunken\")\n# ======= Main Loop =======\ntestList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"Closing database connection\")\nconn.close()",
-        "detail": "MusicBrowser.jukebox",
-        "documentation": {}
-    },
-    {
-        "label": "testList",
-        "kind": 5,
-        "importPath": "MusicBrowser.jukebox",
-        "description": "MusicBrowser.jukebox",
-        "peekOfCode": "testList = range(0, 100)\nalbumLV.set(tuple(testList))\nmainWindow.mainloop()\nprint(\"Closing database connection\")\nconn.close()",
-        "detail": "MusicBrowser.jukebox",
-        "documentation": {}
-    },
-    {
-        "label": "build_tuple",
-        "kind": 2,
-        "importPath": "MusicBrowser.star_args",
-        "description": "MusicBrowser.star_args",
-        "peekOfCode": "def build_tuple(*args):\n    return args\nmessage_tuple = build_tuple(\"hello\", \"planet\", \"earth\", \"take\", \"me\", \"to\", \"your\", \"leader\")  # noqa: E501\nprint(type(message_tuple))\nprint(message_tuple)\nnumber_tuple = build_tuple(1, 2, 3, 4, 5, 6)\nprint(type(number_tuple))\nprint(number_tuple)",
-        "detail": "MusicBrowser.star_args",
-        "documentation": {}
-    },
-    {
-        "label": "message_tuple",
-        "kind": 5,
-        "importPath": "MusicBrowser.star_args",
-        "description": "MusicBrowser.star_args",
-        "peekOfCode": "message_tuple = build_tuple(\"hello\", \"planet\", \"earth\", \"take\", \"me\", \"to\", \"your\", \"leader\")  # noqa: E501\nprint(type(message_tuple))\nprint(message_tuple)\nnumber_tuple = build_tuple(1, 2, 3, 4, 5, 6)\nprint(type(number_tuple))\nprint(number_tuple)",
-        "detail": "MusicBrowser.star_args",
-        "documentation": {}
-    },
-    {
-        "label": "number_tuple",
-        "kind": 5,
-        "importPath": "MusicBrowser.star_args",
-        "description": "MusicBrowser.star_args",
-        "peekOfCode": "number_tuple = build_tuple(1, 2, 3, 4, 5, 6)\nprint(type(number_tuple))\nprint(number_tuple)",
-        "detail": "MusicBrowser.star_args",
-        "documentation": {}
-    },
-    {
-        "label": "print_backwards",
-        "kind": 2,
-        "importPath": "MusicBrowser.star_kwargs",
-        "description": "MusicBrowser.star_kwargs",
-        "peekOfCode": "def print_backwards(*args, **kwargs):\n    end_character = kwargs.pop('end', '\\n')\n    sep_character = kwargs.pop('sep', ' ')\n    for word in args[:0:-1]:    # change the range\n        print(word[::-1], end=sep_character, **kwargs)\n    print(args[0][::-1], end=end_character, **kwargs)   # and print the first word separately #noqa\n    # print(end=end_character)  # which means we don't need this line\n# In this print statement we use the \"end=' '\"\" to continue the end of a string to the same line and not send it to a new line. #noqa\n# Adding the \"file=file\" allows us to print this script to a file.\n# You just add a named peremeter and pass that on to the built-in function, which is what is happening in the next line.   # noqa: E501",
-        "detail": "MusicBrowser.star_kwargs",
-        "documentation": {}
-    },
-    {
-        "label": "backwards_print",
-        "kind": 2,
-        "importPath": "MusicBrowser.star_kwargs",
-        "description": "MusicBrowser.star_kwargs",
-        "peekOfCode": "def backwards_print(*args, **kwargs):\n    sep_character = kwargs.pop('sep', ' ')\n    print(sep_character.join(word[::-1] for word in args[::-1]), **kwargs)\nwith open(\"backwards.txt\", \"w\") as backwards:\n    # The line above first gives the open command to create a text file 'write' to the text file and call the file 'backwards'. # noqa\n    print_backwards(\"hello\", \"planet\", \"earth\", \"take\", \"me\", \"to\", \"your\", \"leader\", end=\"n\")  # noqa\n    print(\"Another String\")\n# print_backwards is a modified version of the print function. You then have to add the print parameters file equals the name of the file. #noqa\nprint()\nprint(\"hello\", \"planet\", \"earth\", \"take\", \"me\", \"to\", \"your\", \"leader\", end='', sep='\\n**\\n')  # noqa",
-        "detail": "MusicBrowser.star_kwargs",
+        "importPath": "MySQL.checkdb",
+        "description": "MySQL.checkdb",
+        "peekOfCode": "name = input(\"Please enter a name to search for? \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name = ?\", (name,)):\n    print(row)\n# the name at the end in parathesis has comma with it to make it a tuple.\n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied.  # noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative.  # noqa\nconn.close()",
+        "detail": "MySQL.checkdb",
         "documentation": {}
     },
     {
@@ -901,123 +1045,6 @@
         "documentation": {}
     },
     {
-        "label": "Wing",
-        "kind": 6,
-        "importPath": "oop.ducks",
-        "description": "oop.ducks",
-        "peekOfCode": "class Wing(object):\n    def __init__(self, ratio):\n        self.ratio = ratio\n    def fly(self):\n        if self.ratio > 1:\n            print(\"Wee, this is fun.\")\n        elif self.ratio == 1:\n            print(\"This is hard work, but I'm flying.\")\n        else:\n            print(\"I think I'll just walk.\")",
-        "detail": "oop.ducks",
-        "documentation": {}
-    },
-    {
-        "label": "Duck",
-        "kind": 6,
-        "importPath": "oop.ducks",
-        "description": "oop.ducks",
-        "peekOfCode": "class Duck(object):\n    def __init__(self):\n        self._wing = Wing(1.8)\n    def walk(self):\n        print(\"Waddle, waddle, waddle\")\n    def swim(self):\n        print(\"Come on in, the water's lovely\")\n    def quack(self):\n        print(\"Quack quack\")\n    def fly(self):",
-        "detail": "oop.ducks",
-        "documentation": {}
-    },
-    {
-        "label": "Penguin",
-        "kind": 6,
-        "importPath": "oop.ducks",
-        "description": "oop.ducks",
-        "peekOfCode": "class Penguin(object):\n    def walk(self):\n        print(\"Waddle, waddle, I waddle too\")\n    def swim(self):\n        print(\"Come on in, but it's a bit chilly this far South\")\n    def quack(self):\n        print(\"Are you having a laugh? I'm a penguin!\")\ndef test_duck(duck):\n    duck.walk()\n    duck.swim()",
-        "detail": "oop.ducks",
-        "documentation": {}
-    },
-    {
-        "label": "test_duck",
-        "kind": 2,
-        "importPath": "oop.ducks",
-        "description": "oop.ducks",
-        "peekOfCode": "def test_duck(duck):\n    duck.walk()\n    duck.swim()\n    duck.quack()\nif __name__ == '__main__':\n    donald = Duck()\n    donald.fly()\n    test_duck(donald)\n    # percy = Penguin()\n    # test_duck(percy)",
-        "detail": "oop.ducks",
-        "documentation": {}
-    },
-    {
-        "label": "Enemy",
-        "kind": 6,
-        "importPath": "oop.enemy",
-        "description": "oop.enemy",
-        "peekOfCode": "class Enemy:\n    def __init__(self, name=\"Enemy\", hit_points=0, lives=1):\n        self._name = name\n        self._hit_points = hit_points\n        self._lives = lives\n        self._alive = True\n    def take_damage(self, damage):\n        remaining_points = self._hit_points - damage\n        if remaining_points >= 0:\n            self._hit_points = remaining_points",
-        "detail": "oop.enemy",
-        "documentation": {}
-    },
-    {
-        "label": "Troll",
-        "kind": 6,
-        "importPath": "oop.enemy",
-        "description": "oop.enemy",
-        "peekOfCode": "class Troll(Enemy):\n    def __init__(self, name):\n    #  super(Troll, self).__init__(name = name, lives = 1, hit_points = 23)\n       super().__init__(name = name, lives = 1, hit_points = 23)\n    def grunt(self):\n        print(\"Me {0._name}, {0._name}, stomp you\".format(self))\nclass Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):",
-        "detail": "oop.enemy",
-        "documentation": {}
-    },
-    {
-        "label": "Vampyre",
-        "kind": 6,
-        "importPath": "oop.enemy",
-        "description": "oop.enemy",
-        "peekOfCode": "class Vampyre(Enemy):\n    def __init__(self, name):\n        super().__init__(name=name, lives=3, hit_points=12)\n    def dodges(self):\n        if random.randint(1, 3) == 3:\n            print(\"***** {0._name} dodges *****\".format(self))\n            return True\n        else:\n            return False\n    def take_damage(self, damage):",
-        "detail": "oop.enemy",
-        "documentation": {}
-    },
-    {
-        "label": "VampyreKing",
-        "kind": 6,
-        "importPath": "oop.enemy",
-        "description": "oop.enemy",
-        "peekOfCode": "class VampyreKing(Vampyre):\n    def __init__(self, name):\n        super().__init__(name)\n        self._hit_points = 140\n    # A VampyreKing is going to be incredibly powerful, and any points of damage inflicted will be divided by 4.\n    #todo I need to create a damage inflicted function that when attacking will divide by 4.\n    # VampyreKing objects will also start off with 140 hit points and only takes a quarter of the damage inflicted.\n    def take_damage(self, damage):\n        super().take_damage(damage // 4)",
-        "detail": "oop.enemy",
-        "documentation": {}
-    },
-    {
-        "label": "Tag",
-        "kind": 6,
-        "importPath": "oop.html_duck",
-        "description": "oop.html_duck",
-        "peekOfCode": "class Tag(object):\n    def __init__(self, name, contents):\n        self.start_tag = '<()>'.format(name)\n        self.end_tag = '</()>'.format(name)\n        self.contents = contents\n    def __str__(self):\n        return \"{0.start_tag}{0.contents}{0.end_tag}\".format(self)\n    def display(self, file=None):\n        print(self, file=file)\nclass DocType(Tag):",
-        "detail": "oop.html_duck",
-        "documentation": {}
-    },
-    {
-        "label": "DocType",
-        "kind": 6,
-        "importPath": "oop.html_duck",
-        "description": "oop.html_duck",
-        "peekOfCode": "class DocType(Tag):\n    def __init__(self):\n        super().__init__('!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" http://www.w3.org/TR/html4/strict.dtd', '')\n        self.end_tag = ''   # DOCTYPE doesn't have an end tag\nclass Head(Tag):\n    def __init__(self, title=None):\n        super().__init__('head', '')\n        if title:\n            self._title_tag = Tag('title', title)\n            self.contents = str(self._title_tag)",
-        "detail": "oop.html_duck",
-        "documentation": {}
-    },
-    {
-        "label": "Head",
-        "kind": 6,
-        "importPath": "oop.html_duck",
-        "description": "oop.html_duck",
-        "peekOfCode": "class Head(Tag):\n    def __init__(self, title=None):\n        super().__init__('head', '')\n        if title:\n            self._title_tag = Tag('title', title)\n            self.contents = str(self._title_tag)\nclass Body(Tag):\n    def __init__(self):\n        super().__init__('body', '')    # body contents will be built up separatly\n        self._body_contents = []",
-        "detail": "oop.html_duck",
-        "documentation": {}
-    },
-    {
-        "label": "Body",
-        "kind": 6,
-        "importPath": "oop.html_duck",
-        "description": "oop.html_duck",
-        "peekOfCode": "class Body(Tag):\n    def __init__(self):\n        super().__init__('body', '')    # body contents will be built up separatly\n        self._body_contents = []\n    def add_tag(self, name, contents):\n        new_tag = Tag(name, contents)\n        self._body_contents.append(new_tag)\n    def display(self, file=None):\n        for tag in self._body_contents:\n            self.contents += str(tag)",
-        "detail": "oop.html_duck",
-        "documentation": {}
-    },
-    {
-        "label": "HtmlDoc",
-        "kind": 6,
-        "importPath": "oop.html_duck",
-        "description": "oop.html_duck",
-        "peekOfCode": "class HtmlDoc(object):\n    def __init__(self, doc_type, head, body):\n        self._doc_type = doc_type\n        self._head = head\n        self._body = body\n    def add_tag(self, name, contents):\n        self._body.add_tag(name, contents)\n    def display(self, file=None):\n        self._doc_type.display(file=file)\n        print('<html>', file=file)",
-        "detail": "oop.html_duck",
-        "documentation": {}
-    },
-    {
         "label": "grevy",
         "kind": 5,
         "importPath": "oop.main-Bearded-Daddy",
@@ -1042,33 +1069,6 @@
         "description": "oop.main-LivingRoom-Computer",
         "peekOfCode": "grevy = Player(\"Grevy\")\nprint(grevy.name)\nprint(grevy.lives)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1\nprint(grevy)\ngrevy.lives -= 1",
         "detail": "oop.main-LivingRoom-Computer",
-        "documentation": {}
-    },
-    {
-        "label": "a",
-        "kind": 5,
-        "importPath": "oop.main",
-        "description": "oop.main",
-        "peekOfCode": "a = 3\n# This is a string.\nb = \"grevy\"\n# This is a tuple.\nc = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
-        "detail": "oop.main",
-        "documentation": {}
-    },
-    {
-        "label": "b",
-        "kind": 5,
-        "importPath": "oop.main",
-        "description": "oop.main",
-        "peekOfCode": "b = \"grevy\"\n# This is a tuple.\nc = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
-        "detail": "oop.main",
-        "documentation": {}
-    },
-    {
-        "label": "c",
-        "kind": 5,
-        "importPath": "oop.main",
-        "description": "oop.main",
-        "peekOfCode": "c = 1, 2, 3\nprint(a)\nprint(b)\nprint(c)",
-        "detail": "oop.main",
         "documentation": {}
     },
     {
@@ -1126,15 +1126,6 @@
         "documentation": {}
     },
     {
-        "label": "Player",
-        "kind": 6,
-        "importPath": "oop.player",
-        "description": "oop.player",
-        "peekOfCode": "class Player(object):\n    def __init__(self, name):\n        self.name = name\n        self._lives = 3\n        self._level = 1\n        self._score = 0\n    def _get_lives(self):\n        return self._lives\n    def _set_lives(self, lives):\n        if lives >= 0:",
-        "detail": "oop.player",
-        "documentation": {}
-    },
-    {
         "label": "Song",
         "kind": 6,
         "importPath": "oop.song",
@@ -1189,6 +1180,51 @@
         "documentation": {}
     },
     {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "PythonPractice.sqlite3",
+        "description": "PythonPractice.sqlite3",
+        "peekOfCode": "conn = sqlite3.connect('store_transactions.db')\ncursor = conn.cursor()\n# create a store table\ncommand1 = \"\"\"CREATE TABLE IF NOT EXISTS\nstores(store_id INTEGER PRIMARY KEY, location TEXT)\"\"\"\ncursor.execute(command1)\n# create a purchase table\ncommand2 = \"\"\"CREATE TABLE IF NOT EXISTS\npurchases(purchase_id INTEGER PRIMARY KEY, store_id INTEGER, total_cost FLOAT,\nFOREIGN KEY(store_id) REFERENCES stores(store_id))\"\"\"",
+        "detail": "PythonPractice.sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "PythonPractice.sqlite3",
+        "description": "PythonPractice.sqlite3",
+        "peekOfCode": "cursor = conn.cursor()\n# create a store table\ncommand1 = \"\"\"CREATE TABLE IF NOT EXISTS\nstores(store_id INTEGER PRIMARY KEY, location TEXT)\"\"\"\ncursor.execute(command1)\n# create a purchase table\ncommand2 = \"\"\"CREATE TABLE IF NOT EXISTS\npurchases(purchase_id INTEGER PRIMARY KEY, store_id INTEGER, total_cost FLOAT,\nFOREIGN KEY(store_id) REFERENCES stores(store_id))\"\"\"\ncursor.execute(command2)",
+        "detail": "PythonPractice.sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "command1",
+        "kind": 5,
+        "importPath": "PythonPractice.sqlite3",
+        "description": "PythonPractice.sqlite3",
+        "peekOfCode": "command1 = \"\"\"CREATE TABLE IF NOT EXISTS\nstores(store_id INTEGER PRIMARY KEY, location TEXT)\"\"\"\ncursor.execute(command1)\n# create a purchase table\ncommand2 = \"\"\"CREATE TABLE IF NOT EXISTS\npurchases(purchase_id INTEGER PRIMARY KEY, store_id INTEGER, total_cost FLOAT,\nFOREIGN KEY(store_id) REFERENCES stores(store_id))\"\"\"\ncursor.execute(command2)\n# add three rows to our stores table\ncursor.execute(\"INSERT INTO store VALUES (21, 'Minneapolis, MN')\")",
+        "detail": "PythonPractice.sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "command2",
+        "kind": 5,
+        "importPath": "PythonPractice.sqlite3",
+        "description": "PythonPractice.sqlite3",
+        "peekOfCode": "command2 = \"\"\"CREATE TABLE IF NOT EXISTS\npurchases(purchase_id INTEGER PRIMARY KEY, store_id INTEGER, total_cost FLOAT,\nFOREIGN KEY(store_id) REFERENCES stores(store_id))\"\"\"\ncursor.execute(command2)\n# add three rows to our stores table\ncursor.execute(\"INSERT INTO store VALUES (21, 'Minneapolis, MN')\")\ncursor.execute(\"INSERT INTO store VALUES (95, 'Chicago, IL')\")\ncursor.execute(\"INSERT INTO store VALUES (64, 'Iowa City, IA')\")\n# add to our purchases table\ncursor.execute(\"INSERT INTO purchases VALUES (54, 21, 15.49)\")",
+        "detail": "PythonPractice.sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "PythonPractice.sqlite3",
+        "description": "PythonPractice.sqlite3",
+        "peekOfCode": "results = cursor.fetchall()\nprint(results)",
+        "detail": "PythonPractice.sqlite3",
+        "documentation": {}
+    },
+    {
         "label": "Person",
         "kind": 6,
         "importPath": "Python_Projects.DeletingObjectProperties",
@@ -1229,7 +1265,7 @@
         "kind": 5,
         "importPath": "RollingBack.db.checkdb",
         "description": "RollingBack.db.checkdb",
-        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n#for row in db.execute(\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\"\n#                      \" history.account, history.amount FROM history ORDER BY history.time\"):\nfor row in db.execute(\"SELECT * FROM localhistory\"):\n    print(row)\ndb.close()",
+        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\nfor row in db.execute(\"SELECT * FROM localhistory\"):\n    print(row)\ndb.close()",
         "detail": "RollingBack.db.checkdb",
         "documentation": {}
     },
@@ -1238,7 +1274,7 @@
         "kind": 5,
         "importPath": "RollingBack.db.pickling",
         "description": "RollingBack.db.pickling",
-        "peekOfCode": "carlist = ['Toyota', 'BMW', 'Audi', 'Suzuki', 'Honda']\n# open a file to store the pickle of cars\nwith open('carlist.pkl','wb') as carpickle: # To open you need parameters, the file name and the \n    pickle.dump(carlist, carpickle) # Dump is the functions that creates the pickle file. It takes two agruements.\n    # The first is the file we want to pickle and the second arguement is the file object.",
+        "peekOfCode": "carlist = ['Toyota', 'BMW', 'Audi', 'Suzuki', 'Honda']\n# open a file to store the pickle of cars\nwith open('carlist.pkl','wb') as carpickle: # To open you need parameters, the file name and the  # noqa\n    pickle.dump(carlist, carpickle) # Dump is the functions that creates the pickle file. It takes two agruements.  # noqa\n    # The first is the file we want to pickle and the second arguement is the file object.  # noqa",
         "detail": "RollingBack.db.pickling",
         "documentation": {}
     },
@@ -1247,7 +1283,7 @@
         "kind": 6,
         "importPath": "RollingBack.db.rollback",
         "description": "RollingBack.db.rollback",
-        "peekOfCode": "class Account(object):\n    @staticmethod\n    def _current_time():\n        #return pytz.utc.localize(datetime.datetime.utcnow())\n        return 1\n    def __init__(self, name: str, opening_balance: int = 0):\n        cursor = db.execute(\"SELECT name, balance FROM accounts WHERE (name = ?)\", (name,))  # noqa: E501\n        row = cursor.fetchone()\n        if row:\n            self.name, self._balance = row",
+        "peekOfCode": "class Account(object):\n    \"\"\"This class creates an object called Account.\"\"\"\n    @staticmethod\n    def _current_time():\n        return pytz.utc.localize(datetime.datetime.now(datetime.UTC))\n        # local_time = pytz.utc.localize(datetime.datetime.utcnow)\n        # return local_time.astimezone()\n    def __init__(self, name: str, opening_balance: int = 0) -> None:\n        cursor = db.execute(\"SELECT name, balance FROM accounts WHERE (name = ?)\", (name,))  # noqa\n        row = cursor.fetchone()",
         "detail": "RollingBack.db.rollback",
         "documentation": {}
     },
@@ -1256,17 +1292,8 @@
         "kind": 5,
         "importPath": "RollingBack.db.rollback",
         "description": "RollingBack.db.rollback",
-        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\ndb.execute(\"CREATE TABLE IF NOT EXISTS accounts (name TEXT PRIMARY KEY NOT NULL, balance INTEGER NOT NULL)\")  # noqa: E501\ndb.execute(\"CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL,\"\n           \" account TEXT NOT NULL, amount INTEGER NOT NULL, PRIMARY KEY (time, account))\")  # noqa: E501\ndb.execute(\"CREATE VIEW IF NOT EXISTS localhistory AS\"\n           \" SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\"  # noqa: E501\n           \" history.account, history.amount FROM history ORDER BY history.time\")\nclass Account(object):\n    @staticmethod\n    def _current_time():",
+        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n# this is the database connection to sqlite with a .sqlite extention # noqa\ndb.execute(\"\"\"CREATE TABLE IF NOT EXISTS accounts\n(name TEXT PRIMARY KEY NOT NULL, balance INTEGER NOT NULL)\"\"\")\n# noqa: #E501 This is the accounts table.\ndb.execute(\"CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL, account TEXT NOT NULL, amount INTEGER NOT NULL, PRIMARY KEY (time, account))\")  # noqa\ndb.execute(\"CREATE VIEW IF NOT EXISTS localhistory AS SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime, history.account, history.amount FROM history ORDER BY history.time\")  # noqa\ndb.execute(\"CREATE VIEW IF NOT EXISTS localhistory AS SELECT strftime('%Y-%m-%d %H:%M:%f', history.time,'localtime') AS localtime, history.account, history.amount FROM history ORDER BY history.time\")  # noqa\nclass Account(object):\n    \"\"\"This class creates an object called Account.\"\"\"",
         "detail": "RollingBack.db.rollback",
-        "documentation": {}
-    },
-    {
-        "label": "Account",
-        "kind": 6,
-        "importPath": "RollingBack.db.rollback2",
-        "description": "RollingBack.db.rollback2",
-        "peekOfCode": "class Account(object):\n    _qb = Decimal('0.00')  # class constant, accessible without creating an instance.\n    def __init__(self, name: str, opening_balance: float = 0.0):\n        self.name = name\n        self._balance = Decimal(opening_balance).quantize(Account._qb)\n        print(\"Account created for {}. \".format(self.name), end='')\n        self.show_balance()\n    def deposit(self, amount: float) -> Decimal:\n        decimal_amount = Decimal(amount).quantize(Account._qb)\n        if decimal_amount > Account._qb:",
-        "detail": "RollingBack.db.rollback2",
         "documentation": {}
     },
     {
@@ -1274,7 +1301,7 @@
         "kind": 5,
         "importPath": "RollingBack.db.tzcheck",
         "description": "RollingBack.db.tzcheck",
-        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n#for row in db.execute (\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\" \"             # noqa: E501\n#                       history.account, history.amount FROM history ORDER BY history.time\"):  # noqa: E501\nfor row in db.execute(\"SELECT * FROM history\"):\n    utc_time = row[0]\n    # picked_zone = row[3]\n    # zone = pickle.loads(picked_zone)\n    zone = pytz.timezone(\"Australia/Adelaide\")\n    local_time = pytz.utc.localize(utc_time).astimezone(zone)\n    print(\"{}\\t{}\\t{}\".format(utc_time, local_time, local_time.tzinfo))",
+        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n# for row in db.execute (\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time,\n# 'localtime') AS localtime,\" \"history.account, history.amount FROM history\n# ORDER BY history.time\"):\nfor row in db.execute(\"SELECT * FROM history\"):\n    utc_time = row[0]\n#    picked_zone = row[3]\n#    zone = pickle.loads(picked_zone)\n    zone = pytz.timezone(\"Australia/Adelaide\")\n    local_time = pytz.utc.localize(utc_time).astimezone(zone)",
         "detail": "RollingBack.db.tzcheck",
         "documentation": {}
     },
@@ -1283,7 +1310,34 @@
         "kind": 6,
         "importPath": "RollingBack.db.tztest",
         "description": "RollingBack.db.tztest",
-        "peekOfCode": "class Account(object):\n    @staticmethod\n    def _current_time():\n        #return pytz.utc.localize(datetime.datetime.utcnow())\n        # local_time = pytz.utc.localize(datetime.datetime.utcnow())\n        # return local_time.astimezone()\n        utc_time = pytz.utc.localize(datetime.datetime.utcnow())\n        local_time = utc_time.astimezone()\n        zone = local_time.tzinfo\n        return utc_time, zone",
+        "peekOfCode": "class Account(object, name, balance):\n    \"\"\"This class creates an object called Account.\"\"\"\n    @staticmethod\n    def _current_time():\n        # return pytz.utc.localize(datetime.datetime.utcnow())\n        # local_time = pytz.utc.localize(datetime.datetime.utcnow)\n        # return local_time.astimezone()\n        utc_time = pytz.utc.localize(datetime.datetime.utcnow())\n        local_time = utc_time.astimezone()\n        zone = local_time.tzinfo",
+        "detail": "RollingBack.db.tztest",
+        "documentation": {}
+    },
+    {
+        "label": "deposit",
+        "kind": 2,
+        "importPath": "RollingBack.db.tztest",
+        "description": "RollingBack.db.tztest",
+        "peekOfCode": "def deposit(self, amount: int) -> float:\n    \"\"\"deposit function indicates a deposit.\n    Parameters\n    ----------\n    amount\n        The amount indicates the total of the deposit.\n    Returns\n    -------\n        Once this function is run we will return a floating number.\n    \"\"\"",
+        "detail": "RollingBack.db.tztest",
+        "documentation": {}
+    },
+    {
+        "label": "withdraw",
+        "kind": 2,
+        "importPath": "RollingBack.db.tztest",
+        "description": "RollingBack.db.tztest",
+        "peekOfCode": "def withdraw(self, amount: int) -> float:\n    \"\"\"withdraw function shows the amount taken out.\n    Parameters\n    ----------\n    amount\n        This indicates the total taken out.\n    Returns\n    -------\n        The return function will indicate a floating number.\n    \"\"\"",
+        "detail": "RollingBack.db.tztest",
+        "documentation": {}
+    },
+    {
+        "label": "show_balance",
+        "kind": 2,
+        "importPath": "RollingBack.db.tztest",
+        "description": "RollingBack.db.tztest",
+        "peekOfCode": "def show_balance(self):\n    \"\"\"show_balance This line indicates the balance.\n    \"\"\"\n    print(\"Balance on account {} is {:.2f}\".format(self.name, self._balance / 100))  # noqa\nif __name__ == '__main__':\n    john = Account()\n    john.deposit(5000)\n    john.deposit(10)\n    john.deposit(10)\n    john.withdraw(30)",
         "detail": "RollingBack.db.tztest",
         "documentation": {}
     },
@@ -1292,7 +1346,7 @@
         "kind": 5,
         "importPath": "RollingBack.db.tztest",
         "description": "RollingBack.db.tztest",
-        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\ndb.execute(\"CREATE TABLE IF NOT EXISTS accounts (name TEXT PRIMARY KEY NOT NULL, balance INTEGER NOT NULL)\")\ndb.execute(\"CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL,\"\n           \" account TEXT NOT NULL, amount INTEGER NOT NULL,\"\n           \" zone INTEGER NOT NULL, PRIMARY KEY (time, account))\")\ndb.execute(\"CREATE VIEW IF NOT EXISTS localhistory AS\"\n           \" SELECT strftime('%Y-%m-%d %H:%M:%f', history.time, 'localtime') AS localtime,\"\n           \" history.account, history.amount FROM history ORDER BY history.time\")\nclass Account(object):\n    @staticmethod",
+        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n# this is the database connection to sqlite with a .sqlite extention # noqa\ndb.execute(\"\"\"CREATE TABLE IF NOT EXISTS accounts\n(name TEXT PRIMARY KEY NOT NULL, balance INTEGER NOT NULL)\"\"\")\n# noqa: #E501 This is the accounts table.\ndb.execute(\"CREATE TABLE IF NOT EXISTS history (time TIMESTAMP NOT NULL,\"\n           \" account TEXT NOT NULL, amount INTEGER NOT NULL,\"\n           \"zone INTEGER NOT NULL, PRIMARY KEY (time, account))\")\n# On line 13 we added a new column called zone.\ndb.execute(\"CREATE VIEW IF NOT EXISTS localhistory AS\"",
         "detail": "RollingBack.db.tztest",
         "documentation": {}
     },
@@ -1837,39 +1891,480 @@
         "documentation": {}
     },
     {
-        "label": "conn",
-        "kind": 5,
-        "importPath": "UdemyClasses.createDB.checkdb",
-        "description": "UdemyClasses.createDB.checkdb",
-        "peekOfCode": "conn = sqlite3.connect(\"contacts.sqlite\")\nname = input(\"Please enter a name to search for \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name LIKE ?\", (name,)):\n# the name at the end in parathesis has comma with it to make it a tuple. \n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied. #noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative. #noqa\n    print(row)  \nconn.close()",
-        "detail": "UdemyClasses.createDB.checkdb",
+        "label": "centre_text",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.center_text",
+        "description": "UdemyClasses.Comprehension.center_text",
+        "peekOfCode": "def centre_text(*args):\n    \"\"\"This line creates a function called\n    centre_text with an *args argument.\"\"\"\n    # text = \"\"\n    # for arg in args:\n    #     text += str(arg) + \" \"\n    text = \"-\".join([str(arg) for arg in args])  # This is a list comprehension.  # noqa\n    # text = \"-\".join(str(arg) for arg in args) # This is a generator expression.  # noqa\n    left_margin = (80 - len(text)) // 2\n    print(\" \" * left_margin, text)",
+        "detail": "UdemyClasses.Comprehension.center_text",
         "documentation": {}
     },
     {
-        "label": "name",
+        "label": "text",
         "kind": 5,
-        "importPath": "UdemyClasses.createDB.checkdb",
-        "description": "UdemyClasses.createDB.checkdb",
-        "peekOfCode": "name = input(\"Please enter a name to search for \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name LIKE ?\", (name,)):\n# the name at the end in parathesis has comma with it to make it a tuple. \n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied. #noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative. #noqa\n    print(row)  \nconn.close()",
-        "detail": "UdemyClasses.createDB.checkdb",
+        "importPath": "UdemyClasses.Comprehension.Challenge1",
+        "description": "UdemyClasses.Comprehension.Challenge1",
+        "peekOfCode": "text = input(\"Please enter your text: \")\noutput = []\nfor x in text.split():\n    output.append(len(x))\nprint(output)\n# type your solution here:\nanswer = [len(x) for x in text.split()]\nprint(answer)\n# It could be useful to store the original words in the list, as well.\n# The for loop would look like this (note the extra parentheses, so",
+        "detail": "UdemyClasses.Comprehension.Challenge1",
         "documentation": {}
     },
     {
-        "label": "db",
+        "label": "output",
         "kind": 5,
-        "importPath": "UdemyClasses.createDB.contacts",
-        "description": "UdemyClasses.createDB.contacts",
-        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\ndb.execute(\"CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone INTEGER, email TEXT)\")\ndb.execute(\"INSERT INTO contacts(name, phone, email) VALUES('Grevy', 7542134200, 'grevyjr@gmail.com')\")  # noqa: E501\ndb.execute(\"INSERT INTO contacts VALUES('Mia', 7542314300, 'mia@gmail.com')\")\ncursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print (cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())",
-        "detail": "UdemyClasses.createDB.contacts",
+        "importPath": "UdemyClasses.Comprehension.Challenge1",
+        "description": "UdemyClasses.Comprehension.Challenge1",
+        "peekOfCode": "output = []\nfor x in text.split():\n    output.append(len(x))\nprint(output)\n# type your solution here:\nanswer = [len(x) for x in text.split()]\nprint(answer)\n# It could be useful to store the original words in the list, as well.\n# The for loop would look like this (note the extra parentheses, so\n# that we get tuples in the list):",
+        "detail": "UdemyClasses.Comprehension.Challenge1",
         "documentation": {}
     },
     {
-        "label": "cursor",
+        "label": "answer",
         "kind": 5,
-        "importPath": "UdemyClasses.createDB.contacts",
-        "description": "UdemyClasses.createDB.contacts",
-        "peekOfCode": "cursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print (cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nfor name, phone, email in cursor:\n    print(name)\n    print(phone)\n    print(email)",
-        "detail": "UdemyClasses.createDB.contacts",
+        "importPath": "UdemyClasses.Comprehension.Challenge1",
+        "description": "UdemyClasses.Comprehension.Challenge1",
+        "peekOfCode": "answer = [len(x) for x in text.split()]\nprint(answer)\n# It could be useful to store the original words in the list, as well.\n# The for loop would look like this (note the extra parentheses, so\n# that we get tuples in the list):\noutput = []\nfor x in text.split():\n    output.append(int(x, len(x)))\nprint(output)\n# type the corresponding comprehension here:",
+        "detail": "UdemyClasses.Comprehension.Challenge1",
+        "documentation": {}
+    },
+    {
+        "label": "output",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge1",
+        "description": "UdemyClasses.Comprehension.Challenge1",
+        "peekOfCode": "output = []\nfor x in text.split():\n    output.append(int(x, len(x)))\nprint(output)\n# type the corresponding comprehension here:\nanswer = [(x, len(x)) for x in text.split()]\nprint(answer)",
+        "detail": "UdemyClasses.Comprehension.Challenge1",
+        "documentation": {}
+    },
+    {
+        "label": "answer",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge1",
+        "description": "UdemyClasses.Comprehension.Challenge1",
+        "peekOfCode": "answer = [(x, len(x)) for x in text.split()]\nprint(answer)",
+        "detail": "UdemyClasses.Comprehension.Challenge1",
+        "documentation": {}
+    },
+    {
+        "label": "inch_measurement",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge2",
+        "description": "UdemyClasses.Comprehension.Challenge2",
+        "peekOfCode": "inch_measurement = (3, 8, 20)\ncm_measurement = [inch * 2.54 for inch in inch_measurement]\nprint(cm_measurement)\n# Once you've got the correct values, change the code to produce a tuple, rather than a list.  # noqa\ncm_measurement = tuple([inch * 2.54 for inch in inch_measurement])\nprint(cm_measurement)",
+        "detail": "UdemyClasses.Comprehension.Challenge2",
+        "documentation": {}
+    },
+    {
+        "label": "cm_measurement",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge2",
+        "description": "UdemyClasses.Comprehension.Challenge2",
+        "peekOfCode": "cm_measurement = [inch * 2.54 for inch in inch_measurement]\nprint(cm_measurement)\n# Once you've got the correct values, change the code to produce a tuple, rather than a list.  # noqa\ncm_measurement = tuple([inch * 2.54 for inch in inch_measurement])\nprint(cm_measurement)",
+        "detail": "UdemyClasses.Comprehension.Challenge2",
+        "documentation": {}
+    },
+    {
+        "label": "cm_measurement",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.Challenge2",
+        "description": "UdemyClasses.Comprehension.Challenge2",
+        "peekOfCode": "cm_measurement = tuple([inch * 2.54 for inch in inch_measurement])\nprint(cm_measurement)",
+        "detail": "UdemyClasses.Comprehension.Challenge2",
+        "documentation": {}
+    },
+    {
+        "label": "fizzbuzz",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge1",
+        "description": "UdemyClasses.Comprehension.compchallenge1",
+        "peekOfCode": "fizzbuzz = [\"fizz buzz\" if x % 15 == 0 else \"fizz\" if x % 3 == 0 else \"buzz\" if x % 5 == 0 else str(x)\n            for x in range(1, 31)]\nprint(fizzbuzz)\nfor buzz in fizzbuzz:\n    print(buzz.center(12, '*'))  # This will print the output using 12 characters in the centered by asterisks.  # noqa",
+        "detail": "UdemyClasses.Comprehension.compchallenge1",
+        "documentation": {}
+    },
+    {
+        "label": "locations",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2",
+        "description": "UdemyClasses.Comprehension.compchallenge2",
+        "peekOfCode": "locations = {0: \"You are sitting in front of a computer learning Python\",\n             1: \"You are standing at the end of a road before a small brick building\",  # noqa\n             2: \"You are at the top of a hill\",\n             3: \"You are inside a building, a well house for a small stream\",\n             4: \"You are in a valley beside a stream\",\n             5: \"You are in the forest\"}\nleaves = {0: {\"Q\": 0},\n         1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n         2: {\"N\": 5, \"Q\": 0},\n         3: {\"W\": 1, \"Q\": 0},",
+        "detail": "UdemyClasses.Comprehension.compchallenge2",
+        "documentation": {}
+    },
+    {
+        "label": "leaves",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2",
+        "description": "UdemyClasses.Comprehension.compchallenge2",
+        "peekOfCode": "leaves = {0: {\"Q\": 0},\n         1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n         2: {\"N\": 5, \"Q\": 0},\n         3: {\"W\": 1, \"Q\": 0},\n         4: {\"N\": 1, \"W\": 2, \"Q\": 0},\n         5: {\"W\": 2, \"S\": 1, \"Q\": 0}}\nLOC = 1\nforest = [locations[leave] for leave in leaves if LOC in leaves[leave].values()]\nprint(forest)\nforest = []",
+        "detail": "UdemyClasses.Comprehension.compchallenge2",
+        "documentation": {}
+    },
+    {
+        "label": "LOC",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2",
+        "description": "UdemyClasses.Comprehension.compchallenge2",
+        "peekOfCode": "LOC = 1\nforest = [locations[leave] for leave in leaves if LOC in leaves[leave].values()]\nprint(forest)\nforest = []\nfor leave in leaves:\n    if LOC in leaves[leave].values():\n        forest.append(locations[leave])\nprint(forest)\nprint()\n# for loc in sorted(locations):",
+        "detail": "UdemyClasses.Comprehension.compchallenge2",
+        "documentation": {}
+    },
+    {
+        "label": "forest",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2",
+        "description": "UdemyClasses.Comprehension.compchallenge2",
+        "peekOfCode": "forest = [locations[leave] for leave in leaves if LOC in leaves[leave].values()]\nprint(forest)\nforest = []\nfor leave in leaves:\n    if LOC in leaves[leave].values():\n        forest.append(locations[leave])\nprint(forest)\nprint()\n# for loc in sorted(locations):\n#     forest = [f\"{leave}, {locations[leave]}\" for leave in leaves if LOC in leaves[leave].values()]  # noqa",
+        "detail": "UdemyClasses.Comprehension.compchallenge2",
+        "documentation": {}
+    },
+    {
+        "label": "forest",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2",
+        "description": "UdemyClasses.Comprehension.compchallenge2",
+        "peekOfCode": "forest = []\nfor leave in leaves:\n    if LOC in leaves[leave].values():\n        forest.append(locations[leave])\nprint(forest)\nprint()\n# for loc in sorted(locations):\n#     forest = [f\"{leave}, {locations[leave]}\" for leave in leaves if LOC in leaves[leave].values()]  # noqa\n#     print(f\"Locations leading to {loc}\", end='\\t')\n#     print(forest)",
+        "detail": "UdemyClasses.Comprehension.compchallenge2",
+        "documentation": {}
+    },
+    {
+        "label": "NESTED_LOOP",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "def NESTED_LOOP():\n    result = []\n    for loc in sorted(locations):\n        leaves_to_destination_1 = []\n        for leave in leaves:\n            if loc in leaves[leave].values():\n                leaves_to_destination_1.append((leave, locations[leave]))\n        result.append(leaves_to_destination_1)\n    # print the result before returning\n    for x in result:",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "LOOP_COMP",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "def LOOP_COMP():\n    result = []\n    for loc in sorted(locations):\n        leaves_to_destination_2 = [(leave, locations[leave]) for leave in leaves if loc in leaves[leave].values()]  # noqa\n        result.append(leaves_to_destination_2)\n    # print the result before returning\n    for x in result:\n        pass\n    return result\ndef NESTED_COMP():",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "NESTED_COMP",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "def NESTED_COMP():\n    leaves_to_destination_3 = [[(leave, locations[leave]) for leave in leaves\n                                if loc in leaves[leave].values()]\n                               for loc in sorted(locations)]\n    # print the result before returning\n    for x in leaves_to_destination_3:\n        pass\n    return leaves_to_destination_3\ndef NESTED_GEN():\n    leaves_to_destination_3 = ([(leave, locations[leave]) for leave in leaves",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "NESTED_GEN",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "def NESTED_GEN():\n    leaves_to_destination_3 = ([(leave, locations[leave]) for leave in leaves\n                                if loc in leaves[leave].values()]\n                               for loc in sorted(locations))\n    # print the result before returning\n    for x in leaves_to_destination_3:\n        pass\n    return leaves_to_destination_3\n# In this module we are using the timeit module. We are converting the list\n# comprehensions into strings by put them in triple quotes.",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "setup",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "setup = \"\"\"\\\ngc.enable()\nlocations = {0: \"You are sitting in front of a computer learning Python\",\n             1: \"You are standing at the end of a road before a small brick building\",  # noqa\n             2: \"You are at the top of a hill\",\n             3: \"You are inside a building, a well house for a small stream\",\n             4: \"You are in a valley beside a stream\",\n             5: \"You are in the forest\"}\nleaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "locations",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "locations = {0: \"You are sitting in front of a computer learning Python\",\n             1: \"You are standing at the end of a road before a small brick building\",  # noqa\n             2: \"You are at the top of a hill\",\n             3: \"You are inside a building, a well house for a small stream\",\n             4: \"You are in a valley beside a stream\",\n             5: \"You are in the forest\"}\nleaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "leaves",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "leaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},\n          4: {\"N\": 1, \"W\": 2, \"Q\": 0},\n          5: {\"W\": 2, \"S\": 1, \"Q\": 0}}\n\"\"\"\nlocations = {0: \"You are sitting in front of a computer learning Python\",\n             1: \"You are standing at the end of a road before a small brick building\",  # noqa\n             2: \"You are at the top of a hill\",",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "locations",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "locations = {0: \"You are sitting in front of a computer learning Python\",\n             1: \"You are standing at the end of a road before a small brick building\",  # noqa\n             2: \"You are at the top of a hill\",\n             3: \"You are inside a building, a well house for a small stream\",\n             4: \"You are in a valley beside a stream\",\n             5: \"You are in the forest\"}\nleaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "leaves",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "leaves = {0: {\"Q\": 0},\n          1: {\"W\": 2, \"E\": 3, \"N\": 5, \"S\": 4, \"Q\": 0},\n          2: {\"N\": 5, \"Q\": 0},\n          3: {\"W\": 1, \"Q\": 0},\n          4: {\"N\": 1, \"W\": 2, \"Q\": 0}}\ndef NESTED_LOOP():\n    result = []\n    for loc in sorted(locations):\n        leaves_to_destination_1 = []\n        for leave in leaves:",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "result_1",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "result_1 = timeit.timeit(NESTED_LOOP, setup, number=1000)\nresult_2 = timeit.timeit(LOOP_COMP, setup, number=1000)\nresult_3 = timeit.timeit(NESTED_COMP, setup, number=1000)\nresult_4 = timeit.timeit(NESTED_GEN, setup, number=1000)\nprint(f\"Nested loop:\\t{result_1}\")\nprint(f\"LOOP_COMP:\\t{result_2}\")\nprint(f\"Nested_COMP:\\t{result_3}\")\nprint(f\"Nested_GEN:\\t{result_4}\")",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "result_2",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "result_2 = timeit.timeit(LOOP_COMP, setup, number=1000)\nresult_3 = timeit.timeit(NESTED_COMP, setup, number=1000)\nresult_4 = timeit.timeit(NESTED_GEN, setup, number=1000)\nprint(f\"Nested loop:\\t{result_1}\")\nprint(f\"LOOP_COMP:\\t{result_2}\")\nprint(f\"Nested_COMP:\\t{result_3}\")\nprint(f\"Nested_GEN:\\t{result_4}\")",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "result_3",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "result_3 = timeit.timeit(NESTED_COMP, setup, number=1000)\nresult_4 = timeit.timeit(NESTED_GEN, setup, number=1000)\nprint(f\"Nested loop:\\t{result_1}\")\nprint(f\"LOOP_COMP:\\t{result_2}\")\nprint(f\"Nested_COMP:\\t{result_3}\")\nprint(f\"Nested_GEN:\\t{result_4}\")",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "result_4",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.compchallenge2b",
+        "description": "UdemyClasses.Comprehension.compchallenge2b",
+        "peekOfCode": "result_4 = timeit.timeit(NESTED_GEN, setup, number=1000)\nprint(f\"Nested loop:\\t{result_1}\")\nprint(f\"LOOP_COMP:\\t{result_2}\")\nprint(f\"Nested_COMP:\\t{result_3}\")\nprint(f\"Nested_GEN:\\t{result_4}\")",
+        "detail": "UdemyClasses.Comprehension.compchallenge2b",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp",
+        "description": "UdemyClasses.Comprehension.condcomp",
+        "peekOfCode": "menu = [\n    [\"egg\", \"spam\", \"bacon\"],\n    [\"egg\", \"sausage\", \"bacon\"],\n    [\"egg\", \"spam\"],\n    [\"egg\", \"bacon\", \"spam\"],\n    [\"egg\", \"bacon\", \"sausage\", \"spam\"],\n    [\"spam\", \"bacon\", \"sausage\", \"spam\"],\n    [\"spam\", \"egg\", \"spam\", \"spam\", \"bacon\", \"spam\"],\n    [\"spam\", \"egg\", \"sausage\", \"spam\"],\n    [\"chicken\", \"chips\"]",
+        "detail": "UdemyClasses.Comprehension.condcomp",
+        "documentation": {}
+    },
+    {
+        "label": "meals",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp",
+        "description": "UdemyClasses.Comprehension.condcomp",
+        "peekOfCode": "meals = []\nfor meal in menu:\n    if \"spam\" not in meal:\n        meals.append(meal)\n    else:\n        meals.append([\"a meal was skipped\"])\nprint(meal)\n# meals = [meal for meal in menu if \"spam\" not in meal if \"chicken\" not in meal]  # noqa\nmeals = [meal for meal in menu if \"spam\" not in meal and \"chicken\" not in meal]\nprint(meals)",
+        "detail": "UdemyClasses.Comprehension.condcomp",
+        "documentation": {}
+    },
+    {
+        "label": "meals",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp",
+        "description": "UdemyClasses.Comprehension.condcomp",
+        "peekOfCode": "meals = [meal for meal in menu if \"spam\" not in meal and \"chicken\" not in meal]\nprint(meals)\nfussy_meals = [meal for meal in menu if \"spam\" in meal or \"eggs\" in meal if not\n               (\"bacon\" in meal and \"sausage\" in meal)]\nprint(fussy_meals)\nfussy_meals = [meal for meal in menu if\n               (\"spam\" in meal or \"eggs\" in meal) and not\n               (\"bacon\" in meal and \"sausage\" in meal)]\nprint(fussy_meals)",
+        "detail": "UdemyClasses.Comprehension.condcomp",
+        "documentation": {}
+    },
+    {
+        "label": "fussy_meals",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp",
+        "description": "UdemyClasses.Comprehension.condcomp",
+        "peekOfCode": "fussy_meals = [meal for meal in menu if \"spam\" in meal or \"eggs\" in meal if not\n               (\"bacon\" in meal and \"sausage\" in meal)]\nprint(fussy_meals)\nfussy_meals = [meal for meal in menu if\n               (\"spam\" in meal or \"eggs\" in meal) and not\n               (\"bacon\" in meal and \"sausage\" in meal)]\nprint(fussy_meals)",
+        "detail": "UdemyClasses.Comprehension.condcomp",
+        "documentation": {}
+    },
+    {
+        "label": "fussy_meals",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp",
+        "description": "UdemyClasses.Comprehension.condcomp",
+        "peekOfCode": "fussy_meals = [meal for meal in menu if\n               (\"spam\" in meal or \"eggs\" in meal) and not\n               (\"bacon\" in meal and \"sausage\" in meal)]\nprint(fussy_meals)",
+        "detail": "UdemyClasses.Comprehension.condcomp",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp1",
+        "description": "UdemyClasses.Comprehension.condcomp1",
+        "peekOfCode": "menu = [\n    [\"egg\", \"spam\", \"bacon\"],\n    [\"egg\", \"sausage\", \"bacon\"],\n    [\"egg\", \"spam\"],\n    [\"egg\", \"bacon\", \"spam\"],\n    [\"egg\", \"bacon\", \"sausage\", \"spam\"],\n    [\"spam\", \"bacon\", \"sausage\", \"spam\"],\n    [\"spam\", \"egg\", \"spam\", \"spam\", \"bacon\", \"spam\"],\n    [\"spam\", \"egg\", \"sausage\", \"spam\"],\n    [\"chicken\", \"chips\"]",
+        "detail": "UdemyClasses.Comprehension.condcomp1",
+        "documentation": {}
+    },
+    {
+        "label": "items",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.condcomp1",
+        "description": "UdemyClasses.Comprehension.condcomp1",
+        "peekOfCode": "items = set()\nfor meal in menu:\n    for item in meal:\n        items.add(item)\nprint(items)\nprint()\nfor meal in menu:\n    for item in items:\n        if item in meal:\n            print(f\"{(meal)} contains {item}\")",
+        "detail": "UdemyClasses.Comprehension.condcomp1",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.examples",
+        "description": "UdemyClasses.Comprehension.examples",
+        "peekOfCode": "TEXT = \"what have the romans ever done for us\"\ncapitals = [char.upper() for char in TEXT]\nprint(capitals)\nwords = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.Comprehension.examples",
+        "documentation": {}
+    },
+    {
+        "label": "capitals",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.examples",
+        "description": "UdemyClasses.Comprehension.examples",
+        "peekOfCode": "capitals = [char.upper() for char in TEXT]\nprint(capitals)\nwords = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.Comprehension.examples",
+        "documentation": {}
+    },
+    {
+        "label": "words",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.examples",
+        "description": "UdemyClasses.Comprehension.examples",
+        "peekOfCode": "words = [word.upper() for word in TEXT.split(' ')]\nprint(words)\nlc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.Comprehension.examples",
+        "documentation": {}
+    },
+    {
+        "label": "lc_words",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.examples",
+        "description": "UdemyClasses.Comprehension.examples",
+        "peekOfCode": "lc_words = TEXT.split(' ')\nprint(lc_words)",
+        "detail": "UdemyClasses.Comprehension.examples",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.list comp",
+        "description": "UdemyClasses.Comprehension.list comp",
+        "peekOfCode": "numbers = [1, 2, 3, 4, 5, 6]\nnumber = int(input(\"Please enter a number, and I'll tell you which one is squared. \"))  # noqa\nsquares = [number ** 2 for number in numbers]\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.list comp",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.list comp",
+        "description": "UdemyClasses.Comprehension.list comp",
+        "peekOfCode": "number = int(input(\"Please enter a number, and I'll tell you which one is squared. \"))  # noqa\nsquares = [number ** 2 for number in numbers]\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.list comp",
+        "documentation": {}
+    },
+    {
+        "label": "squares",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.list comp",
+        "description": "UdemyClasses.Comprehension.list comp",
+        "peekOfCode": "squares = [number ** 2 for number in numbers]\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.list comp",
+        "documentation": {}
+    },
+    {
+        "label": "index_pos",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.list comp",
+        "description": "UdemyClasses.Comprehension.list comp",
+        "peekOfCode": "index_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.list comp",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.listfor",
+        "description": "UdemyClasses.Comprehension.listfor",
+        "peekOfCode": "numbers = [1, 2, 3, 4, 5, 6]\nnumber = int(input(\"Please enter a number, and I'll tell you which one is squared. \"))  # noqa\nsquares = []\nfor number in numbers:\n    squares.append(number ** 2)\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.listfor",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.listfor",
+        "description": "UdemyClasses.Comprehension.listfor",
+        "peekOfCode": "number = int(input(\"Please enter a number, and I'll tell you which one is squared. \"))  # noqa\nsquares = []\nfor number in numbers:\n    squares.append(number ** 2)\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.listfor",
+        "documentation": {}
+    },
+    {
+        "label": "squares",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.listfor",
+        "description": "UdemyClasses.Comprehension.listfor",
+        "peekOfCode": "squares = []\nfor number in numbers:\n    squares.append(number ** 2)\nindex_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.listfor",
+        "documentation": {}
+    },
+    {
+        "label": "index_pos",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.listfor",
+        "description": "UdemyClasses.Comprehension.listfor",
+        "peekOfCode": "index_pos = numbers.index(number)\nprint(squares[index_pos])",
+        "detail": "UdemyClasses.Comprehension.listfor",
+        "documentation": {}
+    },
+    {
+        "label": "burgers",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.nested1",
+        "description": "UdemyClasses.Comprehension.nested1",
+        "peekOfCode": "burgers = [\"beef\", \"chicken\", \"spicy bean\"]\ntoppings = [\"cheese\", \"egg\", \"beans\", \"spam\"]\nfor meals in [(burger, toppings) for burger in burgers for topping in toppings]:\n    print(meals)\n# The above code is a nested list comprehension.\nprint()\n# for burger in burgers:\n#     for topping in toppings:\n#         print((burger, topping))\n# The above code is a nested for loop.",
+        "detail": "UdemyClasses.Comprehension.nested1",
+        "documentation": {}
+    },
+    {
+        "label": "toppings",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.nested1",
+        "description": "UdemyClasses.Comprehension.nested1",
+        "peekOfCode": "toppings = [\"cheese\", \"egg\", \"beans\", \"spam\"]\nfor meals in [(burger, toppings) for burger in burgers for topping in toppings]:\n    print(meals)\n# The above code is a nested list comprehension.\nprint()\n# for burger in burgers:\n#     for topping in toppings:\n#         print((burger, topping))\n# The above code is a nested for loop.\nfor nested_meals in [[(burger, toppings) for burger in burgers] for topping in toppings]:  # noqa",
+        "detail": "UdemyClasses.Comprehension.nested1",
+        "documentation": {}
+    },
+    {
+        "label": "times",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.nested_challenge",
+        "description": "UdemyClasses.Comprehension.nested_challenge",
+        "peekOfCode": "times = [(i, i * j) for i in range(1, 11) for j in range(1, 1)]\nprint(times)\nfor x, y in [(i, i * j) for i in range(1, 11) for j in range(1, 1)]:\n    print(x, y)\ntimes2 = [[(i, i * j) for i in range(1, 11)] for j in range(1, 1)]\nprint(times2)\nfor x, y in ((i, i * j) for i in range(1, 11) for j in range(1, 1)):\n    print(x, y)",
+        "detail": "UdemyClasses.Comprehension.nested_challenge",
+        "documentation": {}
+    },
+    {
+        "label": "times2",
+        "kind": 5,
+        "importPath": "UdemyClasses.Comprehension.nested_challenge",
+        "description": "UdemyClasses.Comprehension.nested_challenge",
+        "peekOfCode": "times2 = [[(i, i * j) for i in range(1, 11)] for j in range(1, 1)]\nprint(times2)\nfor x, y in ((i, i * j) for i in range(1, 11) for j in range(1, 1)):\n    print(x, y)",
+        "detail": "UdemyClasses.Comprehension.nested_challenge",
+        "documentation": {}
+    },
+    {
+        "label": "fact",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.timeitchallenge",
+        "description": "UdemyClasses.Comprehension.timeitchallenge",
+        "peekOfCode": "def fact(n):\n    \"\"\" This function returns the factorial.\"\"\"\n    result = 1\n    if n > 1:\n        for f in range(2, n + 1):\n            result *= f\n    return result\ndef factorial(n):\n    \"\"\" This function returns the factorial\"\"\"\n    # n! can also be defined as n * (n-1)!",
+        "detail": "UdemyClasses.Comprehension.timeitchallenge",
+        "documentation": {}
+    },
+    {
+        "label": "factorial",
+        "kind": 2,
+        "importPath": "UdemyClasses.Comprehension.timeitchallenge",
+        "description": "UdemyClasses.Comprehension.timeitchallenge",
+        "peekOfCode": "def factorial(n):\n    \"\"\" This function returns the factorial\"\"\"\n    # n! can also be defined as n * (n-1)!\n    if n <= 1:\n        return 1\n    else:\n        return n * factorial(n-1)\nif __name__ == \"__main__\":\n    list1 = timeit.repeat(\"x = fact(130)\", setup=\"from __main__ import fact\", number = 10000, repeat = 6)  # noqa\n    list2 = timeit.repeat(\"x = factorial(130)\", setup=\"from __main__ import factorial\", number = 10000, repeat = 6)  # noqa",
+        "detail": "UdemyClasses.Comprehension.timeitchallenge",
         "documentation": {}
     },
     {
@@ -1877,7 +2372,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.createDB.contacts2",
         "description": "UdemyClasses.createDB.contacts2",
-        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\nnew_email = \"newupdate@update.com\"\nphone = input(\"Please enter a phone number \")\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))",
+        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\nnew_email = \"newemail@update.com\"\nphone = input(\"Please enter a phone number \")\n# update_sql = \"UPDATE contacts SET email = '{}' WHERE phone = {}\".format(new_email, phone)  # noqa\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"  # noqa\n# print(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()",
         "detail": "UdemyClasses.createDB.contacts2",
         "documentation": {}
     },
@@ -1886,7 +2381,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.createDB.contacts2",
         "description": "UdemyClasses.createDB.contacts2",
-        "peekOfCode": "new_email = \"newupdate@update.com\"\nphone = input(\"Please enter a phone number \")\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()",
+        "peekOfCode": "new_email = \"newemail@update.com\"\nphone = input(\"Please enter a phone number \")\n# update_sql = \"UPDATE contacts SET email = '{}' WHERE phone = {}\".format(new_email, phone)  # noqa\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"  # noqa\n# print(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))",
         "detail": "UdemyClasses.createDB.contacts2",
         "documentation": {}
     },
@@ -1895,7 +2390,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.createDB.contacts2",
         "description": "UdemyClasses.createDB.contacts2",
-        "peekOfCode": "phone = input(\"Please enter a phone number \")\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()",
+        "peekOfCode": "phone = input(\"Please enter a phone number \")\n# update_sql = \"UPDATE contacts SET email = '{}' WHERE phone = {}\".format(new_email, phone)  # noqa\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"  # noqa\n# print(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()",
         "detail": "UdemyClasses.createDB.contacts2",
         "documentation": {}
     },
@@ -1904,7 +2399,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.createDB.contacts2",
         "description": "UdemyClasses.createDB.contacts2",
-        "peekOfCode": "update_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\n# this is the same as db.commit() # calling dot commit on the wrong connection could cause bugs. # noqa",
+        "peekOfCode": "update_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"  # noqa\n# print(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\n# this is the same as db.commit() # calling dot commit on the wrong connection could cause bugs. # noqa",
         "detail": "UdemyClasses.createDB.contacts2",
         "documentation": {}
     },
@@ -1915,6 +2410,492 @@
         "description": "UdemyClasses.createDB.contacts2",
         "peekOfCode": "update_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\n# this is the same as db.commit() # calling dot commit on the wrong connection could cause bugs. # noqa\nupdate_cursor.close()\nfor name, phone, email in db.execute(\"SELECT * FROM contacts\"):",
         "detail": "UdemyClasses.createDB.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "getint",
+        "kind": 2,
+        "importPath": "UdemyClasses.createDB.get_ints",
+        "description": "UdemyClasses.createDB.get_ints",
+        "peekOfCode": "def getint(prompt):\n    while True:\n        try:\n            number = int(input(prompt))\n            return number\n        except ValueError:\n            print(\"Invalid number entered, please try again\")\n        except EOFError:\n            sys.exit(0)\n        except KeyboardInterrupt:",
+        "detail": "UdemyClasses.createDB.get_ints",
+        "documentation": {}
+    },
+    {
+        "label": "first_number",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.get_ints",
+        "description": "UdemyClasses.createDB.get_ints",
+        "peekOfCode": "first_number = getint(\"Please enter first number \")\nsecond_number = getint(\"Please enter second number \")\ntry:\n    print(\"{} divided by {} is {:.2f}\".format(first_number, second_number, first_number / second_number))   # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")\n    sys.exit(2)\nelse:\n    print(\"Division performed successfully\")",
+        "detail": "UdemyClasses.createDB.get_ints",
+        "documentation": {}
+    },
+    {
+        "label": "second_number",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB.get_ints",
+        "description": "UdemyClasses.createDB.get_ints",
+        "peekOfCode": "second_number = getint(\"Please enter second number \")\ntry:\n    print(\"{} divided by {} is {:.2f}\".format(first_number, second_number, first_number / second_number))   # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")\n    sys.exit(2)\nelse:\n    print(\"Division performed successfully\")",
+        "detail": "UdemyClasses.createDB.get_ints",
+        "documentation": {}
+    },
+    {
+        "label": "conn",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB-LivingRoom-Computer.checkdb",
+        "description": "UdemyClasses.createDB-LivingRoom-Computer.checkdb",
+        "peekOfCode": "conn = sqlite3.connect(\"contacts.sqlite\")\nname = input(\"Please enter a name to search for \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name LIKE ?\", (name,)):\n# the name at the end in parathesis has comma with it to make it a tuple. \n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied. #noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative. #noqa\n    print(row)  \nconn.close()",
+        "detail": "UdemyClasses.createDB-LivingRoom-Computer.checkdb",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB-LivingRoom-Computer.checkdb",
+        "description": "UdemyClasses.createDB-LivingRoom-Computer.checkdb",
+        "peekOfCode": "name = input(\"Please enter a name to search for \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name LIKE ?\", (name,)):\n# the name at the end in parathesis has comma with it to make it a tuple. \n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied. #noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative. #noqa\n    print(row)  \nconn.close()",
+        "detail": "UdemyClasses.createDB-LivingRoom-Computer.checkdb",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB-LivingRoom-Computer.contacts",
+        "description": "UdemyClasses.createDB-LivingRoom-Computer.contacts",
+        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\ndb.execute(\"CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone INTEGER, email TEXT)\")\ndb.execute(\"INSERT INTO contacts(name, phone, email) VALUES('Grevy', 7542134200, 'grevyjr@gmail.com')\")  # noqa: E501\ndb.execute(\"INSERT INTO contacts VALUES('Mia', 7542314300, 'mia@gmail.com')\")\ncursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print (cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())",
+        "detail": "UdemyClasses.createDB-LivingRoom-Computer.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB-LivingRoom-Computer.contacts",
+        "description": "UdemyClasses.createDB-LivingRoom-Computer.contacts",
+        "peekOfCode": "cursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print (cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nfor name, phone, email in cursor:\n    print(name)\n    print(phone)\n    print(email)",
+        "detail": "UdemyClasses.createDB-LivingRoom-Computer.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "description": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\nnew_email = \"newupdate@update.com\"\nphone = input(\"Please enter a phone number \")\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))",
+        "detail": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "new_email",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "description": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "peekOfCode": "new_email = \"newupdate@update.com\"\nphone = input(\"Please enter a phone number \")\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()",
+        "detail": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "phone",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "description": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "peekOfCode": "phone = input(\"Please enter a phone number \")\nupdate_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()",
+        "detail": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "update_sql",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "description": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "peekOfCode": "update_sql = \"UPDATE contacts SET email = ? WHERE phone = ?\"\nprint(update_sql)\nupdate_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\n# this is the same as db.commit() # calling dot commit on the wrong connection could cause bugs. # noqa",
+        "detail": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "update_cursor",
+        "kind": 5,
+        "importPath": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "description": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "peekOfCode": "update_cursor = db.cursor()\nupdate_cursor.execute(update_sql, (new_email, phone))\nprint(\"{} rows updated\".format(update_cursor.rowcount))\nprint()\nprint(\"Are connections the same: {}\".format(update_cursor.connection == db))\nprint()\nupdate_cursor.connection.commit()\n# this is the same as db.commit() # calling dot commit on the wrong connection could cause bugs. # noqa\nupdate_cursor.close()\nfor name, phone, email in db.execute(\"SELECT * FROM contacts\"):",
+        "detail": "UdemyClasses.createDB-LivingRoom-Computer.contacts2",
+        "documentation": {}
+    },
+    {
+        "label": "entries",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.allgotcha",
+        "description": "UdemyClasses.map.allgotcha",
+        "peekOfCode": "entries = []\nif entries:\n    print(\"all: {}\".format(all(entries)))\nelse:\n    print(False)\nprint(\"any: {}\".format(any(entries)))\nresult = bool(entries) and all(entries)\nprint(result)",
+        "detail": "UdemyClasses.map.allgotcha",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.allgotcha",
+        "description": "UdemyClasses.map.allgotcha",
+        "peekOfCode": "result = bool(entries) and all(entries)\nprint(result)",
+        "detail": "UdemyClasses.map.allgotcha",
+        "documentation": {}
+    },
+    {
+        "label": "entries",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.anyall",
+        "description": "UdemyClasses.map.anyall",
+        "peekOfCode": "entries = [1, 2, 3, 4, 5]\nprint(\"all: {}\".format(all(entries)))\nprint(\"any: {}\".format(any(entries)))\nprint(\"Iterable with a 'False' value\")\nentries_with_zero = [1, 2, 0, 4, 5]\nprint(\"all: {}\".format(all(entries_with_zero)))\nprint(\"any: {}\".format(any(entries_with_zero)))\nprint()\nprint(\"Values interpreted as False in Python\")\nprint(\"\"\"False; {0}",
+        "detail": "UdemyClasses.map.anyall",
+        "documentation": {}
+    },
+    {
+        "label": "entries_with_zero",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.anyall",
+        "description": "UdemyClasses.map.anyall",
+        "peekOfCode": "entries_with_zero = [1, 2, 0, 4, 5]\nprint(\"all: {}\".format(all(entries_with_zero)))\nprint(\"any: {}\".format(any(entries_with_zero)))\nprint()\nprint(\"Values interpreted as False in Python\")\nprint(\"\"\"False; {0}\nNone: {1}\n0: {2}\n0.0: {3}\nempty list []: {4}",
+        "detail": "UdemyClasses.map.anyall",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.anyall",
+        "description": "UdemyClasses.map.anyall",
+        "peekOfCode": "name = \"Grevy\"\nif name:\n    print(\"Hello {}\".format(name))\nelse:\n    print(\"Welcome, person with no name\")",
+        "detail": "UdemyClasses.map.anyall",
+        "documentation": {}
+    },
+    {
+        "label": "people",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.data",
+        "description": "UdemyClasses.map.data",
+        "peekOfCode": "people = [\n    (\"John Cleese\", \"cleese@gmail.com\"),\n    (\"Terry Gilliam\", \"gilliam@gmail.com\"),\n    (\"Eric Idle\", \"\"),\n    (\"Terry Jones\", \"jones@gmail.com\"),\n    (\"Graham Chapman\", \"chapman@gmail.com\"),\n    (\"Michael Palin\", \"\")\n]\n# Named Tuples are described in the documentation\n# https://docs.python.org/3/library/collections.html#collections.namedtuple",
+        "detail": "UdemyClasses.map.data",
+        "documentation": {}
+    },
+    {
+        "label": "Plant",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.data",
+        "description": "UdemyClasses.map.data",
+        "peekOfCode": "Plant = namedtuple('Plant', 'name, scientific_name, lifecycle, plant_type')\nPlantDetails = namedtuple('PlantDetails',\n                          ['scientific_name', 'lifecycle', 'plant_type'])\nbasic_plants_list = [\n    (\"Andromeda\", \"Pieris japonica\", \"Evergreen\", \"Shrub\"),\n    (\"Bellflower\", \"Campanula\", \"perennial\", \"Flower\"),\n    (\"China Pink\", \"Dianthus\", \"Perennial\", \"Flower\"),\n    (\"Daffodil\", \"Narcissus\", \"Perennial\", \"Flower\"),\n    (\"Evening Primrose\", \"Oenothera\", \"Biennial\", \"Flower\"),\n    (\"French Marigold\", \"Tagetes patula\", \"Annual\", \"Flower\"),",
+        "detail": "UdemyClasses.map.data",
+        "documentation": {}
+    },
+    {
+        "label": "PlantDetails",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.data",
+        "description": "UdemyClasses.map.data",
+        "peekOfCode": "PlantDetails = namedtuple('PlantDetails',\n                          ['scientific_name', 'lifecycle', 'plant_type'])\nbasic_plants_list = [\n    (\"Andromeda\", \"Pieris japonica\", \"Evergreen\", \"Shrub\"),\n    (\"Bellflower\", \"Campanula\", \"perennial\", \"Flower\"),\n    (\"China Pink\", \"Dianthus\", \"Perennial\", \"Flower\"),\n    (\"Daffodil\", \"Narcissus\", \"Perennial\", \"Flower\"),\n    (\"Evening Primrose\", \"Oenothera\", \"Biennial\", \"Flower\"),\n    (\"French Marigold\", \"Tagetes patula\", \"Annual\", \"Flower\"),\n    (\"Golden Hakone Grass\", \"Hakonechloa macra\", \"Perennial\", \"Grass\"),",
+        "detail": "UdemyClasses.map.data",
+        "documentation": {}
+    },
+    {
+        "label": "basic_plants_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.data",
+        "description": "UdemyClasses.map.data",
+        "peekOfCode": "basic_plants_list = [\n    (\"Andromeda\", \"Pieris japonica\", \"Evergreen\", \"Shrub\"),\n    (\"Bellflower\", \"Campanula\", \"perennial\", \"Flower\"),\n    (\"China Pink\", \"Dianthus\", \"Perennial\", \"Flower\"),\n    (\"Daffodil\", \"Narcissus\", \"Perennial\", \"Flower\"),\n    (\"Evening Primrose\", \"Oenothera\", \"Biennial\", \"Flower\"),\n    (\"French Marigold\", \"Tagetes patula\", \"Annual\", \"Flower\"),\n    (\"Golden Hakone Grass\", \"Hakonechloa macra\", \"Perennial\", \"Grass\"),\n    (\"Hydrangea\", \"Hydrangea\", \"evergreen\", \"Shrub\"),\n    (\"Iris\", \"Iris\", \"Perennial\", \"Flower\"),",
+        "detail": "UdemyClasses.map.data",
+        "documentation": {}
+    },
+    {
+        "label": "plants_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.data",
+        "description": "UdemyClasses.map.data",
+        "peekOfCode": "plants_list = [\n    Plant(\"Andromeda\", \"Pieris japonica\", \"Evergreen\", \"Shrub\"),\n    Plant(\"Bellflower\", \"Campanula\", \"perennial\", \"Flower\"),\n    Plant(\"China Pink\", \"Dianthus\", \"Perennial\", \"Flower\"),\n    Plant(\"Daffodil\", \"Narcissus\", \"Perennial\", \"Flower\"),\n    Plant(\"Evening Primrose\", \"Oenothera\", \"Biennial\", \"Flower\"),\n    Plant(\"French Marigold\", \"Tagetes patula\", \"Annual\", \"Flower\"),\n    Plant(\"Golden Hakone Grass\", \"Hakonechloa macra\", \"Perennial\", \"Grass\"),\n    Plant(\"Hydrangea\", \"Hydrangea\", \"evergreen\", \"Shrub\"),\n    Plant(\"Iris\", \"Iris\", \"Perennial\", \"Flower\"),",
+        "detail": "UdemyClasses.map.data",
+        "documentation": {}
+    },
+    {
+        "label": "plants_dict",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.data",
+        "description": "UdemyClasses.map.data",
+        "peekOfCode": "plants_dict = {\n    \"Andromeda\": PlantDetails(\"Pieris japonica\", \"Evergreen\", \"Shrub\"),\n    \"Bellflower\": PlantDetails(\"Campanula\", \"Annual, biennial, perennial\", \"Flower\"),\n    \"China Pink\": PlantDetails(\"Dianthus\", \"Perennial\", \"Flower\"),\n    \"Daffodil\": PlantDetails(\"Narcissus\", \"Perennial\", \"Flower\"),\n    \"Evening Primrose\": PlantDetails(\"Oenothera\", \"Biennial\", \"Flower\"),\n    \"French Marigold\": PlantDetails(\"Tagetes patula\", \"Annual\", \"Flower\"),\n    \"Golden Hakone Grass\": PlantDetails(\"Hakonechloa macra\", \"Perennial\", \"Grass\"),\n    \"Hydrangea\": PlantDetails(\"Hydrangea\", \"Deciduous, evergreen\", \"Shrub\"),\n    \"Iris\": PlantDetails(\"Iris\", \"Perennial\", \"Flower\"),",
+        "detail": "UdemyClasses.map.data",
+        "documentation": {}
+    },
+    {
+        "label": "spamless_comp",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.filtertest",
+        "description": "UdemyClasses.map.filtertest",
+        "peekOfCode": "def spamless_comp():\n    \"\"\"\n    This is function called spamless comprehension\n    creates an object that loops through the items\n    in the menu and displays everything except spam.\n    \"\"\"\n    meals = [meal for meal in menu if not_spam(meal)]\n    return meals\nprint(\"-\" * 40)\ndef not_spam(meal_list: list):",
+        "detail": "UdemyClasses.map.filtertest",
+        "documentation": {}
+    },
+    {
+        "label": "not_spam",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.filtertest",
+        "description": "UdemyClasses.map.filtertest",
+        "peekOfCode": "def not_spam(meal_list: list):\n    \"\"\"\n    This line creates a function called\n    not_spam that does not have spam in the menu.\n    \"\"\"\n    return \"spam\" not in meal_list\ndef spamless_filter():\n    \"\"\"spamless_filter is a function that creates a filter\n    that only display items in the menu that are not spam.\n    Returns",
+        "detail": "UdemyClasses.map.filtertest",
+        "documentation": {}
+    },
+    {
+        "label": "spamless_filter",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.filtertest",
+        "description": "UdemyClasses.map.filtertest",
+        "peekOfCode": "def spamless_filter():\n    \"\"\"spamless_filter is a function that creates a filter\n    that only display items in the menu that are not spam.\n    Returns\n    -------\n        it will return variable with a list function that\n        will iterate through the menu and display everything\n        in the menu but spam.\n    \"\"\"\n    spamless_meals = list(filter(not_spam, menu))",
+        "detail": "UdemyClasses.map.filtertest",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.filtertest",
+        "description": "UdemyClasses.map.filtertest",
+        "peekOfCode": "menu = [\n    [\"egg\", \"spam\", \"bacon\"],\n    [\"egg\", \"sausage\", \"bacon\"],\n    [\"egg\", \"spam\"],\n    [\"egg\", \"bacon\", \"spam\"],\n    [\"egg\", \"bacon\", \"sausage\", \"spam\"],\n    [\"spam\", \"bacon\", \"sausage\", \"spam\"],\n    [\"spam\", \"egg\", \"spam\", \"spam\", \"bacon\", \"spam\"],\n    [\"spam\", \"egg\", \"sausage\", \"spam\"],\n    [\"chicken\", \"chips\"]",
+        "detail": "UdemyClasses.map.filtertest",
+        "documentation": {}
+    },
+    {
+        "label": "sort_key",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.lambda_example",
+        "description": "UdemyClasses.map.lambda_example",
+        "peekOfCode": "def sort_key(d: dict, field: str) -> str:\n    return d['field']\nmedals_table.sort(key=sort_key)\nprint(medals_table)",
+        "detail": "UdemyClasses.map.lambda_example",
+        "documentation": {}
+    },
+    {
+        "label": "comp_caps",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.map_intro",
+        "description": "UdemyClasses.map.map_intro",
+        "peekOfCode": "def comp_caps():\n    \"\"\"\n    The code snippet below is a function\n    that changes the text character to uppercase.\n    \"\"\"\n    capitals = [char.upper() for char in TEXT]\n    return capitals\n# use map\ndef map_caps():\n    \"\"\"",
+        "detail": "UdemyClasses.map.map_intro",
+        "documentation": {}
+    },
+    {
+        "label": "map_caps",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.map_intro",
+        "description": "UdemyClasses.map.map_intro",
+        "peekOfCode": "def map_caps():\n    \"\"\"\n    The code snippet below is a function\n    that changes the text string to uppercase.\n    \"\"\"\n    map_capitals = list(map(str.upper, TEXT))\n    return map_capitals\ndef comp_words():\n    \"\"\"\n    The code snippet below is a function",
+        "detail": "UdemyClasses.map.map_intro",
+        "documentation": {}
+    },
+    {
+        "label": "comp_words",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.map_intro",
+        "description": "UdemyClasses.map.map_intro",
+        "peekOfCode": "def comp_words():\n    \"\"\"\n    The code snippet below is a function\n    that changes the text words to uppercase.\n    \"\"\"\n    words = [word.upper() for word in TEXT.split(' ')]\n    return words\n# use map\ndef map_words():\n    \"\"\"",
+        "detail": "UdemyClasses.map.map_intro",
+        "documentation": {}
+    },
+    {
+        "label": "map_words",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.map_intro",
+        "description": "UdemyClasses.map.map_intro",
+        "peekOfCode": "def map_words():\n    \"\"\"\n    The code snippet below is a function\n    that changes the list of text words to uppercase.\n    \"\"\"\n    map_w = list(map(str.upper, TEXT.split(' ')))\n    return map_w\n# The code below is how you call the print the functions above.\nif __name__ == '__main__':\n    print(comp_caps())",
+        "detail": "UdemyClasses.map.map_intro",
+        "documentation": {}
+    },
+    {
+        "label": "TEXT",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.map_intro",
+        "description": "UdemyClasses.map.map_intro",
+        "peekOfCode": "TEXT = \"what have the romans ever done for us\"\ndef comp_caps():\n    \"\"\"\n    The code snippet below is a function\n    that changes the text character to uppercase.\n    \"\"\"\n    capitals = [char.upper() for char in TEXT]\n    return capitals\n# use map\ndef map_caps():",
+        "detail": "UdemyClasses.map.map_intro",
+        "documentation": {}
+    },
+    {
+        "label": "medals_table",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.medals_data",
+        "description": "UdemyClasses.map.medals_data",
+        "peekOfCode": "medals_table = [\n    {'country': 'United States', 'gold': 39, 'silver': 41, 'bronze': 33, 'rank': 1},\n    {'country': 'China', 'gold': 38, 'silver': 32, 'bronze': 18, 'rank': 2},\n    {'country': 'Japan', 'gold': 27, 'silver': 14, 'bronze': 17, 'rank': 3},\n    {'country': 'Great Britain', 'gold': 22, 'silver': 21, 'bronze': 22, 'rank': 4},\n    {'country': 'ROC', 'gold': 20, 'silver': 28, 'bronze': 23, 'rank': 5},\n    {'country': 'Australia', 'gold': 17, 'silver': 7, 'bronze': 22, 'rank': 6},\n    {'country': 'Netherlands', 'gold': 10, 'silver': 12, 'bronze': 14, 'rank': 7},\n    {'country': 'France', 'gold': 10, 'silver': 12, 'bronze': 11, 'rank': 8},\n    {'country': 'Germany', 'gold': 10, 'silver': 11, 'bronze': 16, 'rank': 9},",
+        "detail": "UdemyClasses.map.medals_data",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.namedtupletest",
+        "description": "UdemyClasses.map.namedtupletest",
+        "peekOfCode": "example = plants_list[0]\nprint(example)\nexample = example._replace(lifecycle='Annual')\nprint(example)",
+        "detail": "UdemyClasses.map.namedtupletest",
+        "documentation": {}
+    },
+    {
+        "label": "example",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.namedtupletest",
+        "description": "UdemyClasses.map.namedtupletest",
+        "peekOfCode": "example = example._replace(lifecycle='Annual')\nprint(example)",
+        "detail": "UdemyClasses.map.namedtupletest",
+        "documentation": {}
+    },
+    {
+        "label": "calc_values",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.reduceintro",
+        "description": "UdemyClasses.map.reduceintro",
+        "peekOfCode": "def calc_values(x, y: int):\n    \"\"\"\n    This function ask to take to two values and expect\n    the an int, then on the next line adds those\n    two values.\n    \"\"\"\n    return x * y\nnumbers = [2, 3, 5, 8, 13]\nreduced_value = functools.reduce(calc_values, numbers)\nprint(reduced_value)",
+        "detail": "UdemyClasses.map.reduceintro",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.reduceintro",
+        "description": "UdemyClasses.map.reduceintro",
+        "peekOfCode": "numbers = [2, 3, 5, 8, 13]\nreduced_value = functools.reduce(calc_values, numbers)\nprint(reduced_value)\nprint(sum(numbers))\nRESULT = 1\nfor x in numbers:\n    RESULT *= x\n# print(RESULT)\nRESULT = calc_values(2, 3)\nRESULT = calc_values(RESULT, 5)",
+        "detail": "UdemyClasses.map.reduceintro",
+        "documentation": {}
+    },
+    {
+        "label": "reduced_value",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.reduceintro",
+        "description": "UdemyClasses.map.reduceintro",
+        "peekOfCode": "reduced_value = functools.reduce(calc_values, numbers)\nprint(reduced_value)\nprint(sum(numbers))\nRESULT = 1\nfor x in numbers:\n    RESULT *= x\n# print(RESULT)\nRESULT = calc_values(2, 3)\nRESULT = calc_values(RESULT, 5)\nRESULT = calc_values(RESULT, 8)",
+        "detail": "UdemyClasses.map.reduceintro",
+        "documentation": {}
+    },
+    {
+        "label": "RESULT",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.reduceintro",
+        "description": "UdemyClasses.map.reduceintro",
+        "peekOfCode": "RESULT = 1\nfor x in numbers:\n    RESULT *= x\n# print(RESULT)\nRESULT = calc_values(2, 3)\nRESULT = calc_values(RESULT, 5)\nRESULT = calc_values(RESULT, 8)\nRESULT = calc_values(RESULT, 13)\nprint(RESULT)",
+        "detail": "UdemyClasses.map.reduceintro",
+        "documentation": {}
+    },
+    {
+        "label": "RESULT",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.reduceintro",
+        "description": "UdemyClasses.map.reduceintro",
+        "peekOfCode": "RESULT = calc_values(2, 3)\nRESULT = calc_values(RESULT, 5)\nRESULT = calc_values(RESULT, 8)\nRESULT = calc_values(RESULT, 13)\nprint(RESULT)",
+        "detail": "UdemyClasses.map.reduceintro",
+        "documentation": {}
+    },
+    {
+        "label": "RESULT",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.reduceintro",
+        "description": "UdemyClasses.map.reduceintro",
+        "peekOfCode": "RESULT = calc_values(RESULT, 5)\nRESULT = calc_values(RESULT, 8)\nRESULT = calc_values(RESULT, 13)\nprint(RESULT)",
+        "detail": "UdemyClasses.map.reduceintro",
+        "documentation": {}
+    },
+    {
+        "label": "RESULT",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.reduceintro",
+        "description": "UdemyClasses.map.reduceintro",
+        "peekOfCode": "RESULT = calc_values(RESULT, 8)\nRESULT = calc_values(RESULT, 13)\nprint(RESULT)",
+        "detail": "UdemyClasses.map.reduceintro",
+        "documentation": {}
+    },
+    {
+        "label": "RESULT",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.reduceintro",
+        "description": "UdemyClasses.map.reduceintro",
+        "peekOfCode": "RESULT = calc_values(RESULT, 13)\nprint(RESULT)",
+        "detail": "UdemyClasses.map.reduceintro",
+        "documentation": {}
+    },
+    {
+        "label": "sort_country",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "def sort_country(d: dict) -> str:\n    return d['country']\ndef sort_gold(d: dict) -> str:\n    return d['gold']\ndef sort_silver(d: dict) -> str:\n    return d['silver']\ndef sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "sort_gold",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "def sort_gold(d: dict) -> str:\n    return d['gold']\ndef sort_silver(d: dict) -> str:\n    return d['silver']\ndef sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "sort_silver",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "def sort_silver(d: dict) -> str:\n    return d['silver']\ndef sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "sort_bronze",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "def sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),\n    'B': ('bronze medals',),\n    'R': ('rank',),",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "sort_rank",
+        "kind": 2,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "def sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),\n    'B': ('bronze medals',),\n    'R': ('rank',),\n}\nwhile True:",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "options",
+        "kind": 5,
+        "importPath": "UdemyClasses.map.sort_data_functions",
+        "description": "UdemyClasses.map.sort_data_functions",
+        "peekOfCode": "options = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),\n    'B': ('bronze medals',),\n    'R': ('rank',),\n}\nwhile True:\n    for option, (description, *_) in options.items():\n        print(f'{option}: Sort by {description}')",
+        "detail": "UdemyClasses.map.sort_data_functions",
+        "documentation": {}
+    },
+    {
+        "label": "Scrollbox",
+        "kind": 6,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "class Scrollbox(tkinter.Listbox):\n    \"\"\" Line 10 creates a class called Scrollbox that has method as argument.\n    \"\"\"\n    def __init__(self, window, **kwargs):\n        # tkinter.Listbox.__init__(self, window, **kwargs)  # Python 2\n        super().__init__(window, **kwargs)\n        self.scrollbar = tkinter.Scrollbar(window, orient=tkinter.VERTICAL,\n                                           command=self.yview)\n    def grid(self, row, column, sticky='nsw',\n             rowspan=1, columnspan=1, **kwargs):",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "DataListBox",
+        "kind": 6,
+        "importPath": "UdemyClasses.MusicBrowser.jukebox",
+        "description": "UdemyClasses.MusicBrowser.jukebox",
+        "peekOfCode": "class DataListBox(Scrollbox):\n    \"\"\" Line 36 creates a class called DataListBox that has method as argument.\n    \"\"\"\n    def __init__(self, window, connection, table, field, sort_order=(), **kwargs):  # noqa\n        # Scrollbox.__init__(self, window, **kwargs)  # Python 2\n        super().__init__(window, **kwargs)\n        self.linked_box = None\n        self.link_field = None\n        self.cursor = connection.cursor()\n        self.table = table",
+        "detail": "UdemyClasses.MusicBrowser.jukebox",
+        "documentation": {}
+    },
+    {
+        "label": "print_backwards",
+        "kind": 2,
+        "importPath": "UdemyClasses.MusicBrowser.star_args",
+        "description": "UdemyClasses.MusicBrowser.star_args",
+        "peekOfCode": "def print_backwards(*args, **kwargs):\n    \"\"\" This line of code creates a function called\n    print_backwards that has two arguments * args and **kwargs.\n    \"\"\"\n    end_character = kwargs.pop('end', '\\n')\n    sep_character = kwargs.pop('sep', ' ')\n    for word in args[:0:-1]:    # change the range\n        print(word[::-1], end=sep_character, **kwargs)\n    print(args[0][::-1], end=end_character, **kwargs)\n    # and print the first word separately  # noqa",
+        "detail": "UdemyClasses.MusicBrowser.star_args",
+        "documentation": {}
+    },
+    {
+        "label": "backwards_print",
+        "kind": 2,
+        "importPath": "UdemyClasses.MusicBrowser.star_args",
+        "description": "UdemyClasses.MusicBrowser.star_args",
+        "peekOfCode": "def backwards_print(*args, **kwargs):\n    \"\"\"backwards_print is a function\n    that has two arguments * args and **kwargs.\n    \"\"\"\n    sep_character = kwargs.pop('sep', ' ')\n    print(sep_character.join(word[::-1] for word in args[::-1]), **kwargs)\nwith open(\"backwards.txt\", 'w', encoding='UTF-8') as backwards:\n    print_backwards(\"hello\", \"planet\", \"earth\",\n                    \"take\", \"me\", \"to\", \"your\", \"leader\", end='\\n')\n    print(\"Another String\")",
+        "detail": "UdemyClasses.MusicBrowser.star_args",
         "documentation": {}
     },
     {
@@ -1972,30 +2953,444 @@
         "documentation": {}
     },
     {
-        "label": "DivideTwoNumbers",
+        "label": "conn",
+        "kind": 5,
+        "importPath": "UdemyClasses.__pycache__.preview.PIL.checkdb",
+        "description": "UdemyClasses.__pycache__.preview.PIL.checkdb",
+        "peekOfCode": "conn = sqlite3.connect(\"contacts.sqlite\")\nname = input(\"Please enter a name to search for? \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name = ?\", (name,)):\n    print(row)\n# the name at the end in parathesis has comma with it to make it a tuple.\n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied.  # noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative.  # noqa\nconn.close()",
+        "detail": "UdemyClasses.__pycache__.preview.PIL.checkdb",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "UdemyClasses.__pycache__.preview.PIL.checkdb",
+        "description": "UdemyClasses.__pycache__.preview.PIL.checkdb",
+        "peekOfCode": "name = input(\"Please enter a name to search for? \")\nfor row in conn.execute(\"SELECT * FROM contacts WHERE name = ?\", (name,)):\n    print(row)\n# the name at the end in parathesis has comma with it to make it a tuple.\n# If you do not use a comma you will get a ProgrammingError:\n# Incorrect number of bindings supplied. The current statement uses 1, and there are 5 supplied.  # noqa\n# Also in that line you can use LIKE so that the query does not have to be case sensative.  # noqa\nconn.close()",
+        "detail": "UdemyClasses.__pycache__.preview.PIL.checkdb",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "UdemyClasses.__pycache__.preview.PIL.contacts",
+        "description": "UdemyClasses.__pycache__.preview.PIL.contacts",
+        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\ndb.execute(\"CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone INTEGER, email TEXT)\")  # noqa\ndb.execute(\"INSERT INTO contacts(name, phone, email) VALUES('Grevy', 7542134200, 'grevyjr@gmail.com')\")  # noqa\ndb.execute(\"INSERT INTO contacts VALUES('MIA', 7542134300, 'mia@gmail.com')\")\ncursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print(cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())",
+        "detail": "UdemyClasses.__pycache__.preview.PIL.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "UdemyClasses.__pycache__.preview.PIL.contacts",
+        "description": "UdemyClasses.__pycache__.preview.PIL.contacts",
+        "peekOfCode": "cursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print(cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nfor name, phone, email in cursor:\n    print(name)\n    print(phone)\n    print(email)",
+        "detail": "UdemyClasses.__pycache__.preview.PIL.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "UdemyClasses.checkdb",
+        "description": "UdemyClasses.checkdb",
+        "peekOfCode": "db = sqlite3.connect(\"accounts.sqlite\", detect_types=sqlite3.PARSE_DECLTYPES)\n# for row in db.execute(\"SELECT strftime('%Y-%m-%d %H:%M:%f', history.time,'localtime') AS localtime,\"\n#                       \" history.account, history.amount FROM history ORDER BY history.time\"):\nfor row in db.execute(\"SELECT * FROM localhistory\"):\n    print(row)\ndb.close()\n# conn.close()",
+        "detail": "UdemyClasses.checkdb",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "UdemyClasses.contacts",
+        "description": "UdemyClasses.contacts",
+        "peekOfCode": "db = sqlite3.connect(\"contacts.sqlite\")\ndb.execute(\"CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone INTEGER, email TEXT)\")  # noqa\ndb.execute(\"INSERT INTO contacts(name, phone, email) VALUES('Grevy', 7542134200, 'grevyjr@gmail.com')\")  # noqa\ndb.execute(\"INSERT INTO contacts VALUES('MIA', 7542134300, 'mia@gmail.com')\")\ncursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print(cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())",
+        "detail": "UdemyClasses.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "cursor",
+        "kind": 5,
+        "importPath": "UdemyClasses.contacts",
+        "description": "UdemyClasses.contacts",
+        "peekOfCode": "cursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print(cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nfor name, phone, email in cursor:\n    print(name)\n    print(phone)\n    print(email)",
+        "detail": "UdemyClasses.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "divide_two_numbers",
         "kind": 2,
         "importPath": "UdemyClasses.DivideTwoNumber",
         "description": "UdemyClasses.DivideTwoNumber",
-        "peekOfCode": "def DivideTwoNumbers(n1, n2):\n    result = n1/ n2\nprint(\"Pick two numbers to divide: \")\nn1 = input('First Number ')\nn2 = input('Second Number ')\nprint(\"Your answer is \"(result))",
+        "peekOfCode": "def divide_two_numbers(prompt):\n    while True:\n        try:\n            number = int(input(prompt))\n            return number\n        except ValueError:\n            print(\"Invalid number entered, please try again\")\nprint(\"Pick two numbers to divide: \")\nfirst_number = divide_two_numbers('First Number ')\nsecond_number = divide_two_numbers('Second Number ')",
         "detail": "UdemyClasses.DivideTwoNumber",
         "documentation": {}
     },
     {
-        "label": "n1",
+        "label": "first_number",
         "kind": 5,
         "importPath": "UdemyClasses.DivideTwoNumber",
         "description": "UdemyClasses.DivideTwoNumber",
-        "peekOfCode": "n1 = input('First Number ')\nn2 = input('Second Number ')\nprint(\"Your answer is \"(result))",
+        "peekOfCode": "first_number = divide_two_numbers('First Number ')\nsecond_number = divide_two_numbers('Second Number ')\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))  # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
         "detail": "UdemyClasses.DivideTwoNumber",
         "documentation": {}
     },
     {
-        "label": "n2",
+        "label": "second_number",
         "kind": 5,
         "importPath": "UdemyClasses.DivideTwoNumber",
         "description": "UdemyClasses.DivideTwoNumber",
-        "peekOfCode": "n2 = input('Second Number ')\nprint(\"Your answer is \"(result))",
+        "peekOfCode": "second_number = divide_two_numbers('Second Number ')\ntry:\n    print(\"{} divided by {} is {}\".format(first_number, second_number, first_number / second_number))  # noqa\nexcept ZeroDivisionError:\n    print(\"You can't divide by zero\")",
         "detail": "UdemyClasses.DivideTwoNumber",
+        "documentation": {}
+    },
+    {
+        "label": "fibonacci",
+        "kind": 2,
+        "importPath": "UdemyClasses.fibgen",
+        "description": "UdemyClasses.fibgen",
+        "peekOfCode": "def fibonacci():\n    \"\"\"fibonacci generator\n    Returns\n    -------\n        current get the value zero plus 1, and previous get the old value of\n        current, which the first time it runs is zero. Next time around\n        current becomes 1 plus zero, so one again, in other words,\n        and previous this time, becomes one. And the third time around,\n        current becomes two and previous becomes one. Then we get three and\n        two, followed by five and three and so on.",
+        "detail": "UdemyClasses.fibgen",
+        "documentation": {}
+    },
+    {
+        "label": "fib",
+        "kind": 5,
+        "importPath": "UdemyClasses.fibgen",
+        "description": "UdemyClasses.fibgen",
+        "peekOfCode": "fib = fibonacci()\nfor i in range(21):\n    print(i, next(fib))",
+        "detail": "UdemyClasses.fibgen",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT",
+        "kind": 5,
+        "importPath": "UdemyClasses.filegen",
+        "description": "UdemyClasses.filegen",
+        "peekOfCode": "ROOT = \"music\"\nfor path, directories, files in os.walk(ROOT, topdown=True):\n    if files:\n        print(path)\n        first_split = os.path.split(path)\n        print(first_split)\n        second_split = os.path.split(first_split[0])\n        print(second_split)\n        for f in files:\n            song_details = f[:-5].split(' - ')",
+        "detail": "UdemyClasses.filegen",
+        "documentation": {}
+    },
+    {
+        "label": "find_albums",
+        "kind": 2,
+        "importPath": "UdemyClasses.filesearch",
+        "description": "UdemyClasses.filesearch",
+        "peekOfCode": "def find_albums(root, artist_name):\n    \"\"\" This function creates a function called find_albums to locate\n    the albums and artist in the file directory.\n    \"\"\"\n    caps_name = artist_name.upper()\n    for path, directories, files in os.walk(root):\n        # for artist in fnmatch.filter(directories, artist_name):\n        # for artist in fnmatch.filter((d.upper() for d in directories), caps_name):  # noqa\n        for artist in (d for d in directories if fnmatch.fnmatch(d.upper(), caps_name)):  # noqa\n            subdir = os.path.join(path, artist)",
+        "detail": "UdemyClasses.filesearch",
+        "documentation": {}
+    },
+    {
+        "label": "find_songs",
+        "kind": 2,
+        "importPath": "UdemyClasses.filesearch",
+        "description": "UdemyClasses.filesearch",
+        "peekOfCode": "def find_songs(albums):\n    \"\"\"find_songs is a function to search for albums\n    in the file directory.\n    Parameters\n    ----------\n    albums\n        Albums is the column name in this table.\n    Yields\n    ------\n        The yield keyword is used here to iterate thru",
+        "detail": "UdemyClasses.filesearch",
+        "documentation": {}
+    },
+    {
+        "label": "album_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.filesearch",
+        "description": "UdemyClasses.filesearch",
+        "peekOfCode": "album_list = find_albums(\"music\", \"black*\")\nsong_list = find_songs(album_list)\nfor s in song_list:\n    print(s)",
+        "detail": "UdemyClasses.filesearch",
+        "documentation": {}
+    },
+    {
+        "label": "song_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.filesearch",
+        "description": "UdemyClasses.filesearch",
+        "peekOfCode": "song_list = find_songs(album_list)\nfor s in song_list:\n    print(s)",
+        "detail": "UdemyClasses.filesearch",
+        "documentation": {}
+    },
+    {
+        "label": "Id3Error",
+        "kind": 6,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "class Id3Error(Exception):\n    \"\"\" An exception caused by id3reader properly handling a bad ID3 tag.\n    \"\"\"\n    pass\nclass _Header:\n    \"\"\" Represent the ID3 header in a tag.\n    \"\"\"\n    def __init__(self):\n        self.majorVersion = 0\n        self.revision = 0",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_Header",
+        "kind": 6,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "class _Header:\n    \"\"\" Represent the ID3 header in a tag.\n    \"\"\"\n    def __init__(self):\n        self.majorVersion = 0\n        self.revision = 0\n        self.flags = 0\n        self.size = 0\n        self.bUnsynchronized = False\n        self.bExperimental = False",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_Frame",
+        "kind": 6,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "class _Frame:\n    \"\"\" Represent an ID3 frame in a tag.\n    \"\"\"\n    def __init__(self):\n        self.id = ''\n        self.size = 0\n        self.flags = 0\n        self.rawData = ''\n        self.bTagAlterPreserve = False\n        self.bFileAlterPreserve = False",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "Reader",
+        "kind": 6,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "class Reader:\n    \"\"\" An ID3 reader.\n        Create one on a file object, and then use getValue('TIT2') (for example)\n        to pull values.\n    \"\"\"\n    def __init__(self, music_file):\n        \"\"\" Create a reader from a file or filename. \"\"\"\n        self.file = music_file\n        self.header = None\n        self.frames = {}",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "__version__ = '2.00.20170522'  # History at the end of the file.\n# ID3 specs: http://www.id3.org/develop.html\n# These are the text encodings, indexed by the first byte of a text value.\n_encodings = ['iso8859-1', 'utf-16', 'utf-16be', 'utf-8']\n# Simple pseudo-id's, mapped to their various representations.\n# Use these ids with getValue, and you don't need to know what\n# version of ID3 the file contains.\n_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_encodings",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_encodings = ['iso8859-1', 'utf-16', 'utf-16be', 'utf-8']\n# Simple pseudo-id's, mapped to their various representations.\n# Use these ids with getValue, and you don't need to know what\n# version of ID3 the file contains.\n_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),\n    'title': ('TIT2', 'TT2', 'v1title'),\n    'track': ('TRCK', 'TRK', 'v1track'),\n    'year': ('TYER', 'TYE', 'v1year'),",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_simpleDataMapping",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),\n    'title': ('TIT2', 'TT2', 'v1title'),\n    'track': ('TRCK', 'TRK', 'v1track'),\n    'year': ('TYER', 'TYE', 'v1year'),\n    'genre': ('TCON', 'TCO', 'v1genre'),\n    'comment': ('COMM', 'COM', 'v1comment'),\n}\n# Tracing",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_t",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_t = False\ndef _trace(msg):\n    print(msg)\n# Coverage\n_c = False\n_features = {}\ndef _coverage(feat):\n    # if _t: _trace('feature '+feat)\n    _features[feat] = _features.setdefault(feat, 0) + 1\ndef _safestr(s):",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_c",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_c = False\n_features = {}\ndef _coverage(feat):\n    # if _t: _trace('feature '+feat)\n    _features[feat] = _features.setdefault(feat, 0) + 1\ndef _safestr(s):\n    \"\"\" Get a good string for printing, that won't throw exceptions,\n        no matter what's in it.\n    \"\"\"\n    try:",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_features",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_features = {}\ndef _coverage(feat):\n    # if _t: _trace('feature '+feat)\n    _features[feat] = _features.setdefault(feat, 0) + 1\ndef _safestr(s):\n    \"\"\" Get a good string for printing, that won't throw exceptions,\n        no matter what's in it.\n    \"\"\"\n    try:\n        return s.encode(sys.getdefaultencoding())",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_genres",
+        "kind": 5,
+        "importPath": "UdemyClasses.id3reader_p3",
+        "description": "UdemyClasses.id3reader_p3",
+        "peekOfCode": "_genres = [\n    # 0-19\n    'Blues', 'Classic Rock', 'Country', 'Dance', 'Disco', 'Funk', 'Grunge', 'Hip - Hop', 'Jazz', 'Metal',\n    'New Age', 'Oldies', 'Other', 'Pop', 'R&B', 'Rap', 'Reggae', 'Rock', 'Techno', 'Industrial',\n    # 20-39\n    'Alternative', 'Ska', 'Death Metal', 'Pranks', 'Soundtrack', 'Euro - Techno', 'Ambient', 'Trip - Hop',\n    'Vocal', 'Jazz + Funk', 'Fusion', 'Trance', 'Classical', 'Instrumental', 'Acid', 'House', 'Game',\n    'Sound Clip', 'Gospel', 'Noise',\n    # 40-59\n    'Alt Rock', 'Bass', 'Soul', 'Punk', 'Space', 'Meditative', 'Instrumental Pop', 'Instrumental Rock', 'Ethnic',",
+        "detail": "UdemyClasses.id3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "Id3Error",
+        "kind": 6,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "class Id3Error(Exception):\n    \"\"\" An exception caused by id3reader properly handling a bad ID3 tag.\n    \"\"\"\n    pass\nclass _Header:\n    \"\"\" Represent the ID3 header in a tag.\n    \"\"\"\n    def __init__(self):\n        self._major_version = 0\n        self.revision = 0",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_Header",
+        "kind": 6,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "class _Header:\n    \"\"\" Represent the ID3 header in a tag.\n    \"\"\"\n    def __init__(self):\n        self._major_version = 0\n        self.revision = 0\n        self.flags = 0\n        self.size = 0\n        self.bunsynchronized = False\n        self.bexperimental = False",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_Frame",
+        "kind": 6,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "class _Frame:\n    \"\"\" Represent an ID3 frame in a tag.\n    \"\"\"\n    def __init__(self):\n        self.id = ''\n        self.size = 0\n        self.flags = 0\n        self.raw_data = None\n        self.b_tag_alter_preserve = False\n        self.b_file_alter_preserve = False",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "Reader",
+        "kind": 6,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "class Reader:\n    \"\"\" An ID3 reader.\n        Create one on a file object, and then use getValue('TIT2') (for example)  # noqa\n        to pull values.\n    \"\"\"\n    def __init__(self, music_file):\n        \"\"\" Create a reader from a file or filename. \"\"\"\n        self.file = music_file\n        self.header = None\n        self.frames = {}",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "__version__",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "__version__ = '2.00.20170522'  # History at the end of the file.\n# ID3 specs: http://www.id3.org/develop.html\n# These are the text encodings, indexed by the first byte of a text value.\n_encodings = ['iso8859-1', 'utf-16', 'utf-16be', 'utf-8']\n# Simple pseudo-id's, mapped to their various representations.\n# Use these ids with getValue, and you don't need to know what\n# version of ID3 the file contains.\n_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_encodings",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "_encodings = ['iso8859-1', 'utf-16', 'utf-16be', 'utf-8']\n# Simple pseudo-id's, mapped to their various representations.\n# Use these ids with getValue, and you don't need to know what\n# version of ID3 the file contains.\n_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),\n    'title': ('TIT2', 'TT2', 'v1title'),\n    'track': ('TRCK', 'TRK', 'v1track'),\n    'year': ('TYER', 'TYE', 'v1year'),",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_simpleDataMapping",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "_simpleDataMapping = {\n    'album': ('TALB', 'TAL', 'v1album', 'TOAL'),\n    'performer': ('TPE1', 'TP1', 'v1performer', 'TOPE'),\n    'title': ('TIT2', 'TT2', 'v1title'),\n    'track': ('TRCK', 'TRK', 'v1track'),\n    'year': ('TYER', 'TYE', 'v1year'),\n    'genre': ('TCON', 'TCO', 'v1genre'),\n    'comment': ('COMM', 'COM', 'v1comment'),\n}\n# Tracing",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_T",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "_T = False\ndef _trace(msg):\n    print(msg)\n# Coverage\n_C = False\n_features: dict = {}\ndef _coverage(feat):\n    # if _t: _trace('feature '+feat)\n    _features[feat] = _features.setdefault(feat, 0) + 1\ndef _safestr(s):",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_C",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "_C = False\n_features: dict = {}\ndef _coverage(feat):\n    # if _t: _trace('feature '+feat)\n    _features[feat] = _features.setdefault(feat, 0) + 1\ndef _safestr(s):\n    \"\"\" Get a good string for printing, that won't throw exceptions,\n        no matter what's in it.\n    \"\"\"\n    try:",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "_genres",
+        "kind": 5,
+        "importPath": "UdemyClasses.ID_3reader_p3",
+        "description": "UdemyClasses.ID_3reader_p3",
+        "peekOfCode": "_genres = [\n    # 0-19\n    'Blues', 'Classic Rock', 'Country', 'Dance', 'Disco', 'Funk', 'Grunge', 'Hip - Hop', 'Jazz', 'Metal',  # noqa\n    'New Age', 'Oldies', 'Other', 'Pop', 'R&B', 'Rap', 'Reggae', 'Rock', 'Techno', 'Industrial',  # noqa\n    # 20-39\n    'Alternative', 'Ska', 'Death Metal', 'Pranks', 'Soundtrack', 'Euro - Techno', 'Ambient', 'Trip - Hop',  # noqa\n    'Vocal', 'Jazz + Funk', 'Fusion', 'Trance', 'Classical', 'Instrumental', 'Acid', 'House', 'Game',  # noqa\n    'Sound Clip', 'Gospel', 'Noise',\n    # 40-59\n    'Alt Rock', 'Bass', 'Soul', 'Punk', 'Space', 'Meditative', 'Instrumental Pop', 'Instrumental Rock', 'Ethnic',  # noqa",
+        "detail": "UdemyClasses.ID_3reader_p3",
+        "documentation": {}
+    },
+    {
+        "label": "find_music",
+        "kind": 2,
+        "importPath": "UdemyClasses.mp3scan",
+        "description": "UdemyClasses.mp3scan",
+        "peekOfCode": "def find_music(start, extension):\n    \"\"\"find_music is a function with two parameters,\n    one that has a start parameter and the second to for the extention.\n    Parameters\n    ----------\n    start\n       This parameter indicates where we start the search.\n    extension\n        This parameter indicates the files with a certain\n        file extention.",
+        "detail": "UdemyClasses.mp3scan",
+        "documentation": {}
+    },
+    {
+        "label": "my_music_files",
+        "kind": 5,
+        "importPath": "UdemyClasses.mp3scan",
+        "description": "UdemyClasses.mp3scan",
+        "peekOfCode": "my_music_files = find_music(\"/Users/grevy/OneDrive/Music/\", \"mp3\")\nerror_list = []\nfor f in my_music_files:  # The music parameter indicates\n    # where to start. The emp3 indicates the file extention to search for.\n    try:\n        id3r = id3reader.Reader(f)\n        print(f\"Artist: {id3r.get_value('performer')}, \"\n              f\"Album: {id3r.get_value('album')}, \"\n              f\"Track: {id3r.get_value('track')}, \"\n              f\"Song: {id3r.get_value('title')}\")",
+        "detail": "UdemyClasses.mp3scan",
+        "documentation": {}
+    },
+    {
+        "label": "error_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.mp3scan",
+        "description": "UdemyClasses.mp3scan",
+        "peekOfCode": "error_list = []\nfor f in my_music_files:  # The music parameter indicates\n    # where to start. The emp3 indicates the file extention to search for.\n    try:\n        id3r = id3reader.Reader(f)\n        print(f\"Artist: {id3r.get_value('performer')}, \"\n              f\"Album: {id3r.get_value('album')}, \"\n              f\"Track: {id3r.get_value('track')}, \"\n              f\"Song: {id3r.get_value('title')}\")\n    except:",
+        "detail": "UdemyClasses.mp3scan",
+        "documentation": {}
+    },
+    {
+        "label": "oddnumbers",
+        "kind": 2,
+        "importPath": "UdemyClasses.pigen",
+        "description": "UdemyClasses.pigen",
+        "peekOfCode": "def oddnumbers():\n    n = 1\n    while True:\n        yield n\n        n += 2\ndef pi_series():\n    odds = oddnumbers()\n    approximation = 0\n    while True:\n        approximation += (4 / next(odds))",
+        "detail": "UdemyClasses.pigen",
+        "documentation": {}
+    },
+    {
+        "label": "pi_series",
+        "kind": 2,
+        "importPath": "UdemyClasses.pigen",
+        "description": "UdemyClasses.pigen",
+        "peekOfCode": "def pi_series():\n    odds = oddnumbers()\n    approximation = 0\n    while True:\n        approximation += (4 / next(odds))\n        yield approximation\n        approximation -= (4 / next(odds))\n        yield approximation\napprox_pi = pi_series()\nfor x in range(100000):",
+        "detail": "UdemyClasses.pigen",
+        "documentation": {}
+    },
+    {
+        "label": "approx_pi",
+        "kind": 5,
+        "importPath": "UdemyClasses.pigen",
+        "description": "UdemyClasses.pigen",
+        "peekOfCode": "approx_pi = pi_series()\nfor x in range(100000):\n    print(next(approx_pi))",
+        "detail": "UdemyClasses.pigen",
+        "documentation": {}
+    },
+    {
+        "label": "a",
+        "kind": 5,
+        "importPath": "UdemyClasses.scratchpad",
+        "description": "UdemyClasses.scratchpad",
+        "peekOfCode": "a = 2 \nb = 3\nprint(f\"a is {a}, b is {b}\")\na, b = 3, 2 # b, a\n# TEMP = a\n# A = b\n# B = TEMP\nprint(f\"a is {a}, b is {b}\")",
+        "detail": "UdemyClasses.scratchpad",
+        "documentation": {}
+    },
+    {
+        "label": "b",
+        "kind": 5,
+        "importPath": "UdemyClasses.scratchpad",
+        "description": "UdemyClasses.scratchpad",
+        "peekOfCode": "b = 3\nprint(f\"a is {a}, b is {b}\")\na, b = 3, 2 # b, a\n# TEMP = a\n# A = b\n# B = TEMP\nprint(f\"a is {a}, b is {b}\")",
+        "detail": "UdemyClasses.scratchpad",
+        "documentation": {}
+    },
+    {
+        "label": "my_range",
+        "kind": 2,
+        "importPath": "UdemyClasses.size",
+        "description": "UdemyClasses.size",
+        "peekOfCode": "def my_range(n: int):\n    \"\"\"\n    This line defines a function named my_range that takes one argument n.\n    The : int part is a type hint that indicates n should be an integer.\n    Type hints are optional in Python and do not enforce\n    the type of the variable, but they can make your code easier to understand.\n    \"\"\"\n    print(\"my_range starts\")\n    start = 0\n    while start < n:",
+        "detail": "UdemyClasses.size",
+        "documentation": {}
+    },
+    {
+        "label": "big_range",
+        "kind": 5,
+        "importPath": "UdemyClasses.size",
+        "description": "UdemyClasses.size",
+        "peekOfCode": "big_range = range(5)\n# big_range = my_range(5)\n# _ = input(\"Line 23, hit enter to continue.\")\nprint(f\"big_range is {sys.getsizeof(big_range)} bytes\")\n# Create a list containing all the values in big_range\nbig_list = []\n# _ = input(\"Line 31, hit enter to continue.\")\nfor val in big_range:\n    # _ = input(\"Line 34, hit enter to continue.\")\n    big_list.append(val)",
+        "detail": "UdemyClasses.size",
+        "documentation": {}
+    },
+    {
+        "label": "big_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.size",
+        "description": "UdemyClasses.size",
+        "peekOfCode": "big_list = []\n# _ = input(\"Line 31, hit enter to continue.\")\nfor val in big_range:\n    # _ = input(\"Line 34, hit enter to continue.\")\n    big_list.append(val)\nprint(f\"big_list is {sys.getsizeof(big_list)} bytes\")\nprint(big_range)\nprint(big_list)\nprint(\"looping again ...or not\")\nfor i in big_range:",
+        "detail": "UdemyClasses.size",
         "documentation": {}
     },
     {

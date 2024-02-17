@@ -3250,6 +3250,24 @@
         "documentation": {}
     },
     {
+        "label": "double",
+        "kind": 2,
+        "importPath": "UdemyClasses.more_lambdas",
+        "description": "UdemyClasses.more_lambdas",
+        "peekOfCode": "def double(x):\n    return x * 2\nprint(anon)\nprint(lambda x: x * 2)\nprint(double)\nprint(anon(7))\nprint(anon(7))",
+        "detail": "UdemyClasses.more_lambdas",
+        "documentation": {}
+    },
+    {
+        "label": "anon",
+        "kind": 5,
+        "importPath": "UdemyClasses.more_lambdas",
+        "description": "UdemyClasses.more_lambdas",
+        "peekOfCode": "anon = lambda x: x * 2 # Not PEP 8 compliant!!!\ndef double(x):\n    return x * 2\nprint(anon)\nprint(lambda x: x * 2)\nprint(double)\nprint(anon(7))\nprint(anon(7))",
+        "detail": "UdemyClasses.more_lambdas",
+        "documentation": {}
+    },
+    {
         "label": "find_music",
         "kind": 2,
         "importPath": "UdemyClasses.mp3scan",

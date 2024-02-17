@@ -2953,6 +2953,24 @@
         "documentation": {}
     },
     {
+        "label": "x",
+        "kind": 5,
+        "importPath": "UdemyClasses.conditional_expression",
+        "description": "UdemyClasses.conditional_expression",
+        "peekOfCode": "x = 99\nresult = 'in range' if x < 100 else 'out of range'\nprint(result)",
+        "detail": "UdemyClasses.conditional_expression",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "UdemyClasses.conditional_expression",
+        "description": "UdemyClasses.conditional_expression",
+        "peekOfCode": "result = 'in range' if x < 100 else 'out of range'\nprint(result)",
+        "detail": "UdemyClasses.conditional_expression",
+        "documentation": {}
+    },
+    {
         "label": "db",
         "kind": 5,
         "importPath": "UdemyClasses.contacts",

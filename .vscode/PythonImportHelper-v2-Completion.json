@@ -2809,51 +2809,6 @@
         "documentation": {}
     },
     {
-        "label": "sort_country",
-        "kind": 2,
-        "importPath": "UdemyClasses.map.sort_data_functions",
-        "description": "UdemyClasses.map.sort_data_functions",
-        "peekOfCode": "def sort_country(d: dict) -> str:\n    return d['country']\ndef sort_gold(d: dict) -> str:\n    return d['gold']\ndef sort_silver(d: dict) -> str:\n    return d['silver']\ndef sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']",
-        "detail": "UdemyClasses.map.sort_data_functions",
-        "documentation": {}
-    },
-    {
-        "label": "sort_gold",
-        "kind": 2,
-        "importPath": "UdemyClasses.map.sort_data_functions",
-        "description": "UdemyClasses.map.sort_data_functions",
-        "peekOfCode": "def sort_gold(d: dict) -> str:\n    return d['gold']\ndef sort_silver(d: dict) -> str:\n    return d['silver']\ndef sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),",
-        "detail": "UdemyClasses.map.sort_data_functions",
-        "documentation": {}
-    },
-    {
-        "label": "sort_silver",
-        "kind": 2,
-        "importPath": "UdemyClasses.map.sort_data_functions",
-        "description": "UdemyClasses.map.sort_data_functions",
-        "peekOfCode": "def sort_silver(d: dict) -> str:\n    return d['silver']\ndef sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),",
-        "detail": "UdemyClasses.map.sort_data_functions",
-        "documentation": {}
-    },
-    {
-        "label": "sort_bronze",
-        "kind": 2,
-        "importPath": "UdemyClasses.map.sort_data_functions",
-        "description": "UdemyClasses.map.sort_data_functions",
-        "peekOfCode": "def sort_bronze(d: dict) -> str:\n    return d['bronze']\ndef sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),\n    'B': ('bronze medals',),\n    'R': ('rank',),",
-        "detail": "UdemyClasses.map.sort_data_functions",
-        "documentation": {}
-    },
-    {
-        "label": "sort_rank",
-        "kind": 2,
-        "importPath": "UdemyClasses.map.sort_data_functions",
-        "description": "UdemyClasses.map.sort_data_functions",
-        "peekOfCode": "def sort_rank(d: dict) -> str:\n    return d['rank']\noptions = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),\n    'B': ('bronze medals',),\n    'R': ('rank',),\n}\nwhile True:",
-        "detail": "UdemyClasses.map.sort_data_functions",
-        "documentation": {}
-    },
-    {
         "label": "options",
         "kind": 5,
         "importPath": "UdemyClasses.map.sort_data_functions",

@@ -1,26 +1,5 @@
 from medals_data import medals_table
 
-
-def sort_country(d: dict) -> str:
-    return d['country']
-
-
-def sort_gold(d: dict) -> str:
-    return d['gold']
-
-
-def sort_silver(d: dict) -> str:
-    return d['silver']
-
-
-def sort_bronze(d: dict) -> str:
-    return d['bronze']
-
-
-def sort_rank(d: dict) -> str:
-    return d['rank']
-
-
 options = {
     'C': ('country',),
     'G': ('gold medals',),
@@ -37,15 +16,18 @@ while True:
     choice = input('Please select an option: ').upper()
 
     if choice == 'C':
-        medals_table.sort(key=sort_country)
+        medals_table.sort(key=lambda d: d['country'])
+        # The lambda
+        # expression creates an anonymous function return
+        # uses the parameter list with a single expresion
     elif choice == 'G':
-        medals_table.sort(key=sort_gold, reverse=True)
+        medals_table.sort(key=lambda d: d['gold'], reverse=True)
     elif choice == 'S':
-        medals_table.sort(key=sort_silver, reverse=True)
+        medals_table.sort(key=lambda d: d['silver'], reverse=True)
     elif choice == 'B':
-        medals_table.sort(key=sort_bronze, reverse=True)
+        medals_table.sort(key=lambda d:  d['bronze'], reverse=True)
     elif choice == 'R':
-        medals_table.sort(key=sort_rank)
+        medals_table.sort(key=lambda d: d['rank'])
     else:
         break
 

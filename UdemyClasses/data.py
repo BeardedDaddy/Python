@@ -38,7 +38,7 @@ basic_plants_list = [
     ("Witch Hazel", "Hamamelis", "Deciduous", "Shrubs"),
 ]
 
-plants_list = [
+PLANTS_LIST = [
     Plant("Andromeda", "Pieris japonica", "Evergreen", "Shrub"),
     Plant("Bellflower", "Campanula", "perennial", "Flower"),
     Plant("China Pink", "Dianthus", "Perennial", "Flower"),

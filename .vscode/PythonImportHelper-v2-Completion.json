@@ -301,6 +301,22 @@
         "documentation": {}
     },
     {
+        "label": "plants_list",
+        "importPath": "data",
+        "description": "data",
+        "isExtraImport": true,
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "namedtuple",
         "importPath": "collections",
         "description": "collections",
@@ -2986,6 +3002,60 @@
         "description": "UdemyClasses.contacts",
         "peekOfCode": "cursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print(cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nfor name, phone, email in cursor:\n    print(name)\n    print(phone)\n    print(email)",
         "detail": "UdemyClasses.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "people",
+        "kind": 5,
+        "importPath": "UdemyClasses.data",
+        "description": "UdemyClasses.data",
+        "peekOfCode": "people = [\n    (\"John Cleese\", \"cleese@gmail.com\"),\n    (\"Terry Gilliam\", \"gilliam@gmail.com\"),\n    (\"Eric Idle\", \"\"),\n    (\"Terry Jones\", \"jones@gmail.com\"),\n    (\"Graham Chapman\", \"chapman@gmail.com\"),\n    (\"Michael Palin\", \"\")\n]\n# Named Tuples are described in the documentation\n# https://docs.python.org/3/library/collections.html#collections.namedtuple",
+        "detail": "UdemyClasses.data",
+        "documentation": {}
+    },
+    {
+        "label": "Plant",
+        "kind": 5,
+        "importPath": "UdemyClasses.data",
+        "description": "UdemyClasses.data",
+        "peekOfCode": "Plant = namedtuple('Plant', ['name', 'scientific_name', 'lifecycle', 'plant_type'])\nPlantDetails = namedtuple('PlantDetails', ['scientific_name', 'lifecycle', 'plant_type'])\nbasic_plants_list = [\n    (\"Andromeda\", \"Pieris japonica\", \"Evergreen\", \"Shrub\"),\n    (\"Bellflower\", \"Campanula\", \"perennial\", \"Flower\"),\n    (\"China Pink\", \"Dianthus\", \"Perennial\", \"Flower\"),\n    (\"Daffodil\", \"Narcissus\", \"Perennial\", \"Flower\"),\n    (\"Evening Primrose\", \"Oenothera\", \"Biennial\", \"Flower\"),\n    (\"French Marigold\", \"Tagetes patula\", \"Annual\", \"Flower\"),\n    (\"Golden Hakone Grass\", \"Hakonechloa macra\", \"Perennial\", \"Grass\"),",
+        "detail": "UdemyClasses.data",
+        "documentation": {}
+    },
+    {
+        "label": "PlantDetails",
+        "kind": 5,
+        "importPath": "UdemyClasses.data",
+        "description": "UdemyClasses.data",
+        "peekOfCode": "PlantDetails = namedtuple('PlantDetails', ['scientific_name', 'lifecycle', 'plant_type'])\nbasic_plants_list = [\n    (\"Andromeda\", \"Pieris japonica\", \"Evergreen\", \"Shrub\"),\n    (\"Bellflower\", \"Campanula\", \"perennial\", \"Flower\"),\n    (\"China Pink\", \"Dianthus\", \"Perennial\", \"Flower\"),\n    (\"Daffodil\", \"Narcissus\", \"Perennial\", \"Flower\"),\n    (\"Evening Primrose\", \"Oenothera\", \"Biennial\", \"Flower\"),\n    (\"French Marigold\", \"Tagetes patula\", \"Annual\", \"Flower\"),\n    (\"Golden Hakone Grass\", \"Hakonechloa macra\", \"Perennial\", \"Grass\"),\n    (\"Hydrangea\", \"Hydrangea\", \"evergreen\", \"Shrub\"),",
+        "detail": "UdemyClasses.data",
+        "documentation": {}
+    },
+    {
+        "label": "basic_plants_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.data",
+        "description": "UdemyClasses.data",
+        "peekOfCode": "basic_plants_list = [\n    (\"Andromeda\", \"Pieris japonica\", \"Evergreen\", \"Shrub\"),\n    (\"Bellflower\", \"Campanula\", \"perennial\", \"Flower\"),\n    (\"China Pink\", \"Dianthus\", \"Perennial\", \"Flower\"),\n    (\"Daffodil\", \"Narcissus\", \"Perennial\", \"Flower\"),\n    (\"Evening Primrose\", \"Oenothera\", \"Biennial\", \"Flower\"),\n    (\"French Marigold\", \"Tagetes patula\", \"Annual\", \"Flower\"),\n    (\"Golden Hakone Grass\", \"Hakonechloa macra\", \"Perennial\", \"Grass\"),\n    (\"Hydrangea\", \"Hydrangea\", \"evergreen\", \"Shrub\"),\n    (\"Iris\", \"Iris\", \"Perennial\", \"Flower\"),",
+        "detail": "UdemyClasses.data",
+        "documentation": {}
+    },
+    {
+        "label": "plants_list",
+        "kind": 5,
+        "importPath": "UdemyClasses.data",
+        "description": "UdemyClasses.data",
+        "peekOfCode": "plants_list = [\n    Plant(\"Andromeda\", \"Pieris japonica\", \"Evergreen\", \"Shrub\"),\n    Plant(\"Bellflower\", \"Campanula\", \"perennial\", \"Flower\"),\n    Plant(\"China Pink\", \"Dianthus\", \"Perennial\", \"Flower\"),\n    Plant(\"Daffodil\", \"Narcissus\", \"Perennial\", \"Flower\"),\n    Plant(\"Evening Primrose\", \"Oenothera\", \"Biennial\", \"Flower\"),\n    Plant(\"French Marigold\", \"Tagetes patula\", \"Annual\", \"Flower\"),\n    Plant(\"Golden Hakone Grass\", \"Hakonechloa macra\", \"Perennial\", \"Grass\"),\n    Plant(\"Hydrangea\", \"Hydrangea\", \"evergreen\", \"Shrub\"),\n    Plant(\"Iris\", \"Iris\", \"Perennial\", \"Flower\"),",
+        "detail": "UdemyClasses.data",
+        "documentation": {}
+    },
+    {
+        "label": "plants_dict",
+        "kind": 5,
+        "importPath": "UdemyClasses.data",
+        "description": "UdemyClasses.data",
+        "peekOfCode": "plants_dict = {\n    \"Andromeda\": PlantDetails(\"Pieris japonica\", \"Evergreen\", \"Shrub\"),\n    \"Bellflower\": PlantDetails(\"Campanula\", \"Annual, biennial, perennial\", \"Flower\"),\n    \"China Pink\": PlantDetails(\"Dianthus\", \"Perennial\", \"Flower\"),\n    \"Daffodil\": PlantDetails(\"Narcissus\", \"Perennial\", \"Flower\"),\n    \"Evening Primrose\": PlantDetails(\"Oenothera\", \"Biennial\", \"Flower\"),\n    \"French Marigold\": PlantDetails(\"Tagetes patula\", \"Annual\", \"Flower\"),\n    \"Golden Hakone Grass\": PlantDetails(\"Hakonechloa macra\", \"Perennial\", \"Grass\"),\n    \"Hydrangea\": PlantDetails(\"Hydrangea\", \"Deciduous, evergreen\", \"Shrub\"),\n    \"Iris\": PlantDetails(\"Iris\", \"Perennial\", \"Flower\"),",
+        "detail": "UdemyClasses.data",
         "documentation": {}
     },
     {

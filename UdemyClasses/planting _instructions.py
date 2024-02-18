@@ -10,10 +10,16 @@ from DATA import PLANTS_LIST
 #             WHERE_TO_PLANT = 'window box'
 #         else:
 #             WHERE_TO_PLANT = 'garden'
-            
+
+def sort_perinnials(item) -> str:
+    if item.lifecycle.casefold() == 'perinnial':
+        return '1' + item.name
+    else:
+        return '0' + item.name
+          
 with open("PLANTING_INSTRUCTIONS.txt", 'w', encoding='utf-8') as output_file:
     for plant in PLANTS_LIST:
-        WHERE_TO_PLANT, who = ('window box', 'me') if plant.lifecycle == 'Perinnial' else ('garden', 'gardner')
+        WHERE_TO_PLANT, who = ('window box', 'me') if plant.lifecycle == 'Perinnial' else ('garden', 'gardner')  # noqa
         # if plant.lifecycle == 'Perennial':
         #     WHERE_TO_PLANT = 'window box'
         #     who = 'me'

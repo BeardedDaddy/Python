@@ -656,6 +656,15 @@
         "documentation": {}
     },
     {
+        "label": "tkinter.messagebox",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter.messagebox",
+        "description": "tkinter.messagebox",
+        "detail": "tkinter.messagebox",
+        "documentation": {}
+    },
+    {
         "label": "fnmatch",
         "kind": 6,
         "isExtraImport": true,
@@ -689,15 +698,6 @@
         "importPath": "id3reader_p3",
         "description": "id3reader_p3",
         "detail": "id3reader_p3",
-        "documentation": {}
-    },
-    {
-        "label": "tkinter.messagebox",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "tkinter.messagebox",
-        "description": "tkinter.messagebox",
-        "detail": "tkinter.messagebox",
         "documentation": {}
     },
     {
@@ -4271,6 +4271,33 @@
         "description": "UdemyClasses.__pycache__.preview.PIL.contacts",
         "peekOfCode": "cursor = db.cursor()\ncursor.execute(\"SELECT * FROM contacts\")\n# print(cursor.fetchall())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nprint(cursor.fetchone())\nfor name, phone, email in cursor:\n    print(name)\n    print(phone)\n    print(email)",
         "detail": "UdemyClasses.__pycache__.preview.PIL.contacts",
+        "documentation": {}
+    },
+    {
+        "label": "CalculatorButton",
+        "kind": 6,
+        "importPath": "UdemyClasses.calculator_widgets",
+        "description": "UdemyClasses.calculator_widgets",
+        "peekOfCode": "class CalculatorButton(tk.Button):\n    \"\"\"A button with callback, to be used with a CalculatorGrid widget\"\"\"\n    def __init__(self, master, callback=None, **kwargs):\n        # self.callback = kwargs.pop('callback', None)\n        self.callback = callback\n        super().__init__(master, **kwargs)\n        self.config(command=self.on_click)\ndef on_click(self):\n    if self.callback:\n        self.callback(self['text'])",
+        "detail": "UdemyClasses.calculator_widgets",
+        "documentation": {}
+    },
+    {
+        "label": "on_click",
+        "kind": 2,
+        "importPath": "UdemyClasses.calculator_widgets",
+        "description": "UdemyClasses.calculator_widgets",
+        "peekOfCode": "def on_click(self):\n    if self.callback:\n        self.callback(self['text'])\ndef test():\n    def clicked(caption: str):\n        print(f'{caption} was clicked')\n    main_window = tk.Tk()\n    main_window.title(\"CalculatorButton test\")\n    main_window.geometry('640x480')\n    btn = CalculatorButton(main_window, callback=clicked, text='Test')",
+        "detail": "UdemyClasses.calculator_widgets",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "UdemyClasses.calculator_widgets",
+        "description": "UdemyClasses.calculator_widgets",
+        "peekOfCode": "def test():\n    def clicked(caption: str):\n        print(f'{caption} was clicked')\n    main_window = tk.Tk()\n    main_window.title(\"CalculatorButton test\")\n    main_window.geometry('640x480')\n    btn = CalculatorButton(main_window, callback=clicked, text='Test')\n    btn.grid(row=0, column=0, sticky=\"nsew\")\n    main_window.mainloop()\nif __name__ == '__main__':",
+        "detail": "UdemyClasses.calculator_widgets",
         "documentation": {}
     },
     {

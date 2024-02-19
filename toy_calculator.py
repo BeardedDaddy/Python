@@ -48,9 +48,14 @@ for key_row in keys:
     for key in key_row:
         btn = tk.Button(keypad, text=key[0], width=2,
                         command=lambda char=key[0]: btn_click(char))
+        # btn = tk.Button(keypad, text=key[0], width=2,
+        #                 command=lambda: btn_click(key[0]))
+        # print(lambda: btn_click(key[0]))
         btn.grid(row=row, column=col, columnspan=key[1], sticky=tk.E + tk.W)
         col += key[1]
     row += 1
+
+print(key)
 
 main_window.update()
 main_window.minsize(keypad.winfo_width() + main_window_padding * 2, result.winfo_height() + keypad.winfo_height())  # noqa

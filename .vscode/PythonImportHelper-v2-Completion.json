@@ -4278,16 +4278,16 @@
         "kind": 6,
         "importPath": "UdemyClasses.calculator_widgets",
         "description": "UdemyClasses.calculator_widgets",
-        "peekOfCode": "class CalculatorButton(tk.Button):\n    \"\"\"A button with callback, to be used with a CalculatorGrid widget\"\"\"\n    def __init__(self, master, callback=None, **kwargs):\n        # self.callback = kwargs.pop('callback', None)\n        self.callback = callback\n        super().__init__(master, **kwargs)\n        self.config(command=self.on_click)\ndef on_click(self):\n    if self.callback:\n        self.callback(self['text'])",
+        "peekOfCode": "class CalculatorButton(tk.Button):\n    \"\"\"A button with callback, to be used with a CalculatorGrid widget\"\"\"\n    def __init__(self, master, callback=None, **kwargs):\n        # self.callback = kwargs.pop('callback', None)\n        self.callback = callback\n        super().__init__(master, **kwargs)\n        self.config(command=self.on_click)\n    def on_click(self):\n        if self.callback:\n            self.callback(self['text'])",
         "detail": "UdemyClasses.calculator_widgets",
         "documentation": {}
     },
     {
-        "label": "on_click",
-        "kind": 2,
+        "label": "CalculatorGrid",
+        "kind": 6,
         "importPath": "UdemyClasses.calculator_widgets",
         "description": "UdemyClasses.calculator_widgets",
-        "peekOfCode": "def on_click(self):\n    if self.callback:\n        self.callback(self['text'])\ndef test():\n    def clicked(caption: str):\n        print(f'{caption} was clicked')\n    main_window = tk.Tk()\n    main_window.title(\"CalculatorButton test\")\n    main_window.geometry('640x480')\n    btn = CalculatorButton(main_window, callback=clicked, text='Test')",
+        "peekOfCode": "class CalculatorGrid(tk.Frame):\n    \"\"\"A tinker Frame that displays buttons and implements a simple calculator.\"\"\"  # noqa\n    keys = [[('C', 1), ('CE', 1)],\n            [('7', 1), ('8', 1), ('9', 1), ('+', 1)],\n            [('4', 1), ('5', 1), ('6', 1), ('-', 1)],\n            [('1', 1), ('2', 1), ('3', 1), ('*', 1)],\n            [('0', 1), ('=', 2), ('/', 1)],\n            ]\n    def __init__(self, master, **kwargs):\n        super().__init__(master, **kwargs)",
         "detail": "UdemyClasses.calculator_widgets",
         "documentation": {}
     },

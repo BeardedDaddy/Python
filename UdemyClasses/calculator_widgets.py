@@ -17,6 +17,24 @@ class CalculatorButton(tk.Button):
             self.callback(self['text'])
 
 
+class CalculatorGrid(tk.Frame):
+    """A tinker Frame that displays buttons and implements a simple calculator."""  # noqa
+
+    keys = [[('C', 1), ('CE', 1)],
+            [('7', 1), ('8', 1), ('9', 1), ('+', 1)],
+            [('4', 1), ('5', 1), ('6', 1), ('-', 1)],
+            [('1', 1), ('2', 1), ('3', 1), ('*', 1)],
+            [('0', 1), ('=', 2), ('/', 1)],
+            ]
+    
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
+        
+        max_columns = max(len(row) for row in CalculatorGrid.keys)
+        self.result = tk.Entry(self)
+        self.result.grid(row=0, column=0, columnspan=max_columns, sticky="nsew")
+
+        
 def test():
     def clicked(caption: str):
         print(f'{caption} was clicked')

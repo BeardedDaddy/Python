@@ -34,6 +34,41 @@ class CalculatorGrid(tk.Frame):
         self.result = tk.Entry(self)
         self.result.grid(row=0, column=0, columnspan=max_columns, sticky="nsew")
 
+        # Add the buttons
+        keypad = tk.Frame(self)
+        keypad.grid(row=1, column=0, sticky='nsew')
+
+        row = 0
+        for key_row in CalculatorGrid.keys:
+            col = 0
+            for key in key_row:
+                btn = CalculatorButton(keypad, text=key[0], width=2,
+                                callback=self.on_click)
+                btn.grid(row=row, column=col, columnspan=key[1], sticky=tk.E + tk.W)
+                col += key[1]
+            row += 1
+            
+            
+    def on_click(self, char: str):
+        """Called by a CalculatorButton when it's clicked."""
+        if char == '=':
+            if self.result.get():
+                try:
+                    answer = str(eval(self.result.get()))
+                except SyntaxError:
+                    tk.messagebox.showerror("Error", "Your calculation isn't valid")
+                except ZeroDivisionError:
+                    tk.messagebox.showerror("Error", "You can't divide by zero")
+                else:
+                    self.result.delete(0, tk.END)
+                    self.result.insert(0, answer)
+        elif char == 'C':
+            self.result.delete(0, tk.END)
+        elif char == 'CE':
+            self.result.delete(len(self.result.get())- 1, tk.END)
+        else:
+            self.result.insert(tk.END, char)
+
         
 def test():
     def clicked(caption: str):

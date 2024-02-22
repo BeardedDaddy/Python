@@ -701,6 +701,14 @@
         "documentation": {}
     },
     {
+        "label": "CalculatorGrid",
+        "importPath": "calculator_widgets",
+        "description": "calculator_widgets",
+        "isExtraImport": true,
+        "detail": "calculator_widgets",
+        "documentation": {}
+    },
+    {
         "label": "Example3",
         "kind": 6,
         "importPath": ".trunk.plugins.trunk.linters.autopep8.test_data.basic.in",
@@ -4775,6 +4783,42 @@
         "description": "UdemyClasses.scratchpad",
         "peekOfCode": "b = 3\nprint(f\"a is {a}, b is {b}\")\na, b = 3, 2 # b, a\n# TEMP = a\n# A = b\n# B = TEMP\nprint(f\"a is {a}, b is {b}\")",
         "detail": "UdemyClasses.scratchpad",
+        "documentation": {}
+    },
+    {
+        "label": "main_window_padding",
+        "kind": 5,
+        "importPath": "UdemyClasses.simple_calculator",
+        "description": "UdemyClasses.simple_calculator",
+        "peekOfCode": "main_window_padding = 8\nmain_window = tk.Tk()\nmain_window.title(\"Calculator with subclassed widgets\")\nmain_window.geometry('640x480')\nmain_window['padx'] = main_window_padding\ncalc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')",
+        "detail": "UdemyClasses.simple_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "main_window",
+        "kind": 5,
+        "importPath": "UdemyClasses.simple_calculator",
+        "description": "UdemyClasses.simple_calculator",
+        "peekOfCode": "main_window = tk.Tk()\nmain_window.title(\"Calculator with subclassed widgets\")\nmain_window.geometry('640x480')\nmain_window['padx'] = main_window_padding\ncalc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')",
+        "detail": "UdemyClasses.simple_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "main_window['padx']",
+        "kind": 5,
+        "importPath": "UdemyClasses.simple_calculator",
+        "description": "UdemyClasses.simple_calculator",
+        "peekOfCode": "main_window['padx'] = main_window_padding\ncalc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')",
+        "detail": "UdemyClasses.simple_calculator",
+        "documentation": {}
+    },
+    {
+        "label": "calc",
+        "kind": 5,
+        "importPath": "UdemyClasses.simple_calculator",
+        "description": "UdemyClasses.simple_calculator",
+        "peekOfCode": "calc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')",
+        "detail": "UdemyClasses.simple_calculator",
         "documentation": {}
     },
     {

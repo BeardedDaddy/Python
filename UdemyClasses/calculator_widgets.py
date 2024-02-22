@@ -16,6 +16,20 @@ class CalculatorButton(tk.Button):
         if self.callback:
             self.callback(self['text'])
 
+class CopyLabel(tk.Label):
+    """A Label that allows copying its text to the clipboard."""
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
+        
+        # Bind the double click event to our on_copy method
+        self.bind('<Double-Button-1>', self.on_copy)  
+        
+        
+    def on_copy(self, event):
+        self.clipboard_clear()
+        self.clipboard_append(self['text'])
+        tk.messagebox.showinfo('Clipboard', 'text copied')
+
 
 class CalculatorGrid(tk.Frame):
     """A tinker Frame that displays buttons and implements a simple calculator."""  # noqa
@@ -26,12 +40,14 @@ class CalculatorGrid(tk.Frame):
             [('1', 1), ('2', 1), ('3', 1), ('*', 1)],
             [('0', 1), ('=', 2), ('/', 1)],
             ]
+    # allowed_chars = [key[0] for key_row in keys for key in key_row]
     
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
         
         max_columns = max(len(row) for row in CalculatorGrid.keys)
-        self.result = tk.Entry(self)
+        # self.result = tk.Entry(self)
+        self.result = CopyLabel(self, borderwidth=2, relief='sunken', anchor='w', bg='white')
         self.result.grid(row=0, column=0, columnspan=max_columns, sticky="nsew")
 
         # Add the buttons
@@ -52,22 +68,29 @@ class CalculatorGrid(tk.Frame):
     def on_click(self, char: str):
         """Called by a CalculatorButton when it's clicked."""
         if char == '=':
-            if self.result.get():
+            # if self.result.get() and all(caption in CalculatorGrid.
+            # allowed_chars for caption in self.result.get()):  # noqa
+            if self.result['text']:
                 try:
-                    answer = str(eval(self.result.get()))
+                    # answer = str(eval(self.result.get()))
+                    answer = str(eval(self.result['text']))
                 except SyntaxError:
                     tk.messagebox.showerror("Error", "Your calculation isn't valid")
                 except ZeroDivisionError:
                     tk.messagebox.showerror("Error", "You can't divide by zero")
                 else:
-                    self.result.delete(0, tk.END)
-                    self.result.insert(0, answer)
+                    # self.result.delete(0, tk.END)
+                    # self.result.insert(0, answer)
+                    self.result['text'] = answer
         elif char == 'C':
-            self.result.delete(0, tk.END)
+            # self.result.delete(0, tk.END)
+            self.result['text'] = ''
         elif char == 'CE':
-            self.result.delete(len(self.result.get())- 1, tk.END)
+            # self.result.delete(len(self.result.get())- 1, tk.END)
+            self.result['text'] = self.result['text'][:-1]
         else:
-            self.result.insert(tk.END, char)
+            # self.result.insert(tk.END, char)
+            self.result['text'] += char
 
         
 def test():

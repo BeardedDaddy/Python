@@ -4291,11 +4291,20 @@
         "documentation": {}
     },
     {
+        "label": "CopyLabel",
+        "kind": 6,
+        "importPath": "UdemyClasses.calculator_widgets",
+        "description": "UdemyClasses.calculator_widgets",
+        "peekOfCode": "class CopyLabel(tk.Label):\n    \"\"\"A Label that allows copying its text to the clipboard.\"\"\"\n    def __init__(self, master, **kwargs):\n        super().__init__(master, **kwargs)\n        # Bind the double click event to our on_copy method\n        self.bind('<Double-Button-1>', self.on_copy)  \n    def on_copy(self, event):\n        self.clipboard_clear()\n        self.clipboard_append(self['text'])\n        tk.messagebox.showinfo('Clipboard', 'text copied')",
+        "detail": "UdemyClasses.calculator_widgets",
+        "documentation": {}
+    },
+    {
         "label": "CalculatorGrid",
         "kind": 6,
         "importPath": "UdemyClasses.calculator_widgets",
         "description": "UdemyClasses.calculator_widgets",
-        "peekOfCode": "class CalculatorGrid(tk.Frame):\n    \"\"\"A tinker Frame that displays buttons and implements a simple calculator.\"\"\"  # noqa\n    keys = [[('C', 1), ('CE', 1)],\n            [('7', 1), ('8', 1), ('9', 1), ('+', 1)],\n            [('4', 1), ('5', 1), ('6', 1), ('-', 1)],\n            [('1', 1), ('2', 1), ('3', 1), ('*', 1)],\n            [('0', 1), ('=', 2), ('/', 1)],\n            ]\n    def __init__(self, master, **kwargs):\n        super().__init__(master, **kwargs)",
+        "peekOfCode": "class CalculatorGrid(tk.Frame):\n    \"\"\"A tinker Frame that displays buttons and implements a simple calculator.\"\"\"  # noqa\n    keys = [[('C', 1), ('CE', 1)],\n            [('7', 1), ('8', 1), ('9', 1), ('+', 1)],\n            [('4', 1), ('5', 1), ('6', 1), ('-', 1)],\n            [('1', 1), ('2', 1), ('3', 1), ('*', 1)],\n            [('0', 1), ('=', 2), ('/', 1)],\n            ]\n    # allowed_chars = [key[0] for key_row in keys for key in key_row]\n    def __init__(self, master, **kwargs):",
         "detail": "UdemyClasses.calculator_widgets",
         "documentation": {}
     },
@@ -4790,7 +4799,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.simple_calculator",
         "description": "UdemyClasses.simple_calculator",
-        "peekOfCode": "main_window_padding = 8\nmain_window = tk.Tk()\nmain_window.title(\"Calculator with subclassed widgets\")\nmain_window.geometry('640x480')\nmain_window['padx'] = main_window_padding\ncalc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')",
+        "peekOfCode": "main_window_padding = 8\nmain_window = tk.Tk()\nmain_window.title(\"Calculator with subclassed widgets\")\nmain_window.geometry('640x480')\nmain_window['padx'] = main_window_padding\ncalc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')\nmain_window.mainloop()",
         "detail": "UdemyClasses.simple_calculator",
         "documentation": {}
     },
@@ -4799,7 +4808,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.simple_calculator",
         "description": "UdemyClasses.simple_calculator",
-        "peekOfCode": "main_window = tk.Tk()\nmain_window.title(\"Calculator with subclassed widgets\")\nmain_window.geometry('640x480')\nmain_window['padx'] = main_window_padding\ncalc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')",
+        "peekOfCode": "main_window = tk.Tk()\nmain_window.title(\"Calculator with subclassed widgets\")\nmain_window.geometry('640x480')\nmain_window['padx'] = main_window_padding\ncalc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')\nmain_window.mainloop()",
         "detail": "UdemyClasses.simple_calculator",
         "documentation": {}
     },
@@ -4808,7 +4817,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.simple_calculator",
         "description": "UdemyClasses.simple_calculator",
-        "peekOfCode": "main_window['padx'] = main_window_padding\ncalc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')",
+        "peekOfCode": "main_window['padx'] = main_window_padding\ncalc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')\nmain_window.mainloop()",
         "detail": "UdemyClasses.simple_calculator",
         "documentation": {}
     },
@@ -4817,7 +4826,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.simple_calculator",
         "description": "UdemyClasses.simple_calculator",
-        "peekOfCode": "calc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')",
+        "peekOfCode": "calc = CalculatorGrid(main_window)\ncalc.grid(row=1, column=0, sticky='nsew')\nmain_window.mainloop()",
         "detail": "UdemyClasses.simple_calculator",
         "documentation": {}
     },
@@ -5303,7 +5312,7 @@
         "kind": 5,
         "importPath": "toy_calculator",
         "description": "toy_calculator",
-        "peekOfCode": "main_window_padding = 8\nmain_window = tk.Tk()\nmain_window.title(\"Calculator\")\nmain_window.geometry('640x480-8-200')\nmain_window['padx'] = main_window_padding\nresult = tk.Entry(main_window)\nresult.grid(row=0, column=0, sticky='nsew')\nkeypad = tk.Frame(main_window)\nkeypad.grid(row=1, column=0, sticky='nsew')\nrow = 0",
+        "peekOfCode": "main_window_padding = 8\nmain_window = tk.Tk()\nmain_window.title(\"Calculator\")\nmain_window.geometry('640x480-8-200')\nmain_window['padx'] = main_window_padding\nmain_window.columnconfigure(0, weight=1)\nresult = tk.Entry(main_window)\nresult.grid(row=0, column=0, sticky='nsew')\nkeypad = tk.Frame(main_window)\nkeypad.grid(row=1, column=0, sticky='nsew')",
         "detail": "toy_calculator",
         "documentation": {}
     },
@@ -5312,7 +5321,7 @@
         "kind": 5,
         "importPath": "toy_calculator",
         "description": "toy_calculator",
-        "peekOfCode": "main_window = tk.Tk()\nmain_window.title(\"Calculator\")\nmain_window.geometry('640x480-8-200')\nmain_window['padx'] = main_window_padding\nresult = tk.Entry(main_window)\nresult.grid(row=0, column=0, sticky='nsew')\nkeypad = tk.Frame(main_window)\nkeypad.grid(row=1, column=0, sticky='nsew')\nrow = 0\nfor key_row in keys:",
+        "peekOfCode": "main_window = tk.Tk()\nmain_window.title(\"Calculator\")\nmain_window.geometry('640x480-8-200')\nmain_window['padx'] = main_window_padding\nmain_window.columnconfigure(0, weight=1)\nresult = tk.Entry(main_window)\nresult.grid(row=0, column=0, sticky='nsew')\nkeypad = tk.Frame(main_window)\nkeypad.grid(row=1, column=0, sticky='nsew')\nrow = 0",
         "detail": "toy_calculator",
         "documentation": {}
     },
@@ -5321,7 +5330,7 @@
         "kind": 5,
         "importPath": "toy_calculator",
         "description": "toy_calculator",
-        "peekOfCode": "main_window['padx'] = main_window_padding\nresult = tk.Entry(main_window)\nresult.grid(row=0, column=0, sticky='nsew')\nkeypad = tk.Frame(main_window)\nkeypad.grid(row=1, column=0, sticky='nsew')\nrow = 0\nfor key_row in keys:\n    col = 0\n    for key in key_row:\n        btn = tk.Button(keypad, text=key[0], width=2,",
+        "peekOfCode": "main_window['padx'] = main_window_padding\nmain_window.columnconfigure(0, weight=1)\nresult = tk.Entry(main_window)\nresult.grid(row=0, column=0, sticky='nsew')\nkeypad = tk.Frame(main_window)\nkeypad.grid(row=1, column=0, sticky='nsew')\nrow = 0\nfor key_row in keys:\n    col = 0\n    for key in key_row:",
         "detail": "toy_calculator",
         "documentation": {}
     },

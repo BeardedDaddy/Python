@@ -10,3 +10,5 @@ main_window['padx'] = main_window_padding
 
 calc = CalculatorGrid(main_window)
 calc.grid(row=1, column=0, sticky='nsew')
+
+main_window.mainloop()

@@ -4151,7 +4151,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.map.sort_data_functions",
         "description": "UdemyClasses.map.sort_data_functions",
-        "peekOfCode": "options = {\n    'C': ('country',),\n    'G': ('gold medals',),\n    'S': ('silver medals',),\n    'B': ('bronze medals',),\n    'R': ('rank',),\n}\nwhile True:\n    for option, (description, *_) in options.items():\n        print(f'{option}: Sort by {description}')",
+        "peekOfCode": "options = {\n    'C': ('country', lambda d: d['country'], False),\n    'G': ('gold medals', lambda d: d['gold'],True ),\n    'S': ('silver medals', lambda d: d['silver'],True ),\n    'B': ('bronze medals', lambda d:  d['bronze'],True ),\n    'R': ('rank', lambda d: d['rank'], False),\n}\nwhile True:\n    for option, (description, *_) in options.items():\n        print(f'{option}: Sort by {description}')",
         "detail": "UdemyClasses.map.sort_data_functions",
         "documentation": {}
     },

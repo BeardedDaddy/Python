@@ -1717,6 +1717,33 @@
         "documentation": {}
     },
     {
+        "label": "bubble_sort",
+        "kind": 2,
+        "importPath": "Big_O.bubble_sort",
+        "description": "Big_O.bubble_sort",
+        "peekOfCode": "def bubble_sort(data: list) -> None:\n    \"\"\"Sorts a list in place.\"\"\"\n    n = len(data)\n    comparison_count = 0\n    for i in range(n -1):\n        for i in range(n - 1):\n            comparison_count += 1\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\nx = 1",
+        "detail": "Big_O.bubble_sort",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "Big_O.bubble_sort",
+        "description": "Big_O.bubble_sort",
+        "peekOfCode": "x = 1\ny = 2\nprint(x, y)\nx, y = y, x\nprint(x, y)",
+        "detail": "Big_O.bubble_sort",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "Big_O.bubble_sort",
+        "description": "Big_O.bubble_sort",
+        "peekOfCode": "y = 2\nprint(x, y)\nx, y = y, x\nprint(x, y)",
+        "detail": "Big_O.bubble_sort",
+        "documentation": {}
+    },
+    {
         "label": "conn",
         "kind": 5,
         "importPath": "codemySqlitecourse.database-Bearded-Daddy",

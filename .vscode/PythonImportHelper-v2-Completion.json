@@ -357,6 +357,15 @@
         "documentation": {}
     },
     {
+        "label": "colorama",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "colorama",
+        "description": "colorama",
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
         "label": "sqlite3",
         "kind": 6,
         "isExtraImport": true,
@@ -1717,29 +1726,92 @@
         "documentation": {}
     },
     {
+        "label": "format_data",
+        "kind": 2,
+        "importPath": "Big_O.animated_bubble_sort_1",
+        "description": "Big_O.animated_bubble_sort_1",
+        "peekOfCode": "def format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True\n        result += f\"{val}\"\n        if (position is not None) and (index == position + 1) and inverse:\n            result += colorama.Back.RESET",
+        "detail": "Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "bubble_sort",
+        "kind": 2,
+        "importPath": "Big_O.animated_bubble_sort_1",
+        "description": "Big_O.animated_bubble_sort_1",
+        "peekOfCode": "def bubble_sort(data: list) -> None:\n    \"\"\"Sorts a list in place.\"\"\"\n    n = len(data)\n    comparison_count = 0\n    for i in range(n - 1):\n        swapped = False\n        print(f\"i = {i}. Starting outer loop with {format_data(data)}\")\n        print(end=\"\")\n        for j in range(n - 1 - i):\n            print(f\"{CLEAR_LINE}j = {j}. Starting the inner loop with  {format_data(data, j)}\", end=\"\")",
+        "detail": "Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "CLEAR_SCREEN",
+        "kind": 5,
+        "importPath": "Big_O.animated_bubble_sort_1",
+        "description": "Big_O.animated_bubble_sort_1",
+        "peekOfCode": "CLEAR_SCREEN = '\\u001b[2J'\nSTART_OF_LINE = '\\u001b[1G'\nCLEAR_LINE = f'{START_OF_LINE}\\u001b[0K'\nPREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):",
+        "detail": "Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "START_OF_LINE",
+        "kind": 5,
+        "importPath": "Big_O.animated_bubble_sort_1",
+        "description": "Big_O.animated_bubble_sort_1",
+        "peekOfCode": "START_OF_LINE = '\\u001b[1G'\nCLEAR_LINE = f'{START_OF_LINE}\\u001b[0K'\nPREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX",
+        "detail": "Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "CLEAR_LINE",
+        "kind": 5,
+        "importPath": "Big_O.animated_bubble_sort_1",
+        "description": "Big_O.animated_bubble_sort_1",
+        "peekOfCode": "CLEAR_LINE = f'{START_OF_LINE}\\u001b[0K'\nPREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True",
+        "detail": "Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "PREVIOUS_LINE",
+        "kind": 5,
+        "importPath": "Big_O.animated_bubble_sort_1",
+        "description": "Big_O.animated_bubble_sort_1",
+        "peekOfCode": "PREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True\n        result += f\"{val}\"",
+        "detail": "Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "HIDE_CURSOR",
+        "kind": 5,
+        "importPath": "Big_O.animated_bubble_sort_1",
+        "description": "Big_O.animated_bubble_sort_1",
+        "peekOfCode": "HIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True\n        result += f\"{val}\"\n        if (position is not None) and (index == position + 1) and inverse:",
+        "detail": "Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "Big_O.animated_bubble_sort_1",
+        "description": "Big_O.animated_bubble_sort_1",
+        "peekOfCode": "numbers = [1, 2, 3, 4, 6, 5, 7]\nprint(f\"{CLEAR_SCREEN}{HIDE_CURSOR}Sorting {format_data(numbers)}\")\nbubble_sort(numbers)\nprint(f\"The sorted data is {format_data(numbers)}\")\ncolorama.deinit()",
+        "detail": "Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
         "label": "bubble_sort",
         "kind": 2,
         "importPath": "Big_O.bubble_sort",
         "description": "Big_O.bubble_sort",
-        "peekOfCode": "def bubble_sort(data: list) -> None:\n    \"\"\"Sorts a list in place.\"\"\"\n    n = len(data)\n    comparison_count = 0\n    for i in range(n -1):\n        for i in range(n - 1):\n            comparison_count += 1\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]\nx = 1",
+        "peekOfCode": "def bubble_sort(data: list) -> None:\n    \"\"\"Sorts a list in place.\"\"\"\n    n = len(data)\n    comparison_count = 0\n    for i in range(n -1):\n        swapped = False\n        for j in range(n - 1 - i):\n            comparison_count += 1\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]",
         "detail": "Big_O.bubble_sort",
         "documentation": {}
     },
     {
-        "label": "x",
+        "label": "numbers",
         "kind": 5,
         "importPath": "Big_O.bubble_sort",
         "description": "Big_O.bubble_sort",
-        "peekOfCode": "x = 1\ny = 2\nprint(x, y)\nx, y = y, x\nprint(x, y)",
-        "detail": "Big_O.bubble_sort",
-        "documentation": {}
-    },
-    {
-        "label": "y",
-        "kind": 5,
-        "importPath": "Big_O.bubble_sort",
-        "description": "Big_O.bubble_sort",
-        "peekOfCode": "y = 2\nprint(x, y)\nx, y = y, x\nprint(x, y)",
+        "peekOfCode": "numbers = [7, 6, 5, 4, 3, 2, 1]\n# numbers = [1, 2, 3, 4, 6, 5, 7]\n# numbers = [1, 2, 3, 4, 5, 6, 7]\n# numbers = list(range(70, 0, -1))\nprint(len(numbers))\nprint(f\"Sorting {numbers}\")\nbubble_sort(numbers)\nprint(f\"The sorted data is {numbers}\")\n# x = 1\n# y = 2",
         "detail": "Big_O.bubble_sort",
         "documentation": {}
     },

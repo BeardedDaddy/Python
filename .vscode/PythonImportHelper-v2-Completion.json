@@ -357,15 +357,6 @@
         "documentation": {}
     },
     {
-        "label": "colorama",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "colorama",
-        "description": "colorama",
-        "detail": "colorama",
-        "documentation": {}
-    },
-    {
         "label": "sqlite3",
         "kind": 6,
         "isExtraImport": true,
@@ -566,6 +557,15 @@
         "documentation": {}
     },
     {
+        "label": "colorama",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "colorama",
+        "description": "colorama",
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
         "label": "blackjack",
         "kind": 6,
         "isExtraImport": true,
@@ -662,6 +662,40 @@
         "importPath": "functools",
         "description": "functools",
         "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "turtle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "turtle",
+        "description": "turtle",
+        "detail": "turtle",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "radians",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "cos",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
         "documentation": {}
     },
     {
@@ -1726,96 +1760,6 @@
         "documentation": {}
     },
     {
-        "label": "format_data",
-        "kind": 2,
-        "importPath": "Big_O.animated_bubble_sort_1",
-        "description": "Big_O.animated_bubble_sort_1",
-        "peekOfCode": "def format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True\n        result += f\"{val}\"\n        if (position is not None) and (index == position + 1) and inverse:\n            result += colorama.Back.RESET",
-        "detail": "Big_O.animated_bubble_sort_1",
-        "documentation": {}
-    },
-    {
-        "label": "bubble_sort",
-        "kind": 2,
-        "importPath": "Big_O.animated_bubble_sort_1",
-        "description": "Big_O.animated_bubble_sort_1",
-        "peekOfCode": "def bubble_sort(data: list) -> None:\n    \"\"\"Sorts a list in place.\"\"\"\n    n = len(data)\n    comparison_count = 0\n    for i in range(n - 1):\n        swapped = False\n        print(f\"i = {i}. Starting outer loop with {format_data(data)}\")\n        print(end=\"\")\n        for j in range(n - 1 - i):\n            print(f\"{CLEAR_LINE}j = {j}. Starting the inner loop with  {format_data(data, j)}\", end=\"\")",
-        "detail": "Big_O.animated_bubble_sort_1",
-        "documentation": {}
-    },
-    {
-        "label": "CLEAR_SCREEN",
-        "kind": 5,
-        "importPath": "Big_O.animated_bubble_sort_1",
-        "description": "Big_O.animated_bubble_sort_1",
-        "peekOfCode": "CLEAR_SCREEN = '\\u001b[2J'\nSTART_OF_LINE = '\\u001b[1G'\nCLEAR_LINE = f'{START_OF_LINE}\\u001b[0K'\nPREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):",
-        "detail": "Big_O.animated_bubble_sort_1",
-        "documentation": {}
-    },
-    {
-        "label": "START_OF_LINE",
-        "kind": 5,
-        "importPath": "Big_O.animated_bubble_sort_1",
-        "description": "Big_O.animated_bubble_sort_1",
-        "peekOfCode": "START_OF_LINE = '\\u001b[1G'\nCLEAR_LINE = f'{START_OF_LINE}\\u001b[0K'\nPREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX",
-        "detail": "Big_O.animated_bubble_sort_1",
-        "documentation": {}
-    },
-    {
-        "label": "CLEAR_LINE",
-        "kind": 5,
-        "importPath": "Big_O.animated_bubble_sort_1",
-        "description": "Big_O.animated_bubble_sort_1",
-        "peekOfCode": "CLEAR_LINE = f'{START_OF_LINE}\\u001b[0K'\nPREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True",
-        "detail": "Big_O.animated_bubble_sort_1",
-        "documentation": {}
-    },
-    {
-        "label": "PREVIOUS_LINE",
-        "kind": 5,
-        "importPath": "Big_O.animated_bubble_sort_1",
-        "description": "Big_O.animated_bubble_sort_1",
-        "peekOfCode": "PREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True\n        result += f\"{val}\"",
-        "detail": "Big_O.animated_bubble_sort_1",
-        "documentation": {}
-    },
-    {
-        "label": "HIDE_CURSOR",
-        "kind": 5,
-        "importPath": "Big_O.animated_bubble_sort_1",
-        "description": "Big_O.animated_bubble_sort_1",
-        "peekOfCode": "HIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True\n        result += f\"{val}\"\n        if (position is not None) and (index == position + 1) and inverse:",
-        "detail": "Big_O.animated_bubble_sort_1",
-        "documentation": {}
-    },
-    {
-        "label": "numbers",
-        "kind": 5,
-        "importPath": "Big_O.animated_bubble_sort_1",
-        "description": "Big_O.animated_bubble_sort_1",
-        "peekOfCode": "numbers = [1, 2, 3, 4, 6, 5, 7]\nprint(f\"{CLEAR_SCREEN}{HIDE_CURSOR}Sorting {format_data(numbers)}\")\nbubble_sort(numbers)\nprint(f\"The sorted data is {format_data(numbers)}\")\ncolorama.deinit()",
-        "detail": "Big_O.animated_bubble_sort_1",
-        "documentation": {}
-    },
-    {
-        "label": "bubble_sort",
-        "kind": 2,
-        "importPath": "Big_O.bubble_sort",
-        "description": "Big_O.bubble_sort",
-        "peekOfCode": "def bubble_sort(data: list) -> None:\n    \"\"\"Sorts a list in place.\"\"\"\n    n = len(data)\n    comparison_count = 0\n    for i in range(n -1):\n        swapped = False\n        for j in range(n - 1 - i):\n            comparison_count += 1\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]",
-        "detail": "Big_O.bubble_sort",
-        "documentation": {}
-    },
-    {
-        "label": "numbers",
-        "kind": 5,
-        "importPath": "Big_O.bubble_sort",
-        "description": "Big_O.bubble_sort",
-        "peekOfCode": "numbers = [7, 6, 5, 4, 3, 2, 1]\n# numbers = [1, 2, 3, 4, 6, 5, 7]\n# numbers = [1, 2, 3, 4, 5, 6, 7]\n# numbers = list(range(70, 0, -1))\nprint(len(numbers))\nprint(f\"Sorting {numbers}\")\nbubble_sort(numbers)\nprint(f\"The sorted data is {numbers}\")\n# x = 1\n# y = 2",
-        "detail": "Big_O.bubble_sort",
-        "documentation": {}
-    },
-    {
         "label": "conn",
         "kind": 5,
         "importPath": "codemySqlitecourse.database-Bearded-Daddy",
@@ -2857,6 +2801,96 @@
         "description": "Sequences.unpacking",
         "peekOfCode": "data_list = [12, 13, 14]\ndata_list.append(15)\np, q, r = data_list\nprint(p)\nprint(q)\nprint(r)",
         "detail": "Sequences.unpacking",
+        "documentation": {}
+    },
+    {
+        "label": "format_data",
+        "kind": 2,
+        "importPath": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "description": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "peekOfCode": "def format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True\n        result += f\"{val}\"\n        if (position is not None) and (index == position + 1) and inverse:\n            result += colorama.Back.RESET",
+        "detail": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "bubble_sort",
+        "kind": 2,
+        "importPath": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "description": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "peekOfCode": "def bubble_sort(data: list) -> None:\n    \"\"\"Sorts a list in place.\"\"\"\n    n = len(data)\n    comparison_count = 0\n    for i in range(n - 1):\n        swapped = False\n        print(f\"i = {i}. Starting outer loop with {format_data(data)}\")\n        print(end=\"\")\n        for j in range(n - 1 - i):\n            print(f\"{CLEAR_LINE}j = {j}. Starting the inner loop with  {format_data(data, j)}\", end=\"\")",
+        "detail": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "CLEAR_SCREEN",
+        "kind": 5,
+        "importPath": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "description": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "peekOfCode": "CLEAR_SCREEN = '\\u001b[2J'\nSTART_OF_LINE = '\\u001b[1G'\nCLEAR_LINE = f'{START_OF_LINE}\\u001b[0K'\nPREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):",
+        "detail": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "START_OF_LINE",
+        "kind": 5,
+        "importPath": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "description": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "peekOfCode": "START_OF_LINE = '\\u001b[1G'\nCLEAR_LINE = f'{START_OF_LINE}\\u001b[0K'\nPREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX",
+        "detail": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "CLEAR_LINE",
+        "kind": 5,
+        "importPath": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "description": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "peekOfCode": "CLEAR_LINE = f'{START_OF_LINE}\\u001b[0K'\nPREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True",
+        "detail": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "PREVIOUS_LINE",
+        "kind": 5,
+        "importPath": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "description": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "peekOfCode": "PREVIOUS_LINE = colorama.Cursor.UP(1)\nHIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True\n        result += f\"{val}\"",
+        "detail": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "HIDE_CURSOR",
+        "kind": 5,
+        "importPath": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "description": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "peekOfCode": "HIDE_CURSOR = '\\u001b[?25l'\ndef format_data(data, position=None):\n    result = \"[ \"\n    inverse = False\n    for index, val in enumerate(data):\n        if (position is not None) and (position == index):\n            result += colorama.Back.LIGHTYELLOW_EX\n            inverse = True\n        result += f\"{val}\"\n        if (position is not None) and (index == position + 1) and inverse:",
+        "detail": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "description": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "peekOfCode": "numbers = [1, 2, 3, 4, 6, 5, 7]\nprint(f\"{CLEAR_SCREEN}{HIDE_CURSOR}Sorting {format_data(numbers)}\")\nbubble_sort(numbers)\nprint(f\"The sorted data is {format_data(numbers)}\")\ncolorama.deinit()",
+        "detail": "UdemyClasses.Big_O.animated_bubble_sort_1",
+        "documentation": {}
+    },
+    {
+        "label": "bubble_sort",
+        "kind": 2,
+        "importPath": "UdemyClasses.Big_O.bubble_sort",
+        "description": "UdemyClasses.Big_O.bubble_sort",
+        "peekOfCode": "def bubble_sort(data: list) -> None:\n    \"\"\"Sorts a list in place.\"\"\"\n    n = len(data)\n    comparison_count = 0\n    for i in range(n -1):\n        swapped = False\n        for j in range(n - 1 - i):\n            comparison_count += 1\n            if data[j] > data[j + 1]:\n                data[j], data[j + 1] = data[j + 1], data[j]",
+        "detail": "UdemyClasses.Big_O.bubble_sort",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "UdemyClasses.Big_O.bubble_sort",
+        "description": "UdemyClasses.Big_O.bubble_sort",
+        "peekOfCode": "numbers = [7, 6, 5, 4, 3, 2, 1]\n# numbers = [1, 2, 3, 4, 6, 5, 7]\n# numbers = [1, 2, 3, 4, 5, 6, 7]\n# numbers = list(range(70, 0, -1))\nprint(len(numbers))\nprint(f\"Sorting {numbers}\")\nbubble_sort(numbers)\nprint(f\"The sorted data is {numbers}\")\n# x = 1\n# y = 2",
+        "detail": "UdemyClasses.Big_O.bubble_sort",
         "documentation": {}
     },
     {
@@ -4255,6 +4289,24 @@
         "documentation": {}
     },
     {
+        "label": "square",
+        "kind": 2,
+        "importPath": "UdemyClasses.ModulesAndFunctions.import_turtle",
+        "description": "UdemyClasses.ModulesAndFunctions.import_turtle",
+        "peekOfCode": "def square(length: int) -> None:\n    \"\"\"Draws a square of length `length`\"\"\"\n    for side in range(4):\n        turtle.forward(length)\n        turtle.right(90)\ndef encircled_square(length: int) -> None:\n    \"\"\"Draws a square of length `length`,\n    then encloses it in a circle.\n    \"\"\"\n    square(length)",
+        "detail": "UdemyClasses.ModulesAndFunctions.import_turtle",
+        "documentation": {}
+    },
+    {
+        "label": "encircled_square",
+        "kind": 2,
+        "importPath": "UdemyClasses.ModulesAndFunctions.import_turtle",
+        "description": "UdemyClasses.ModulesAndFunctions.import_turtle",
+        "peekOfCode": "def encircled_square(length: int) -> None:\n    \"\"\"Draws a square of length `length`,\n    then encloses it in a circle.\n    \"\"\"\n    square(length)\n    angle = math.radians(45)\n    radius = length * math.cos(angle)\n    turtle.right(135)\n    turtle.circle(radius)\nencircled_square(300)",
+        "detail": "UdemyClasses.ModulesAndFunctions.import_turtle",
+        "documentation": {}
+    },
+    {
         "label": "Scrollbox",
         "kind": 6,
         "importPath": "UdemyClasses.MusicBrowser.jukebox",
@@ -5233,6 +5285,24 @@
         "description": "EscapeChar",
         "peekOfCode": "anotherString = \"\"\"This string has been \\\nsplit over \\\nseveral \\\nlines\"\"\"\nprint(anotherString)\nprint(\"C:\\\\Users\\\\grevymarcelin\\\\notes.txt\")\nprint(r\"C:\\Users\\grevymarcelin\\notes.txt\")",
         "detail": "EscapeChar",
+        "documentation": {}
+    },
+    {
+        "label": "square",
+        "kind": 2,
+        "importPath": "import_turtle",
+        "description": "import_turtle",
+        "peekOfCode": "def square(length: int) -> None:\n    \"\"\"Draws a square of lenght 'length'\"\"\"\n    for side in range(4):\n        turtle.forward(length)\n        turtle.right(90)\ndef encircled_square(length: int)-> None:\n    \"\"\"Draws a square of length 'length',\n    then encloses it in a circle.\"\"\"\n    square(length)\n    angle = radians(45)",
+        "detail": "import_turtle",
+        "documentation": {}
+    },
+    {
+        "label": "encircled_square",
+        "kind": 2,
+        "importPath": "import_turtle",
+        "description": "import_turtle",
+        "peekOfCode": "def encircled_square(length: int)-> None:\n    \"\"\"Draws a square of length 'length',\n    then encloses it in a circle.\"\"\"\n    square(length)\n    angle = radians(45)\n    radius = length * cos(angle)\n    turtle.right(135)\n    turtle.circle(radius)\n    turtle.left(135)\n    print(f'Inside fucntion, namespace is: {dir()}')",
+        "detail": "import_turtle",
         "documentation": {}
     },
     {

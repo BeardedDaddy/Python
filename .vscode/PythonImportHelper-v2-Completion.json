@@ -4289,6 +4289,51 @@
         "documentation": {}
     },
     {
+        "label": "area_of_square",
+        "kind": 2,
+        "importPath": "UdemyClasses.ModulesAndFunctions.bad_code",
+        "description": "UdemyClasses.ModulesAndFunctions.bad_code",
+        "peekOfCode": "def area_of_square(length: float):\n    global area\n    area = length * length\narea_of_square(30)\nprint(f'The area is {area}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.bad_code",
+        "documentation": {}
+    },
+    {
+        "label": "this_area",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.bad_code",
+        "description": "UdemyClasses.ModulesAndFunctions.bad_code",
+        "peekOfCode": "this_area = 0\ndef area_of_square(length: float):\n    global area\n    area = length * length\narea_of_square(30)\nprint(f'The area is {area}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.bad_code",
+        "documentation": {}
+    },
+    {
+        "label": "area_of_square",
+        "kind": 2,
+        "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
+        "description": "UdemyClasses.ModulesAndFunctions.better_code",
+        "peekOfCode": "def area_of_square():\n    global area\n    area = length * length\narea_of_square()\nprint(f'The area is {area}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.better_code",
+        "documentation": {}
+    },
+    {
+        "label": "area",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
+        "description": "UdemyClasses.ModulesAndFunctions.better_code",
+        "peekOfCode": "area = 0\nlength = 30\ndef area_of_square():\n    global area\n    area = length * length\narea_of_square()\nprint(f'The area is {area}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.better_code",
+        "documentation": {}
+    },
+    {
+        "label": "length",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
+        "description": "UdemyClasses.ModulesAndFunctions.better_code",
+        "peekOfCode": "length = 30\ndef area_of_square():\n    global area\n    area = length * length\narea_of_square()\nprint(f'The area is {area}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.better_code",
+        "documentation": {}
+    },
+    {
         "label": "square",
         "kind": 2,
         "importPath": "UdemyClasses.ModulesAndFunctions.import_turtle",
@@ -4304,6 +4349,24 @@
         "description": "UdemyClasses.ModulesAndFunctions.import_turtle",
         "peekOfCode": "def encircled_square(length: int) -> None:\n    \"\"\"Draws a square of length `length`,\n    then encloses it in a circle.\n    \"\"\"\n    square(length)\n    angle = math.radians(45)\n    radius = length * math.cos(angle)\n    turtle.right(135)\n    turtle.circle(radius)\nencircled_square(300)",
         "detail": "UdemyClasses.ModulesAndFunctions.import_turtle",
+        "documentation": {}
+    },
+    {
+        "label": "greet_pythons",
+        "kind": 2,
+        "importPath": "UdemyClasses.ModulesAndFunctions.nested_function_1",
+        "description": "UdemyClasses.ModulesAndFunctions.nested_function_1",
+        "peekOfCode": "def greet_pythons(items: list) -> None:\n    greeting = 'Hello'\n    print(f'The ID of \"greeting\" in \"greet_python\" is {id(greeting)}')\n    print(f'local namespace in \"greet_python\"(1): {locals()}')\n    def make_greeting(item: str) -> str: # This a nested funtion which also makes it a local namespace  # noqa\n        nonlocal greeting\n        print(f'local namespace in \"make_greeting\"(1): {locals()}')\n        greeting = 'Hi'\n        print(f'The ID of \"greeting\" in \"make_greeting\" is {id(greeting)}')\n        print(f'local namespace in \"greet_python\"(2): {locals()}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.nested_function_1",
+        "documentation": {}
+    },
+    {
+        "label": "names",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.nested_function_1",
+        "description": "UdemyClasses.ModulesAndFunctions.nested_function_1",
+        "peekOfCode": "names = ['John']  # , 'Eric', 'Graham', 'Terry', 'Terry', 'Michael']\ngreet_pythons(names)\nprint(f'local namespace in \"greet_python\"(1): {locals()}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.nested_function_1",
         "documentation": {}
     },
     {

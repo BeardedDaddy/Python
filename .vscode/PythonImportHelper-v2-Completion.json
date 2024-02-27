@@ -665,6 +665,31 @@
         "documentation": {}
     },
     {
+        "label": "better_code",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "better_code",
+        "description": "better_code",
+        "detail": "better_code",
+        "documentation": {}
+    },
+    {
+        "label": "area_of_square",
+        "importPath": "better_code",
+        "description": "better_code",
+        "isExtraImport": true,
+        "detail": "better_code",
+        "documentation": {}
+    },
+    {
+        "label": "area_of_square",
+        "importPath": "better_code",
+        "description": "better_code",
+        "isExtraImport": true,
+        "detail": "better_code",
+        "documentation": {}
+    },
+    {
         "label": "turtle",
         "kind": 6,
         "isExtraImport": true,
@@ -4311,7 +4336,7 @@
         "kind": 2,
         "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
         "description": "UdemyClasses.ModulesAndFunctions.better_code",
-        "peekOfCode": "def area_of_square():\n    global area\n    area = length * length\narea_of_square()\nprint(f'The area is {area}')",
+        "peekOfCode": "def area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\narea = area_of_square(30)\nprint(f'The area is {area}')",
         "detail": "UdemyClasses.ModulesAndFunctions.better_code",
         "documentation": {}
     },
@@ -4320,7 +4345,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
         "description": "UdemyClasses.ModulesAndFunctions.better_code",
-        "peekOfCode": "area = 0\nlength = 30\ndef area_of_square():\n    global area\n    area = length * length\narea_of_square()\nprint(f'The area is {area}')",
+        "peekOfCode": "area = 0\nlength = 30\ndef area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\narea = area_of_square(30)\nprint(f'The area is {area}')",
         "detail": "UdemyClasses.ModulesAndFunctions.better_code",
         "documentation": {}
     },
@@ -4329,8 +4354,71 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
         "description": "UdemyClasses.ModulesAndFunctions.better_code",
-        "peekOfCode": "length = 30\ndef area_of_square():\n    global area\n    area = length * length\narea_of_square()\nprint(f'The area is {area}')",
+        "peekOfCode": "length = 30\ndef area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\narea = area_of_square(30)\nprint(f'The area is {area}')",
         "detail": "UdemyClasses.ModulesAndFunctions.better_code",
+        "documentation": {}
+    },
+    {
+        "label": "area",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
+        "description": "UdemyClasses.ModulesAndFunctions.better_code",
+        "peekOfCode": "area = area_of_square(30)\nprint(f'The area is {area}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.better_code",
+        "documentation": {}
+    },
+    {
+        "label": "area",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.break_globals",
+        "description": "UdemyClasses.ModulesAndFunctions.break_globals",
+        "peekOfCode": "area = better_code.area_of_square(40)\narea = area_of_square(40)\nprint(area)\nprint(\"Global namespace\")\nnamespace = globals()   # .copy()\nfor name, obj in namespace.items(): # This line is creating two new variables name and obj.  # noqa\n    print(name, obj)",
+        "detail": "UdemyClasses.ModulesAndFunctions.break_globals",
+        "documentation": {}
+    },
+    {
+        "label": "area",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.break_globals",
+        "description": "UdemyClasses.ModulesAndFunctions.break_globals",
+        "peekOfCode": "area = area_of_square(40)\nprint(area)\nprint(\"Global namespace\")\nnamespace = globals()   # .copy()\nfor name, obj in namespace.items(): # This line is creating two new variables name and obj.  # noqa\n    print(name, obj)",
+        "detail": "UdemyClasses.ModulesAndFunctions.break_globals",
+        "documentation": {}
+    },
+    {
+        "label": "namespace",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.break_globals",
+        "description": "UdemyClasses.ModulesAndFunctions.break_globals",
+        "peekOfCode": "namespace = globals()   # .copy()\nfor name, obj in namespace.items(): # This line is creating two new variables name and obj.  # noqa\n    print(name, obj)",
+        "detail": "UdemyClasses.ModulesAndFunctions.break_globals",
+        "documentation": {}
+    },
+    {
+        "label": "area",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.importing",
+        "description": "UdemyClasses.ModulesAndFunctions.importing",
+        "peekOfCode": "area = better_code.area_of_square(40)\narea = area_of_square(40)\nprint(area)\nprint(\"Global namespace\")\nnamespace = globals().copy()\nfor name, obj in namespace.items():\n    print(name, obj)",
+        "detail": "UdemyClasses.ModulesAndFunctions.importing",
+        "documentation": {}
+    },
+    {
+        "label": "area",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.importing",
+        "description": "UdemyClasses.ModulesAndFunctions.importing",
+        "peekOfCode": "area = area_of_square(40)\nprint(area)\nprint(\"Global namespace\")\nnamespace = globals().copy()\nfor name, obj in namespace.items():\n    print(name, obj)",
+        "detail": "UdemyClasses.ModulesAndFunctions.importing",
+        "documentation": {}
+    },
+    {
+        "label": "namespace",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.importing",
+        "description": "UdemyClasses.ModulesAndFunctions.importing",
+        "peekOfCode": "namespace = globals().copy()\nfor name, obj in namespace.items():\n    print(name, obj)",
+        "detail": "UdemyClasses.ModulesAndFunctions.importing",
         "documentation": {}
     },
     {

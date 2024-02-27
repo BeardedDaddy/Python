@@ -5306,6 +5306,15 @@
         "documentation": {}
     },
     {
+        "label": "g",
+        "kind": 5,
+        "importPath": "import_turtle",
+        "description": "import_turtle",
+        "peekOfCode": "g = globals()\nprint(g['square'])\nprint(dir(__builtins__))",
+        "detail": "import_turtle",
+        "documentation": {}
+    },
+    {
         "label": "name",
         "kind": 5,
         "importPath": "moreprint",

@@ -31,7 +31,7 @@ def encircled_square(length: int)-> None:
     print(f'locals: {locals()}')
     
     
-encircled_square(300)
+# encircled_square(300)
 # turtle.speed('fast')
 # for s in range(72):
 #     encircled_square(120)
@@ -40,3 +40,7 @@ encircled_square(300)
 # turtle.done()
 
 print(dir())
+g = globals()
+print(g['square'])
+
+print(dir(__builtins__))

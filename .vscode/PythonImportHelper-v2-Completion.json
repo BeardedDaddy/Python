@@ -699,11 +699,26 @@
         "documentation": {}
     },
     {
-        "label": "math",
-        "kind": 6,
+        "label": "*",
+        "importPath": "turtle",
+        "description": "turtle",
         "isExtraImport": true,
+        "detail": "turtle",
+        "documentation": {}
+    },
+    {
+        "label": "radians",
         "importPath": "math",
         "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "cos",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
         "detail": "math",
         "documentation": {}
     },
@@ -4336,7 +4351,7 @@
         "kind": 2,
         "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
         "description": "UdemyClasses.ModulesAndFunctions.better_code",
-        "peekOfCode": "def area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\narea = area_of_square(30)\nprint(f'The area is {area}')",
+        "peekOfCode": "def area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\nif __name__ == '__main__':\n    area = area_of_square(30)\n    print(f'The area is {area}')\n    print(f'in better_code.py, __name__ is {__name__}')",
         "detail": "UdemyClasses.ModulesAndFunctions.better_code",
         "documentation": {}
     },
@@ -4345,7 +4360,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
         "description": "UdemyClasses.ModulesAndFunctions.better_code",
-        "peekOfCode": "area = 0\nlength = 30\ndef area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\narea = area_of_square(30)\nprint(f'The area is {area}')",
+        "peekOfCode": "area = 0\nlength = 30\ndef area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\nif __name__ == '__main__':\n    area = area_of_square(30)\n    print(f'The area is {area}')\n    print(f'in better_code.py, __name__ is {__name__}')",
         "detail": "UdemyClasses.ModulesAndFunctions.better_code",
         "documentation": {}
     },
@@ -4354,16 +4369,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
         "description": "UdemyClasses.ModulesAndFunctions.better_code",
-        "peekOfCode": "length = 30\ndef area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\narea = area_of_square(30)\nprint(f'The area is {area}')",
-        "detail": "UdemyClasses.ModulesAndFunctions.better_code",
-        "documentation": {}
-    },
-    {
-        "label": "area",
-        "kind": 5,
-        "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
-        "description": "UdemyClasses.ModulesAndFunctions.better_code",
-        "peekOfCode": "area = area_of_square(30)\nprint(f'The area is {area}')",
+        "peekOfCode": "length = 30\ndef area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\nif __name__ == '__main__':\n    area = area_of_square(30)\n    print(f'The area is {area}')\n    print(f'in better_code.py, __name__ is {__name__}')",
         "detail": "UdemyClasses.ModulesAndFunctions.better_code",
         "documentation": {}
     },
@@ -4426,7 +4432,7 @@
         "kind": 2,
         "importPath": "UdemyClasses.ModulesAndFunctions.import_turtle",
         "description": "UdemyClasses.ModulesAndFunctions.import_turtle",
-        "peekOfCode": "def square(length: int) -> None:\n    \"\"\"Draws a square of length `length`\"\"\"\n    for side in range(4):\n        turtle.forward(length)\n        turtle.right(90)\ndef encircled_square(length: int) -> None:\n    \"\"\"Draws a square of length `length`,\n    then encloses it in a circle.\n    \"\"\"\n    square(length)",
+        "peekOfCode": "def square(length: int) -> None:\n    \"\"\"Draws a square of length `length`\"\"\"\n    for side in range(4):\n        forward(length)\n        right(90)\ndef encircled_square(length: int) -> None:\n    \"\"\"Draws a square of length `length`,\n    then encloses it in a circle.\n    \"\"\"\n    square(length)",
         "detail": "UdemyClasses.ModulesAndFunctions.import_turtle",
         "documentation": {}
     },
@@ -4435,7 +4441,16 @@
         "kind": 2,
         "importPath": "UdemyClasses.ModulesAndFunctions.import_turtle",
         "description": "UdemyClasses.ModulesAndFunctions.import_turtle",
-        "peekOfCode": "def encircled_square(length: int) -> None:\n    \"\"\"Draws a square of length `length`,\n    then encloses it in a circle.\n    \"\"\"\n    square(length)\n    angle = math.radians(45)\n    radius = length * math.cos(angle)\n    turtle.right(135)\n    turtle.circle(radius)\nencircled_square(300)",
+        "peekOfCode": "def encircled_square(length: int) -> None:\n    \"\"\"Draws a square of length `length`,\n    then encloses it in a circle.\n    \"\"\"\n    square(length)\n    angle = radians(45)\n    radius = length * cos(angle)\n    right(135)\n    circle(radius)\n    left(135)",
+        "detail": "UdemyClasses.ModulesAndFunctions.import_turtle",
+        "documentation": {}
+    },
+    {
+        "label": "g",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.import_turtle",
+        "description": "UdemyClasses.ModulesAndFunctions.import_turtle",
+        "peekOfCode": "g = globals()\nprint(g['square'])\nprint(dir(__builtins__))",
         "detail": "UdemyClasses.ModulesAndFunctions.import_turtle",
         "documentation": {}
     },

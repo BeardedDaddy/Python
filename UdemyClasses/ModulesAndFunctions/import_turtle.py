@@ -13,9 +13,11 @@ from math import radians, cos
 
 def square(length: int) -> None:
     """Draws a square of length `length`"""
+    inner_forward = forward
+    inner_right = right
     for side in range(4):
-        forward(length)
-        right(90)
+        inner_forward(length)
+        inner_right(90)
 
 
 def encircled_square(length: int) -> None:
@@ -33,10 +35,13 @@ def encircled_square(length: int) -> None:
 
 # encircled_square(300)
 speed('fast')
+Screen().tracer(0) # disable turtle animation
+
 for s in range(72):
     encircled_square(100)
     left(5)
-
+    
+Screen().update()  # update the screen
 done()
 
 print(dir())

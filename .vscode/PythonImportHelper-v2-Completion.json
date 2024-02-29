@@ -690,6 +690,15 @@
         "documentation": {}
     },
     {
+        "label": "locale",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "locale",
+        "description": "locale",
+        "detail": "locale",
+        "documentation": {}
+    },
+    {
         "label": "turtle",
         "kind": 6,
         "isExtraImport": true,
@@ -4356,11 +4365,11 @@
         "documentation": {}
     },
     {
-        "label": "this_area",
+        "label": "area",
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.bad_code",
         "description": "UdemyClasses.ModulesAndFunctions.bad_code",
-        "peekOfCode": "this_area = 0\ndef area_of_square(length: float):\n    global area\n    area = length * length\narea_of_square(30)\nprint(f'The area is {area}')",
+        "peekOfCode": "area = 0\ndef area_of_square(length: float):\n    global area\n    area = length * length\narea_of_square(30)\nprint(f'The area is {area}')",
         "detail": "UdemyClasses.ModulesAndFunctions.bad_code",
         "documentation": {}
     },
@@ -4369,25 +4378,7 @@
         "kind": 2,
         "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
         "description": "UdemyClasses.ModulesAndFunctions.better_code",
-        "peekOfCode": "def area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\nif __name__ == '__main__':\n    area = area_of_square(30)\n    print(f'The area is {area}')\n    print(f'in better_code.py, __name__ is {__name__}')",
-        "detail": "UdemyClasses.ModulesAndFunctions.better_code",
-        "documentation": {}
-    },
-    {
-        "label": "area",
-        "kind": 5,
-        "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
-        "description": "UdemyClasses.ModulesAndFunctions.better_code",
-        "peekOfCode": "area = 0\nlength = 30\ndef area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\nif __name__ == '__main__':\n    area = area_of_square(30)\n    print(f'The area is {area}')\n    print(f'in better_code.py, __name__ is {__name__}')",
-        "detail": "UdemyClasses.ModulesAndFunctions.better_code",
-        "documentation": {}
-    },
-    {
-        "label": "length",
-        "kind": 5,
-        "importPath": "UdemyClasses.ModulesAndFunctions.better_code",
-        "description": "UdemyClasses.ModulesAndFunctions.better_code",
-        "peekOfCode": "length = 30\ndef area_of_square(length: float) -> float:\n    \"\"\"This is a function called area_of_square with 0 arguments.\"\"\"\n    return length * length\nif __name__ == '__main__':\n    area = area_of_square(30)\n    print(f'The area is {area}')\n    print(f'in better_code.py, __name__ is {__name__}')",
+        "peekOfCode": "def area_of_square(length: float) -> float:\n    return length * length\nif __name__ == '__main__':\n    area = area_of_square(30)\n    print(f'The area is {area}')\n    print(f'in better_code.py, __name__ is {__name__}')",
         "detail": "UdemyClasses.ModulesAndFunctions.better_code",
         "documentation": {}
     },
@@ -4396,7 +4387,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.break_globals",
         "description": "UdemyClasses.ModulesAndFunctions.break_globals",
-        "peekOfCode": "area = better_code.area_of_square(40)\narea = area_of_square(40)\nprint(area)\nprint(\"Global namespace\")\nnamespace = globals()   # .copy()\nfor name, obj in namespace.items(): # This line is creating two new variables name and obj.  # noqa\n    print(name, obj)",
+        "peekOfCode": "area = better_code.area_of_square(40)\narea = area_of_square(40)\nprint(area)\nprint('Global namespace')\nnamespace = globals()  # .copy()\nfor name, obj in namespace.items():\n    print(name, obj)",
         "detail": "UdemyClasses.ModulesAndFunctions.break_globals",
         "documentation": {}
     },
@@ -4405,7 +4396,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.break_globals",
         "description": "UdemyClasses.ModulesAndFunctions.break_globals",
-        "peekOfCode": "area = area_of_square(40)\nprint(area)\nprint(\"Global namespace\")\nnamespace = globals()   # .copy()\nfor name, obj in namespace.items(): # This line is creating two new variables name and obj.  # noqa\n    print(name, obj)",
+        "peekOfCode": "area = area_of_square(40)\nprint(area)\nprint('Global namespace')\nnamespace = globals()  # .copy()\nfor name, obj in namespace.items():\n    print(name, obj)",
         "detail": "UdemyClasses.ModulesAndFunctions.break_globals",
         "documentation": {}
     },
@@ -4414,8 +4405,80 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.break_globals",
         "description": "UdemyClasses.ModulesAndFunctions.break_globals",
-        "peekOfCode": "namespace = globals()   # .copy()\nfor name, obj in namespace.items(): # This line is creating two new variables name and obj.  # noqa\n    print(name, obj)",
+        "peekOfCode": "namespace = globals()  # .copy()\nfor name, obj in namespace.items():\n    print(name, obj)",
         "detail": "UdemyClasses.ModulesAndFunctions.break_globals",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.date_example",
+        "description": "UdemyClasses.ModulesAndFunctions.date_example",
+        "peekOfCode": "start = datetime.date(2022, 2, 4)\nprint(start)\npretty_start = start.strftime('%A %d %B, %Y')  # %A is the day of the week, %d is the day of the month, %B is the month, %Y is the year\nprint(pretty_start)\nduration = datetime.timedelta(days=15, hours=48)\nend = start + duration\nprint(end)\nprint(duration)\nd1 = datetime.timedelta(hours=2)\nd2 = datetime.timedelta(minutes=120)",
+        "detail": "UdemyClasses.ModulesAndFunctions.date_example",
+        "documentation": {}
+    },
+    {
+        "label": "pretty_start",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.date_example",
+        "description": "UdemyClasses.ModulesAndFunctions.date_example",
+        "peekOfCode": "pretty_start = start.strftime('%A %d %B, %Y')  # %A is the day of the week, %d is the day of the month, %B is the month, %Y is the year\nprint(pretty_start)\nduration = datetime.timedelta(days=15, hours=48)\nend = start + duration\nprint(end)\nprint(duration)\nd1 = datetime.timedelta(hours=2)\nd2 = datetime.timedelta(minutes=120)\nd3 = datetime.timedelta(seconds=7200)\nprint(d1, d2, d3, sep=', ')",
+        "detail": "UdemyClasses.ModulesAndFunctions.date_example",
+        "documentation": {}
+    },
+    {
+        "label": "duration",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.date_example",
+        "description": "UdemyClasses.ModulesAndFunctions.date_example",
+        "peekOfCode": "duration = datetime.timedelta(days=15, hours=48)\nend = start + duration\nprint(end)\nprint(duration)\nd1 = datetime.timedelta(hours=2)\nd2 = datetime.timedelta(minutes=120)\nd3 = datetime.timedelta(seconds=7200)\nprint(d1, d2, d3, sep=', ')\nprint(repr(d1), repr(d2), repr(d3), sep=', ')\ndifference = end - start",
+        "detail": "UdemyClasses.ModulesAndFunctions.date_example",
+        "documentation": {}
+    },
+    {
+        "label": "end",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.date_example",
+        "description": "UdemyClasses.ModulesAndFunctions.date_example",
+        "peekOfCode": "end = start + duration\nprint(end)\nprint(duration)\nd1 = datetime.timedelta(hours=2)\nd2 = datetime.timedelta(minutes=120)\nd3 = datetime.timedelta(seconds=7200)\nprint(d1, d2, d3, sep=', ')\nprint(repr(d1), repr(d2), repr(d3), sep=', ')\ndifference = end - start\nprint(repr(difference))",
+        "detail": "UdemyClasses.ModulesAndFunctions.date_example",
+        "documentation": {}
+    },
+    {
+        "label": "d1",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.date_example",
+        "description": "UdemyClasses.ModulesAndFunctions.date_example",
+        "peekOfCode": "d1 = datetime.timedelta(hours=2)\nd2 = datetime.timedelta(minutes=120)\nd3 = datetime.timedelta(seconds=7200)\nprint(d1, d2, d3, sep=', ')\nprint(repr(d1), repr(d2), repr(d3), sep=', ')\ndifference = end - start\nprint(repr(difference))\nprint(difference == duration)",
+        "detail": "UdemyClasses.ModulesAndFunctions.date_example",
+        "documentation": {}
+    },
+    {
+        "label": "d2",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.date_example",
+        "description": "UdemyClasses.ModulesAndFunctions.date_example",
+        "peekOfCode": "d2 = datetime.timedelta(minutes=120)\nd3 = datetime.timedelta(seconds=7200)\nprint(d1, d2, d3, sep=', ')\nprint(repr(d1), repr(d2), repr(d3), sep=', ')\ndifference = end - start\nprint(repr(difference))\nprint(difference == duration)",
+        "detail": "UdemyClasses.ModulesAndFunctions.date_example",
+        "documentation": {}
+    },
+    {
+        "label": "d3",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.date_example",
+        "description": "UdemyClasses.ModulesAndFunctions.date_example",
+        "peekOfCode": "d3 = datetime.timedelta(seconds=7200)\nprint(d1, d2, d3, sep=', ')\nprint(repr(d1), repr(d2), repr(d3), sep=', ')\ndifference = end - start\nprint(repr(difference))\nprint(difference == duration)",
+        "detail": "UdemyClasses.ModulesAndFunctions.date_example",
+        "documentation": {}
+    },
+    {
+        "label": "difference",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.date_example",
+        "description": "UdemyClasses.ModulesAndFunctions.date_example",
+        "peekOfCode": "difference = end - start\nprint(repr(difference))\nprint(difference == duration)",
+        "detail": "UdemyClasses.ModulesAndFunctions.date_example",
         "documentation": {}
     },
     {
@@ -4423,7 +4486,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.importing",
         "description": "UdemyClasses.ModulesAndFunctions.importing",
-        "peekOfCode": "area = better_code.area_of_square(40)\narea = area_of_square(40)\nprint(area)\nprint(\"Global namespace\")\nnamespace = globals().copy()\nfor name, obj in namespace.items():\n    print(name, obj)",
+        "peekOfCode": "area = better_code.area_of_square(40)\narea = area_of_square(40)\nprint(area)\nprint('Global namespace')\nnamespace = globals().copy()\nfor name, obj in namespace.items():\n    print(name, obj)",
         "detail": "UdemyClasses.ModulesAndFunctions.importing",
         "documentation": {}
     },
@@ -4432,7 +4495,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.importing",
         "description": "UdemyClasses.ModulesAndFunctions.importing",
-        "peekOfCode": "area = area_of_square(40)\nprint(area)\nprint(\"Global namespace\")\nnamespace = globals().copy()\nfor name, obj in namespace.items():\n    print(name, obj)",
+        "peekOfCode": "area = area_of_square(40)\nprint(area)\nprint('Global namespace')\nnamespace = globals().copy()\nfor name, obj in namespace.items():\n    print(name, obj)",
         "detail": "UdemyClasses.ModulesAndFunctions.importing",
         "documentation": {}
     },
@@ -4477,7 +4540,7 @@
         "kind": 2,
         "importPath": "UdemyClasses.ModulesAndFunctions.nested_function_1",
         "description": "UdemyClasses.ModulesAndFunctions.nested_function_1",
-        "peekOfCode": "def greet_pythons(items: list) -> None:\n    greeting = 'Hello'\n    print(f'The ID of \"greeting\" in \"greet_python\" is {id(greeting)}')\n    print(f'local namespace in \"greet_python\"(1): {locals()}')\n    def make_greeting(item: str) -> str: # This a nested funtion which also makes it a local namespace  # noqa\n        nonlocal greeting\n        print(f'local namespace in \"make_greeting\"(1): {locals()}')\n        greeting = 'Hi'\n        print(f'The ID of \"greeting\" in \"make_greeting\" is {id(greeting)}')\n        print(f'local namespace in \"greet_python\"(2): {locals()}')",
+        "peekOfCode": "def greet_pythons(items: list) -> None:\n    greeting = 'Hello'\n    print(f'The ID of `greeting` in `greet_pythons` is {id(greeting)}')\n    print(f'local namespace in `greet_pythons`(1): {locals()}')\n    def make_greeting(item: str) -> str:\n        nonlocal greeting\n        print(f'local namespace in `make_greeting`(1): {locals()}')\n        greeting = 'Hi'\n        print(f'The ID of `greeting` in `make_greeting` is {id(greeting)}')\n        print(f'local namespace in `make_greeting`(2): {locals()}')",
         "detail": "UdemyClasses.ModulesAndFunctions.nested_function_1",
         "documentation": {}
     },
@@ -4486,8 +4549,35 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.nested_function_1",
         "description": "UdemyClasses.ModulesAndFunctions.nested_function_1",
-        "peekOfCode": "names = ['John']  # , 'Eric', 'Graham', 'Terry', 'Terry', 'Michael']\ngreet_pythons(names)\nprint(f'local namespace in \"greet_python\"(1): {locals()}')",
+        "peekOfCode": "names = ['John']  #, 'Eric', 'Graham', 'Terry', 'Terry', 'Michael']\ngreet_pythons(names)",
         "detail": "UdemyClasses.ModulesAndFunctions.nested_function_1",
+        "documentation": {}
+    },
+    {
+        "label": "greet_pythons",
+        "kind": 2,
+        "importPath": "UdemyClasses.ModulesAndFunctions.nested_function_2",
+        "description": "UdemyClasses.ModulesAndFunctions.nested_function_2",
+        "peekOfCode": "def greet_pythons(items: list) -> None:\n    for item in items:\n        print(make_greeting(item))\ndef make_greeting(item: str) -> str:\n    return f'Hello {item}'\nnames = ['John', 'Eric', 'Graham', 'Terry', 'Terry', 'Michael']\ngreet_pythons(names)",
+        "detail": "UdemyClasses.ModulesAndFunctions.nested_function_2",
+        "documentation": {}
+    },
+    {
+        "label": "make_greeting",
+        "kind": 2,
+        "importPath": "UdemyClasses.ModulesAndFunctions.nested_function_2",
+        "description": "UdemyClasses.ModulesAndFunctions.nested_function_2",
+        "peekOfCode": "def make_greeting(item: str) -> str:\n    return f'Hello {item}'\nnames = ['John', 'Eric', 'Graham', 'Terry', 'Terry', 'Michael']\ngreet_pythons(names)",
+        "detail": "UdemyClasses.ModulesAndFunctions.nested_function_2",
+        "documentation": {}
+    },
+    {
+        "label": "names",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.nested_function_2",
+        "description": "UdemyClasses.ModulesAndFunctions.nested_function_2",
+        "peekOfCode": "names = ['John', 'Eric', 'Graham', 'Terry', 'Terry', 'Michael']\ngreet_pythons(names)",
+        "detail": "UdemyClasses.ModulesAndFunctions.nested_function_2",
         "documentation": {}
     },
     {
@@ -4495,7 +4585,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.open_url",
         "description": "UdemyClasses.ModulesAndFunctions.open_url",
-        "peekOfCode": "chrome = webbrowser.get('C:/ProgramData/Microsoft/Windows/Start Menu/Programs/chrome.exe %s')  # noqa\nchrome.open('https://learningprogramming.academy/courses')",
+        "peekOfCode": "chrome = webbrowser.get('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s')\nchrome.open('https://learnprogramming.academy/courses')",
         "detail": "UdemyClasses.ModulesAndFunctions.open_url",
         "documentation": {}
     },
@@ -4515,6 +4605,33 @@
         "description": "UdemyClasses.ModulesAndFunctions.supported_hashes",
         "peekOfCode": "supported_hashes = {\n    'blake2b': hashlib.blake2b,\n    'blake2s': hashlib.blake2s,\n    'md5': hashlib.md5,\n    'sha1': hashlib.sha1,\n    'sha224': hashlib.sha224,\n    'sha256': hashlib.sha3_256,\n    'sha384': hashlib.sha384,\n    'sha3_224': hashlib.sha224,\n    'sha3_256': hashlib.sha3_256,",
         "detail": "UdemyClasses.ModulesAndFunctions.supported_hashes",
+        "documentation": {}
+    },
+    {
+        "label": "area_of_square",
+        "kind": 2,
+        "importPath": "UdemyClasses.ModulesAndFunctions.worse_code",
+        "description": "UdemyClasses.ModulesAndFunctions.worse_code",
+        "peekOfCode": "def area_of_square():\n    global area\n    area = length * length\narea_of_square()\nprint(f'The area is {area}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.worse_code",
+        "documentation": {}
+    },
+    {
+        "label": "area",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.worse_code",
+        "description": "UdemyClasses.ModulesAndFunctions.worse_code",
+        "peekOfCode": "area = 0\nlength = 30\ndef area_of_square():\n    global area\n    area = length * length\narea_of_square()\nprint(f'The area is {area}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.worse_code",
+        "documentation": {}
+    },
+    {
+        "label": "length",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.worse_code",
+        "description": "UdemyClasses.ModulesAndFunctions.worse_code",
+        "peekOfCode": "length = 30\ndef area_of_square():\n    global area\n    area = length * length\narea_of_square()\nprint(f'The area is {area}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.worse_code",
         "documentation": {}
     },
     {

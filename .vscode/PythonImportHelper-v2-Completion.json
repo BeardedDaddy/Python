@@ -459,6 +459,22 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "pytz",
         "kind": 6,
         "isExtraImport": true,
@@ -4434,20 +4450,11 @@
         "documentation": {}
     },
     {
-        "label": "today",
-        "kind": 5,
-        "importPath": "UdemyClasses.ModulesAndFunctions.datetime_example",
-        "description": "UdemyClasses.ModulesAndFunctions.datetime_example",
-        "peekOfCode": "today = dt.datetime.today()\nnow = datetime.now()\nutc_now = datetime.utcnow()\nprint(today)\nprint(now)\nprint(utc_now)",
-        "detail": "UdemyClasses.ModulesAndFunctions.datetime_example",
-        "documentation": {}
-    },
-    {
         "label": "now",
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.datetime_example",
         "description": "UdemyClasses.ModulesAndFunctions.datetime_example",
-        "peekOfCode": "now = datetime.now()\nutc_now = datetime.utcnow()\nprint(today)\nprint(now)\nprint(utc_now)",
+        "peekOfCode": "now = datetime.now()\nutc_now = datetime.utcnow()\n# print(today) # It is preffered that you don't use the today method but instead use now.  # nqa\nprint(now)\nprint(utc_now)",
         "detail": "UdemyClasses.ModulesAndFunctions.datetime_example",
         "documentation": {}
     },
@@ -4456,7 +4463,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.datetime_example",
         "description": "UdemyClasses.ModulesAndFunctions.datetime_example",
-        "peekOfCode": "utc_now = datetime.utcnow()\nprint(today)\nprint(now)\nprint(utc_now)",
+        "peekOfCode": "utc_now = datetime.utcnow()\n# print(today) # It is preffered that you don't use the today method but instead use now.  # nqa\nprint(now)\nprint(utc_now)",
         "detail": "UdemyClasses.ModulesAndFunctions.datetime_example",
         "documentation": {}
     },
@@ -4728,6 +4735,42 @@
         "description": "UdemyClasses.ModulesAndFunctions.worse_code",
         "peekOfCode": "length = 30\ndef area_of_square():\n    global area\n    area = length * length\narea_of_square()\nprint(f'The area is {area}')",
         "detail": "UdemyClasses.ModulesAndFunctions.worse_code",
+        "documentation": {}
+    },
+    {
+        "label": "utc_now",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "description": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "peekOfCode": "utc_now = datetime.now(timezone.utc)\nprint(utc_now)\nlocal_now = utc_now.astimezone()\nprint(local_now)\nnew_york_tz = zoneinfo.ZoneInfo('America/New_York')\nny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)",
+        "detail": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "documentation": {}
+    },
+    {
+        "label": "local_now",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "description": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "peekOfCode": "local_now = utc_now.astimezone()\nprint(local_now)\nnew_york_tz = zoneinfo.ZoneInfo('America/New_York')\nny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)",
+        "detail": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "documentation": {}
+    },
+    {
+        "label": "new_york_tz",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "description": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "peekOfCode": "new_york_tz = zoneinfo.ZoneInfo('America/New_York')\nny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)",
+        "detail": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "documentation": {}
+    },
+    {
+        "label": "ny_now",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "description": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "peekOfCode": "ny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)",
+        "detail": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
         "documentation": {}
     },
     {

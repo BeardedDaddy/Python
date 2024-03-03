@@ -14,3 +14,13 @@ new_york_tz = zoneinfo.ZoneInfo('America/New_York')
 ny_now = utc_now.astimezone(tz=new_york_tz)
 print(ny_now)
 
+france_tz = zoneinfo.ZoneInfo('Europe/Paris')
+france_now = utc_now.astimezone(france_tz)
+print(france_now)
+
+print()
+print("Available timezone keys")
+print("-----------------------")
+
+for zone_key in sorted(zoneinfo.available_timezones()):
+    print(zone_key)

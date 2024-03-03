@@ -4742,7 +4742,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
         "description": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
-        "peekOfCode": "utc_now = datetime.now(timezone.utc)\nprint(utc_now)\nlocal_now = utc_now.astimezone()\nprint(local_now)\nnew_york_tz = zoneinfo.ZoneInfo('America/New_York')\nny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)",
+        "peekOfCode": "utc_now = datetime.now(timezone.utc)\nprint(utc_now)\nlocal_now = utc_now.astimezone()\nprint(local_now)\nnew_york_tz = zoneinfo.ZoneInfo('America/New_York')\nny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)\nfrance_tz = zoneinfo.ZoneInfo('Europe/Paris')\nfrance_now = utc_now.astimezone(france_tz)\nprint(france_now)",
         "detail": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
         "documentation": {}
     },
@@ -4751,7 +4751,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
         "description": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
-        "peekOfCode": "local_now = utc_now.astimezone()\nprint(local_now)\nnew_york_tz = zoneinfo.ZoneInfo('America/New_York')\nny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)",
+        "peekOfCode": "local_now = utc_now.astimezone()\nprint(local_now)\nnew_york_tz = zoneinfo.ZoneInfo('America/New_York')\nny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)\nfrance_tz = zoneinfo.ZoneInfo('Europe/Paris')\nfrance_now = utc_now.astimezone(france_tz)\nprint(france_now)\nprint()\nprint(\"Available timezone keys\")",
         "detail": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
         "documentation": {}
     },
@@ -4760,7 +4760,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
         "description": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
-        "peekOfCode": "new_york_tz = zoneinfo.ZoneInfo('America/New_York')\nny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)",
+        "peekOfCode": "new_york_tz = zoneinfo.ZoneInfo('America/New_York')\nny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)\nfrance_tz = zoneinfo.ZoneInfo('Europe/Paris')\nfrance_now = utc_now.astimezone(france_tz)\nprint(france_now)\nprint()\nprint(\"Available timezone keys\")\nprint(\"-----------------------\")\nfor zone_key in sorted(zoneinfo.available_timezones()):",
         "detail": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
         "documentation": {}
     },
@@ -4769,7 +4769,25 @@
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
         "description": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
-        "peekOfCode": "ny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)",
+        "peekOfCode": "ny_now = utc_now.astimezone(tz=new_york_tz)\nprint(ny_now)\nfrance_tz = zoneinfo.ZoneInfo('Europe/Paris')\nfrance_now = utc_now.astimezone(france_tz)\nprint(france_now)\nprint()\nprint(\"Available timezone keys\")\nprint(\"-----------------------\")\nfor zone_key in sorted(zoneinfo.available_timezones()):\n    print(zone_key)",
+        "detail": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "documentation": {}
+    },
+    {
+        "label": "france_tz",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "description": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "peekOfCode": "france_tz = zoneinfo.ZoneInfo('Europe/Paris')\nfrance_now = utc_now.astimezone(france_tz)\nprint(france_now)\nprint()\nprint(\"Available timezone keys\")\nprint(\"-----------------------\")\nfor zone_key in sorted(zoneinfo.available_timezones()):\n    print(zone_key)",
+        "detail": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "documentation": {}
+    },
+    {
+        "label": "france_now",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "description": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
+        "peekOfCode": "france_now = utc_now.astimezone(france_tz)\nprint(france_now)\nprint()\nprint(\"Available timezone keys\")\nprint(\"-----------------------\")\nfor zone_key in sorted(zoneinfo.available_timezones()):\n    print(zone_key)",
         "detail": "UdemyClasses.ModulesAndFunctions.zoneinfo_test",
         "documentation": {}
     },

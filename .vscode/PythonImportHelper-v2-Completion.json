@@ -443,6 +443,22 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "importPath": "datetime",
         "description": "datetime",
@@ -4663,6 +4679,24 @@
         "description": "UdemyClasses.ModulesAndFunctions.supported_hashes",
         "peekOfCode": "supported_hashes = {\n    'blake2b': hashlib.blake2b,\n    'blake2s': hashlib.blake2s,\n    'md5': hashlib.md5,\n    'sha1': hashlib.sha1,\n    'sha224': hashlib.sha224,\n    'sha256': hashlib.sha3_256,\n    'sha384': hashlib.sha384,\n    'sha3_224': hashlib.sha224,\n    'sha3_256': hashlib.sha3_256,",
         "detail": "UdemyClasses.ModulesAndFunctions.supported_hashes",
+        "documentation": {}
+    },
+    {
+        "label": "zones",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.timezone_challenge",
+        "description": "UdemyClasses.ModulesAndFunctions.timezone_challenge",
+        "peekOfCode": "zones = (\n    'Europe/Paris',\n    'Europe/London',\n    'Asia/Hong_Kong',\n    'Africa/Nairobi',\n)\n# Get the current time, in UTC\n# utc_now = datetime.now(tz=timezone.utc)\nlocal_now = datetime.now()\n# local_now = local_now.replace(microsecond=0)",
+        "detail": "UdemyClasses.ModulesAndFunctions.timezone_challenge",
+        "documentation": {}
+    },
+    {
+        "label": "local_now",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.timezone_challenge",
+        "description": "UdemyClasses.ModulesAndFunctions.timezone_challenge",
+        "peekOfCode": "local_now = datetime.now()\n# local_now = local_now.replace(microsecond=0)\nfor zone in zones:\n    tz = zoneinfo.ZoneInfo(zone)\n    # required_time = utc_now.astimezone(tz)\n    # required_time = datetime.now(tz=tz)\n    required_time = local_now.astimezone(tz)\n    # The city is the last item, after splitting the zone at the /\n    city = zone.split('/')[-1]\n    print(f'The time in {city} is {required_time} {required_time.tzname()}') # noqa",
+        "detail": "UdemyClasses.ModulesAndFunctions.timezone_challenge",
         "documentation": {}
     },
     {

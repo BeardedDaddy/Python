@@ -435,6 +435,30 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "pytz",
         "kind": 6,
         "isExtraImport": true,
@@ -4410,6 +4434,33 @@
         "documentation": {}
     },
     {
+        "label": "today",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.datetime_example",
+        "description": "UdemyClasses.ModulesAndFunctions.datetime_example",
+        "peekOfCode": "today = dt.datetime.today()\nnow = datetime.now()\nutc_now = datetime.utcnow()\nprint(today)\nprint(now)\nprint(utc_now)",
+        "detail": "UdemyClasses.ModulesAndFunctions.datetime_example",
+        "documentation": {}
+    },
+    {
+        "label": "now",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.datetime_example",
+        "description": "UdemyClasses.ModulesAndFunctions.datetime_example",
+        "peekOfCode": "now = datetime.now()\nutc_now = datetime.utcnow()\nprint(today)\nprint(now)\nprint(utc_now)",
+        "detail": "UdemyClasses.ModulesAndFunctions.datetime_example",
+        "documentation": {}
+    },
+    {
+        "label": "utc_now",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.datetime_example",
+        "description": "UdemyClasses.ModulesAndFunctions.datetime_example",
+        "peekOfCode": "utc_now = datetime.utcnow()\nprint(today)\nprint(now)\nprint(utc_now)",
+        "detail": "UdemyClasses.ModulesAndFunctions.datetime_example",
+        "documentation": {}
+    },
+    {
         "label": "start",
         "kind": 5,
         "importPath": "UdemyClasses.ModulesAndFunctions.date_example",
@@ -4605,6 +4656,51 @@
         "description": "UdemyClasses.ModulesAndFunctions.supported_hashes",
         "peekOfCode": "supported_hashes = {\n    'blake2b': hashlib.blake2b,\n    'blake2s': hashlib.blake2s,\n    'md5': hashlib.md5,\n    'sha1': hashlib.sha1,\n    'sha224': hashlib.sha224,\n    'sha256': hashlib.sha3_256,\n    'sha384': hashlib.sha384,\n    'sha3_224': hashlib.sha224,\n    'sha3_256': hashlib.sha3_256,",
         "detail": "UdemyClasses.ModulesAndFunctions.supported_hashes",
+        "documentation": {}
+    },
+    {
+        "label": "meeting",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.time_example",
+        "description": "UdemyClasses.ModulesAndFunctions.time_example",
+        "peekOfCode": "meeting = time(hour=11, minute=15, second=0)\nprint(meeting)\nend_time= time(hour=12, minute=30)\nprint(end_time)\niso_time = '11:15:00'\n_time = time.fromisoformat(iso_time)\nprint(_time)\niso_date = '2022-02-04'\n_date = date.fromisoformat(iso_date)\nprint(_date)",
+        "detail": "UdemyClasses.ModulesAndFunctions.time_example",
+        "documentation": {}
+    },
+    {
+        "label": "iso_time",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.time_example",
+        "description": "UdemyClasses.ModulesAndFunctions.time_example",
+        "peekOfCode": "iso_time = '11:15:00'\n_time = time.fromisoformat(iso_time)\nprint(_time)\niso_date = '2022-02-04'\n_date = date.fromisoformat(iso_date)\nprint(_date)",
+        "detail": "UdemyClasses.ModulesAndFunctions.time_example",
+        "documentation": {}
+    },
+    {
+        "label": "_time",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.time_example",
+        "description": "UdemyClasses.ModulesAndFunctions.time_example",
+        "peekOfCode": "_time = time.fromisoformat(iso_time)\nprint(_time)\niso_date = '2022-02-04'\n_date = date.fromisoformat(iso_date)\nprint(_date)",
+        "detail": "UdemyClasses.ModulesAndFunctions.time_example",
+        "documentation": {}
+    },
+    {
+        "label": "iso_date",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.time_example",
+        "description": "UdemyClasses.ModulesAndFunctions.time_example",
+        "peekOfCode": "iso_date = '2022-02-04'\n_date = date.fromisoformat(iso_date)\nprint(_date)",
+        "detail": "UdemyClasses.ModulesAndFunctions.time_example",
+        "documentation": {}
+    },
+    {
+        "label": "_date",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.time_example",
+        "description": "UdemyClasses.ModulesAndFunctions.time_example",
+        "peekOfCode": "_date = date.fromisoformat(iso_date)\nprint(_date)",
+        "detail": "UdemyClasses.ModulesAndFunctions.time_example",
         "documentation": {}
     },
     {

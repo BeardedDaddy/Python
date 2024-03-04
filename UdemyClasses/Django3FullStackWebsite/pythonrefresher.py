@@ -2,8 +2,14 @@ age = 50
 
 name = 'Grevy'
 
-# print(f'Hello my name is {name} and I am {age} years old.')
+# sentence = 'Hello my name is {} and I am {} years old.'.format(name, age)  # noqa
 
-sentence = 'Hello my name is {} and I am {} years old.'.format(name, age)  # noqa
+# print(sentence)
+# todayIsCold = False
 
-print(sentence)
+print(f'Hello my name is {name} and I am {age} years old.')
+
+if age >= 18:
+    print('You are of legal age.')
+else:
+    print('You are not old enough.')

@@ -4167,7 +4167,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
         "description": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
-        "peekOfCode": "age = 50\nname = 'Grevy'\n# print(f'Hello my name is {name} and I am {age} years old.')\nsentence = 'Hello my name is {} and I am {} years old.'.format(name, age)  # noqa\nprint(sentence)",
+        "peekOfCode": "age = 50\nname = 'Grevy'\n# sentence = 'Hello my name is {} and I am {} years old.'.format(name, age)  # noqa\n# print(sentence)\n# todayIsCold = False\nprint(f'Hello my name is {name} and I am {age} years old.')\nif age >= 18:\n    print('You are of legal age.')\nelse:\n    print('You are not old enough.')",
         "detail": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
         "documentation": {}
     },
@@ -4176,16 +4176,7 @@
         "kind": 5,
         "importPath": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
         "description": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
-        "peekOfCode": "name = 'Grevy'\n# print(f'Hello my name is {name} and I am {age} years old.')\nsentence = 'Hello my name is {} and I am {} years old.'.format(name, age)  # noqa\nprint(sentence)",
-        "detail": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
-        "documentation": {}
-    },
-    {
-        "label": "sentence",
-        "kind": 5,
-        "importPath": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
-        "description": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
-        "peekOfCode": "sentence = 'Hello my name is {} and I am {} years old.'.format(name, age)  # noqa\nprint(sentence)",
+        "peekOfCode": "name = 'Grevy'\n# sentence = 'Hello my name is {} and I am {} years old.'.format(name, age)  # noqa\n# print(sentence)\n# todayIsCold = False\nprint(f'Hello my name is {name} and I am {age} years old.')\nif age >= 18:\n    print('You are of legal age.')\nelse:\n    print('You are not old enough.')",
         "detail": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
         "documentation": {}
     },

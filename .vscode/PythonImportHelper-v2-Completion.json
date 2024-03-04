@@ -459,6 +459,54 @@
         "documentation": {}
     },
     {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "time",
         "importPath": "datetime",
         "description": "datetime",
@@ -4553,6 +4601,276 @@
         "description": "UdemyClasses.ModulesAndFunctions.date_example",
         "peekOfCode": "difference = end - start\nprint(repr(difference))\nprint(difference == duration)",
         "detail": "UdemyClasses.ModulesAndFunctions.date_example",
+        "documentation": {}
+    },
+    {
+        "label": "uk_tz",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "uk_tz = zoneinfo.ZoneInfo('Europe/London')\namerica_tz = zoneinfo.ZoneInfo('America/New_York')\nyear = 2022\nmonth = 3\nday = 27\nhour = 0\nminute = 25\ntd = timedelta(minutes=125)\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nutc_time = uk_time.astimezone(timezone.utc)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "america_tz",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "america_tz = zoneinfo.ZoneInfo('America/New_York')\nyear = 2022\nmonth = 3\nday = 27\nhour = 0\nminute = 25\ntd = timedelta(minutes=125)\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nutc_time = uk_time.astimezone(timezone.utc)\nutc_time = utc_time + td",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "year",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "year = 2022\nmonth = 3\nday = 27\nhour = 0\nminute = 25\ntd = timedelta(minutes=125)\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nutc_time = uk_time.astimezone(timezone.utc)\nutc_time = utc_time + td\nuk_time = utc_time.astimezone(uk_tz)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "month",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "month = 3\nday = 27\nhour = 0\nminute = 25\ntd = timedelta(minutes=125)\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nutc_time = uk_time.astimezone(timezone.utc)\nutc_time = utc_time + td\nuk_time = utc_time.astimezone(uk_tz)\nuk_to_utc = uk_time.astimezone(timezone.utc)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "day",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "day = 27\nhour = 0\nminute = 25\ntd = timedelta(minutes=125)\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nutc_time = uk_time.astimezone(timezone.utc)\nutc_time = utc_time + td\nuk_time = utc_time.astimezone(uk_tz)\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 20/21 - utc_time:\\t {utc_time}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "hour",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "hour = 0\nminute = 25\ntd = timedelta(minutes=125)\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nutc_time = uk_time.astimezone(timezone.utc)\nutc_time = utc_time + td\nuk_time = utc_time.astimezone(uk_tz)\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 20/21 - utc_time:\\t {utc_time}')\nprint(f'Line 22 - uk_time:\\t {uk_time}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "minute",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "minute = 25\ntd = timedelta(minutes=125)\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nutc_time = uk_time.astimezone(timezone.utc)\nutc_time = utc_time + td\nuk_time = utc_time.astimezone(uk_tz)\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 20/21 - utc_time:\\t {utc_time}')\nprint(f'Line 22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "td",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "td = timedelta(minutes=125)\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nutc_time = uk_time.astimezone(timezone.utc)\nutc_time = utc_time + td\nuk_time = utc_time.astimezone(uk_tz)\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 20/21 - utc_time:\\t {utc_time}')\nprint(f'Line 22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "uk_time",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "uk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nutc_time = uk_time.astimezone(timezone.utc)\nutc_time = utc_time + td\nuk_time = utc_time.astimezone(uk_tz)\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 20/21 - utc_time:\\t {utc_time}')\nprint(f'Line 22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "utc_time",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "utc_time = uk_time.astimezone(timezone.utc)\nutc_time = utc_time + td\nuk_time = utc_time.astimezone(uk_tz)\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 20/21 - utc_time:\\t {utc_time}')\nprint(f'Line 22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)\nprint()",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "utc_time",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "utc_time = utc_time + td\nuk_time = utc_time.astimezone(uk_tz)\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 20/21 - utc_time:\\t {utc_time}')\nprint(f'Line 22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)\nprint()\nprint(f'uk --> ny:\\t {ny1}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "uk_time",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "uk_time = utc_time.astimezone(uk_tz)\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 20/21 - utc_time:\\t {utc_time}')\nprint(f'Line 22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)\nprint()\nprint(f'uk --> ny:\\t {ny1}')\nprint(f'utc --> ny:\\t {ny2}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "uk_to_utc",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "uk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 20/21 - utc_time:\\t {utc_time}')\nprint(f'Line 22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)\nprint()\nprint(f'uk --> ny:\\t {ny1}')\nprint(f'utc --> ny:\\t {ny2}')\nprint(ny1 == ny2)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "ny1",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "ny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)\nprint()\nprint(f'uk --> ny:\\t {ny1}')\nprint(f'utc --> ny:\\t {ny2}')\nprint(ny1 == ny2)\n# <------------------------------------------->\nprint()\nprint('*' * 40)\nprint(f'Check: uk time equals UTC time: {uk_time == utc_time}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "ny2",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "peekOfCode": "ny2 = utc_time.astimezone(america_tz)\nprint()\nprint(f'uk --> ny:\\t {ny1}')\nprint(f'utc --> ny:\\t {ny2}')\nprint(ny1 == ny2)\n# <------------------------------------------->\nprint()\nprint('*' * 40)\nprint(f'Check: uk time equals UTC time: {uk_time == utc_time}')\nprint(f'Check: uk in UTC equals UTC time: {uk_to_utc == utc_time}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_fixed",
+        "documentation": {}
+    },
+    {
+        "label": "uk_tz",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "uk_tz = zoneinfo.ZoneInfo('Europe/London')\namerica_tz = zoneinfo.ZoneInfo('America/New_York')\nyear = 2022\nmonth = 3\nday = 27\nhour = 0\nminute = 25\ntd = timedelta(minutes=125)\nutc_time = datetime(year, month, day, hour, minute, tzinfo=timezone.utc)\nutc_time = utc_time + td",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "america_tz",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "america_tz = zoneinfo.ZoneInfo('America/New_York')\nyear = 2022\nmonth = 3\nday = 27\nhour = 0\nminute = 25\ntd = timedelta(minutes=125)\nutc_time = datetime(year, month, day, hour, minute, tzinfo=timezone.utc)\nutc_time = utc_time + td\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "year",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "year = 2022\nmonth = 3\nday = 27\nhour = 0\nminute = 25\ntd = timedelta(minutes=125)\nutc_time = datetime(year, month, day, hour, minute, tzinfo=timezone.utc)\nutc_time = utc_time + td\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nuk_time = uk_time + td",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "month",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "month = 3\nday = 27\nhour = 0\nminute = 25\ntd = timedelta(minutes=125)\nutc_time = datetime(year, month, day, hour, minute, tzinfo=timezone.utc)\nutc_time = utc_time + td\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nuk_time = uk_time + td\nuk_to_utc = uk_time.astimezone(timezone.utc)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "day",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "day = 27\nhour = 0\nminute = 25\ntd = timedelta(minutes=125)\nutc_time = datetime(year, month, day, hour, minute, tzinfo=timezone.utc)\nutc_time = utc_time + td\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nuk_time = uk_time + td\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 19/20 - utc_time:\\t {utc_time}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "hour",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "hour = 0\nminute = 25\ntd = timedelta(minutes=125)\nutc_time = datetime(year, month, day, hour, minute, tzinfo=timezone.utc)\nutc_time = utc_time + td\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nuk_time = uk_time + td\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 19/20 - utc_time:\\t {utc_time}')\nprint(f'Line 21/22 - uk_time:\\t {uk_time}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "minute",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "minute = 25\ntd = timedelta(minutes=125)\nutc_time = datetime(year, month, day, hour, minute, tzinfo=timezone.utc)\nutc_time = utc_time + td\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nuk_time = uk_time + td\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 19/20 - utc_time:\\t {utc_time}')\nprint(f'Line 21/22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "td",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "td = timedelta(minutes=125)\nutc_time = datetime(year, month, day, hour, minute, tzinfo=timezone.utc)\nutc_time = utc_time + td\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nuk_time = uk_time + td\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 19/20 - utc_time:\\t {utc_time}')\nprint(f'Line 21/22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "utc_time",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "utc_time = datetime(year, month, day, hour, minute, tzinfo=timezone.utc)\nutc_time = utc_time + td\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nuk_time = uk_time + td\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 19/20 - utc_time:\\t {utc_time}')\nprint(f'Line 21/22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "utc_time",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "utc_time = utc_time + td\nuk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nuk_time = uk_time + td\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 19/20 - utc_time:\\t {utc_time}')\nprint(f'Line 21/22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)\nprint()",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "uk_time",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "uk_time = datetime(year, month, day, hour, minute, tzinfo=uk_tz)\nuk_time = uk_time + td\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 19/20 - utc_time:\\t {utc_time}')\nprint(f'Line 21/22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)\nprint()\nprint(f'uk --> ny:\\t {ny1}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "uk_time",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "uk_time = uk_time + td\nuk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 19/20 - utc_time:\\t {utc_time}')\nprint(f'Line 21/22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)\nprint()\nprint(f'uk --> ny:\\t {ny1}')\nprint(f'utc --> ny:\\t {ny2}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "uk_to_utc",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "uk_to_utc = uk_time.astimezone(timezone.utc)\nprint(f'Line 19/20 - utc_time:\\t {utc_time}')\nprint(f'Line 21/22 - uk_time:\\t {uk_time}')\nprint(f'Line 23 - uk --> utc:\\t {uk_to_utc}')\nny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)\nprint()\nprint(f'uk --> ny:\\t {ny1}')\nprint(f'utc --> ny:\\t {ny2}')\nprint(ny1 == ny2)",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "ny1",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "ny1 = uk_time.astimezone(america_tz)\nny2 = utc_time.astimezone(america_tz)\nprint()\nprint(f'uk --> ny:\\t {ny1}')\nprint(f'utc --> ny:\\t {ny2}')\nprint(ny1 == ny2)\n# <------------------------------------------->\nprint()\nprint('*' * 40)\nprint(f'Check: uk time equals UTC time: {uk_time == utc_time}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "documentation": {}
+    },
+    {
+        "label": "ny2",
+        "kind": 5,
+        "importPath": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "description": "UdemyClasses.ModulesAndFunctions.dst_problem",
+        "peekOfCode": "ny2 = utc_time.astimezone(america_tz)\nprint()\nprint(f'uk --> ny:\\t {ny1}')\nprint(f'utc --> ny:\\t {ny2}')\nprint(ny1 == ny2)\n# <------------------------------------------->\nprint()\nprint('*' * 40)\nprint(f'Check: uk time equals UTC time: {uk_time == utc_time}')\nprint(f'Check: uk in UTC equals UTC time: {uk_to_utc == utc_time}')",
+        "detail": "UdemyClasses.ModulesAndFunctions.dst_problem",
         "documentation": {}
     },
     {

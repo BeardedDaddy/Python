@@ -4163,6 +4163,24 @@
         "documentation": {}
     },
     {
+        "label": "age",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
+        "description": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
+        "peekOfCode": "age = 50\nname = 'Grevy'",
+        "detail": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
+        "description": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
+        "peekOfCode": "name = 'Grevy'",
+        "detail": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
+        "documentation": {}
+    },
+    {
         "label": "entries",
         "kind": 5,
         "importPath": "UdemyClasses.map.allgotcha",

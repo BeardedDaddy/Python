@@ -4172,6 +4172,24 @@
         "documentation": {}
     },
     {
+        "label": "dognames",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson_10_List",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson_10_List",
+        "peekOfCode": "dognames = [\"Fido\", \"Sean\", \"Sally\", \"Mark\", \"Sean\"]\n# print(dognames)\ndognames.insert(0, \"Pepe\")\ndel(dognames[3])  # del deletes an item from the list. # From dognames delete index 3 which = Mark.  # noqa\n# print(dognames)\nprint(dognames[2])  # prints Sally\ndognames[1] = \"Jane\"  # replaces Sean with Jane\nprint(len(dognames))  # prints 5\nprint(dognames)  # prints ['Pepe', 'Fido', 'Sean', 'Sally', 'Sean']",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson_10_List",
+        "documentation": {}
+    },
+    {
+        "label": "dognames[1]",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson_10_List",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson_10_List",
+        "peekOfCode": "dognames[1] = \"Jane\"  # replaces Sean with Jane\nprint(len(dognames))  # prints 5\nprint(dognames)  # prints ['Pepe', 'Fido', 'Sean', 'Sally', 'Sean']",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson_10_List",
+        "documentation": {}
+    },
+    {
         "label": "hello",
         "kind": 2,
         "importPath": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",

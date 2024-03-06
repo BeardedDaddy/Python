@@ -4163,6 +4163,15 @@
         "documentation": {}
     },
     {
+        "label": "tripleprint",
+        "kind": 2,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson9FunctionChallenge",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson9FunctionChallenge",
+        "peekOfCode": "def tripleprint(string):\n    print(string * 3)\ntripleprint(\"hello\")",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson9FunctionChallenge",
+        "documentation": {}
+    },
+    {
         "label": "hello",
         "kind": 2,
         "importPath": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",

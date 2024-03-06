@@ -4163,20 +4163,20 @@
         "documentation": {}
     },
     {
-        "label": "age",
-        "kind": 5,
+        "label": "hello",
+        "kind": 2,
         "importPath": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
         "description": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
-        "peekOfCode": "age = 50\nname = 'Grevy'\n# sentence = 'Hello my name is {} and I am {} years old.'.format(name, age)  # noqa\n# print(sentence)\n# todayIsCold = False\nprint(f'Hello my name is {name} and I am {age} years old.')\nif age >= 18:\n    print('You are of legal age.')\nelse:\n    print('You are not old enough.')",
+        "peekOfCode": "def hello(name=\"Mia\", age=13):\n    return \"Good morning {} you are {} years old.\".format (name, age)  # noqa\nx = hello()\nprint(x)",
         "detail": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
         "documentation": {}
     },
     {
-        "label": "name",
+        "label": "x",
         "kind": 5,
         "importPath": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
         "description": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
-        "peekOfCode": "name = 'Grevy'\n# sentence = 'Hello my name is {} and I am {} years old.'.format(name, age)  # noqa\n# print(sentence)\n# todayIsCold = False\nprint(f'Hello my name is {name} and I am {age} years old.')\nif age >= 18:\n    print('You are of legal age.')\nelse:\n    print('You are not old enough.')",
+        "peekOfCode": "x = hello()\nprint(x)",
         "detail": "UdemyClasses.Django3FullStackWebsite.pythonrefresher",
         "documentation": {}
     },

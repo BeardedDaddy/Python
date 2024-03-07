@@ -4163,15 +4163,6 @@
         "documentation": {}
     },
     {
-        "label": "dognames",
-        "kind": 5,
-        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson12Loops",
-        "description": "UdemyClasses.Django3FullStackWebsite.Lesson12Loops",
-        "peekOfCode": "dognames = [\"Fido\", \"Sean\", \"Sally\", \"Mark\"]\nfor dog in dognames:\n    print(dog)",
-        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson12Loops",
-        "documentation": {}
-    },
-    {
         "label": "tripleprint",
         "kind": 2,
         "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson9FunctionChallenge",

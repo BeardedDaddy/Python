@@ -4163,6 +4163,15 @@
         "documentation": {}
     },
     {
+        "label": "age",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson12Loops",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson12Loops",
+        "peekOfCode": "age = 0\nwhile age < 18:\n    print(age)\n    age += 1",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson12Loops",
+        "documentation": {}
+    },
+    {
         "label": "tripleprint",
         "kind": 2,
         "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson9FunctionChallenge",

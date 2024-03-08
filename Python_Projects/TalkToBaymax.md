@@ -8,19 +8,32 @@ Print(input("Please enter your name))
 The computer will say hello and interduce itself as Baymax.
 print(" Hello, " + name + " it is nice to meet you.")
 
-There will be 3 second time delay before the next prompt.
-time.sleep(2)
+print(" My name is Baymax. ")
+time.sleep(3)
 
-print(input("Are you having a wonderful day? (yes/ no) "))
-time.sleep(2)
-
-Loop Here
-
-if answer in input == "yes":
-    print("That is awsome!")
+day = input(" Are you having a wonderful day? (y/n) ")
+if day == "y":
+    print("That's great to hear " + name + "!", ("\U0001F600"))
+elif day == "n":
+    print("I'm sorry to hear that " + name + ".", ("\U0001F614"))
 else:
-    print("I'm sorry to hear that " + name + "")
+    print(" Please enter an y for yes or n for no " + name + "?")
 
+How old are you?
+Create a script that after the "age" is given we will take the age - the current year to then respond "So you were born in " + year + "."
+
+Are you in a relationship?
+    Loop - If the answer is y print("So you single single?") else: If the answer is n print("It's nice to be with someone.")
+
+What is your birthday?
+Create a script that when you give a birthdate [Month/ Day] the following response is "So you're a {sign}."
+
+print("You are very beautiful " + name + ".")
+
+if answer("Thank you"):
+    print("You're welcome beautiful.")
+pause
+Create a script that if no input after 5 seconds print("You shy?")
 
 ## Emojis
 Big Smile emoji

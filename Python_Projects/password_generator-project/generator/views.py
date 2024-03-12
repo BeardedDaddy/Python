@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('Hello there people.')
+    return render(request, 'generator/home.html', {"password": 'asdkf'})
 
 
 def eggs(request):

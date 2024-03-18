@@ -14,3 +14,5 @@ elif day == "n":
     print("I'm sorry to hear that " + name + ".", ("\U0001F614"))
 else:
     print(" Please enter an y for yes or n for no " + name + "?")
+print(input("How old are you? "))
+time.sleep(3)

@@ -35,7 +35,10 @@ if answer("Thank you"):
 pause
 Create a script that if no input after 5 seconds print("You shy?")
 
+
+
 ## Emojis
+
 Big Smile emoji
 print("\U0001F600")
 

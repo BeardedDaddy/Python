@@ -22,18 +22,21 @@ else:
 How old are you?
 Create a script that after the "age" is given we will take the age - the current year to then respond "So you were born in " + year + "."
 
-Are you in a relationship?
-    Loop - If the answer is y print("So you single single?") else: If the answer is n print("It's nice to be with someone.")
+print("You look young for your age.")
 
 What is your birthday?
 Create a script that when you give a birthdate [Month/ Day] the following response is "So you're a {sign}."
 
 print("You are very beautiful " + name + ".")
 
-if answer("Thank you"):
+answer = input("You are very beautiful")
+
+if answer == " Thank you":
     print("You're welcome beautiful.")
 pause
-Create a script that if no input after 5 seconds print("You shy?")
+else:
+    print("Ahhh you shy?", print("\U0001F97A"))
+
 
 
 
@@ -63,5 +66,6 @@ print("\U0001F606")
 Winking Face emoji
 print("\U0001F609")
 
-Baymax Emoji
-print("\U0001F603")
+Pleading Face Emoji
+print("\U0001F97A")
+

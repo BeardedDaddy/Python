@@ -1,5 +1,5 @@
 """Import time modules to use in the program."""
-from calendar import month
+from calendar import month_name
 import time
 
 # Get the user's name
@@ -32,7 +32,7 @@ if age <= 18:
     print("You look young for your age.")
 
 
-def get_zodiac_Sign(month, day):
+def get_zodiac_sign(month, day):
     """Gets the zodiac Sign for a given date of birth.
 
   Args:
@@ -42,6 +42,10 @@ def get_zodiac_Sign(month, day):
   Returns:
     The zodiac Sign, as a string.
     """
+
+
+month = input("Enter your birth month: ")
+day = int(input("Enter your birth day: "))  
 
 
 Signs = {
@@ -93,28 +97,27 @@ Signs = {
         "scorpio": (1, 21),
         "sagittarius": (22, 30)
     }
-}
+    }
 
-Sign = None
+
+SIGN = get_zodiac_sign(month, day)
 for month_name, month_data in Signs.items():
     if month_name == month:
-        for Sign_name, Sign_dates in month_data.items():
-            if day >= Sign_dates[0] and day <= Sign_dates[1]:
-                Sign = Sign_name
+        for sign_name, sign_dates in month_data.items():
+            if day == sign_dates[0] and day <= sign_dates[1]:
+                SIGN = sign_name
                 break
-        return Sign
+        return SIGN
 
 
 def main():
     """Gets the zodiac Sign for the user's date of birth."""
-    month = input("Enter your birth month: ")
-    day = int(input("Enter your birth day: "))  
-    Sign = get_zodiac_Sign(month, day)  
-    print(f"Your zodiac Sign is {Sign}.")
+    # SIGN = get_zodiac_sign(month, day)
+    print(f"Your zodiac Sign is {SIGN}.")
 
 
 if __name__ == "__main__":
-  main()
+    main()
 
 # answer = input("You are very beautiful")
 # if answer == " Thank you":

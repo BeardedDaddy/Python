@@ -564,6 +564,94 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "generator",
+        "description": "generator",
+        "isExtraImport": true,
+        "detail": "generator",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
         "label": "tkinter",
         "kind": 6,
         "isExtraImport": true,
@@ -658,6 +746,23 @@
         "description": "tkinter",
         "isExtraImport": true,
         "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "month_name",
+        "importPath": "calendar",
+        "description": "calendar",
+        "isExtraImport": true,
+        "detail": "calendar",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -2777,6 +2882,222 @@
         "documentation": {}
     },
     {
+        "label": "GeneratorConfig",
+        "kind": 6,
+        "importPath": "Python_Projects.password_generator-project.generator.apps",
+        "description": "Python_Projects.password_generator-project.generator.apps",
+        "peekOfCode": "class GeneratorConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"generator\"",
+        "detail": "Python_Projects.password_generator-project.generator.apps",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "Python_Projects.password_generator-project.generator.views",
+        "description": "Python_Projects.password_generator-project.generator.views",
+        "peekOfCode": "def home(request):\n    return render(request, 'generator/home.html')\ndef password(request):\n    characters = list('abcdefghijklmnopqrstuvwxyz')\n    if request.GET.get('uppercase'):\n        characters.extend(list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))\n    if request.GET.get('special'):\n        characters.extend(list('~!@#$%^&*()_+=-'))\n    if request.GET.get('numbers'):\n        characters.extend(list('1234567890'))",
+        "detail": "Python_Projects.password_generator-project.generator.views",
+        "documentation": {}
+    },
+    {
+        "label": "password",
+        "kind": 2,
+        "importPath": "Python_Projects.password_generator-project.generator.views",
+        "description": "Python_Projects.password_generator-project.generator.views",
+        "peekOfCode": "def password(request):\n    characters = list('abcdefghijklmnopqrstuvwxyz')\n    if request.GET.get('uppercase'):\n        characters.extend(list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))\n    if request.GET.get('special'):\n        characters.extend(list('~!@#$%^&*()_+=-'))\n    if request.GET.get('numbers'):\n        characters.extend(list('1234567890'))\n    length = int(request.GET.get('length', 12))\n    password = ''",
+        "detail": "Python_Projects.password_generator-project.generator.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.asgi",
+        "description": "Python_Projects.password_generator-project.password_generator.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "Python_Projects.password_generator-project.password_generator.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = \"django-insecure-qpr&xz2%2h&oibm6s7v$@m&*b&6vxhecailde-zq^2hxn)eh*r\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "SECRET_KEY = \"django-insecure-qpr&xz2%2h&oibm6s7v$@m&*b&6vxhecailde-zq^2hxn)eh*r\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"generator\",",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"generator\",\n]\nMIDDLEWARE = [",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]\nROOT_URLCONF = \"password_generator.urls\"",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "ROOT_URLCONF = \"password_generator.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "WSGI_APPLICATION = \"password_generator.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.settings",
+        "description": "Python_Projects.password_generator-project.password_generator.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "Python_Projects.password_generator-project.password_generator.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.urls",
+        "description": "Python_Projects.password_generator-project.password_generator.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.home),\n    path('password/', views.password, name='password'),\n]",
+        "detail": "Python_Projects.password_generator-project.password_generator.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Python_Projects.password_generator-project.password_generator.wsgi",
+        "description": "Python_Projects.password_generator-project.password_generator.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "Python_Projects.password_generator-project.password_generator.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Python_Projects.password_generator-project.manage",
+        "description": "Python_Projects.password_generator-project.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"password_generator.settings\")\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "Python_Projects.password_generator-project.manage",
+        "documentation": {}
+    },
+    {
         "label": "Person",
         "kind": 6,
         "importPath": "Python_Projects.DeletingObjectProperties",
@@ -2810,6 +3131,87 @@
         "description": "Python_Projects.eight_ball",
         "peekOfCode": "question = input(\"Ask a question: \")\nmagic_8_ball(question)",
         "detail": "Python_Projects.eight_ball",
+        "documentation": {}
+    },
+    {
+        "label": "get_zodiac_sign",
+        "kind": 2,
+        "importPath": "Python_Projects.talk_to_baymax",
+        "description": "Python_Projects.talk_to_baymax",
+        "peekOfCode": "def get_zodiac_sign(month, day):\n    \"\"\"Gets the zodiac Sign for a given date of birth.\n  Args:\n    month: The month of birth, as a string.\n    day: The day of birth, as an integer.\n  Returns:\n    The zodiac Sign, as a string.\n    \"\"\"\nmonth = input(\"Enter your birth month: \")\nday = int(input(\"Enter your birth day: \"))  ",
+        "detail": "Python_Projects.talk_to_baymax",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Python_Projects.talk_to_baymax",
+        "description": "Python_Projects.talk_to_baymax",
+        "peekOfCode": "def main():\n    \"\"\"Gets the zodiac Sign for the user's date of birth.\"\"\"\n    # SIGN = get_zodiac_sign(month, day)\n    print(f\"Your zodiac Sign is {SIGN}.\")\nif __name__ == \"__main__\":\n    main()\n# answer = input(\"You are very beautiful\")\n# if answer == \" Thank you\":\n#     print(\"You're welcome beautiful.\")\n# else:",
+        "detail": "Python_Projects.talk_to_baymax",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "Python_Projects.talk_to_baymax",
+        "description": "Python_Projects.talk_to_baymax",
+        "peekOfCode": "name = input(\"Please enter your name? \")\nprint(\" Hello, \" + name + \" it is nice to meet you.\", (\"\\U0001F603\"))\ntime.sleep(3)\n# Baymax introduces himself\nprint(\" My name is Baymax. \")\ntime.sleep(3)\n# Baymax asks the user how their day is going\nday = input(\" Are you having a wonderful day? (y/n) \")\nif day == \"y\":\n    print(\"That's great to hear \" + name + \"!\", (\"\\U0001F600\"))",
+        "detail": "Python_Projects.talk_to_baymax",
+        "documentation": {}
+    },
+    {
+        "label": "day",
+        "kind": 5,
+        "importPath": "Python_Projects.talk_to_baymax",
+        "description": "Python_Projects.talk_to_baymax",
+        "peekOfCode": "day = input(\" Are you having a wonderful day? (y/n) \")\nif day == \"y\":\n    print(\"That's great to hear \" + name + \"!\", (\"\\U0001F600\"))\nelif day == \"n\":\n    # Baymax responds to how is your day.\n    print(\"I'm sorry to hear that \" + name + \".\", (\"\\U0001F614\"))\nelse:\n    print(\" Please enter an y for yes or n for no \" + name + \"?\")\n# Baymax asks the user how old they are\nage = int(input(\"How old are you? \"))",
+        "detail": "Python_Projects.talk_to_baymax",
+        "documentation": {}
+    },
+    {
+        "label": "age",
+        "kind": 5,
+        "importPath": "Python_Projects.talk_to_baymax",
+        "description": "Python_Projects.talk_to_baymax",
+        "peekOfCode": "age = int(input(\"How old are you? \"))\ntime.sleep(3)\nif age <= 18:\n    print(\"You look young for your age.\")\ndef get_zodiac_sign(month, day):\n    \"\"\"Gets the zodiac Sign for a given date of birth.\n  Args:\n    month: The month of birth, as a string.\n    day: The day of birth, as an integer.\n  Returns:",
+        "detail": "Python_Projects.talk_to_baymax",
+        "documentation": {}
+    },
+    {
+        "label": "month",
+        "kind": 5,
+        "importPath": "Python_Projects.talk_to_baymax",
+        "description": "Python_Projects.talk_to_baymax",
+        "peekOfCode": "month = input(\"Enter your birth month: \")\nday = int(input(\"Enter your birth day: \"))  \nSigns = {\n    \"december\": {\n        \"sagittarius\": (22, 31),\n        \"capricorn\": (1, 21)\n    },\n    \"january\": {\n        \"capricorn\": (1, 19),\n        \"aquarius\": (20, 31)",
+        "detail": "Python_Projects.talk_to_baymax",
+        "documentation": {}
+    },
+    {
+        "label": "day",
+        "kind": 5,
+        "importPath": "Python_Projects.talk_to_baymax",
+        "description": "Python_Projects.talk_to_baymax",
+        "peekOfCode": "day = int(input(\"Enter your birth day: \"))  \nSigns = {\n    \"december\": {\n        \"sagittarius\": (22, 31),\n        \"capricorn\": (1, 21)\n    },\n    \"january\": {\n        \"capricorn\": (1, 19),\n        \"aquarius\": (20, 31)\n    },",
+        "detail": "Python_Projects.talk_to_baymax",
+        "documentation": {}
+    },
+    {
+        "label": "Signs",
+        "kind": 5,
+        "importPath": "Python_Projects.talk_to_baymax",
+        "description": "Python_Projects.talk_to_baymax",
+        "peekOfCode": "Signs = {\n    \"december\": {\n        \"sagittarius\": (22, 31),\n        \"capricorn\": (1, 21)\n    },\n    \"january\": {\n        \"capricorn\": (1, 19),\n        \"aquarius\": (20, 31)\n    },\n    \"february\": {",
+        "detail": "Python_Projects.talk_to_baymax",
+        "documentation": {}
+    },
+    {
+        "label": "SIGN",
+        "kind": 5,
+        "importPath": "Python_Projects.talk_to_baymax",
+        "description": "Python_Projects.talk_to_baymax",
+        "peekOfCode": "SIGN = get_zodiac_sign(month, day)\nfor month_name, month_data in Signs.items():\n    if month_name == month:\n        for sign_name, sign_dates in month_data.items():\n            if day == sign_dates[0] and day <= sign_dates[1]:\n                SIGN = sign_name\n                break\n        return SIGN\ndef main():\n    \"\"\"Gets the zodiac Sign for the user's date of birth.\"\"\"",
+        "detail": "Python_Projects.talk_to_baymax",
         "documentation": {}
     },
     {
@@ -4163,12 +4565,102 @@
         "documentation": {}
     },
     {
+        "label": "Car",
+        "kind": 6,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Challenge7Clases",
+        "description": "UdemyClasses.Django3FullStackWebsite.Challenge7Clases",
+        "peekOfCode": "class Car:\n    def __init__(self, make, model, year): # These are variable of the init function for the class.  # noqa\n        self.make = make  # This is a method of the class.\n        self.model = model  # This is a method of the class.\n        self.year = year  # This is a method of the class.\n    def age(self): # This is a method of the class. It is a function that is part of the class. It takes in a parameter called self. The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class like age.  # noqa\n        return 2020 - self.year\nCar1 = Car(\"Toyota\", \"Corolla\", 2015) # To call this function you assign the class to a variable.  # noqa\nprint(Car1.age())  # To print this function you print the variable also adding the method of the class.  # noqa",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Challenge7Clases",
+        "documentation": {}
+    },
+    {
+        "label": "Car1",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Challenge7Clases",
+        "description": "UdemyClasses.Django3FullStackWebsite.Challenge7Clases",
+        "peekOfCode": "Car1 = Car(\"Toyota\", \"Corolla\", 2015) # To call this function you assign the class to a variable.  # noqa\nprint(Car1.age())  # To print this function you print the variable also adding the method of the class.  # noqa",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Challenge7Clases",
+        "documentation": {}
+    },
+    {
         "label": "age",
         "kind": 5,
         "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson12Loops",
         "description": "UdemyClasses.Django3FullStackWebsite.Lesson12Loops",
         "peekOfCode": "age = 0\nwhile age < 18:\n    print(age)\n    age += 1",
         "detail": "UdemyClasses.Django3FullStackWebsite.Lesson12Loops",
+        "documentation": {}
+    },
+    {
+        "label": "numbers",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson13LoopsChallenge",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson13LoopsChallenge",
+        "peekOfCode": "numbers = [76, 83, 16, 69, 52, 78, 10, 77, 45, 52, 32, 17, 58, 38, 17, 31, 63, 29, 45, 50, 59, 18, 69, 41, 50, 29, 27, 20, 24, 16, 23, 50, 11, 11, 49, 14, 93, 41, 62, 17, 29, 63, 56, 19, 92]\nfor number in numbers:\n    if number > 90:\n        print(number)",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson13LoopsChallenge",
+        "documentation": {}
+    },
+    {
+        "label": "dogs",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson14Dictionaries",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson14Dictionaries",
+        "peekOfCode": "dogs = {\"Fido\": 8, \"Sally\": 17, \"Sean\": 2}\n# dogs[\"Sally\"] = 10  # Change the value of a key-value pair in the dictionary\n# del(dogs[\"Fido\"])  # Remove a key-value pair from the dictionary\n# dogs.pop(\"Sally\")  # Remove a key-value pair from the dictionary\ndogs[\"Frank\"] = 5  # Add a new key-value pair to the dictionary\nprint(dogs)\n# print(dogs[\"Fido\"])  # Access the value of a key-value pair in the dictionary",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson14Dictionaries",
+        "documentation": {}
+    },
+    {
+        "label": "dogs[\"Frank\"]",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson14Dictionaries",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson14Dictionaries",
+        "peekOfCode": "dogs[\"Frank\"] = 5  # Add a new key-value pair to the dictionary\nprint(dogs)\n# print(dogs[\"Fido\"])  # Access the value of a key-value pair in the dictionary",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson14Dictionaries",
+        "documentation": {}
+    },
+    {
+        "label": "words",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson15Dictionaries",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson15Dictionaries",
+        "peekOfCode": "words = [\"Pogo\", \"Spange\", \"Lie-Fi\"]\ndefinitions = [\"Slang for Pokemon Go\", \"To collect spare change, either from couches, passsrbys on the street or any numerous other ways and means\", \"When your phone or tablet indicates that you are connected to a wireless network, however you are still unable to load webpages or use any internet services with your device\"]\ncooldictionary = {}\nfor i in range(0,3):\n    cooldictionary[words[i]] = definitions[i]\n    print(i)",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson15Dictionaries",
+        "documentation": {}
+    },
+    {
+        "label": "definitions",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson15Dictionaries",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson15Dictionaries",
+        "peekOfCode": "definitions = [\"Slang for Pokemon Go\", \"To collect spare change, either from couches, passsrbys on the street or any numerous other ways and means\", \"When your phone or tablet indicates that you are connected to a wireless network, however you are still unable to load webpages or use any internet services with your device\"]\ncooldictionary = {}\nfor i in range(0,3):\n    cooldictionary[words[i]] = definitions[i]\n    print(i)",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson15Dictionaries",
+        "documentation": {}
+    },
+    {
+        "label": "cooldictionary",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson15Dictionaries",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson15Dictionaries",
+        "peekOfCode": "cooldictionary = {}\nfor i in range(0,3):\n    cooldictionary[words[i]] = definitions[i]\n    print(i)",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson15Dictionaries",
+        "documentation": {}
+    },
+    {
+        "label": "Dog",
+        "kind": 6,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson16Classes",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson16Classes",
+        "peekOfCode": "class Dog():\n    \"\"\"This is an class called Dog. It has a method called bark.\n    \"\"\"\n    # dogInfo = \"Hey dogs are cool.\"  # This is a class attribute. It is an attribute that is shared by all instances of the class.  # noqa\n    def __init__(self, name=\"\", age=0, furcolor=\"\"): # What are inside the parameters are called attributes. This is a method of the class. It is a function that is part of the class. It is called a constructor. It is called when an instance of the class is created. It is used to initialize the attributes of the class.  # noqa\n        self.name = name\n        self.age = age\n        self.furcolor = furcolor\n        # This is a method of the class. It is a function that is part of the class. It is called a constructor. It is called when an instance of the class is created. It is used to initialize the attributes of the class.  # noqa\n    def bark(self, str): # This is a method of the class. It is a function that is part of the class. It takes in a parameter called str. The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.  # noqa",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson16Classes",
+        "documentation": {}
+    },
+    {
+        "label": "mydog",
+        "kind": 5,
+        "importPath": "UdemyClasses.Django3FullStackWebsite.Lesson16Classes",
+        "description": "UdemyClasses.Django3FullStackWebsite.Lesson16Classes",
+        "peekOfCode": "mydog = Dog(\"Fido\", 13, \"Brown\")  # Here we are creating an instance of the Dog class and assigning it to the variable mydog. Which simply means to assign the class to the variable.  This instance is only used if you do not create an instance variable like on line 5. You would than create an init function that will have the parameters called attributes.   # noqa\nmydog.bark(\" Hey I'm talking to you.\")  # Here we are calling the bark method of the mydog instance of the Dog class. Which simply means to call the method of the class. We are also passing in a string as an argument to the bark method.  # noqa \n# mydog.name = \"Fido\"  # Here we are creating an attribute called name and assigning it the value of Fido to the mydog instance of the Dog class. Which simply means to create an attribute of the class.  # noqa\n# mydog.age = 3  # Here we are creating an attribute called age and assigning it the value of 3 to the mydog instance of the Dog class. Which simply means to create an attribute of the class.  # noqa\n# print(mydog.name)  # Here we are printing the name attribute of the mydog instance of the Dog class. Which simply means to print the attribute of the class.  # noqa\nprint(mydog.age)  # Here we are printing the age attribute of the mydog instance of the Dog class. Which simply means to print the attribute of the class.  # noqa\n# Dog.dogInfo = \"Hey there.\"\n# print(Dog.dogInfo)  # Here we are printing the dogInfo attribute of the Dog class. Which simply means to print the attribute of the class.  # noqa",
+        "detail": "UdemyClasses.Django3FullStackWebsite.Lesson16Classes",
         "documentation": {}
     },
     {

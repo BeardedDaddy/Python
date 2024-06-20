@@ -1,0 +1,27 @@
+[
+    {
+        "label": "Doc",
+        "importPath": "yattag",
+        "description": "yattag",
+        "isExtraImport": true,
+        "detail": "yattag",
+        "documentation": {}
+    },
+    {
+        "label": "indent",
+        "importPath": "yattag",
+        "description": "yattag",
+        "isExtraImport": true,
+        "detail": "yattag",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "gcp_script_yattag",
+        "description": "gcp_script_yattag",
+        "peekOfCode": "result = doc.getvalue()\nfrom yattag import indent\nwith open('index.html', 'w') as file:\n    file.writelines(indent(result))",
+        "detail": "gcp_script_yattag",
+        "documentation": {}
+    }
+]

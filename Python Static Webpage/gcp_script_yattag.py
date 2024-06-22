@@ -1,3 +1,5 @@
+"""Import doc from yattag."""
+
 from yattag import Doc
 
 doc, tag, text = Doc().tagtext()
@@ -18,3 +20,4 @@ from yattag import indent
 
 with open('index.html', 'w') as file:
     file.writelines(indent(result))
+

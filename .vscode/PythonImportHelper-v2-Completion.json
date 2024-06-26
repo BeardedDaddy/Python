@@ -564,6 +564,22 @@
         "documentation": {}
     },
     {
+        "label": "Doc",
+        "importPath": "yattag",
+        "description": "yattag",
+        "isExtraImport": true,
+        "detail": "yattag",
+        "documentation": {}
+    },
+    {
+        "label": "indent",
+        "importPath": "yattag",
+        "description": "yattag",
+        "isExtraImport": true,
+        "detail": "yattag",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -2834,6 +2850,15 @@
         "description": "oop.song",
         "peekOfCode": "def create_checkfile(artist_list):\n    \"\"\"Create a check file from the object data for comparison with the original file.\"\"\"\n    with open(\"checkfile.txt\", \"w\") as checkfile:\n        for new_artist in artist_list:\n            for new_album in new_artist.albums:\n                for new_song in new_album.tracks:\n                    print(\"{0.name}\\t{1.name}\\t{1.year}\\t{2.title}\".format(new_artist, new_album, new_song),file=checkfile)\nif __name__=='__main__':\n    artists = load_data()\n    print(\"There are {} artists\".format(len(artists)))",
         "detail": "oop.song",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "Python Static Webpage.gcp_script_yattag",
+        "description": "Python Static Webpage.gcp_script_yattag",
+        "peekOfCode": "result = doc.getvalue()\nfrom yattag import indent\nwith open('index.html', 'w') as file:\n    file.writelines(indent(result))",
+        "detail": "Python Static Webpage.gcp_script_yattag",
         "documentation": {}
     },
     {

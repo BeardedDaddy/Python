@@ -1,7 +1,7 @@
-from collections import nametuple
+from collections import namedtuple
 
 def multiple_values():
-    MyTuple = nametuple("MyTulpe", ["name", "age", "car"])
+    MyTuple = namedtuple("MyTuple", ["name", "age", "car"])
     name = "Grevy"
     age = 51
     car = "Rivan"

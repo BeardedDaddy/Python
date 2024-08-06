@@ -1,0 +1,18 @@
+---
+# This is my first YAML 
+# I am working with Yaml in VS Code
+# This is my third command
+
+FirstName: Grevy
+# ^--Key   ^--Value
+# or
+# First_Name: Grevy
+# or
+# First Name: Grevy
+# or
+# First: "Grevy$"
+# On the above line if you have special character that is being used in the value and yaml syntax does not like
+# you can enclose the value in single or double quotes.
+# Keys must be unique and can not be duplicated. You can use for example LastName: and Last Name.
+LastName: Marcelin
+Age: 51

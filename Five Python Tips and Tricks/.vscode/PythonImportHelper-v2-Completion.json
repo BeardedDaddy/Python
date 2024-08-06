@@ -1,0 +1,55 @@
+[
+    {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "multiple_values",
+        "kind": 2,
+        "importPath": "Multiple_Values_Function",
+        "description": "Multiple_Values_Function",
+        "peekOfCode": "def multiple_values():\n    MyTuple = namedtuple(\"MyTuple\", [\"name\", \"age\", \"car\"])\n    name = \"Grevy\"\n    age = 51\n    car = \"Rivan\"\n    return MyTuple(name, age, car)\n# Calling the function\nresult = multiple_values()\nname = result.name\nage = result.age",
+        "detail": "Multiple_Values_Function",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "Multiple_Values_Function",
+        "description": "Multiple_Values_Function",
+        "peekOfCode": "result = multiple_values()\nname = result.name\nage = result.age\ncar = result.car\nprint(f\"Name: {name}, Age: {age}, Car: {car}\")",
+        "detail": "Multiple_Values_Function",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "Multiple_Values_Function",
+        "description": "Multiple_Values_Function",
+        "peekOfCode": "name = result.name\nage = result.age\ncar = result.car\nprint(f\"Name: {name}, Age: {age}, Car: {car}\")",
+        "detail": "Multiple_Values_Function",
+        "documentation": {}
+    },
+    {
+        "label": "age",
+        "kind": 5,
+        "importPath": "Multiple_Values_Function",
+        "description": "Multiple_Values_Function",
+        "peekOfCode": "age = result.age\ncar = result.car\nprint(f\"Name: {name}, Age: {age}, Car: {car}\")",
+        "detail": "Multiple_Values_Function",
+        "documentation": {}
+    },
+    {
+        "label": "car",
+        "kind": 5,
+        "importPath": "Multiple_Values_Function",
+        "description": "Multiple_Values_Function",
+        "peekOfCode": "car = result.car\nprint(f\"Name: {name}, Age: {age}, Car: {car}\")",
+        "detail": "Multiple_Values_Function",
+        "documentation": {}
+    }
+]

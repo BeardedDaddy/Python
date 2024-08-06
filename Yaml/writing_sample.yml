@@ -2,11 +2,19 @@
 
 # Student Data
 
-Name: Grevy
-Age: 51
-Grade: 100
-Subjects: 
-  Math
-  Science
-  History
+Students:
+  - Name: Grevy
+    Age: 51
+    Grade: 100
+    Subjects: 
+      Math
+      Science
+      History
 
+  - Name: Mia
+    Age: 14
+    Grade: 100
+    Subjects:
+      Polical Science
+      Socialogy
+      Algebra

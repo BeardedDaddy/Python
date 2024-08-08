@@ -1,0 +1,15 @@
+---
+applications:
+  - Loans:
+      name: IAintGotItLoans
+      technology: Python
+      team: 30
+  - Cards:
+      name: IAintGotItCards
+      technology: Java
+      team:  17
+  - Accounts:
+      name: IAintGotItAccounts
+      technology: C#
+      team: 40
+      

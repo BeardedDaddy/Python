@@ -349,6 +349,14 @@
         "documentation": {}
     },
     {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
         "label": "islice",
         "importPath": "itertools",
         "description": "itertools",
@@ -389,6 +397,38 @@
         "importPath": "ducks",
         "description": "ducks",
         "detail": "ducks",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
         "documentation": {}
     },
     {
@@ -2169,6 +2209,51 @@
         "documentation": {}
     },
     {
+        "label": "multiple_values",
+        "kind": 2,
+        "importPath": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "description": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "peekOfCode": "def multiple_values():\n    MyTuple = namedtuple(\"MyTuple\", [\"name\", \"age\", \"car\"])\n    name = \"Grevy\"\n    age = 51\n    car = \"Rivan\"\n    return MyTuple(name, age, car)\n# Calling the function\nresult = multiple_values()\nname = result.name\nage = result.age",
+        "detail": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "description": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "peekOfCode": "result = multiple_values()\nname = result.name\nage = result.age\ncar = result.car\nprint(f\"Name: {name}, Age: {age}, Car: {car}\")",
+        "detail": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "description": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "peekOfCode": "name = result.name\nage = result.age\ncar = result.car\nprint(f\"Name: {name}, Age: {age}, Car: {car}\")",
+        "detail": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "documentation": {}
+    },
+    {
+        "label": "age",
+        "kind": 5,
+        "importPath": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "description": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "peekOfCode": "age = result.age\ncar = result.car\nprint(f\"Name: {name}, Age: {age}, Car: {car}\")",
+        "detail": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "documentation": {}
+    },
+    {
+        "label": "car",
+        "kind": 5,
+        "importPath": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "description": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "peekOfCode": "car = result.car\nprint(f\"Name: {name}, Age: {age}, Car: {car}\")",
+        "detail": "Five Python Tips and Tricks.Multiple_Values_Function",
+        "documentation": {}
+    },
+    {
         "label": "Wing",
         "kind": 6,
         "importPath": "Games.ducks",
@@ -2409,6 +2494,51 @@
         "description": "Games.player",
         "peekOfCode": "class Player(object):\n    def __init__(self, name):\n        self.name = name\n        self._lives = 3\n        self._level = 1\n        self._score = 0\n    def _get_lives(self):\n        return self._lives\n    def _set_lives(self, lives):\n        if lives >= 0:",
         "detail": "Games.player",
+        "documentation": {}
+    },
+    {
+        "label": "Book",
+        "kind": 6,
+        "importPath": "GCP.FastAPI.venv.books",
+        "description": "GCP.FastAPI.venv.books",
+        "peekOfCode": "class Book(BaseModel):\n    id: UUID\n    title: str = Field(min_length=1)\n    author: str = Field(min_length=1, max_length=100)\n    description: str = Field(min_length=1, max_length=100)\n    rating: int = Field(gt=-1, lt=101)\nBOOKS = [\"The You You Know\", \"Stop Saying Yes When You Mean No\", \"Just Because You Can Doesn't Mean You Should\"]  # noqa\n@app.get('/{name}')\ndef read_api(name: str):\n    return {'Welcome': name}",
+        "detail": "GCP.FastAPI.venv.books",
+        "documentation": {}
+    },
+    {
+        "label": "read_api",
+        "kind": 2,
+        "importPath": "GCP.FastAPI.venv.books",
+        "description": "GCP.FastAPI.venv.books",
+        "peekOfCode": "def read_api(name: str):\n    return {'Welcome': name}\n@app.post(\"\")\ndef create_book(book: Book):\n    BOOKS.append(book)\n    return book",
+        "detail": "GCP.FastAPI.venv.books",
+        "documentation": {}
+    },
+    {
+        "label": "create_book",
+        "kind": 2,
+        "importPath": "GCP.FastAPI.venv.books",
+        "description": "GCP.FastAPI.venv.books",
+        "peekOfCode": "def create_book(book: Book):\n    BOOKS.append(book)\n    return book",
+        "detail": "GCP.FastAPI.venv.books",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "GCP.FastAPI.venv.books",
+        "description": "GCP.FastAPI.venv.books",
+        "peekOfCode": "app = FastAPI()\nclass Book(BaseModel):\n    id: UUID\n    title: str = Field(min_length=1)\n    author: str = Field(min_length=1, max_length=100)\n    description: str = Field(min_length=1, max_length=100)\n    rating: int = Field(gt=-1, lt=101)\nBOOKS = [\"The You You Know\", \"Stop Saying Yes When You Mean No\", \"Just Because You Can Doesn't Mean You Should\"]  # noqa\n@app.get('/{name}')\ndef read_api(name: str):",
+        "detail": "GCP.FastAPI.venv.books",
+        "documentation": {}
+    },
+    {
+        "label": "BOOKS",
+        "kind": 5,
+        "importPath": "GCP.FastAPI.venv.books",
+        "description": "GCP.FastAPI.venv.books",
+        "peekOfCode": "BOOKS = [\"The You You Know\", \"Stop Saying Yes When You Mean No\", \"Just Because You Can Doesn't Mean You Should\"]  # noqa\n@app.get('/{name}')\ndef read_api(name: str):\n    return {'Welcome': name}\n@app.post(\"\")\ndef create_book(book: Book):\n    BOOKS.append(book)\n    return book",
+        "detail": "GCP.FastAPI.venv.books",
         "documentation": {}
     },
     {

@@ -1,5 +1,6 @@
 from collections import namedtuple
 
+
 def multiple_values():
     MyTuple = namedtuple("MyTuple", ["name", "age", "car"])
     name = "Grevy"
@@ -7,7 +8,10 @@ def multiple_values():
     car = "Rivan"
     return MyTuple(name, age, car)
 
+
 # Calling the function
+
+
 result = multiple_values()
 name = result.name
 age = result.age

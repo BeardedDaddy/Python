@@ -400,6 +400,14 @@
         "documentation": {}
     },
     {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -429,14 +437,6 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "UUID",
-        "importPath": "uuid",
-        "description": "uuid",
-        "isExtraImport": true,
-        "detail": "uuid",
         "documentation": {}
     },
     {
@@ -2509,7 +2509,7 @@
         "kind": 6,
         "importPath": "GCP.FastAPI.venv.books",
         "description": "GCP.FastAPI.venv.books",
-        "peekOfCode": "class Book(BaseModel):\n    id: UUID\n    title: str = Field(min_length=1)\n    author: str = Field(min_length=1, max_length=100)\n    description: str = Field(min_length=1, max_length=100)\n    rating: int = Field(gt=-1, lt=101)\nBOOKS = [\"The You You Know\", \"Stop Saying Yes When You Mean No\", \"Just Because You Can Doesn't Mean You Should\"]  # noqa\n@app.get('/')\ndef read_api():\n    return BOOKS",
+        "peekOfCode": "class Book(BaseModel):\n    \"\"\"Creating a class called BaseModel to validate the data\"\"\"\n    id: UUID\n    title: str = Field(min_length=1)\n    author: str = Field(min_length=1, max_length=100)\n    description: str = Field(min_length=1, max_length=100)\n    rating: int = Field(gt=-1, lt=101)\nBOOKS = [\"The You You Know\",\n         \"Stop Saying Yes When You Mean No\",\n         \"Just Because You Can Doesn't Mean You Should\"]",
         "detail": "GCP.FastAPI.venv.books",
         "documentation": {}
     },
@@ -2518,7 +2518,7 @@
         "kind": 2,
         "importPath": "GCP.FastAPI.venv.books",
         "description": "GCP.FastAPI.venv.books",
-        "peekOfCode": "def read_api():\n    return BOOKS\n\"\"\"\nThis class reads an empty parameter and returns the list of books\n\"\"\"\n@app.post(\"/\")\ndef create_book(book: Book):\n    BOOKS.append(book)\n    return book\n\"\"\"",
+        "peekOfCode": "def read_api():\n    \"\"\"This class reads an empty parameter and returns the list of books\"\"\"\n    return BOOKS\n@app.post(\"/\")\ndef create_book(book: Book):\n    \"\"\"Created a class called create_book with a boo  and a\"\"\"\n    BOOKS.append(\"book\")\n    return book\n@app.put(\"/{book_id}\")\ndef update_book(book_id: UUID, book: Book):",
         "detail": "GCP.FastAPI.venv.books",
         "documentation": {}
     },
@@ -2527,7 +2527,7 @@
         "kind": 2,
         "importPath": "GCP.FastAPI.venv.books",
         "description": "GCP.FastAPI.venv.books",
-        "peekOfCode": "def create_book(book: Book):\n    BOOKS.append(book)\n    return book\n\"\"\"\nThe above class is called create_book and has a parameter book and parses the list of books\n\"\"\"\n@app.put(\"/{book_id}\")\ndef update_book(book_id: UUID, book: BOOK):\n    counter = 0\nfor x in BOOKS:",
+        "peekOfCode": "def create_book(book: Book):\n    \"\"\"Created a class called create_book with a boo  and a\"\"\"\n    BOOKS.append(\"book\")\n    return book\n@app.put(\"/{book_id}\")\ndef update_book(book_id: UUID, book: Book):\n    \"\"\"This class, called update_book, the book object as a parameter\"\"\"\n    counter = 0\n    for x in BOOKS:\n        counter += 1",
         "detail": "GCP.FastAPI.venv.books",
         "documentation": {}
     },
@@ -2536,7 +2536,7 @@
         "kind": 2,
         "importPath": "GCP.FastAPI.venv.books",
         "description": "GCP.FastAPI.venv.books",
-        "peekOfCode": "def update_book(book_id: UUID, book: BOOK):\n    counter = 0\nfor x in BOOKS:\n    counter += 1\n    if x.id == book_id:\n        BOOKS[counter - 1] = book\n        return BOOKS[counter - 1]\nraise HTTPException(\n    status_code= 404,\n    detail= f\"ID {book_id} : Does not exist\"",
+        "peekOfCode": "def update_book(book_id: UUID, book: Book):\n    \"\"\"This class, called update_book, the book object as a parameter\"\"\"\n    counter = 0\n    for x in BOOKS:\n        counter += 1\n        if x.id == book_id:\n            BOOKS[counter - 1] = book\n            return BOOKS[counter - 1]\n    raise HTTPException(\n        status_code=404,",
         "detail": "GCP.FastAPI.venv.books",
         "documentation": {}
     },
@@ -2545,7 +2545,7 @@
         "kind": 2,
         "importPath": "GCP.FastAPI.venv.books",
         "description": "GCP.FastAPI.venv.books",
-        "peekOfCode": "def delete_book(book_id: UUID):\n    counter = 0\n    for x in BOOKS:\n        counter += 1\n        if x.id == book_id:\n            del BOOKS[counter - 1]",
+        "peekOfCode": "def delete_book(book_id: UUID):\n    \"\"\"This delete_book function will delete books with the same UUID book_id\"\"\"  # noqa\n    counter = 0\n    for x in BOOKS:\n        counter += 1\n        if x.id == book_id:\n            del BOOKS[counter - 1]\n            return f\"ID: {book_id} deleted\"\n    raise HTTPException(\n        status_code=404,",
         "detail": "GCP.FastAPI.venv.books",
         "documentation": {}
     },
@@ -2554,7 +2554,7 @@
         "kind": 5,
         "importPath": "GCP.FastAPI.venv.books",
         "description": "GCP.FastAPI.venv.books",
-        "peekOfCode": "app = FastAPI()\nclass Book(BaseModel):\n    id: UUID\n    title: str = Field(min_length=1)\n    author: str = Field(min_length=1, max_length=100)\n    description: str = Field(min_length=1, max_length=100)\n    rating: int = Field(gt=-1, lt=101)\nBOOKS = [\"The You You Know\", \"Stop Saying Yes When You Mean No\", \"Just Because You Can Doesn't Mean You Should\"]  # noqa\n@app.get('/')\ndef read_api():",
+        "peekOfCode": "app = FastAPI()\nclass Book(BaseModel):\n    \"\"\"Creating a class called BaseModel to validate the data\"\"\"\n    id: UUID\n    title: str = Field(min_length=1)\n    author: str = Field(min_length=1, max_length=100)\n    description: str = Field(min_length=1, max_length=100)\n    rating: int = Field(gt=-1, lt=101)\nBOOKS = [\"The You You Know\",\n         \"Stop Saying Yes When You Mean No\",",
         "detail": "GCP.FastAPI.venv.books",
         "documentation": {}
     },
@@ -2563,7 +2563,7 @@
         "kind": 5,
         "importPath": "GCP.FastAPI.venv.books",
         "description": "GCP.FastAPI.venv.books",
-        "peekOfCode": "BOOKS = [\"The You You Know\", \"Stop Saying Yes When You Mean No\", \"Just Because You Can Doesn't Mean You Should\"]  # noqa\n@app.get('/')\ndef read_api():\n    return BOOKS\n\"\"\"\nThis class reads an empty parameter and returns the list of books\n\"\"\"\n@app.post(\"/\")\ndef create_book(book: Book):\n    BOOKS.append(book)",
+        "peekOfCode": "BOOKS = [\"The You You Know\",\n         \"Stop Saying Yes When You Mean No\",\n         \"Just Because You Can Doesn't Mean You Should\"]\n@app.get('/')\ndef read_api():\n    \"\"\"This class reads an empty parameter and returns the list of books\"\"\"\n    return BOOKS\n@app.post(\"/\")\ndef create_book(book: Book):\n    \"\"\"Created a class called create_book with a boo  and a\"\"\"",
         "detail": "GCP.FastAPI.venv.books",
         "documentation": {}
     },
